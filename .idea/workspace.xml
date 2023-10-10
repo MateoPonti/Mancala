@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="creando tablero , posicion , partida , nuevo concepto un tablero tiene administra los tableros de los jugadores , un jugador tiene un tablero">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo logica del tablero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/contenedor/Agujero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/contenedor/Contenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/contenedor/Contenedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/contenedor/IContenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/contenedor/IContenedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/Posicion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +71,8 @@
       <workItem from="1696910567136" duration="3419000" />
       <workItem from="1696920830077" duration="25000" />
       <workItem from="1696927964315" duration="3063000" />
-      <workItem from="1696966301150" duration="2925000" />
+      <workItem from="1696966301150" duration="3039000" />
+      <workItem from="1696970133059" duration="1006000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -103,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696931036477</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Haciendo logica del tablero">
+      <option name="closed" value="true" />
+      <created>1696969368910</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696969368910</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +127,7 @@
     <MESSAGE value="Creacion Mancala" />
     <MESSAGE value="Creacion de contenedor para hacer el Tablero" />
     <MESSAGE value="creando tablero , posicion , partida , nuevo concepto un tablero tiene administra los tableros de los jugadores , un jugador tiene un tablero" />
-    <option name="LAST_COMMIT_MESSAGE" value="creando tablero , posicion , partida , nuevo concepto un tablero tiene administra los tableros de los jugadores , un jugador tiene un tablero" />
+    <MESSAGE value="Haciendo logica del tablero" />
+    <option name="LAST_COMMIT_MESSAGE" value="Haciendo logica del tablero" />
   </component>
 </project>
