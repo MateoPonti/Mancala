@@ -4,7 +4,7 @@ public class Posicion {
 
 
     public static  boolean validarPosicion( int pos){
-        return (pos>0 && pos<6);
+        return (pos>0 && pos<7);
     }
 
 

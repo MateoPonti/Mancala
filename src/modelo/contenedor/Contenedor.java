@@ -6,7 +6,7 @@ import modelo.haba.IHaba;
 import java.util.ArrayList;
 
 public class Contenedor implements IContenedor {
-    private ArrayList<Haba> habas;
+    private ArrayList<IHaba> habas;
     private TipoContenedor tipo;
 
     public Contenedor(TipoContenedor tipo) {
@@ -14,7 +14,7 @@ public class Contenedor implements IContenedor {
         habas=new ArrayList<>();
     }
 
-    public void agregar(Haba haba){
+    public void agregar(IHaba haba){
         this.habas.add(haba);
     }
 
@@ -32,14 +32,15 @@ public class Contenedor implements IContenedor {
         return tipo;
     }
 
-    protected ArrayList<Haba> getHabas(){
+    public ArrayList<IHaba> getHabas(){
         return habas;
     }
 
 
-    @Override
-    public ArrayList<IHaba> obtenerHabas() {
-        return null;
+
+    public ArrayList<IHaba> sacarHabas() {
+        habas.clear();
+        return habas;
     }
 
 }

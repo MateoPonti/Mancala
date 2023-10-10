@@ -6,5 +6,5 @@ import java.util.ArrayList;
 
 public interface IContenedor {
     public TipoContenedor getTipo();
-    public ArrayList<IHaba> obtenerHabas();
+    public ArrayList<IHaba> getHabas();
 }

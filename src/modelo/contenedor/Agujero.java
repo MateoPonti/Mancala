@@ -20,7 +20,4 @@ public class Agujero extends Contenedor{
 
     }
 
-    public void limpiar(){
-        getHabas().clear();
-    }
 }

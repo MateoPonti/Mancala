@@ -17,26 +17,20 @@ public class Partida {
     public Partida(ArrayList<Jugador> jugadores) {
         this.jugadores = jugadores;
         turno=jugadores.get(0);
-        tablero=new Tablero();
+        ArrayList<TableroJugador> tablerosJugadores = new ArrayList<>();
+        tablerosJugadores.add(jugadores.get(0).getTableroJugador());
+        tablerosJugadores.add(jugadores.get(1).getTableroJugador());
+        tablero= new Tablero(tablerosJugadores);
     }
 
 
-    public void hacerJugada(Posicion posicion, IJugador jugador){
+    public void hacerJugada(int posicion, IJugador jugador){
         if (turno.equals(jugador)){
-            ArrayList<TableroJugador> tablerosJugadores = new ArrayList<>();
-
-            int indiceTurno=0;
-            int indiceOponente=1;
-
-            if(jugadores.get(1).equals(jugador)){
-                indiceTurno=1;
-                indiceOponente=0;
+            if (jugadores.get(0).equals(jugador)){
+              tablero.hacerJugada(posicion,0); }
+            else {
+                tablero.hacerJugada(posicion,1);
             }
-
-            tablerosJugadores.add(jugadores.get(indiceTurno).getTableroJugador());
-            tablerosJugadores.add(jugadores.get(indiceOponente).getTableroJugador());
-
-            tablero.hacerJugada(tablerosJugadores,posicion);
 
         }
 
