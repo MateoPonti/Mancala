@@ -1,22 +1,22 @@
 package modelo.tablero;
 
-import modelo.contenedor.Contenedor;
-
 import java.util.ArrayList;
 
 public class Tablero {
-    private  Contenedor[][] tablero;
 
     public Tablero(){
-        inicializar();
+    }
+
+    public void  hacerJugada(ArrayList<TableroJugador> tableroJugadores,Posicion posicion){
+        TableroJugador tableroTurno= tableroJugadores.get(0);
+        TableroJugador tableroOponente=tableroJugadores.get(1);
+
 
     }
 
-    private void inicializar(){
-        tablero=new Contenedor[1][7];
 
 
-    }
+
 
 
 

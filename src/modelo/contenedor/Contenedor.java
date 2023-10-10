@@ -32,7 +32,7 @@ public class Contenedor implements IContenedor {
         return tipo;
     }
 
-    public ArrayList<Haba> getHabas(){
+    protected ArrayList<Haba> getHabas(){
         return habas;
     }
 
