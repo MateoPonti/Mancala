@@ -2,6 +2,7 @@ package modelo.mancala.partida;
 
 import modelo.jugador.IJugador;
 import modelo.jugador.Jugador;
+import modelo.tablero.ResultadoJugada;
 import modelo.tablero.Tablero;
 import modelo.tablero.TableroJugador;
 
@@ -24,7 +25,7 @@ public class Partida {
     }
 
 
-    public void hacerJugada(int posicion, IJugador jugador){
+    public ResultadoJugada hacerJugada(int posicion, IJugador jugador){
         if (turno.equals(jugador)){
             if (jugadores.get(0).equals(jugador)){
               tablero.hacerJugada(posicion,0); }
@@ -34,5 +35,10 @@ public class Partida {
 
         }
 
+        return null;
+    }
+
+    public Jugador getTurno() {
+        return turno;
     }
 }

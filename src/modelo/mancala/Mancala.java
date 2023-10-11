@@ -4,6 +4,7 @@ import modelo.jugador.IJugador;
 import modelo.jugador.Jugador;
 import modelo.mancala.partida.Partida;
 import modelo.tablero.Posicion;
+import modelo.tablero.ResultadoJugada;
 
 import java.util.ArrayList;
 
@@ -47,11 +48,9 @@ public class Mancala {
         return true;
     }
 
-    private void hacerJugada(Posicion pos, IJugador jugador){
+    private void hacerJugada(int pos, IJugador jugador){
 
         ResultadoJugada resultado = partida.hacerJugada(pos,jugador);
-
-        notify(resultado,partida.getTurno);
 
 
 

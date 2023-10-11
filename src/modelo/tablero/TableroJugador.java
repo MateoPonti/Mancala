@@ -4,7 +4,6 @@ import modelo.contenedor.Agujero;
 import modelo.contenedor.Contenedor;
 import modelo.contenedor.TipoContenedor;
 import modelo.contenedor.Zona;
-import modelo.haba.Haba;
 import modelo.haba.IHaba;
 
 import java.util.ArrayList;

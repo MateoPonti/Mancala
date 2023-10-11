@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo logica del tablero">
-      <change afterPath="$PROJECT_DIR$/src/modelo/tablero/ResultadoJugada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/recursos/AMARILLO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/recursos/Agujero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/recursos/ROJO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/recursos/ROSA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/recursos/Tablero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/recursos/VERDE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/recursos/Zona.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/MancalaGrafico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/PanelConImagen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VentanaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mancala.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Mancala.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/ResultadoJugada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/ResultadoJugada.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,9 +35,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -41,22 +57,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE": "ToolWindow",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE": "ToolWindow",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="modelo.jugador" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\recursos" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -74,7 +98,10 @@
       <workItem from="1696920830077" duration="25000" />
       <workItem from="1696927964315" duration="3063000" />
       <workItem from="1696966301150" duration="3039000" />
-      <workItem from="1696970133059" duration="2750000" />
+      <workItem from="1696970133059" duration="2825000" />
+      <workItem from="1696980598371" duration="4906000" />
+      <workItem from="1696985618632" duration="2037000" />
+      <workItem from="1696996012449" duration="11028000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -116,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696971203697</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Haciendo logica del tablero">
+      <option name="closed" value="true" />
+      <created>1696972956798</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696972956798</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
