@@ -9,10 +9,14 @@ import java.io.IOException;
 
 public class PanelConImagen extends JPanel {
     private BufferedImage imagenDeFondo;
+    private int newWidth;
+    private int newHeight;
 
-    public PanelConImagen(String rutaImagen) {
+    public PanelConImagen(String rutaImagen,int w,int h) {
         try {
             imagenDeFondo = ImageIO.read(new File(rutaImagen));
+            this.newHeight=h;
+            this.newWidth=w;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -22,6 +26,16 @@ public class PanelConImagen extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         if (imagenDeFondo != null) {
-            g.drawImage(imagenDeFondo, 0, 0, getWidth(), getHeight(), this);
+
+            BufferedImage scaledImage = new BufferedImage(newWidth, newHeight, BufferedImage.TYPE_INT_ARGB);
+            Graphics2D g2d = scaledImage.createGraphics();
+
+            // Ajusta la escala de la imagen
+            g2d.drawImage(imagenDeFondo, 0, 0, newWidth, newHeight, null);
+
+            g2d.dispose();
+
+            // Dibuja la imagen escalada
+            g.drawImage(scaledImage, 0, 0, this);
         }
     }}

@@ -7,4 +7,6 @@ import java.util.ArrayList;
 public interface IContenedor {
     public TipoContenedor getTipo();
     public ArrayList<IHaba> getHabas();
+
+    public int getCantidad();
 }

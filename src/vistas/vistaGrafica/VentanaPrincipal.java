@@ -14,7 +14,6 @@ public class VentanaPrincipal {
 
     public VentanaPrincipal() {
         ventanaJuego=new MancalaGrafico();
-        ventanaLogin= new Login();
     }
 
 

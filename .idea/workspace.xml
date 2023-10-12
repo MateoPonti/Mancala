@@ -4,27 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo logica del tablero">
-      <change afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/recursos/AMARILLO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/recursos/Agujero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/recursos/ROJO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/recursos/ROSA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/recursos/Tablero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/recursos/VERDE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/recursos/Zona.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/MancalaGrafico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/PanelConImagen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VentanaPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo grafica">
+      <change afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mancala.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Mancala.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/ResultadoJugada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/ResultadoJugada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/contenedor/IContenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/contenedor/IContenedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recursos/Tablero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/MancalaGrafico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/MancalaGrafico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/PanelConImagen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/PanelConImagen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VentanaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VentanaPrincipal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +35,7 @@
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: -1
+  &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2WXtV5D2ODgUUlq75cIWfWlI0yW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -57,24 +46,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE": "ToolWindow",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE": "ToolWindow",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE&quot;: &quot;ToolWindow&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;ToolWindow&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="modelo.jugador" />
@@ -101,7 +90,15 @@
       <workItem from="1696970133059" duration="2825000" />
       <workItem from="1696980598371" duration="4906000" />
       <workItem from="1696985618632" duration="2037000" />
-      <workItem from="1696996012449" duration="11028000" />
+      <workItem from="1696996012449" duration="11078000" />
+      <workItem from="1697022251155" duration="727000" />
+      <workItem from="1697052195235" duration="3949000" />
+      <workItem from="1697058719416" duration="3514000" />
+      <workItem from="1697089913511" duration="4424000" />
+      <workItem from="1697098830849" duration="203000" />
+      <workItem from="1697140838791" duration="65000" />
+      <workItem from="1697143394878" duration="2142000" />
+      <workItem from="1697146313475" duration="8156000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -151,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696972956798</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Haciendo grafica">
+      <option name="closed" value="true" />
+      <created>1697007210301</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697007210301</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +178,7 @@
     <MESSAGE value="Creacion de contenedor para hacer el Tablero" />
     <MESSAGE value="creando tablero , posicion , partida , nuevo concepto un tablero tiene administra los tableros de los jugadores , un jugador tiene un tablero" />
     <MESSAGE value="Haciendo logica del tablero" />
-    <option name="LAST_COMMIT_MESSAGE" value="Haciendo logica del tablero" />
+    <MESSAGE value="Haciendo grafica" />
+    <option name="LAST_COMMIT_MESSAGE" value="Haciendo grafica" />
   </component>
 </project>

@@ -15,7 +15,7 @@ public class MancalaGrafico {
 
     private JPanel principal;
 
-    private PanelConImagen tablero;
+    private JPanel tablero;
 
     private JPanel agujeros;
 
@@ -31,15 +31,16 @@ public class MancalaGrafico {
     private void inicializarVentana() {
         frame=new JFrame("Mancala");
         principal= (JPanel) frame.getContentPane();
+        principal.setLayout(new BorderLayout());
 
-        frame.setSize(1200,600);
+        frame.setSize(1600,800);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         agujeros=new JPanel();
         zonaOponente=new JPanel();
         zonaTurno=new JPanel();
-        tablero=new PanelConImagen("src/recursos/Tablero.png");
+        tablero = new JPanel();
 
 
         ArrayList<IContenedor> zonas= new ArrayList<>();
@@ -59,10 +60,11 @@ public class MancalaGrafico {
 
         principal.removeAll();
 
+        principal.setBackground(Color.GREEN);
 
-        tablero=new PanelConImagen("src/recursos/Tablero.png");
 
-        agujeros.setLayout(new GridLayout(2,6));
+        agujeros.setLayout(new GridBagLayout());
+
         tablero.setLayout(new BorderLayout());
 
         JLabel habaUno;
@@ -74,40 +76,71 @@ public class MancalaGrafico {
 
         PanelConImagen panelAgujero = null;
 
-        
+        int i=0;
+        int j=0;
 
-        for (int i = 0; i <agujerosCont.size(); i++) {
-            panelAgujero= new PanelConImagen("src/recursos/Agujero.png");
-            panelAgujero.setPreferredSize(new Dimension(60,60));
+        for (int c = 0; c < agujerosCont.size(); c++) {
+            if (c == 6) {
+                i++;
+                j = 0;
+            }
 
-            habaUno= new JLabel();
-            habaDos= new JLabel();
-            habaTres= new JLabel();
-            habaCuatro= new JLabel();
+            panelAgujero = new PanelConImagen("src/recursos/Agujero.png", 500, 300);
+            panelAgujero.setLayout(new GridBagLayout());
+
+            habaUno = new JLabel();
+            habaDos = new JLabel();
+            habaTres = new JLabel();
+            habaCuatro = new JLabel();
 
             habaUno.setIcon(new ImageIcon("src/recursos/AMARILLO.png"));
             habaDos.setIcon(new ImageIcon("src/recursos/AMARILLO.png"));
             habaTres.setIcon(new ImageIcon("src/recursos/AMARILLO.png"));
             habaCuatro.setIcon(new ImageIcon("src/recursos/AMARILLO.png"));
 
+            panelAgujero.add(habaUno, new GridBagConstraints());
+            panelAgujero.add(habaDos, new GridBagConstraints());
+            panelAgujero.add(habaTres, new GridBagConstraints());
+            panelAgujero.add(habaCuatro, new GridBagConstraints());
 
-            panelAgujero.add(habaUno);
-            panelAgujero.add(habaDos);
-            panelAgujero.add(habaTres);
-            panelAgujero.add(habaCuatro);
+            GridBagConstraints gbc = new GridBagConstraints();
+            gbc.gridx = j;
+            gbc.gridy = i;
+            gbc.weightx = 1;
+            gbc.weighty = 1;
+            gbc.insets = new Insets(0, 0, 0, 0);
 
-
-            agujeros.add(panelAgujero);
-
+            agujeros.add(panelAgujero, gbc);
+            j++;
         }
+
+
+        PanelConImagen zonaTurno = new PanelConImagen("src/recursos/Zona.png",200,200);
+        PanelConImagen zonaOponente = new PanelConImagen("src/recursos/Zona.png",200,200);
+
+
+        zonaTurno.setOpaque(false);
+        zonaOponente.setOpaque(false);
+
+
+        principal.add(zonaTurno,BorderLayout.WEST);
+        principal.add(zonaOponente,BorderLayout.EAST);
+
+
+
+
+        tablero.setOpaque(false);
+        agujeros.setOpaque(false);
+
+
+        tablero.setSize(new Dimension(600,600));
+
         tablero.add(agujeros,BorderLayout.CENTER);
-
-
         principal.add(tablero,BorderLayout.CENTER);
-
 
         principal.revalidate();
         principal.repaint();
+
 
 
 
