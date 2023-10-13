@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo grafica">
-      <change afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="intentando ahcer vistaConsola">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/contenedor/IContenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/contenedor/IContenedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/recursos/Tablero.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/MancalaGrafico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/MancalaGrafico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/PanelConImagen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/PanelConImagen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VentanaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VentanaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +91,7 @@
       <workItem from="1697098830849" duration="203000" />
       <workItem from="1697140838791" duration="65000" />
       <workItem from="1697143394878" duration="2142000" />
-      <workItem from="1697146313475" duration="8156000" />
+      <workItem from="1697146313475" duration="10422000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -156,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697007210301</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="intentando ahcer vistaConsola">
+      <option name="closed" value="true" />
+      <created>1697154842524</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697154842524</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +180,7 @@
     <MESSAGE value="creando tablero , posicion , partida , nuevo concepto un tablero tiene administra los tableros de los jugadores , un jugador tiene un tablero" />
     <MESSAGE value="Haciendo logica del tablero" />
     <MESSAGE value="Haciendo grafica" />
-    <option name="LAST_COMMIT_MESSAGE" value="Haciendo grafica" />
+    <MESSAGE value="intentando ahcer vistaConsola" />
+    <option name="LAST_COMMIT_MESSAGE" value="intentando ahcer vistaConsola" />
   </component>
 </project>

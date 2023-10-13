@@ -2,6 +2,7 @@ package vistas.vistaConsola.swing;
 
 import modelo.contenedor.Agujero;
 import modelo.contenedor.IContenedor;
+import modelo.contenedor.Zona;
 
 import javax.swing.*;
 import java.awt.*;
@@ -38,6 +39,9 @@ public class VistaConsolaSwing {
             agujeros.add(new Agujero());
         }
 
+        zonas.add(new Zona());
+        zonas.add(new Zona());
+
         mostrarTablero(agujeros,zonas);
     }
 
@@ -45,7 +49,7 @@ public class VistaConsolaSwing {
     public void mostrarTablero(ArrayList<IContenedor> agujerosCont, ArrayList<IContenedor> zonas){
 
         principal.removeAll();
-        principal.setBackground(Color.GREEN);
+        principal.setBackground(Color.decode("#3b1b0f"));
 
 
 
@@ -68,17 +72,44 @@ public class VistaConsolaSwing {
                 j+=tam;
                 c=0;
             }
-            JLabel l=  new JLabel("<html>" + formatAsciiArt(agujerosCont.get(i).getCantidad()) + "</html>");
+            JLabel l=  new JLabel("<html>" + hacerAgujero(agujerosCont.get(i).getCantidad()) + "</html>");
             int x = ((panelWidth - labelWidth) / 4 )+c;
             l.setSize(labelWidth,labelHeight);
             int y = ((panelHeight - labelHeight) / 2)-j;
             l.setBounds(x, y, labelWidth, labelHeight);
-            principal.add(l);
+
 
             tam= l.getHeight();
             c+=l.getWidth();
 
+            principal.add(l);
+
         }
+
+        JLabel zonaTurno =  new JLabel("<html>" + hacerZona(zonas.get(0).getCantidad()) + "</html>");
+        JLabel zonaOponente= new JLabel("<html>" + hacerZona(zonas.get(1).getCantidad()) + "</html>");
+
+        zonaOponente.setSize(300,300);
+        zonaTurno.setSize(300,300);
+
+
+        int x = zonaOponente.getWidth()/2;
+        int y = ((panelHeight - zonaOponente.getHeight()) / 2)-50;
+
+        zonaOponente.setBounds(x, y, zonaOponente.getWidth(), zonaOponente.getHeight());
+
+
+        x=principal.getWidth()-(zonaTurno.getWidth());
+
+        zonaTurno.setBounds(x,y,zonaTurno.getWidth(),zonaTurno.getHeight());
+
+
+        principal.add(zonaOponente);
+        principal.add(zonaTurno);
+
+
+
+
         principal.revalidate();
         principal.repaint();
 
@@ -86,10 +117,17 @@ public class VistaConsolaSwing {
 
     }
 
-    private String formatAsciiArt(int cantidad) {
+    private String hacerAgujero(int cantidad) {
         // Define tu arte ASCII para diferentes cantidades con saltos de línea HTML
         String formattedAsciiArt = "<pre>";
         switch (cantidad) {
+            case 0:
+                formattedAsciiArt += "┏━━━━━━━━━━┑<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┗━━━━━━━━━━┛";
+                break;
             case 1:
                 formattedAsciiArt += "┏━━━━━━━━━━┑<br>";
                 formattedAsciiArt += "┃          ┃<br>";
@@ -133,6 +171,112 @@ public class VistaConsolaSwing {
         return formattedAsciiArt;
     }
 
+
+    private String hacerZona(int cantidad) {
+        // Define tu arte ASCII para diferentes cantidades con saltos de línea HTML
+        String formattedAsciiArt = "<pre>";
+        switch (cantidad) {
+            case 0:
+                formattedAsciiArt += "┏━━━━━━━━━━┑<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┗━━━━━━━━━━┛";
+                break;
+
+            case 1:
+                formattedAsciiArt += "┏━━━━━━━━━━┑<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃    ⚫   ▕<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┗━━━━━━━━━━┛";
+                break;
+            case 2:
+                formattedAsciiArt += "┏━━━━━━━━━━┑<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃  ⚫  ⚫ ▕<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┗━━━━━━━━━━┛";
+                break;
+            case 3:
+                formattedAsciiArt += "┏━━━━━━━━━━┑<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃  ⚫ ⚫  ▕<br>";
+                formattedAsciiArt += "┃    ⚫    ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┗━━━━━━━━━━┛";
+                break;
+            case 4:
+                formattedAsciiArt += "┏━━━━━━━━━━━┑<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃ ⚫    ⚫ ▕<br>";
+                formattedAsciiArt += "┃         ▕<br>";
+                formattedAsciiArt += "┃ ⚫    ⚫ ▕<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┗━━━━━━━━━━━┛";
+                break;
+            default:
+                formattedAsciiArt += "┏━━━━━━━━━━┑<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃     ⚫   ┃<br>";
+                formattedAsciiArt += "┃   ⚫⚫⚫▕<br>";
+                formattedAsciiArt += "┃     ⚫   ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┃          ┃<br>";
+                formattedAsciiArt += "┗━━━━━━━━━━┛";
+                break;
+        }
+        formattedAsciiArt += "("+String.valueOf(cantidad)+")";
+        formattedAsciiArt += "</pre>";
+        return formattedAsciiArt;
+    }
 
 
 }
