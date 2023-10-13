@@ -51,9 +51,6 @@ public class VistaConsolaSwing {
         principal.removeAll();
         principal.setBackground(Color.decode("#3b1b0f"));
 
-
-
-
         int panelWidth = principal.getWidth();
         int panelHeight = principal.getHeight();
 
@@ -61,7 +58,6 @@ public class VistaConsolaSwing {
         int j = 0;
 
         principal.setLayout(null);
-
 
         int tam= 0;
         int labelWidth = 100;
@@ -98,7 +94,6 @@ public class VistaConsolaSwing {
 
         zonaOponente.setBounds(x, y, zonaOponente.getWidth(), zonaOponente.getHeight());
 
-
         x=principal.getWidth()-(zonaTurno.getWidth());
 
         zonaTurno.setBounds(x,y,zonaTurno.getWidth(),zonaTurno.getHeight());
@@ -107,13 +102,8 @@ public class VistaConsolaSwing {
         principal.add(zonaOponente);
         principal.add(zonaTurno);
 
-
-
-
         principal.revalidate();
         principal.repaint();
-
-
 
     }
 
@@ -160,9 +150,9 @@ public class VistaConsolaSwing {
                 break;
             default:
                 formattedAsciiArt += "┏━━━━━━━━━━┑<br>";
-                formattedAsciiArt += "┃     ⚫   ┃<br>";
-                formattedAsciiArt += "┃   ⚫⚫⚫▕<br>";
-                formattedAsciiArt += "┃     ⚫   ┃<br>";
+                formattedAsciiArt += "┃    ⚫    ┃<br>";
+                formattedAsciiArt += "┃  ⚫⚫⚫ ▕<br>";
+                formattedAsciiArt += "┃    ⚫    ┃<br>";
                 formattedAsciiArt += "┗━━━━━━━━━━┛";
                 break;
         }
@@ -262,9 +252,9 @@ public class VistaConsolaSwing {
                 formattedAsciiArt += "┃          ┃<br>";
                 formattedAsciiArt += "┃          ┃<br>";
                 formattedAsciiArt += "┃          ┃<br>";
-                formattedAsciiArt += "┃     ⚫   ┃<br>";
-                formattedAsciiArt += "┃   ⚫⚫⚫▕<br>";
-                formattedAsciiArt += "┃     ⚫   ┃<br>";
+                formattedAsciiArt += "┃    ⚫    ┃<br>";
+                formattedAsciiArt += "┃  ⚫⚫⚫ ▕<br>";
+                formattedAsciiArt += "┃    ⚫    ┃<br>";
                 formattedAsciiArt += "┃          ┃<br>";
                 formattedAsciiArt += "┃          ┃<br>";
                 formattedAsciiArt += "┃          ┃<br>";
