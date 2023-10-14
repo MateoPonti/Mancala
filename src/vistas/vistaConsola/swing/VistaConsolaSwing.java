@@ -1,49 +1,88 @@
 package vistas.vistaConsola.swing;
 
+import controlador.Controlador;
 import modelo.contenedor.Agujero;
 import modelo.contenedor.IContenedor;
 import modelo.contenedor.Zona;
+import vistas.IVista;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class VistaConsolaSwing {
+public class VistaConsolaSwing implements IVista {
     private JFrame frame;
     private JPanel principal;
 
+    private Controlador controlador;
 
 
-
-
-    public VistaConsolaSwing(){
-        inicializarVentana();
+    public VistaConsolaSwing() {
     }
 
-    private void inicializarVentana() {
+    public void inicializar() {
         frame=new JFrame("Mancala");
-        principal= (JPanel) frame.getContentPane();
-
-        frame.setSize(1200,700);
-        frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pedirNombre();
+    }
+
+    private void pedirNombre() {
+        frame.setSize(500,200);
+        frame.setVisible(true);
+        principal= (JPanel) frame.getContentPane();
+        principal.setLayout(null);
+
+        JButton enviaBut= new JButton("Enviar");
+
+        enviaBut.setSize(200,20);
+        enviaBut.setBounds(150,100,enviaBut.getWidth(),enviaBut.getHeight());
 
 
+        principal.setBackground(Color.lightGray);
+        JTextField ingresoNombre = new JTextField();
+        ingresoNombre.setText("NOMBRE");
+        ingresoNombre.setSize(100,20);
+        ingresoNombre.setBounds(50,100,ingresoNombre.getWidth(),ingresoNombre.getHeight());
 
-        ArrayList<IContenedor> zonas= new ArrayList<>();
 
-        ArrayList<IContenedor> agujeros= new ArrayList<>();
+        enviaBut.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                controlador.conectarUsuario(getNombre(ingresoNombre));
+                enviaBut.setVisible(false);
+            }
+        });
+
+        principal.add(ingresoNombre);
+        principal.add(enviaBut);
+
+        principal.revalidate();
+        principal.repaint();
 
 
-        for(int i =0 ; i<12; i++){
-            agujeros.add(new Agujero());
+    }
+
+    private String getNombre(JTextField j){
+        String texto=j.getText();
+        switch (texto){
+            case "":
+                return "Jugador Anonimo";
+            default:
+                return texto;
         }
 
-        zonas.add(new Zona());
-        zonas.add(new Zona());
-
-        mostrarTablero(agujeros,zonas);
     }
+
+
+    public void pedirJugada(){
+
+
+
+
+
+    }
+
 
 
     public void mostrarTablero(ArrayList<IContenedor> agujerosCont, ArrayList<IContenedor> zonas){
@@ -57,7 +96,6 @@ public class VistaConsolaSwing {
         int c = 0 ;
         int j = 0;
 
-        principal.setLayout(null);
 
         int tam= 0;
         int labelWidth = 100;
@@ -106,7 +144,6 @@ public class VistaConsolaSwing {
         principal.repaint();
 
     }
-
     private String hacerAgujero(int cantidad) {
         // Define tu arte ASCII para diferentes cantidades con saltos de línea HTML
         String formattedAsciiArt = "<pre>";
@@ -160,7 +197,6 @@ public class VistaConsolaSwing {
         formattedAsciiArt += "</pre>";
         return formattedAsciiArt;
     }
-
 
     private String hacerZona(int cantidad) {
         // Define tu arte ASCII para diferentes cantidades con saltos de línea HTML
@@ -269,4 +305,8 @@ public class VistaConsolaSwing {
     }
 
 
+    @Override
+    public void setControlador(Controlador c) {
+        this.controlador=c;
+    }
 }

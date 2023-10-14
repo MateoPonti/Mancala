@@ -15,6 +15,8 @@ public class Partida {
 
     private Tablero tablero;
 
+    private EstadoPartida estado;
+
     public Partida(ArrayList<Jugador> jugadores) {
         this.jugadores = jugadores;
         turno=jugadores.get(0);
@@ -22,6 +24,8 @@ public class Partida {
         tablerosJugadores.add(jugadores.get(0).getTableroJugador());
         tablerosJugadores.add(jugadores.get(1).getTableroJugador());
         tablero= new Tablero(tablerosJugadores);
+        estado=EstadoPartida.EnJuego;
+
     }
 
 
@@ -41,4 +45,8 @@ public class Partida {
     public Jugador getTurno() {
         return turno;
     }
+
+
+
+    
 }

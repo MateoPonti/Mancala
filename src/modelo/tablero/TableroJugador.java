@@ -24,7 +24,7 @@ public class TableroJugador {
     }
 
     private void inicializar(){
-        tablero=new Contenedor[cantidadAgujeros];
+        tablero=new Contenedor[cantidadAgujeros+1];
         for(int i=0;i<cantidadAgujeros-1;i++){
             tablero[i]=new Agujero();
         }
