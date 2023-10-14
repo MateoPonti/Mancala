@@ -31,15 +31,17 @@ public class Partida {
 
     public ResultadoJugada hacerJugada(int posicion, IJugador jugador){
         if (turno.equals(jugador)){
-            if (jugadores.get(0).equals(jugador)){
-              tablero.hacerJugada(posicion,0); }
-            else {
-                tablero.hacerJugada(posicion,1);
-            }
+           Jugador j=jugadores.get(determinarJugador(jugador));
+           hacerJugada(posicion,j);
 
         }
 
         return null;
+    }
+
+    private int determinarJugador(IJugador jugador){
+        if (jugadores.get(0).equals(jugador)){ return 0;}
+          return 1;
     }
 
     public Jugador getTurno() {

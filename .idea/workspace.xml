@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="creando Observadores">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="actualizar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/Posicion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +92,8 @@
       <workItem from="1697140838791" duration="65000" />
       <workItem from="1697143394878" duration="2142000" />
       <workItem from="1697146313475" duration="15663000" />
-      <workItem from="1697312016756" duration="2901000" />
+      <workItem from="1697312016756" duration="2943000" />
+      <workItem from="1697318322773" duration="194000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -183,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697314121962</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="actualizar">
+      <option name="closed" value="true" />
+      <created>1697317943429</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1697317943429</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +217,7 @@
     <MESSAGE value="intentando ahcer vistaConsola" />
     <MESSAGE value="consola Visual swing" />
     <MESSAGE value="creando Observadores" />
-    <option name="LAST_COMMIT_MESSAGE" value="creando Observadores" />
+    <MESSAGE value="actualizar" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizar" />
   </component>
 </project>
