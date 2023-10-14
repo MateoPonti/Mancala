@@ -6,6 +6,7 @@ import controlador.Observador;
 import modelo.jugador.IJugador;
 import modelo.jugador.Jugador;
 import modelo.mancala.partida.Partida;
+import modelo.tablero.Posicion;
 import modelo.tablero.ResultadoJugada;
 
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ public class Mancala extends Observador {
 
 
 
-    public void inicialiarPartida(IJugador jugador) {
+    public void inicializarPartida(IJugador jugador) {
         preparados.add(jugador);
         if (isPreparados()){
             inicializarPartida();
@@ -71,16 +72,16 @@ public class Mancala extends Observador {
 
 
 
+    private boolean hacerJugada(char pos, IJugador jugador){
+        return  hacerJugada(Posicion.CalcularInt(pos), jugador);
+    }
 
 
 
-    private void hacerJugada(int pos, IJugador jugador){
-
+    private boolean hacerJugada(int pos, IJugador jugador){
+        if (Posicion.validarPosicion(pos)){return false;}
         ResultadoJugada resultado = partida.hacerJugada(pos,jugador);
-
-
-
-
+        return true;
     }
 
 

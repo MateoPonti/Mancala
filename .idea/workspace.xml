@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="consola Visual swing">
-      <change afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controlador/Notificacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controlador/Observable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controlador/Observador.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="creando Observadores">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/partida/EstadoPartida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/partida/EstadoPartida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/Posicion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +93,7 @@
       <workItem from="1697140838791" duration="65000" />
       <workItem from="1697143394878" duration="2142000" />
       <workItem from="1697146313475" duration="15663000" />
-      <workItem from="1697312016756" duration="1912000" />
+      <workItem from="1697312016756" duration="2901000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -184,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697157047231</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="creando Observadores">
+      <option name="closed" value="true" />
+      <created>1697314121962</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1697314121962</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +208,7 @@
     <MESSAGE value="Haciendo grafica" />
     <MESSAGE value="intentando ahcer vistaConsola" />
     <MESSAGE value="consola Visual swing" />
-    <option name="LAST_COMMIT_MESSAGE" value="consola Visual swing" />
+    <MESSAGE value="creando Observadores" />
+    <option name="LAST_COMMIT_MESSAGE" value="creando Observadores" />
   </component>
 </project>
