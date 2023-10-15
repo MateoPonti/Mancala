@@ -1,6 +1,8 @@
 package modelo.tablero;
 
+import modelo.contenedor.IContenedor;
 import modelo.haba.IHaba;
+import modelo.jugador.IJugador;
 
 import java.util.ArrayList;
 
@@ -55,4 +57,16 @@ public class Tablero {
     }
 
 
+    public ArrayList<IContenedor> getTableros(boolean esPrimerJugador) {
+        ArrayList<IContenedor> jugador0= tableroJugadores.get(0).getTablero();
+        ArrayList<IContenedor> jugador1= tableroJugadores.get(1).getTablero();
+        if (esPrimerJugador){
+            jugador1.addAll(jugador0);
+            return jugador1;
+
+        }
+        jugador0.addAll(jugador1);
+        return jugador0;
+
+    }
 }

@@ -3,11 +3,13 @@ package modelo.mancala;
 import controlador.Notificacion;
 import controlador.Observable;
 import controlador.Observador;
+import modelo.contenedor.IContenedor;
 import modelo.jugador.IJugador;
 import modelo.jugador.Jugador;
 import modelo.mancala.partida.Partida;
 import modelo.tablero.Posicion;
 import modelo.tablero.ResultadoJugada;
+import modelo.tablero.Tablero;
 
 import java.util.ArrayList;
 
@@ -49,6 +51,8 @@ public class Mancala extends Observador {
         preparados.add(jugador);
         if (isPreparados()){
             inicializarPartida();
+            preparados=null;
+            actualizar(Notificacion.MOSTRARTABLEROS);
         }
     }
 
@@ -85,6 +89,11 @@ public class Mancala extends Observador {
         actualizar(resultado);
     }
 
+
+    public ArrayList<IContenedor> getTableros(IJugador jugador) {
+        if (partida!=null && !partida.isFinalizado())  {return partida.getTableros(jugador); }
+        return null;
+    }
 
 
 }

@@ -1,6 +1,7 @@
 package modelo.mancala.partida;
 
 import controlador.Notificacion;
+import modelo.contenedor.IContenedor;
 import modelo.jugador.IJugador;
 import modelo.jugador.Jugador;
 import modelo.tablero.ResultadoJugada;
@@ -35,7 +36,9 @@ public class Partida {
            int j=determinarJugador();
            ResultadoJugada resultado= tablero.hacerJugada(posicion,j);
            if (resultado!=ResultadoJugada.OtroTurno){turnoSiguiente();}
-           if (resultado==ResultadoJugada.Victoria){return Notificacion.FINALIZOJUEGO;}
+           if (resultado==ResultadoJugada.Victoria){
+               estado=EstadoPartida.Finalizado;
+               return Notificacion.FINALIZOJUEGO;}
            return Notificacion.JUEGATURNO;
         }
 
@@ -65,7 +68,17 @@ public class Partida {
         return  getTurno().equals(jugador);
     }
 
+    public boolean isFinalizado(){
+        return estado==EstadoPartida.Finalizado;
+    }
 
 
-    
+    public ArrayList<IContenedor> getTableros(IJugador jugador) {
+        if (jugadores.get(0)==jugador){
+          return tablero.getTableros(true);
+        }
+        return tablero.getTableros(false);
+
+    }
+
 }

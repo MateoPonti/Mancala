@@ -4,9 +4,9 @@ import modelo.jugador.IJugador;
 import modelo.mancala.Mancala;
 import vistas.IVista;
 
-import java.util.Observable;
+import java.util.Objects;
 
-public class Controlador implements controlador.Observable {
+public class Controlador implements Observable {
 
     private IVista vista;
     private IJugador jugador;
@@ -33,17 +33,10 @@ public class Controlador implements controlador.Observable {
     }
 
 
-
-
-
-
-
-
-
-
-
     @Override
     public void actualizar(Notificacion n) {
-
+        if (Objects.requireNonNull( n) == Notificacion.MOSTRARTABLEROS) {
+            vista.mostrarTablero(modelo.getTableros(this.jugador));
+        }
     }
 }

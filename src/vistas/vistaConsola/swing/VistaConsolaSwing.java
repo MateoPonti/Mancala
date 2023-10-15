@@ -85,7 +85,11 @@ public class VistaConsolaSwing implements IVista {
 
 
 
-    public void mostrarTablero(ArrayList<IContenedor> agujerosCont, ArrayList<IContenedor> zonas){
+    public void mostrarTablero(ArrayList<IContenedor> tablero){
+
+        ArrayList<IContenedor> zonas= new ArrayList<>();
+        zonas.add(tablero.get(tablero.size()-2));
+        zonas.add(tablero.get(tablero.size()-1));
 
         principal.removeAll();
         principal.setBackground(Color.decode("#3b1b0f"));
@@ -101,12 +105,12 @@ public class VistaConsolaSwing implements IVista {
         int labelWidth = 100;
         int labelHeight = 100;
 
-        for (int i=0; i < agujerosCont.size(); i++) {
+        for (int i=0; i < tablero.size()-2; i++) {
             if (i==6){
                 j+=tam;
                 c=0;
             }
-            JLabel l=  new JLabel("<html>" + hacerAgujero(agujerosCont.get(i).getCantidad()) + "</html>");
+            JLabel l=  new JLabel("<html>" + hacerAgujero(tablero.get(i).getCantidad()) + "</html>");
             int x = ((panelWidth - labelWidth) / 4 )+c;
             l.setSize(labelWidth,labelHeight);
             int y = ((panelHeight - labelHeight) / 2)-j;
