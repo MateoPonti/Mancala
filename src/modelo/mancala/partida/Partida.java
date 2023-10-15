@@ -73,11 +73,19 @@ public class Partida {
     }
 
 
-    public ArrayList<IContenedor> getTableros(IJugador jugador) {
+    public ArrayList<IContenedor> getTableroJugador(IJugador jugador) {
         if (jugadores.get(0)==jugador){
-          return tablero.getTableros(true);
+          return tablero.getTablero(0);
         }
-        return tablero.getTableros(false);
+        return tablero.getTablero(1);
+
+    }
+
+    public ArrayList<IContenedor> getTableroOponente(IJugador jugador) {
+        if (jugadores.get(0)==jugador){
+            return tablero.getTablero(1);
+        }
+        return tablero.getTablero(0);
 
     }
 

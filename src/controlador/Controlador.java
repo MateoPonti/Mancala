@@ -12,8 +12,9 @@ public class Controlador implements Observable {
     private IJugador jugador;
     private Mancala modelo;
 
-    public Controlador(Mancala modelo) {
+    public Controlador(IVista vista,Mancala modelo) {
         setModelo(modelo);
+        setVista(vista);
     }
     private void setModelo(Mancala modelo) {
         this.modelo=modelo;
@@ -30,13 +31,14 @@ public class Controlador implements Observable {
 
     public void setVista(IVista vista) {
         this.vista=vista;
+        vista.setControlador(this);
     }
 
 
     @Override
     public void actualizar(Notificacion n) {
         if (Objects.requireNonNull( n) == Notificacion.MOSTRARTABLEROS) {
-            vista.mostrarTablero(modelo.getTableros(this.jugador));
+            vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador));
         }
     }
 }

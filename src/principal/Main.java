@@ -9,14 +9,12 @@ import vistas.vistaConsola.swing.VistaConsolaSwing;
 public class Main {
     public static void main(String[] args) {
         Mancala modelo= new Mancala();
-        Controlador controlador1 = new Controlador(modelo);
         IVista vista = new VistaConsolaSwing();
-        vista.setControlador(controlador1);
-
-        Controlador controlador2 = new Controlador(modelo);
+        Controlador controlador1 = new Controlador(vista,modelo);
 
         IVista vista2 = new VistaConsolaSwing();
-        vista2.setControlador(controlador2);
+        Controlador controlador2 = new Controlador(vista2,modelo);
+
 
         vista.inicializar();
         vista2.inicializar();

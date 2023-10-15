@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="haciendo inicializar y Partida , arreglando buggs">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo Pruebas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Notificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Notificacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
     </list>
@@ -102,7 +102,7 @@
       <workItem from="1697312016756" duration="2943000" />
       <workItem from="1697318322773" duration="405000" />
       <workItem from="1697334139744" duration="1890000" />
-      <workItem from="1697344318813" duration="6116000" />
+      <workItem from="1697344318813" duration="7743000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -232,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697348273424</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Haciendo Pruebas">
+      <option name="closed" value="true" />
+      <created>1697350868890</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697350868890</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +269,7 @@
     <MESSAGE value="actualizar" />
     <MESSAGE value="funcinoes partida" />
     <MESSAGE value="haciendo inicializar y Partida , arreglando buggs" />
-    <option name="LAST_COMMIT_MESSAGE" value="haciendo inicializar y Partida , arreglando buggs" />
+    <MESSAGE value="Haciendo Pruebas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Haciendo Pruebas" />
   </component>
 </project>

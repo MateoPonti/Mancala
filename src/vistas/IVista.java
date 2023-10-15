@@ -9,5 +9,5 @@ public interface IVista {
     public void setControlador(Controlador c);
     public void inicializar();
 
-    public void mostrarTablero(ArrayList<IContenedor> tablero);
+    public void mostrarTablero(ArrayList<IContenedor> tableroJugador,ArrayList<IContenedor> tableroOponente);
 }

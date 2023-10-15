@@ -23,13 +23,12 @@ public class TableroJugador {
     }
 
     public ArrayList<IContenedor> getTablero() {
-        ArrayList<IContenedor> tablero = new ArrayList<>(this.tablero);
-        return tablero;
+        return new ArrayList<>(this.tablero);
     }
 
     private void inicializar(){
         tablero=new ArrayList<>();
-        for(int i=0;i<cantidadAgujeros-1;i++){
+        for(int i=0;i<cantidadAgujeros;i++){
             tablero.add(new Agujero());
         }
         tablero.add(new Zona());
