@@ -4,6 +4,7 @@ import modelo.contenedor.Agujero;
 import modelo.contenedor.Contenedor;
 import modelo.contenedor.TipoContenedor;
 import modelo.contenedor.Zona;
+import modelo.haba.Haba;
 import modelo.haba.IHaba;
 
 import java.util.ArrayList;
@@ -93,5 +94,15 @@ public class TableroJugador {
             i++;
         }
         return noHayHabas;
+    }
+
+    public void sumarHabasRestante(){
+        ArrayList<IHaba> habas= new ArrayList<>();
+        int i=0;
+        while (i<cantidadAgujeros){
+            habas.addAll(tablero[i].sacarHabas());
+            i++;
+        }
+        tablero[cantidadAgujeros].agregar(habas);
     }
 }

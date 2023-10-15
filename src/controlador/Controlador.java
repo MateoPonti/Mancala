@@ -17,7 +17,7 @@ public class Controlador implements controlador.Observable {
     }
     private void setModelo(Mancala modelo) {
         this.modelo=modelo;
-        this.modelo.addObserver(this);
+        this.modelo.agregar(this);
     }
 
 

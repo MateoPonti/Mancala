@@ -1,5 +1,6 @@
 package modelo.mancala.partida;
 
+import controlador.Notificacion;
 import modelo.jugador.IJugador;
 import modelo.jugador.Jugador;
 import modelo.tablero.ResultadoJugada;
@@ -29,18 +30,31 @@ public class Partida {
     }
 
 
-    public ResultadoJugada hacerJugada(int posicion, IJugador jugador){
+    public Notificacion hacerJugada(int posicion, IJugador jugador){
         if (isTurno(jugador)){
-           Jugador j=jugadores.get(determinarJugador(jugador));
-           hacerJugada(posicion,j);
-
+           int j=determinarJugador();
+           ResultadoJugada resultado= tablero.hacerJugada(posicion,j);
+           if (resultado!=ResultadoJugada.OtroTurno){turnoSiguiente();}
+           if (resultado==ResultadoJugada.Victoria){return Notificacion.FINALIZOJUEGO;}
+           return Notificacion.JUEGATURNO;
         }
 
         return null;
     }
 
-    private int determinarJugador(IJugador jugador){
-        if (jugadores.get(0).equals(jugador)){ return 0;}
+    private void turnoSiguiente() {
+        int posicionActual=0;
+        if(jugadores.get(1).equals(turno)) {posicionActual=1;}
+        try{
+            turno=jugadores.get(posicionActual+1);
+        }
+        catch (Exception e){
+            turno=jugadores.get(0);
+        }
+    }
+
+    private int determinarJugador(){
+        if (jugadores.get(0).equals(turno)){ return 0;}
           return 1;
     }
 

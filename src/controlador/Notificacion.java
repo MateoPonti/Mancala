@@ -1,6 +1,8 @@
 package controlador;
 
 public enum Notificacion {
-    INICIARPARTIDA;
+    INICIARPARTIDA,
+    FINALIZOJUEGO,
+    JUEGATURNO
 
 }

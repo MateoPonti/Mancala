@@ -6,6 +6,10 @@ public class Observador {
     private ArrayList<Observable> observables;
 
 
+    public Observador() {
+        observables=new ArrayList<>();
+    }
+
     public void  agregar(Observable observable){
         this.observables.add(observable);
     }

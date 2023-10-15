@@ -11,10 +11,13 @@ public class Tablero {
         this.tableroJugadores=tablerosJugadores;
     }
 
-    public void  hacerJugada(int posicion,int jugadorTurno){
+    public ResultadoJugada  hacerJugada(int posicion,int jugadorTurno){
+        if (!Posicion.validarPosicion(posicion)){ return ResultadoJugada.PosicioInvalida;}
+
         TableroJugador tableroTurno= tableroJugadores.get(0);
         TableroJugador tableroOponente=tableroJugadores.get(1);
         ResultadoJugada resultado = ResultadoJugada.Correcta;
+
 
         ArrayList<IHaba> habasRepartidas=tableroTurno.repartirHabasTurno(posicion);
         while (!habasRepartidas.isEmpty()){
@@ -27,9 +30,12 @@ public class Tablero {
         if (tableroTurno.isUltimaCayoZona()){
             resultado=ResultadoJugada.OtroTurno;
         }
-        if(comprobarVictoria(tableroTurno,tableroOponente)!=null){
+        TableroJugador tableroConHabasRestante = comprobarVictoria(tableroTurno,tableroOponente); // si uno de los 2 jugadores no tiene habas , al otro le suma las habas que tiene en sus agujeros en la Zona en caso de tener.
+        if(tableroConHabasRestante!=null){
             resultado=ResultadoJugada.Victoria;
+            tableroConHabasRestante.sumarHabasRestante();
         }
+        return resultado;
     }
 
     private void RobarPuntos(int posCayoVacio,TableroJugador turno,TableroJugador oponente) {
@@ -40,10 +46,10 @@ public class Tablero {
 
     private TableroJugador comprobarVictoria(TableroJugador turno,TableroJugador oponete){
         if (turno.noHayHabas()) {
-            return turno;
+            return oponete;
         }
         if (oponete.noHayHabas()) {
-            return oponete;
+            return turno;
         }
         return null;
     }

@@ -17,6 +17,10 @@ public class Contenedor implements IContenedor {
     public void agregar(IHaba haba){
         this.habas.add(haba);
     }
+    public void agregar(ArrayList<IHaba> habas){
+        this.habas.addAll(habas);
+    }
+
 
 
 

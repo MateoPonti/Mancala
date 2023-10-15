@@ -22,7 +22,9 @@ public class Mancala extends Observador {
 
 
     public Mancala(){
+
         jugadores=new ArrayList<>();
+        preparados=new ArrayList<>();
     }
 
 
@@ -30,7 +32,7 @@ public class Mancala extends Observador {
         if (getCantidadJugadores()>=maxJugadores){return null;}
         Jugador nuevoJugador= new Jugador(nombre);
         jugadores.add(nuevoJugador);
-        inicializarPartida();
+        inicializarPartida(nuevoJugador);
         return nuevoJugador;
     }
     public void desconectar(IJugador jugador, Observable obs) {
@@ -72,16 +74,15 @@ public class Mancala extends Observador {
 
 
 
-    private boolean hacerJugada(char pos, IJugador jugador){
-        return  hacerJugada(Posicion.CalcularInt(pos), jugador);
+    private void hacerJugada(char pos, IJugador jugador){
+          hacerJugada(Posicion.CalcularInt(pos), jugador);
     }
 
 
 
-    private boolean hacerJugada(int pos, IJugador jugador){
-        if (Posicion.validarPosicion(pos)){return false;}
-        ResultadoJugada resultado = partida.hacerJugada(pos,jugador);
-        return true;
+    private void hacerJugada(int pos, IJugador jugador){
+        Notificacion resultado = partida.hacerJugada(pos,jugador);
+        actualizar(resultado);
     }
 
 
