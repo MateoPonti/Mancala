@@ -30,7 +30,7 @@ public class Partida {
 
 
     public ResultadoJugada hacerJugada(int posicion, IJugador jugador){
-        if (turno.equals(jugador)){
+        if (isTurno(jugador)){
            Jugador j=jugadores.get(determinarJugador(jugador));
            hacerJugada(posicion,j);
 
@@ -46,6 +46,9 @@ public class Partida {
 
     public Jugador getTurno() {
         return turno;
+    }
+    public boolean isTurno(IJugador jugador){
+        return  getTurno().equals(jugador);
     }
 
 
