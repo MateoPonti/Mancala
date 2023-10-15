@@ -26,13 +26,26 @@ public class Tablero {
         }
         if (tableroTurno.isUltimaCayoZona()){
             resultado=ResultadoJugada.OtroTurno;
-
+        }
+        if(comprobarVictoria(tableroTurno,tableroOponente)!=null){
+            resultado=ResultadoJugada.Victoria;
         }
     }
 
     private void RobarPuntos(int posCayoVacio,TableroJugador turno,TableroJugador oponente) {
         ArrayList<IHaba> habas= oponente.obtenerContenedor(turno.getPosCayoVacio());
         turno.sumarPuntos(habas);
+    }
+
+
+    private TableroJugador comprobarVictoria(TableroJugador turno,TableroJugador oponete){
+        if (turno.noHayHabas()) {
+            return turno;
+        }
+        if (oponete.noHayHabas()) {
+            return oponete;
+        }
+        return null;
     }
 
 

@@ -83,4 +83,15 @@ public class TableroJugador {
     public int  obtenerPuntos(){
         return tablero[cantidadAgujeros].getCantidad();
     }
+
+
+    public boolean noHayHabas(){
+        int i=0;
+        boolean noHayHabas=true;
+        while ((i<tablero.length) && (noHayHabas())){
+            noHayHabas= tablero[i].estaVacio();
+            i++;
+        }
+        return noHayHabas;
+    }
 }
