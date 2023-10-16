@@ -6,14 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo Vista">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/contenedor/Contenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/contenedor/Contenedor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/Posicion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +26,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MateoPonti"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="47121aa7-8505-4d58-a158-8e8beb1120b5" />
+        <option name="url" value="https://github.com/MateoPonti/Mancala" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -103,7 +111,7 @@
       <workItem from="1697318322773" duration="405000" />
       <workItem from="1697334139744" duration="1890000" />
       <workItem from="1697344318813" duration="7779000" />
-      <workItem from="1697418184114" duration="5110000" />
+      <workItem from="1697418184114" duration="5786000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -257,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697419348732</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Haciendo Vista">
+      <option name="closed" value="true" />
+      <created>1697423359529</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1697423359529</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

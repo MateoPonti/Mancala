@@ -79,13 +79,10 @@ public class Mancala extends Observador {
 
 
     public void hacerJugada(String pos, IJugador jugador){
-        try {
-            int posInt= Integer.parseInt(pos.trim());
-            hacerJugada(posInt, jugador);
-        }
-        catch (Exception ignored){
-            System.out.println("ingrese numero");
-        }
+
+        int posInt= Integer.parseInt(pos.trim());
+        hacerJugada(posInt, jugador);
+
     }
 
 
