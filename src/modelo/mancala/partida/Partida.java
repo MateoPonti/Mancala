@@ -32,6 +32,7 @@ public class Partida {
 
 
     public Notificacion hacerJugada(int posicion, IJugador jugador){
+        if (!isFinalizado()){
         if (isTurno(jugador)){
            ResultadoJugada resultado= tablero.hacerJugada(posicion,determinarJugador(),determinarOponente());
            if (resultado==ResultadoJugada.Correcta){turnoSiguiente();}
@@ -39,7 +40,7 @@ public class Partida {
                estado=EstadoPartida.Finalizado;
                return Notificacion.FINALIZOJUEGO;}
            return Notificacion.JUEGATURNO;
-        }
+        }}
 
         return null;
     }

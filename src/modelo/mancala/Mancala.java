@@ -99,11 +99,11 @@ public class Mancala extends Observador {
 
 
     public ArrayList<IContenedor> getTableroTurno(IJugador jugador) {
-        if (partida!=null && !partida.isFinalizado())  {return partida.getTableroJugador(jugador); }
+        if (partida!=null )  {return partida.getTableroJugador(jugador); }
         return null;
     }
     public ArrayList<IContenedor> getTableroOponente(IJugador jugador) {
-        if (partida!=null && !partida.isFinalizado())  {return partida.getTableroOponente(jugador); }
+        if (partida!=null )  {return partida.getTableroOponente(jugador); }
         return null;
     }
 
