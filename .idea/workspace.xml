@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="arreglando responsabilidades">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="agregando obtener ganador , permite a la vista saber quien gano y ademas creamos el inicializar partida en caso de que quieran seguir jugando">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/jugador/IJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/jugador/IJugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/jugador/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/jugador/Jugador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/tablero/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +114,7 @@
       <workItem from="1697418184114" duration="5808000" />
       <workItem from="1697456554242" duration="7802000" />
       <workItem from="1697468421228" duration="289000" />
-      <workItem from="1697479116155" duration="2222000" />
+      <workItem from="1697479116155" duration="2514000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -338,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697479253865</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="agregando obtener ganador , permite a la vista saber quien gano y ademas creamos el inicializar partida en caso de que quieran seguir jugando">
+      <option name="closed" value="true" />
+      <created>1697481411966</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1697481411966</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,6 +375,7 @@
     <MESSAGE value="probando juego" />
     <MESSAGE value="buscando bugg" />
     <MESSAGE value="arreglando responsabilidades" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglando responsabilidades" />
+    <MESSAGE value="agregando obtener ganador , permite a la vista saber quien gano y ademas creamos el inicializar partida en caso de que quieran seguir jugando" />
+    <option name="LAST_COMMIT_MESSAGE" value="agregando obtener ganador , permite a la vista saber quien gano y ademas creamos el inicializar partida en caso de que quieran seguir jugando" />
   </component>
 </project>

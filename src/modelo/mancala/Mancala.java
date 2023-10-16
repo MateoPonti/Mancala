@@ -93,8 +93,8 @@ public class Mancala extends Observador {
 
     public void hacerJugada(int pos, IJugador jugador){
         Notificacion resultado = partida.hacerJugada(pos,jugador);
-        actualizar(resultado);
         actualizar(Notificacion.MOSTRARTABLEROS);
+        actualizar(resultado);
     }
 
 
