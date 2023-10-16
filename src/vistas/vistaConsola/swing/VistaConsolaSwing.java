@@ -86,8 +86,11 @@ public class VistaConsolaSwing implements IVista {
 
 
     public void mostrarTablero(ArrayList<IContenedor> tableroJugador,ArrayList<IContenedor> tableroOponente){
+        int x;
+        int y;
 
 
+        frame.setSize(1200,600);
         principal.setSize(1200,600);
 
         ArrayList<IContenedor> zonas= new ArrayList<>();
@@ -117,15 +120,16 @@ public class VistaConsolaSwing implements IVista {
         int labelWidth = 100;
         int labelHeight = 100;
 
+        // agregar Los Agujeros
         for (int i = 0; i < agujerosContenedor.size(); i++) {
             if (i==6){
                 j+=tam;
                 c=0;
             }
             JLabel l=  new JLabel("<html>" + hacerAgujero(agujerosContenedor.get(i).getCantidad()) + "</html>");
-            int x = ((panelWidth - labelWidth) / 4 )+c;
+            x = ((panelWidth - labelWidth) / 4 )+c;
             l.setSize(labelWidth,labelHeight);
-            int y = ((panelHeight - labelHeight) / 2)-j;
+            y = ((panelHeight - labelHeight) / 2)-j;
             l.setBounds(x, y, labelWidth, labelHeight);
 
 
@@ -134,8 +138,10 @@ public class VistaConsolaSwing implements IVista {
 
             principal.add(l);
 
+
         }
 
+        //Agrega las Zonas
         JLabel zonaTurno =  new JLabel("<html>" + hacerZona(zonas.get(0).getCantidad()) + "</html>");
         JLabel zonaOponente= new JLabel("<html>" + hacerZona(zonas.get(1).getCantidad()) + "</html>");
 
@@ -143,8 +149,8 @@ public class VistaConsolaSwing implements IVista {
         zonaTurno.setSize(300,300);
 
 
-        int x = zonaOponente.getWidth()/2;
-        int y = ((panelHeight - zonaOponente.getHeight()) / 2)-50;
+        x = zonaOponente.getWidth()/2;
+        y = ((panelHeight - zonaOponente.getHeight()) / 2)-50;
 
         zonaOponente.setBounds(x, y, zonaOponente.getWidth(), zonaOponente.getHeight());
 
@@ -155,6 +161,23 @@ public class VistaConsolaSwing implements IVista {
 
         principal.add(zonaOponente);
         principal.add(zonaTurno);
+
+
+
+        // Agrega Edit para ingresar Posicion
+        JTextField posicionIngreso = new JTextField();
+        x=(principal.getWidth()/2)-100;
+        y=(principal.getHeight()/4)+300;
+        posicionIngreso.setSize(100,20);
+        JButton butIngresoPos= new JButton();
+        butIngresoPos.setSize(100,20);
+        butIngresoPos.setText("Enviar");
+        posicionIngreso.setText("Ingresar Posición");
+
+        posicionIngreso.setBounds(x,y,posicionIngreso.getWidth(),posicionIngreso.getHeight());
+        butIngresoPos.setBounds(x+100,y,posicionIngreso.getWidth(),posicionIngreso.getHeight());
+        principal.add(posicionIngreso);
+        principal.add(butIngresoPos);
 
         principal.revalidate();
         principal.repaint();
