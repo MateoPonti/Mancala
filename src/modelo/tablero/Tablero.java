@@ -23,7 +23,10 @@ public class Tablero {
         ResultadoJugada resultado = ResultadoJugada.Correcta;
 
 
+        if (tableroTurno.estaVacioContenedor(posicion)){
+            return ResultadoJugada.PosicioInvalida;} // comprueba que el jugador no haya elegido una posicion donde no haya habas
         ArrayList<IHaba> habasRepartidas=tableroTurno.repartirHabasTurno(posicion);
+
         while (!habasRepartidas.isEmpty()){
             tableroOponente.repartirHabasOponente(habasRepartidas);
             tableroTurno.repartirHabasTurno(habasRepartidas);
@@ -43,7 +46,7 @@ public class Tablero {
     }
 
     private void RobarPuntos(int posCayoVacio,TableroJugador turno,TableroJugador oponente) {
-        ArrayList<IHaba> habas= oponente.obtenerContenedor(turno.getPosCayoVacio());
+        ArrayList<IHaba> habas= oponente.sacarHabas(turno.getPosCayoVacio());
         turno.sumarPuntos(habas);
     }
 

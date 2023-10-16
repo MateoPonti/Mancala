@@ -97,6 +97,7 @@ public class VistaConsolaSwing implements IVista {
         principal.removeAll();
         principal.setBackground(Color.decode("#3b1b0f"));
 
+
         int panelWidth = principal.getWidth();
         int panelHeight = principal.getHeight();
 

@@ -75,7 +75,11 @@ public class TableroJugador {
     public int getPosCayoVacio() {return posCayoVacio;}
 
     public ArrayList<IHaba> obtenerContenedor(int posicion) {
-        return tablero.get(posicion).sacarHabas();
+        return tablero.get(posicion).getHabas();
+    }
+
+    public boolean estaVacioContenedor(int posicion) {
+        return obtenerContenedor(posicion).isEmpty();
     }
 
     public void  sumarPuntos(ArrayList<IHaba> habas){
@@ -86,6 +90,10 @@ public class TableroJugador {
 
     public int  obtenerPuntos(){
         return tablero.get(cantidadAgujeros).getCantidad();
+    }
+
+    public ArrayList<IHaba> sacarHabas(int pos){
+        return tablero.get(pos).sacarHabas();
     }
 
 
