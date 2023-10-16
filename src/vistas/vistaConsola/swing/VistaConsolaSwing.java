@@ -173,6 +173,28 @@ public class VistaConsolaSwing implements IVista {
         principal.repaint();
 
     }
+
+    @Override
+    public void mostrarGanador(String ganador) {
+        principal.removeAll();
+
+        JOptionPane.showMessageDialog(null, ganador, "Ganador", JOptionPane.INFORMATION_MESSAGE);
+
+
+        frame.setSize(600,300);
+        principal.setSize(600,300);
+        principal.setBackground(Color.CYAN);
+
+        JButton arrancarPartida= new JButton("Inicializar Partida");
+        arrancarPartida.setSize(200,20);
+
+        int x=(principal.getWidth()/2);
+        int y=(principal.getHeight()/2);
+        arrancarPartida.setBounds(x,y,arrancarPartida.getWidth(),arrancarPartida.getHeight());
+        arrancarPartida.addActionListener(e -> controlador.inicializarPartida());
+        principal.add(arrancarPartida);
+    }
+
     private String hacerAgujero(int cantidad) {
         String formattedAsciiArt = "<pre>";
         switch (cantidad) {

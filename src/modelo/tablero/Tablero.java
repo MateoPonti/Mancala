@@ -66,4 +66,9 @@ public class Tablero {
     {
         return tableroJugadores.get(indice).getTablero();
     }
+
+    public int devolverPuntosJugador(int jugador)
+    {
+        return tableroJugadores.get(jugador-1).obtenerPuntos();
+    }
 }

@@ -33,6 +33,13 @@ public class Controlador implements Observable {
         modelo.hacerJugada(val,jugador);
     }
 
+    public void inicializarPartida(){
+        modelo.inicializarPartida(jugador);
+    }
+
+
+
+
     public void setVista(IVista vista) {
         this.vista=vista;
         vista.setControlador(this);
@@ -43,6 +50,9 @@ public class Controlador implements Observable {
     public void actualizar(Notificacion n) {
         if (n == Notificacion.MOSTRARTABLEROS) {
             vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador));
+        }
+        if (n == Notificacion.FINALIZOJUEGO) {
+            vista.mostrarGanador(modelo.getGanador());
         }
     }
 }

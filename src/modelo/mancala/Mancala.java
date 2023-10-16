@@ -24,7 +24,6 @@ public class Mancala extends Observador {
 
 
     public Mancala(){
-
         jugadores=new ArrayList<>();
         preparados=new ArrayList<>();
     }
@@ -48,6 +47,7 @@ public class Mancala extends Observador {
 
 
     public void inicializarPartida(IJugador jugador) {
+        if(preparados==null){preparados=new ArrayList<>();}
         preparados.add(jugador);
         if (isPreparados()){
             inicializarPartida();
@@ -104,6 +104,11 @@ public class Mancala extends Observador {
     }
     public ArrayList<IContenedor> getTableroOponente(IJugador jugador) {
         if (partida!=null )  {return partida.getTableroOponente(jugador); }
+        return null;
+    }
+
+    public String getGanador() {
+        if (partida!=null){return partida.getGanador();}
         return null;
     }
 

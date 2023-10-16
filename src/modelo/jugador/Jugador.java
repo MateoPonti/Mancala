@@ -14,4 +14,9 @@ public class Jugador implements IJugador{
     public TableroJugador getTableroJugador() {
         return tableroJugador;
     }
+
+    @Override
+    public String getNombre() {
+        return nombre;
+    }
 }

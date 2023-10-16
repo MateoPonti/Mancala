@@ -19,6 +19,8 @@ public class Partida {
 
     private EstadoPartida estado;
 
+    private String ganador;
+
     public Partida(ArrayList<Jugador> jugadores) {
         this.jugadores = jugadores;
         turno=jugadores.get(0);
@@ -38,6 +40,11 @@ public class Partida {
            if (resultado==ResultadoJugada.Correcta){turnoSiguiente();}
            if (resultado==ResultadoJugada.Victoria){
                estado=EstadoPartida.Finalizado;
+               ganador="Jugador 1, "+jugadores.get(0); // Asume que gano el jugador 1
+               int puntosJugador1=tablero.devolverPuntosJugador(1);
+               int puntosJugador2=tablero.devolverPuntosJugador(2);
+               if(tablero.devolverPuntosJugador(2)>tablero.devolverPuntosJugador(1)){ganador="Jugador 2, "+jugadores.get(1);} // pregunta si gano el jugador 2
+               if(tablero.devolverPuntosJugador(2)==tablero.devolverPuntosJugador(1)){ganador="Empate.";} // se fija si hay empate
                return Notificacion.FINALIZOJUEGO;}
            return Notificacion.JUEGATURNO;
         }}
@@ -95,4 +102,7 @@ public class Partida {
 
     }
 
+    public String getGanador() {
+        return ganador;
+    }
 }
