@@ -51,7 +51,7 @@ public class TableroJugador {
         while ((posicion<=cantidadAgujeros) && (!habas.isEmpty())){
             Contenedor contActual=tablero.get(posicion);
             tam= habas.size();
-            ultimaCayoVacio=tam==1  && contActual.estaVacio() && contActual.getTipo()== TipoContenedor.Agujero;
+            ultimaCayoVacio= tam==1  && contActual.estaVacio() && contActual.getTipo()== TipoContenedor.Agujero;
             if (ultimaCayoVacio){posCayoVacio=posicion;}
             ultimaCayoZona= tam==1  && contActual.getTipo()== TipoContenedor.Zona;
             contActual.agregar( habas.get(tam-1));

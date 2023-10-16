@@ -14,6 +14,8 @@ public class Tablero {
     }
 
     public ResultadoJugada  hacerJugada(int posicion,int jugadorTurno,int jugadorOponente){
+        posicion--;
+
         if (!Posicion.validarPosicion(posicion)){ return ResultadoJugada.PosicioInvalida;}
 
         TableroJugador tableroTurno= tableroJugadores.get(jugadorTurno);

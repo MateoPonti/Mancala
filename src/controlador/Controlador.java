@@ -41,7 +41,7 @@ public class Controlador implements Observable {
 
     @Override
     public void actualizar(Notificacion n) {
-        if (Objects.requireNonNull( n) == Notificacion.MOSTRARTABLEROS) {
+        if (n == Notificacion.MOSTRARTABLEROS) {
             vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador));
         }
     }
