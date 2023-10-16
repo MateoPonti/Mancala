@@ -161,7 +161,7 @@ public class VistaConsolaSwing implements IVista {
         JButton butIngresoPos= new JButton();
         butIngresoPos.setSize(100,20);
         butIngresoPos.setText("Enviar");
-        posicionIngreso.setText("Ingresar Posición");
+
 
         posicionIngreso.setBounds(x,y,posicionIngreso.getWidth(),posicionIngreso.getHeight());
         butIngresoPos.setBounds(x+100,y,posicionIngreso.getWidth(),posicionIngreso.getHeight());

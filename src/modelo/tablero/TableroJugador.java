@@ -100,7 +100,7 @@ public class TableroJugador {
     public boolean noHayHabas(){
         int i=0;
         boolean nHayHabas=true;
-        while ((i<tablero.size()-2) && (nHayHabas)){
+        while ((i<=tablero.size()-2) && (nHayHabas)){
             nHayHabas= tablero.get(i).estaVacio();
             i++;
         }
