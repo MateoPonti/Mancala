@@ -11,6 +11,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class VistaConsolaSwing implements IVista {
     private JFrame frame;
@@ -91,6 +92,7 @@ public class VistaConsolaSwing implements IVista {
         tableroJugador.remove(tableroJugador.size()-1);
         tableroOponente.remove(tableroOponente.size()-1);
 
+        Collections.reverse(tableroOponente);
         tableroJugador.addAll(tableroOponente);
 
 
