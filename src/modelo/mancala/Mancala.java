@@ -41,7 +41,7 @@ public class Mancala extends Observador {
         try {
         jugadores.remove(jugador);
         eliminar(obs);}
-       catch (Exception e){}
+       catch (Exception ignored){}
 
     }
 
@@ -78,15 +78,22 @@ public class Mancala extends Observador {
 
 
 
-    private void hacerJugada(char pos, IJugador jugador){
-          hacerJugada(Posicion.CalcularInt(pos), jugador);
+    public void hacerJugada(String pos, IJugador jugador){
+        try {
+            int posInt= Integer.parseInt(pos.trim());
+            hacerJugada(posInt, jugador);
+        }
+        catch (Exception ignored){
+            System.out.println("ingrese numero");
+        }
     }
 
 
 
-    private void hacerJugada(int pos, IJugador jugador){
+    public void hacerJugada(int pos, IJugador jugador){
         Notificacion resultado = partida.hacerJugada(pos,jugador);
         actualizar(resultado);
+        actualizar(Notificacion.MOSTRARTABLEROS);
     }
 
 

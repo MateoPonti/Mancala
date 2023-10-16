@@ -34,7 +34,7 @@ public class Partida {
     public Notificacion hacerJugada(int posicion, IJugador jugador){
         if (isTurno(jugador)){
            int j=determinarJugador();
-           ResultadoJugada resultado= tablero.hacerJugada(posicion,j);
+           ResultadoJugada resultado= tablero.hacerJugada(posicion,j,determinarOponente());
            if (resultado!=ResultadoJugada.OtroTurno){turnoSiguiente();}
            if (resultado==ResultadoJugada.Victoria){
                estado=EstadoPartida.Finalizado;
@@ -60,6 +60,12 @@ public class Partida {
         if (jugadores.get(0).equals(turno)){ return 0;}
           return 1;
     }
+    private int determinarOponente(){
+        if (jugadores.get(0).equals(turno)){ return 1;}
+        return 0;
+    }
+
+
 
     public Jugador getTurno() {
         return turno;

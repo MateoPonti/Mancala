@@ -43,8 +43,14 @@ public class Contenedor implements IContenedor {
 
 
     public ArrayList<IHaba> sacarHabas() {
+        ArrayList<IHaba> arrayHabas=new ArrayList<>();
+        for(IHaba haba :habas){
+            Haba h=new Haba();
+            h.setColor(haba.getColor());
+            arrayHabas.add(h);
+        }
         habas.clear();
-        return habas;
+        return arrayHabas;
     }
 
 }

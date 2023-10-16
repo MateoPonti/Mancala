@@ -75,15 +75,6 @@ public class VistaConsolaSwing implements IVista {
     }
 
 
-    public void pedirJugada(){
-
-
-
-
-
-    }
-
-
 
     public void mostrarTablero(ArrayList<IContenedor> tableroJugador,ArrayList<IContenedor> tableroOponente){
         int x;
@@ -94,7 +85,7 @@ public class VistaConsolaSwing implements IVista {
         principal.setSize(1200,600);
 
         ArrayList<IContenedor> zonas= new ArrayList<>();
-        zonas.add(tableroOponente.get(tableroOponente.size()-1));
+        zonas.add(tableroJugador.get(tableroOponente.size()-1));
         zonas.add(tableroOponente.get(tableroJugador.size()-1));
 
 
@@ -176,6 +167,7 @@ public class VistaConsolaSwing implements IVista {
 
         posicionIngreso.setBounds(x,y,posicionIngreso.getWidth(),posicionIngreso.getHeight());
         butIngresoPos.setBounds(x+100,y,posicionIngreso.getWidth(),posicionIngreso.getHeight());
+        butIngresoPos.addActionListener(e -> controlador.hacerJugada( posicionIngreso.getText()));
         principal.add(posicionIngreso);
         principal.add(butIngresoPos);
 
@@ -184,7 +176,6 @@ public class VistaConsolaSwing implements IVista {
 
     }
     private String hacerAgujero(int cantidad) {
-        // Define tu arte ASCII para diferentes cantidades con saltos de línea HTML
         String formattedAsciiArt = "<pre>";
         switch (cantidad) {
             case 0:
@@ -238,7 +229,6 @@ public class VistaConsolaSwing implements IVista {
     }
 
     private String hacerZona(int cantidad) {
-        // Define tu arte ASCII para diferentes cantidades con saltos de línea HTML
         String formattedAsciiArt = "<pre>";
         switch (cantidad) {
             case 0:

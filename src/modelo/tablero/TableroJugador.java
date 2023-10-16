@@ -46,9 +46,11 @@ public class TableroJugador {
     private void repartir(int posicion, ArrayList<IHaba> habas){
         ultimaCayoVacio=false;
         ultimaCayoZona=false;
+        int tam;
+
         while ((posicion<=cantidadAgujeros) && (!habas.isEmpty())){
             Contenedor contActual=tablero.get(posicion);
-            int tam= habas.size();
+            tam= habas.size();
             ultimaCayoVacio=tam==1  && contActual.estaVacio() && contActual.getTipo()== TipoContenedor.Agujero;
             if (ultimaCayoVacio){posCayoVacio=posicion;}
             ultimaCayoZona= tam==1  && contActual.getTipo()== TipoContenedor.Zona;
@@ -56,6 +58,7 @@ public class TableroJugador {
             posicion++;
             habas.remove(tam-1);
         }
+
     }
 
     public void repartirHabasOponente(ArrayList<IHaba> habas){
@@ -90,12 +93,12 @@ public class TableroJugador {
 
     public boolean noHayHabas(){
         int i=0;
-        boolean noHayHabas=true;
-        while ((i<tablero.size()) && (noHayHabas())){
-            noHayHabas= tablero.get(i).estaVacio();
+        boolean nHayHabas=true;
+        while ((i<tablero.size()-2) && (nHayHabas)){
+            nHayHabas= tablero.get(i).estaVacio();
             i++;
         }
-        return noHayHabas;
+        return nHayHabas;
     }
 
     public void sumarHabasRestante(){

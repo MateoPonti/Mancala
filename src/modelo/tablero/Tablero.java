@@ -13,11 +13,12 @@ public class Tablero {
         this.tableroJugadores=tablerosJugadores;
     }
 
-    public ResultadoJugada  hacerJugada(int posicion,int jugadorTurno){
+    public ResultadoJugada  hacerJugada(int posicion,int jugadorTurno,int jugadorOponente){
+        posicion--;
         if (!Posicion.validarPosicion(posicion)){ return ResultadoJugada.PosicioInvalida;}
 
-        TableroJugador tableroTurno= tableroJugadores.get(0);
-        TableroJugador tableroOponente=tableroJugadores.get(1);
+        TableroJugador tableroTurno= tableroJugadores.get(jugadorTurno);
+        TableroJugador tableroOponente=tableroJugadores.get(jugadorOponente);
         ResultadoJugada resultado = ResultadoJugada.Correcta;
 
 

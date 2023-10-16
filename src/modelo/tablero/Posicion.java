@@ -12,7 +12,4 @@ public class Posicion {
         return (validarPosicion((int) 65 - Character.toUpperCase(pos)));
     }
 
-    public static int CalcularInt(char pos) {
-        return pos;
-    }
 }

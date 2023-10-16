@@ -29,6 +29,10 @@ public class Controlador implements Observable {
         this.jugador= (IJugador) modelo.conectarJugador(nombre);
     }
 
+    public void hacerJugada(String val){
+        modelo.hacerJugada(val,jugador);
+    }
+
     public void setVista(IVista vista) {
         this.vista=vista;
         vista.setControlador(this);
