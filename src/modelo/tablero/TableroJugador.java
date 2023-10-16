@@ -1,11 +1,9 @@
 package modelo.tablero;
 
 import modelo.contenedor.*;
-import modelo.haba.Haba;
 import modelo.haba.IHaba;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class TableroJugador {
     private final int cantidadAgujeros=6;
@@ -77,7 +75,7 @@ public class TableroJugador {
     public int getPosCayoVacio() {return posCayoVacio;}
 
     public ArrayList<IHaba> obtenerContenedor(int posicion) {
-        return tablero.get(posicion).getHabas();
+        return tablero.get(posicion).sacarHabas();
     }
 
     public void  sumarPuntos(ArrayList<IHaba> habas){
