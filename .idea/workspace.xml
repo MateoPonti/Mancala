@@ -4,40 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="uml Mancala 16/10/2023">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/RMILibreria.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RMILibreria.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/cliente/AppCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/servidor/AppServidor.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="actualizando UML">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mancala.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Mancala.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Notificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Notificacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Observable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Observador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/contenedor/Contenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Contenedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/contenedor/IContenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/IContenedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/contenedor/TipoContenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/TipoContenedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/contenedor/Zona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Zona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/haba/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/haba/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/haba/Haba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/haba/Haba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/haba/IHaba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/haba/IHaba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/jugador/IJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/jugador/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/partida/EstadoPartida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/EstadoPartida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Posicion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/ResultadoJugada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ResultadoJugada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/MancalaGrafico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/MancalaGrafico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VentanaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VentanaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/cliente/AppCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/cliente/AppCliente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +63,7 @@
     &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE&quot;: &quot;ToolWindow&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;ToolWindow&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Mateo/IdeaProjects/Mancala/src/RMILibreria.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -161,6 +133,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.AppCliente" />
+      <item itemvalue="Application.AppServidor" />
+      <item itemvalue="Application.Main" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.AppCliente" />
@@ -210,7 +187,9 @@
       <workItem from="1697587504764" duration="2230000" />
       <workItem from="1697590082531" duration="1284000" />
       <workItem from="1697594350297" duration="344000" />
-      <workItem from="1697604759808" duration="1260000" />
+      <workItem from="1697604759808" duration="1565000" />
+      <workItem from="1697609179631" duration="1764000" />
+      <workItem from="1697611663236" duration="177000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -468,7 +447,31 @@
       <option name="project" value="LOCAL" />
       <updated>1697483137753</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Creando Servidor">
+      <option name="closed" value="true" />
+      <created>1697606182055</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1697606182055</updated>
+    </task>
+    <task id="LOCAL-00034" summary="actualizando UML">
+      <option name="closed" value="true" />
+      <created>1697606301647</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1697606301647</updated>
+    </task>
+    <task id="LOCAL-00035" summary="actualizando UML">
+      <option name="closed" value="true" />
+      <created>1697606309185</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1697606309185</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,6 +510,8 @@
     <MESSAGE value="arreglando problemas" />
     <MESSAGE value="Arreglando VistaConsolaSwing" />
     <MESSAGE value="uml Mancala 16/10/2023" />
-    <option name="LAST_COMMIT_MESSAGE" value="uml Mancala 16/10/2023" />
+    <MESSAGE value="Creando Servidor" />
+    <MESSAGE value="actualizando UML" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizando UML" />
   </component>
 </project>

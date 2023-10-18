@@ -71,7 +71,6 @@ public class Controlador implements IControladorRemoto, Serializable {
     @Override
     public <T extends IObservableRemoto> void setModeloRemoto(T modeloRemoto) throws  RemoteException  {
         this.modelo= (IMancala) modeloRemoto;
-        modelo.agregarObservador(this);
     }
 
 

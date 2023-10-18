@@ -41,6 +41,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
         jugadores.add(nuevoJugador);
         inicializarPartida(nuevoJugador);
         return nuevoJugador;
+
     }
 
 
