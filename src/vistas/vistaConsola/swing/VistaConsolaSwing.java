@@ -82,8 +82,8 @@ public class VistaConsolaSwing implements IVista, Serializable {
         int y;
 
 
-        frame.setSize(1200,600);
-        principal.setSize(1200,600);
+        frame.setSize(820,600);
+        principal.setSize(820,600);
 
         ArrayList<IContenedor> zonas= new ArrayList<>();
         zonas.add(tableroJugador.get(tableroOponente.size()-1));
@@ -118,7 +118,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
                 c=0;
             }
             JLabel l=  new JLabel("<html>" + hacerAgujero(tableroJugador.get(i).getCantidad()) + "</html>");
-            x = ((panelWidth - labelWidth) / 4 )+c;
+            x = ( ((panelWidth - labelWidth) / 4)-80 )+c;
             l.setSize(labelWidth,labelHeight);
             y = ((panelHeight - labelHeight) / 2)-j;
             l.setBounds(x, y, labelWidth, labelHeight);
@@ -140,12 +140,12 @@ public class VistaConsolaSwing implements IVista, Serializable {
         zonaTurno.setSize(300,300);
 
 
-        x = zonaOponente.getWidth()/2;
+        x = zonaOponente.getWidth()/2 -150;
         y = ((panelHeight - zonaOponente.getHeight()) / 2)-50;
 
         zonaOponente.setBounds(x, y, zonaOponente.getWidth(), zonaOponente.getHeight());
 
-        x=principal.getWidth()-(zonaTurno.getWidth());
+        x=(principal.getWidth())-115;
 
         zonaTurno.setBounds(x,y,zonaTurno.getWidth(),zonaTurno.getHeight());
 

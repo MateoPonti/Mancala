@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="actualizando UML">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="servidor creado y probado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/cliente/AppCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/cliente/AppCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +92,14 @@
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\recursos" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppCliente">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="AppCiente2" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
+      <option name="MAIN_CLASS_NAME" value="server.cliente.AppCliente" />
+      <module name="Mancala" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppCliente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.cliente.AppCliente" />
       <module name="Mancala" />
@@ -135,14 +141,15 @@
     </configuration>
     <list>
       <item itemvalue="Application.AppCliente" />
+      <item itemvalue="Application.AppCiente2" />
       <item itemvalue="Application.AppServidor" />
       <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.AppCliente" />
         <item itemvalue="Application.AppServidor" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +196,8 @@
       <workItem from="1697594350297" duration="344000" />
       <workItem from="1697604759808" duration="1565000" />
       <workItem from="1697609179631" duration="1764000" />
-      <workItem from="1697611663236" duration="177000" />
+      <workItem from="1697611663236" duration="271000" />
+      <workItem from="1697654945043" duration="1814000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -471,7 +479,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697606309185</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="servidor creado y probado">
+      <option name="closed" value="true" />
+      <created>1697611906277</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1697611906277</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,6 +528,7 @@
     <MESSAGE value="uml Mancala 16/10/2023" />
     <MESSAGE value="Creando Servidor" />
     <MESSAGE value="actualizando UML" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizando UML" />
+    <MESSAGE value="servidor creado y probado" />
+    <option name="LAST_COMMIT_MESSAGE" value="servidor creado y probado" />
   </component>
 </project>

@@ -19,6 +19,8 @@ public class Main {
 
         controlador1.setModeloRemoto(modelo);
         controlador2.setModeloRemoto(modelo);
+        modelo.agregarObservador(controlador1);
+        modelo.agregarObservador(controlador2);
 
         vista.inicializar();
         vista2.inicializar();
