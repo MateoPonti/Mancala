@@ -1,19 +1,19 @@
 package vistas.vistaConsola.swing;
 
 import controlador.Controlador;
-import modelo.contenedor.Agujero;
-import modelo.contenedor.IContenedor;
-import modelo.contenedor.Zona;
+import modelo.clasesJuego.contenedor.IContenedor;
 import vistas.IVista;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.Serializable;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class VistaConsolaSwing implements IVista {
+public class VistaConsolaSwing implements IVista, Serializable {
     private JFrame frame;
     private JPanel principal;
 
@@ -50,8 +50,8 @@ public class VistaConsolaSwing implements IVista {
 
         enviaBut.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                controlador.conectarUsuario(getNombre(ingresoNombre));
-                enviaBut.setVisible(false);
+                    controlador.conectarUsuario(getNombre(ingresoNombre));
+                    enviaBut.setVisible(false);
             }
         });
 
@@ -167,7 +167,11 @@ public class VistaConsolaSwing implements IVista {
 
         posicionIngreso.setBounds(x,y,posicionIngreso.getWidth(),posicionIngreso.getHeight());
         butIngresoPos.setBounds(x+100,y,posicionIngreso.getWidth(),posicionIngreso.getHeight());
-        butIngresoPos.addActionListener(e -> controlador.hacerJugada( posicionIngreso.getText()));
+        butIngresoPos.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                controlador.hacerJugada( posicionIngreso.getText());
+            }
+        });
         principal.add(posicionIngreso);
         principal.add(butIngresoPos);
 
@@ -193,7 +197,9 @@ public class VistaConsolaSwing implements IVista {
         int x=(principal.getWidth()/2);
         int y=(principal.getHeight()/2);
         arrancarPartida.setBounds(x,y,arrancarPartida.getWidth(),arrancarPartida.getHeight());
-        arrancarPartida.addActionListener(e -> controlador.inicializarPartida());
+        arrancarPartida.addActionListener(e -> {
+            controlador.inicializarPartida();
+        });
         principal.add(arrancarPartida);
     }
 

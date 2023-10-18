@@ -1,6 +1,8 @@
-package modelo.haba;
+package modelo.clasesJuego.haba;
 
-public class Haba implements IHaba{
+import java.io.Serializable;
+
+public class Haba implements IHaba, Serializable {
     private Color color;
 
     public Color getColor() {

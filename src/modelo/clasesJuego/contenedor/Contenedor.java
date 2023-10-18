@@ -1,11 +1,12 @@
-package modelo.contenedor;
+package modelo.clasesJuego.contenedor;
 
-import modelo.haba.Haba;
-import modelo.haba.IHaba;
+import modelo.clasesJuego.haba.Haba;
+import modelo.clasesJuego.haba.IHaba;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Contenedor implements IContenedor {
+public class Contenedor implements IContenedor, Serializable {
     private ArrayList<IHaba> habas;
     private TipoContenedor tipo;
 

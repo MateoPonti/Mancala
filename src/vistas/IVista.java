@@ -1,7 +1,7 @@
 package vistas;
 
 import controlador.Controlador;
-import modelo.contenedor.IContenedor;
+import modelo.clasesJuego.contenedor.IContenedor;
 
 import java.util.ArrayList;
 

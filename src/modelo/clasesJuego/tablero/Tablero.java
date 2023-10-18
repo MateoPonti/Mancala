@@ -1,12 +1,12 @@
-package modelo.tablero;
+package modelo.clasesJuego.tablero;
 
-import modelo.contenedor.IContenedor;
-import modelo.haba.IHaba;
-import modelo.jugador.IJugador;
+import modelo.clasesJuego.contenedor.IContenedor;
+import modelo.clasesJuego.haba.IHaba;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Tablero {
+public class Tablero implements Serializable {
     private ArrayList<TableroJugador> tableroJugadores;
 
     public Tablero(ArrayList<TableroJugador> tablerosJugadores){

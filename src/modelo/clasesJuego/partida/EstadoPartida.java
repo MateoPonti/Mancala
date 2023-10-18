@@ -1,4 +1,4 @@
-package modelo.mancala.partida;
+package modelo.clasesJuego.partida;
 
 public enum EstadoPartida {
     EnJuego,

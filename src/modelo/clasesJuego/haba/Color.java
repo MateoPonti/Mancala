@@ -1,4 +1,4 @@
-package modelo.haba;
+package modelo.clasesJuego.haba;
 
 public enum Color {
     AMARILLO,

@@ -1,84 +1,63 @@
 package modelo.mancala;
 
+import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
-import controlador.Observable;
-import controlador.Observador;
-import modelo.contenedor.IContenedor;
-import modelo.jugador.IJugador;
-import modelo.jugador.Jugador;
-import modelo.mancala.partida.Partida;
-import modelo.tablero.Posicion;
-import modelo.tablero.ResultadoJugada;
-import modelo.tablero.Tablero;
+import modelo.clasesJuego.contenedor.IContenedor;
+import modelo.clasesJuego.jugador.IJugador;
+import modelo.clasesJuego.jugador.Jugador;
+import modelo.clasesJuego.partida.Partida;
 
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 
-public class Mancala extends Observador {
+public class Mancala extends ObservableRemoto implements IMancala{
     private ArrayList<Jugador> jugadores;
     private ArrayList<IJugador> preparados;
 
-    private final int maxJugadores=2;
+    private static final int maxJugadores=2;
 
     private Partida partida;
 
+    private static Mancala instancia;
 
 
-    public Mancala(){
+
+    public static Mancala getInstancia(){
+        if (instancia==null){
+            instancia= new Mancala();
+        }
+        return instancia;
+    }
+
+    private Mancala(){
         jugadores=new ArrayList<>();
         preparados=new ArrayList<>();
     }
 
 
-    public Jugador conectarJugador(String nombre) {
+    public Jugador conectarJugador(String nombre) throws RemoteException {
         if (getCantidadJugadores()>=maxJugadores){return null;}
         Jugador nuevoJugador= new Jugador(nombre);
         jugadores.add(nuevoJugador);
         inicializarPartida(nuevoJugador);
         return nuevoJugador;
     }
-    public void desconectar(IJugador jugador, Observable obs) {
-        try {
-        jugadores.remove(jugador);
-        eliminar(obs);}
-       catch (Exception ignored){}
-
-    }
 
 
 
-    public void inicializarPartida(IJugador jugador) {
+
+    public void inicializarPartida(IJugador jugador) throws RemoteException {
         if(preparados==null){preparados=new ArrayList<>();}
         preparados.add(jugador);
         if (isPreparados()){
             inicializarPartida();
             preparados=null;
-            actualizar(Notificacion.MOSTRARTABLEROS);
+            notificarObservadores(Notificacion.MOSTRARTABLEROS);
         }
     }
 
 
-    private void inicializarPartida() {
-        partida= new Partida(jugadores);
-        actualizar(Notificacion.INICIARPARTIDA);
-    }
-
-
-
-    public int getCantidadJugadores(){
-        return jugadores.size();
-    }
-
-    public boolean isPreparados(){
-        return preparados.size()==maxJugadores;
-    }
-
-
-
-
-
-
-
-    public void hacerJugada(String pos, IJugador jugador){
+    public void hacerJugada(String pos, IJugador jugador) throws RemoteException{
         try {
             int posInt= Integer.parseInt(pos.trim());
             hacerJugada(posInt, jugador);
@@ -89,28 +68,41 @@ public class Mancala extends Observador {
 
     }
 
-
-
-    public void hacerJugada(int pos, IJugador jugador){
+    public void hacerJugada(int pos, IJugador jugador) throws  RemoteException{
         Notificacion resultado = partida.hacerJugada(pos,jugador);
-        actualizar(Notificacion.MOSTRARTABLEROS);
-        actualizar(resultado);
+        notificarObservadores(Notificacion.MOSTRARTABLEROS);
+        notificarObservadores(resultado);
     }
-
-
-    public ArrayList<IContenedor> getTableroTurno(IJugador jugador) {
+    public ArrayList<IContenedor> getTableroTurno(IJugador jugador) throws  RemoteException {
         if (partida!=null )  {return partida.getTableroJugador(jugador); }
         return null;
     }
-    public ArrayList<IContenedor> getTableroOponente(IJugador jugador) {
+    public ArrayList<IContenedor> getTableroOponente(IJugador jugador) throws  RemoteException {
         if (partida!=null )  {return partida.getTableroOponente(jugador); }
         return null;
     }
 
-    public String getGanador() {
+    public String getGanador() throws  RemoteException{
         if (partida!=null){return partida.getGanador();}
         return null;
     }
+
+
+    private void inicializarPartida() throws RemoteException {
+        partida= new Partida(jugadores);
+        notificarObservadores(Notificacion.INICIARPARTIDA);
+    }
+
+
+
+    private int getCantidadJugadores(){
+        return jugadores.size();
+    }
+
+    private boolean isPreparados(){
+        return preparados.size()==maxJugadores;
+    }
+
 
 
 }

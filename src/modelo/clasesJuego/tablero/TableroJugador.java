@@ -1,11 +1,12 @@
-package modelo.tablero;
+package modelo.clasesJuego.tablero;
 
-import modelo.contenedor.*;
-import modelo.haba.IHaba;
+import modelo.clasesJuego.contenedor.*;
+import modelo.clasesJuego.haba.IHaba;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class TableroJugador {
+public class TableroJugador implements Serializable {
     private final int cantidadAgujeros=6;
     private  ArrayList<Contenedor> tablero;
 

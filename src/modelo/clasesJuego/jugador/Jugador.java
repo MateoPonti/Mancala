@@ -1,8 +1,10 @@
-package modelo.jugador;
+package modelo.clasesJuego.jugador;
 
-import modelo.tablero.TableroJugador;
+import modelo.clasesJuego.tablero.TableroJugador;
 
-public class Jugador implements IJugador{
+import java.io.Serializable;
+
+public class Jugador implements IJugador, Serializable {
     private String nombre;
     private TableroJugador tableroJugador;
 

@@ -1,4 +1,4 @@
-package modelo.jugador;
+package modelo.clasesJuego.jugador;
 
 public interface IJugador {
     public String getNombre();

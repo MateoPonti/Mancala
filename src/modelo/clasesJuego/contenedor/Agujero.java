@@ -1,7 +1,7 @@
-package modelo.contenedor;
+package modelo.clasesJuego.contenedor;
 
-import modelo.haba.Color;
-import modelo.haba.Haba;
+import modelo.clasesJuego.haba.Color;
+import modelo.clasesJuego.haba.Haba;
 
 public class Agujero extends Contenedor{
 

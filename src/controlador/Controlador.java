@@ -1,58 +1,78 @@
 package controlador;
 
-import modelo.jugador.IJugador;
+import ar.edu.unlu.rmimvc.cliente.IControladorRemoto;
+import ar.edu.unlu.rmimvc.observer.IObservableRemoto;
+import modelo.clasesJuego.jugador.IJugador;
+import modelo.mancala.IMancala;
 import modelo.mancala.Mancala;
 import vistas.IVista;
 
-import java.util.Objects;
+import java.io.Serializable;
+import java.rmi.RemoteException;
 
-public class Controlador implements Observable {
+public class Controlador implements IControladorRemoto, Serializable {
 
     private IVista vista;
     private IJugador jugador;
-    private Mancala modelo;
+    private IMancala modelo;
 
-    public Controlador(IVista vista,Mancala modelo) {
-        setModelo(modelo);
-        setVista(vista);
-    }
-    private void setModelo(Mancala modelo) {
-        this.modelo=modelo;
-        this.modelo.agregar(this);
-    }
-
-
-
-
-
-    public void conectarUsuario(String nombre){
-        this.jugador= (IJugador) modelo.conectarJugador(nombre);
-    }
-
-    public void hacerJugada(String val){
-        modelo.hacerJugada(val,jugador);
-    }
-
-    public void inicializarPartida(){
-        modelo.inicializarPartida(jugador);
-    }
-
-
-
-
-    public void setVista(IVista vista) {
+    public Controlador(IVista vista) {
         this.vista=vista;
         vista.setControlador(this);
     }
 
 
-    @Override
-    public void actualizar(Notificacion n) {
-        if (n == Notificacion.MOSTRARTABLEROS) {
-            vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador));
-        }
-        if (n == Notificacion.FINALIZOJUEGO) {
-            vista.mostrarGanador(modelo.getGanador());
+
+
+
+    public void conectarUsuario(String nombre)  {
+        try {
+            this.jugador= modelo.conectarJugador(nombre);
+        } catch (RemoteException e) {
+            throw new RuntimeException(e);
+
         }
     }
+
+    public void hacerJugada(String val)  {
+        try {
+            modelo.hacerJugada(val,jugador);
+        } catch (RemoteException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void inicializarPartida()  {
+        try {
+            modelo.inicializarPartida(jugador);
+        } catch (RemoteException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+
+
+
+
+    @Override
+    public void actualizar(IObservableRemoto IObserver, Object cambio) throws RemoteException  {
+        if (cambio instanceof Notificacion) {
+        if (cambio == Notificacion.MOSTRARTABLEROS) {
+            vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador));
+        }
+        if (cambio == Notificacion.FINALIZOJUEGO) {
+            vista.mostrarGanador(modelo.getGanador());
+        }
+
+        }
+    }
+
+    @Override
+    public <T extends IObservableRemoto> void setModeloRemoto(T modeloRemoto) throws  RemoteException  {
+        this.modelo= (IMancala) modeloRemoto;
+        modelo.agregarObservador(this);
+    }
+
+
 }

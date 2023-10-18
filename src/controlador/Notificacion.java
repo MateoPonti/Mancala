@@ -1,6 +1,8 @@
 package controlador;
 
-public enum Notificacion {
+import java.io.Serializable;
+
+public enum Notificacion implements Serializable {
     INICIARPARTIDA,
     FINALIZOJUEGO,
     JUEGATURNO,

@@ -1,4 +1,4 @@
-package modelo.tablero;
+package modelo.clasesJuego.tablero;
 
 public enum ResultadoJugada {
     Correcta,

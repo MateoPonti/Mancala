@@ -1,6 +1,6 @@
-package modelo.contenedor;
+package modelo.clasesJuego.contenedor;
 
-import modelo.haba.IHaba;
+import modelo.clasesJuego.haba.IHaba;
 
 import java.util.ArrayList;
 

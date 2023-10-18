@@ -1,13 +1,11 @@
 package vistas.vistaGrafica;
 
-import modelo.contenedor.Agujero;
-import modelo.contenedor.IContenedor;
-import modelo.haba.IHaba;
+import modelo.clasesJuego.contenedor.Agujero;
+import modelo.clasesJuego.contenedor.IContenedor;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class MancalaGrafico {
 

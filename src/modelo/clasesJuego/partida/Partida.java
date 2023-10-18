@@ -1,16 +1,17 @@
-package modelo.mancala.partida;
+package modelo.clasesJuego.partida;
 
 import controlador.Notificacion;
-import modelo.contenedor.IContenedor;
-import modelo.jugador.IJugador;
-import modelo.jugador.Jugador;
-import modelo.tablero.ResultadoJugada;
-import modelo.tablero.Tablero;
-import modelo.tablero.TableroJugador;
+import modelo.clasesJuego.contenedor.IContenedor;
+import modelo.clasesJuego.jugador.IJugador;
+import modelo.clasesJuego.jugador.Jugador;
+import modelo.clasesJuego.tablero.ResultadoJugada;
+import modelo.clasesJuego.tablero.Tablero;
+import modelo.clasesJuego.tablero.TableroJugador;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Partida {
+public class Partida implements Serializable {
     private Jugador turno;
 
     private ArrayList<Jugador> jugadores;
@@ -52,27 +53,6 @@ public class Partida {
         return null;
     }
 
-    private void turnoSiguiente() {
-        int posicionActual=0;
-        if(jugadores.get(1).equals(turno)) {posicionActual=1;}
-        try{
-            turno=jugadores.get(posicionActual+1);
-        }
-        catch (Exception e){
-            turno=jugadores.get(0);
-        }
-    }
-
-    private int determinarJugador(){
-        if (jugadores.get(0).equals(turno)){ return 0;}
-          return 1;
-    }
-    private int determinarOponente(){
-        if (jugadores.get(0).equals(turno)){ return 1;}
-        return 0;
-    }
-
-
 
     public Jugador getTurno() {
         return turno;
@@ -104,5 +84,25 @@ public class Partida {
 
     public String getGanador() {
         return ganador;
+    }
+
+    private void turnoSiguiente() {
+        int posicionActual=0;
+        if(jugadores.get(1).equals(turno)) {posicionActual=1;}
+        try{
+            turno=jugadores.get(posicionActual+1);
+        }
+        catch (Exception e){
+            turno=jugadores.get(0);
+        }
+    }
+
+    private int determinarJugador(){
+        if (jugadores.get(0).equals(turno)){ return 0;}
+        return 1;
+    }
+    private int determinarOponente(){
+        if (jugadores.get(0).equals(turno)){ return 1;}
+        return 0;
     }
 }

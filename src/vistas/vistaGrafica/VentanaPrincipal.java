@@ -1,8 +1,7 @@
 package vistas.vistaGrafica;
 
-import modelo.contenedor.IContenedor;
+import modelo.clasesJuego.contenedor.IContenedor;
 
-import javax.swing.*;
 import java.util.ArrayList;
 
 public class VentanaPrincipal {
