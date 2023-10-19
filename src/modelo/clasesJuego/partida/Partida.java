@@ -67,7 +67,7 @@ public class Partida implements Serializable {
 
 
     public ArrayList<IContenedor> getTableroJugador(IJugador jugador) {
-        if (jugadores.get(0)==jugador){
+        if (jugadores.get(0).equals(jugador)){
           return tablero.getTablero(0);
         }
         return tablero.getTablero(1);
@@ -75,7 +75,7 @@ public class Partida implements Serializable {
     }
 
     public ArrayList<IContenedor> getTableroOponente(IJugador jugador) {
-        if (jugadores.get(0)==jugador){
+        if (jugadores.get(0).equals(jugador)){
             return tablero.getTablero(1);
         }
         return tablero.getTablero(0);

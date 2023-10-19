@@ -28,6 +28,7 @@ public class Controlador implements IControladorRemoto, Serializable {
     public void conectarUsuario(String nombre)  {
         try {
             this.jugador= modelo.conectarJugador(nombre);
+            modelo.inicializarPartida(jugador);
         } catch (RemoteException e) {
             throw new RuntimeException(e);
 
@@ -56,13 +57,20 @@ public class Controlador implements IControladorRemoto, Serializable {
 
 
     @Override
-    public void actualizar(IObservableRemoto IObserver, Object cambio) throws RemoteException  {
+    public void actualizar(IObservableRemoto IObserver, Object cambio)   {
         if (cambio instanceof Notificacion) {
         if (cambio == Notificacion.MOSTRARTABLEROS) {
-            vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador));
-        }
-        if (cambio == Notificacion.FINALIZOJUEGO) {
-            vista.mostrarGanador(modelo.getGanador());
+            try {
+                    vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador));
+                } catch (RemoteException e) {
+                    throw new RuntimeException(e);
+                }}
+         if (cambio == Notificacion.FINALIZOJUEGO) {
+            try {
+                vista.mostrarGanador(modelo.getGanador());
+            } catch (RemoteException e) {
+                throw new RuntimeException(e);
+            }
         }
 
         }

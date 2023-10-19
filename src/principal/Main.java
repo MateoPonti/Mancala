@@ -2,6 +2,7 @@ package principal;
 
 
 import controlador.Controlador;
+import modelo.mancala.IMancala;
 import modelo.mancala.Mancala;
 import vistas.IVista;
 import vistas.vistaConsola.swing.VistaConsolaSwing;
@@ -17,10 +18,11 @@ public class Main {
         IVista vista2 = new VistaConsolaSwing();
         Controlador controlador2 = new Controlador(vista2);
 
-        controlador1.setModeloRemoto(modelo);
-        controlador2.setModeloRemoto(modelo);
         modelo.agregarObservador(controlador1);
         modelo.agregarObservador(controlador2);
+
+        controlador1.setModeloRemoto((IMancala)modelo);
+        controlador2.setModeloRemoto((IMancala)modelo);
 
         vista.inicializar();
         vista2.inicializar();

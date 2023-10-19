@@ -1,5 +1,6 @@
 package modelo.clasesJuego.jugador;
 
 public interface IJugador {
-    public String getNombre();
+     String getNombre();
+     int getId();
 }

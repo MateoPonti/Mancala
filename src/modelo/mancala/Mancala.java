@@ -39,7 +39,6 @@ public class Mancala extends ObservableRemoto implements IMancala{
         if (getCantidadJugadores()>=maxJugadores){return null;}
         Jugador nuevoJugador= new Jugador(nombre);
         jugadores.add(nuevoJugador);
-        inicializarPartida(nuevoJugador);
         return nuevoJugador;
 
     }
@@ -64,7 +63,6 @@ public class Mancala extends ObservableRemoto implements IMancala{
             hacerJugada(posInt, jugador);
         }
         catch (Exception ignored){
-
         }
 
     }
@@ -91,7 +89,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
     private void inicializarPartida() throws RemoteException {
         partida= new Partida(jugadores);
-        notificarObservadores(Notificacion.INICIARPARTIDA);
+
     }
 
 

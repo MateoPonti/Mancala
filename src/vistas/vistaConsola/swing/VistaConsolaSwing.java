@@ -81,7 +81,6 @@ public class VistaConsolaSwing implements IVista, Serializable {
         int x;
         int y;
 
-
         frame.setSize(820,600);
         principal.setSize(820,600);
 

@@ -6,10 +6,10 @@ import modelo.clasesJuego.contenedor.IContenedor;
 import java.util.ArrayList;
 
 public interface IVista {
-    public void setControlador(Controlador c);
-    public void inicializar();
+     void setControlador(Controlador c);
+     void inicializar();
 
-    public void mostrarTablero(ArrayList<IContenedor> tableroJugador,ArrayList<IContenedor> tableroOponente);
+     void mostrarTablero(ArrayList<IContenedor> tableroJugador,ArrayList<IContenedor> tableroOponente);
 
-    public void mostrarGanador(String ganador);
+     void mostrarGanador(String ganador);
 }
