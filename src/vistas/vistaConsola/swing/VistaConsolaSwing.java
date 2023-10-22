@@ -9,7 +9,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Serializable;
-import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -180,12 +179,8 @@ public class VistaConsolaSwing implements IVista, Serializable {
     }
 
     @Override
-    public void mostrarGanador(String ganador) {
+    public void mostrarInicializarPartida() {
         principal.removeAll();
-
-        JOptionPane.showMessageDialog(null, ganador, "Ganador", JOptionPane.INFORMATION_MESSAGE);
-
-
         frame.setSize(600,300);
         principal.setSize(600,300);
         principal.setBackground(Color.CYAN);
@@ -200,6 +195,11 @@ public class VistaConsolaSwing implements IVista, Serializable {
             controlador.inicializarPartida();
         });
         principal.add(arrancarPartida);
+    }
+
+    @Override
+    public void mostrarGanador(String ganador) {
+        JOptionPane.showMessageDialog(null, ganador, "Ganador", JOptionPane.INFORMATION_MESSAGE);
     }
 
     private String hacerAgujero(int cantidad) {

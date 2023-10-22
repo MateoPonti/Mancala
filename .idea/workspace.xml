@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="anda con rmi">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="contenedor es abstracto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Contenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Contenedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +204,8 @@
       <workItem from="1697725044744" duration="3957000" />
       <workItem from="1697744337643" duration="2260000" />
       <workItem from="1697955872855" duration="218000" />
-      <workItem from="1697956109328" duration="337000" />
+      <workItem from="1697956109328" duration="1011000" />
+      <workItem from="1698007607113" duration="491000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -507,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697745706685</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="contenedor es abstracto">
+      <option name="closed" value="true" />
+      <created>1697956498338</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1697956498338</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creacion de contenedor para hacer el Tablero" />
     <MESSAGE value="creando tablero , posicion , partida , nuevo concepto un tablero tiene administra los tableros de los jugadores , un jugador tiene un tablero" />
     <MESSAGE value="Haciendo logica del tablero" />
     <MESSAGE value="Haciendo grafica" />
@@ -550,6 +561,7 @@
     <MESSAGE value="servidor creado y probado" />
     <MESSAGE value="cambiando resolucion pantalla" />
     <MESSAGE value="anda con rmi" />
-    <option name="LAST_COMMIT_MESSAGE" value="anda con rmi" />
+    <MESSAGE value="contenedor es abstracto" />
+    <option name="LAST_COMMIT_MESSAGE" value="contenedor es abstracto" />
   </component>
 </project>

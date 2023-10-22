@@ -10,6 +10,8 @@ public interface IVista {
      void inicializar();
 
      void mostrarTablero(ArrayList<IContenedor> tableroJugador,ArrayList<IContenedor> tableroOponente);
+     
+     void mostrarInicializarPartida();
 
      void mostrarGanador(String ganador);
 }

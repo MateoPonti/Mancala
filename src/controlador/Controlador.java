@@ -68,6 +68,7 @@ public class Controlador implements IControladorRemoto, Serializable {
          if (cambio == Notificacion.FINALIZOJUEGO) {
             try {
                 vista.mostrarGanador(modelo.getGanador());
+                vista.mostrarInicializarPartida();
             } catch (RemoteException e) {
                 throw new RuntimeException(e);
             }

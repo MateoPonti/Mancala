@@ -12,10 +12,14 @@ public class Agujero extends Contenedor{
     }
 
     private void inicializar() {
+        int i=0;
+
         for (Color c:Color.values()){
             Haba haba=new Haba();
             haba.setColor(c);
             agregar(haba);
+            i++;
+            if (i==4){break;}
         }
 
     }
