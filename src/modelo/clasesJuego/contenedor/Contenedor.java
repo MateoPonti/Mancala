@@ -6,7 +6,7 @@ import modelo.clasesJuego.haba.IHaba;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Contenedor implements IContenedor, Serializable {
+public abstract class Contenedor implements IContenedor, Serializable {
     private ArrayList<IHaba> habas;
     private TipoContenedor tipo;
 
