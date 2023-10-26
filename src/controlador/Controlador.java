@@ -2,9 +2,8 @@ package controlador;
 
 import ar.edu.unlu.rmimvc.cliente.IControladorRemoto;
 import ar.edu.unlu.rmimvc.observer.IObservableRemoto;
-import modelo.clasesJuego.jugador.IJugador;
+import modelo.clasesJuego.usuario.IUsuario;
 import modelo.mancala.IMancala;
-import modelo.mancala.Mancala;
 import vistas.IVista;
 
 import java.io.Serializable;
@@ -13,7 +12,7 @@ import java.rmi.RemoteException;
 public class Controlador implements IControladorRemoto, Serializable {
 
     private IVista vista;
-    private IJugador jugador;
+    private IUsuario jugador;
     private IMancala modelo;
 
     public Controlador(IVista vista) {
@@ -27,7 +26,7 @@ public class Controlador implements IControladorRemoto, Serializable {
 
     public void conectarUsuario(String nombre)  {
         try {
-            this.jugador= modelo.conectarJugador(nombre);
+            this.jugador= modelo.conectarJugador(nombre,"123");
             modelo.inicializarPartida(jugador);
         } catch (RemoteException e) {
             throw new RuntimeException(e);

@@ -5,8 +5,8 @@ import modelo.clasesJuego.haba.IHaba;
 import java.util.ArrayList;
 
 public interface IContenedor {
-    public TipoContenedor getTipo();
-    public ArrayList<IHaba> getHabas();
+     TipoContenedor getTipo();
+     ArrayList<IHaba> getHabas();
 
-    public int getCantidad();
+     int getCantidad();
 }

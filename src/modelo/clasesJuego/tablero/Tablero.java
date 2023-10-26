@@ -5,6 +5,8 @@ import modelo.clasesJuego.haba.IHaba;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Tablero implements Serializable {
     private ArrayList<TableroJugador> tableroJugadores;
@@ -46,7 +48,15 @@ public class Tablero implements Serializable {
     }
 
     private void RobarPuntos(int posCayoVacio,TableroJugador turno,TableroJugador oponente) {
-        ArrayList<IHaba> habas= oponente.sacarHabas(turno.getPosCayoVacio());
+        Map<Integer, Integer> parejas = new HashMap<>();
+        parejas.put(0, 5);
+        parejas.put(5, 0);
+        parejas.put(2, 3);
+        parejas.put(3, 2);
+        parejas.put(4, 1);
+        parejas.put(1, 4);
+
+        ArrayList<IHaba> habas= oponente.sacarHabas(parejas.get(turno.getPosCayoVacio()));
         turno.sumarPuntos(habas);
     }
 

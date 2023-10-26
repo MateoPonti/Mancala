@@ -2,11 +2,11 @@ package modelo.clasesJuego.partida;
 
 import controlador.Notificacion;
 import modelo.clasesJuego.contenedor.IContenedor;
-import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.jugador.Jugador;
 import modelo.clasesJuego.tablero.ResultadoJugada;
 import modelo.clasesJuego.tablero.Tablero;
 import modelo.clasesJuego.tablero.TableroJugador;
+import modelo.clasesJuego.usuario.IUsuario;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -22,8 +22,12 @@ public class Partida implements Serializable {
 
     private String ganador;
 
-    public Partida(ArrayList<Jugador> jugadores) {
-        this.jugadores = jugadores;
+    public Partida(ArrayList<IUsuario> usuarios) {
+        jugadores=new ArrayList<>();
+
+        for(IUsuario u: usuarios){
+            jugadores.add(new Jugador(u.getId()));
+        }
         turno=jugadores.get(0);
         ArrayList<TableroJugador> tablerosJugadores = new ArrayList<>();
         tablerosJugadores.add(jugadores.get(0).getTableroJugador());
@@ -34,18 +38,18 @@ public class Partida implements Serializable {
     }
 
 
-    public Notificacion hacerJugada(int posicion, IJugador jugador){
+    public Notificacion hacerJugada(int posicion, IUsuario jugador){
         if (!isFinalizado()){
         if (isTurno(jugador)){
            ResultadoJugada resultado= tablero.hacerJugada(posicion,determinarJugador(),determinarOponente());
            if (resultado==ResultadoJugada.Correcta){turnoSiguiente();}
            if (resultado==ResultadoJugada.Victoria){
                estado=EstadoPartida.Finalizado;
-               ganador="Jugador 1, "+jugadores.get(0).getNombre(); // Asume que gano el jugador 1
+               ganador="Jugador 1"; // Asume que gano el jugador 1
                int puntosJugador1=tablero.devolverPuntosJugador(1);
                int puntosJugador2=tablero.devolverPuntosJugador(2);
-               if(tablero.devolverPuntosJugador(2)>tablero.devolverPuntosJugador(1)){ganador="Jugador 2, "+jugadores.get(1).getNombre();} // pregunta si gano el jugador 2
-               if(tablero.devolverPuntosJugador(2)==tablero.devolverPuntosJugador(1)){ganador="Empate.";} // se fija si hay empate
+               if(puntosJugador2>puntosJugador1){ganador="Jugador 2";} // pregunta si gano el jugador 2
+               if(puntosJugador2==puntosJugador1){ganador="Empate.";} // se fija si hay empate
                return Notificacion.FINALIZOJUEGO;}
            return Notificacion.JUEGATURNO;
         }}
@@ -57,7 +61,7 @@ public class Partida implements Serializable {
     public Jugador getTurno() {
         return turno;
     }
-    public boolean isTurno(IJugador jugador){
+    public boolean isTurno(IUsuario jugador){
         return  getTurno().equals(jugador);
     }
 
@@ -66,7 +70,7 @@ public class Partida implements Serializable {
     }
 
 
-    public ArrayList<IContenedor> getTableroJugador(IJugador jugador) {
+    public ArrayList<IContenedor> getTableroJugador(IUsuario jugador) {
         if (jugadores.get(0).equals(jugador)){
           return tablero.getTablero(0);
         }
@@ -74,7 +78,7 @@ public class Partida implements Serializable {
 
     }
 
-    public ArrayList<IContenedor> getTableroOponente(IJugador jugador) {
+    public ArrayList<IContenedor> getTableroOponente(IUsuario jugador) {
         if (jugadores.get(0).equals(jugador)){
             return tablero.getTablero(1);
         }

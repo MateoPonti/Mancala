@@ -1,21 +1,20 @@
 package modelo.clasesJuego.jugador;
 
 import modelo.clasesJuego.tablero.TableroJugador;
+import modelo.clasesJuego.usuario.IUsuario;
 
 import java.io.Serializable;
 
-public class Jugador implements IJugador, Serializable {
+public class Jugador implements Serializable {
 
     private int id;
-    private static int idTotal=1;
     private String nombre;
     private TableroJugador tableroJugador;
 
-    public Jugador(String nombre) {
+    public Jugador(int id) {
         this.nombre=nombre;
         tableroJugador=new TableroJugador();
-        this.id= idTotal;
-        idTotal++;
+        this.id= id;
     }
 
     public TableroJugador getTableroJugador() {
@@ -27,14 +26,7 @@ public class Jugador implements IJugador, Serializable {
         return id;
     }
 
-    @Override
-    public String getNombre() {
-        return nombre;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        IJugador jugador2= (IJugador) obj;
-        return jugador2.getId()==getId();
+    public boolean equals(IUsuario obj) {
+        return obj.getId()==getId();
     }
 }

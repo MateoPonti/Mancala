@@ -3,16 +3,15 @@ package modelo.mancala;
 import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
 import modelo.clasesJuego.contenedor.IContenedor;
-import modelo.clasesJuego.jugador.IJugador;
-import modelo.clasesJuego.jugador.Jugador;
 import modelo.clasesJuego.partida.Partida;
+import modelo.clasesJuego.usuario.*;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 public class Mancala extends ObservableRemoto implements IMancala{
-    private ArrayList<Jugador> jugadores;
-    private ArrayList<IJugador> preparados;
+    private ArrayList<Usuario> usuarios;
+    private ArrayList<IUsuario> preparados;
 
     private static final int maxJugadores=2;
 
@@ -30,15 +29,14 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
     private Mancala(){
-        jugadores=new ArrayList<>();
+        usuarios=new ArrayList<>();
         preparados=new ArrayList<>();
     }
 
 
-    public Jugador conectarJugador(String nombre) throws RemoteException {
-        if (getCantidadJugadores()>=maxJugadores){return null;}
-        Jugador nuevoJugador= new Jugador(nombre);
-        jugadores.add(nuevoJugador);
+    public IUsuario conectarJugador(String nombre,String contra) throws RemoteException {
+        Usuario nuevoJugador= new Usuario(nombre,contra, usuarios.size());
+        usuarios.add(nuevoJugador);
         return nuevoJugador;
 
     }
@@ -46,8 +44,8 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
 
 
-    public void inicializarPartida(IJugador jugador) throws RemoteException {
-        if(preparados==null){preparados=new ArrayList<>();}
+    public void inicializarPartida(IUsuario jugador) throws RemoteException {
+        if(preparados==null && partida.isFinalizado()){preparados=new ArrayList<>();}
         preparados.add(jugador);
         if (isPreparados()){
             inicializarPartida();
@@ -57,7 +55,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
 
-    public void hacerJugada(String pos, IJugador jugador) throws RemoteException{
+    public void hacerJugada(String pos, IUsuario jugador) throws RemoteException{
         try {
             int posInt= Integer.parseInt(pos.trim());
             hacerJugada(posInt, jugador);
@@ -67,16 +65,16 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
     }
 
-    public void hacerJugada(int pos, IJugador jugador) throws  RemoteException{
+    public void hacerJugada(int pos, IUsuario jugador) throws  RemoteException{
         Notificacion resultado = partida.hacerJugada(pos,jugador);
         notificarObservadores(Notificacion.MOSTRARTABLEROS);
         notificarObservadores(resultado);
     }
-    public ArrayList<IContenedor> getTableroTurno(IJugador jugador) throws  RemoteException {
+    public ArrayList<IContenedor> getTableroTurno(IUsuario jugador) throws  RemoteException {
         if (partida!=null )  {return partida.getTableroJugador(jugador); }
         return null;
     }
-    public ArrayList<IContenedor> getTableroOponente(IJugador jugador) throws  RemoteException {
+    public ArrayList<IContenedor> getTableroOponente(IUsuario jugador) throws  RemoteException {
         if (partida!=null )  {return partida.getTableroOponente(jugador); }
         return null;
     }
@@ -88,15 +86,10 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
 
     private void inicializarPartida() throws RemoteException {
-        partida= new Partida(jugadores);
+        partida= new Partida(preparados);
 
     }
 
-
-
-    private int getCantidadJugadores(){
-        return jugadores.size();
-    }
 
     private boolean isPreparados(){
         return preparados.size()==maxJugadores;
