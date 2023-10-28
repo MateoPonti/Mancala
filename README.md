@@ -1,3 +1,5 @@
+ #Mancala 
+
 El juego de Mancala, conocido en algunas regiones como Kalaha, pertenece a una familia de juegos de tablero tradicionales con raíces africanas y una amplia difusión. Estos juegos comparten elementos comunes, como un tablero con hoyos o receptáculos y fichas o "semillas", y su mecanismo de juego se denomina "siembra". La designación "kalaha" podría tener relación con su uso frecuente en comunidades del desierto del Kalahari.
 
 Hallazgos arqueológicos han revelado evidencia del juego en diversas partes del mundo, incluyendo Israel, Eritrea y Etiopía, con dataciones que abarcan desde el siglo II hasta el siglo VII d.C. Además, se ha sugerido que el juego pudo haber sido mencionado en textos antiguos, como "Misterios del Cielo y de la Tierra" del siglo XIV, escrito por Giyorgis de Segla.
@@ -38,10 +40,22 @@ La partida termina si uno de los jugadores no puede realizar ningún movimiento 
 El juego, que se encuentra implementado en la rama Master del repositorio, fue realizado en Java (jdk 18.0.2) con el editor de código  IntelliJ IDEA.
 
 
+# Jugar al juego localmente
+
+Si se quiere jugar al juego localmente simplemente debe ejecutar el Main ( se encuentra en src/principal/Main.java). 
+
 # Conexión con RMI
 Para poder jugar Mancala con RMI se deberá ejecutar una instancia del AppServidor ( se encuentra en src/server/servidor/AppServidor.java) y previo a ésto dos instancias del AppCliente( se encuentra en src/server/cliente/AppCliente.java).
 Para poder ejecutar dos instancias de la misma clase en intellij para probar dos clientes en una maquina, se debe agregar una nueva configuracion en el "Run/Debug Configurattions" con otro nombre. Por ejemplo "AppClienteDos" y configurar el build and run para que ejecute "server.cliente.AppCliente".
 
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+- [@MateoPonti](https://www.github.com/MateoPonti)
+  
 
 
 
