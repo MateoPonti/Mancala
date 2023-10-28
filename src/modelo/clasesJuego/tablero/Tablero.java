@@ -55,7 +55,7 @@ public class Tablero implements Serializable {
         parejas.put(4, 1);
         parejas.put(1, 4);
 
-        ArrayList<IHaba> habas= oponente.sacarHabas(parejas.get(turno.getPosCayoVacio()));
+        ArrayList<IHaba> habas= oponente.sacarHabas(parejas.get(posCayoVacio));
         turno.sumarPuntos(habas);
     }
 
