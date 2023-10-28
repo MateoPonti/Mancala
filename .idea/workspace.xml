@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="cambios en vista">
-      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/IUsuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Se crea Uusuario , ahora todo funciona con usuario y la partida crea a los jugadores">
+      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ITableroJugador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/IContenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/IContenedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/haba/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/haba/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/Mancala1610.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/Mancala1810.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,7 @@
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\recursos" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppCiente2">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="AppCiente2" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
       <option name="MAIN_CLASS_NAME" value="server.cliente.AppCliente" />
       <module name="Mancala" />
@@ -156,9 +155,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.AppCliente" />
         <item itemvalue="Application.AppServidor" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +213,8 @@
       <workItem from="1697956109328" duration="1011000" />
       <workItem from="1698007607113" duration="546000" />
       <workItem from="1698267852200" duration="3895000" />
-      <workItem from="1698280785918" duration="754000" />
+      <workItem from="1698280785918" duration="1121000" />
+      <workItem from="1698460488697" duration="2244000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -536,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698008150913</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Se crea Uusuario , ahora todo funciona con usuario y la partida crea a los jugadores">
+      <option name="closed" value="true" />
+      <created>1698282288302</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1698282288302</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +562,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Haciendo logica del tablero" />
     <MESSAGE value="Haciendo grafica" />
     <MESSAGE value="intentando ahcer vistaConsola" />
     <MESSAGE value="consola Visual swing" />
@@ -579,6 +586,7 @@
     <MESSAGE value="anda con rmi" />
     <MESSAGE value="contenedor es abstracto" />
     <MESSAGE value="cambios en vista" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambios en vista" />
+    <MESSAGE value="Se crea Uusuario , ahora todo funciona con usuario y la partida crea a los jugadores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se crea Uusuario , ahora todo funciona con usuario y la partida crea a los jugadores" />
   </component>
 </project>

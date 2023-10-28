@@ -3,6 +3,7 @@ package modelo.clasesJuego.partida;
 import controlador.Notificacion;
 import modelo.clasesJuego.contenedor.IContenedor;
 import modelo.clasesJuego.jugador.Jugador;
+import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.tablero.ResultadoJugada;
 import modelo.clasesJuego.tablero.Tablero;
 import modelo.clasesJuego.tablero.TableroJugador;
@@ -70,7 +71,7 @@ public class Partida implements Serializable {
     }
 
 
-    public ArrayList<IContenedor> getTableroJugador(IUsuario jugador) {
+    public ITableroJugador getTableroJugador(IUsuario jugador) {
         if (jugadores.get(0).equals(jugador)){
           return tablero.getTablero(0);
         }
@@ -78,7 +79,7 @@ public class Partida implements Serializable {
 
     }
 
-    public ArrayList<IContenedor> getTableroOponente(IUsuario jugador) {
+    public ITableroJugador getTableroOponente(IUsuario jugador) {
         if (jugadores.get(0).equals(jugador)){
             return tablero.getTablero(1);
         }

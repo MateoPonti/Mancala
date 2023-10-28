@@ -5,8 +5,9 @@ import modelo.clasesJuego.haba.IHaba;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class TableroJugador implements Serializable {
+public class TableroJugador implements Serializable,ITableroJugador {
     private final int cantidadAgujeros=6;
     private  ArrayList<Contenedor> tablero;
 
@@ -25,6 +26,27 @@ public class TableroJugador implements Serializable {
         return new ArrayList<>(this.tablero);
     }
 
+    @Override
+    public ArrayList<IContenedor> getAgujeros() {
+        ArrayList<IContenedor> agujeros= new ArrayList<>();
+        for(int i=0;i<cantidadAgujeros;i++){
+            agujeros.add(tablero.get(i));
+        }
+        return agujeros;
+    }
+
+    @Override
+    public ArrayList<IContenedor> getAgujerosVuelta() {
+        ArrayList<IContenedor> agujerosDadoVuelta =getAgujeros();
+        Collections.reverse(agujerosDadoVuelta);
+        return agujerosDadoVuelta;
+    }
+
+    @Override
+    public IContenedor getZona() {
+        return tablero.get(cantidadAgujeros);
+    }
+
     private void inicializar(){
         tablero=new ArrayList<>();
         for(int i=0;i<cantidadAgujeros;i++){
@@ -33,14 +55,14 @@ public class TableroJugador implements Serializable {
         tablero.add(new Zona());
     }
 
-    public ArrayList<IHaba> repartirHabasTurno(int posicion){
+    public ArrayList<IHaba> repartirHabas(int posicion){
         Contenedor contenedor=  tablero.get(posicion);
         ArrayList<IHaba> habas= contenedor.sacarHabas();
         repartir(posicion+1,habas);
         return habas;
     }
 
-    public void repartirHabasTurno(ArrayList<IHaba> habas){repartir(0,habas);}
+    public void repartirHabas(ArrayList<IHaba> habas){repartir(0,habas);}
 
     private void repartir(int posicion, ArrayList<IHaba> habas){
         ultimaCayoVacio=false;
@@ -60,15 +82,7 @@ public class TableroJugador implements Serializable {
 
     }
 
-    public void repartirHabasOponente(ArrayList<IHaba> habas){
-        int posicion=cantidadAgujeros-1;
-        while ((posicion>=0) && (!habas.isEmpty())){
-            int tam= habas.size();
-            tablero.get(posicion).agregar( habas.get(tam-1));
-            posicion--;
-            habas.remove(tam-1);
-        }
-    }
+
     public boolean isUltimaCayoVacio() {return ultimaCayoVacio;}
 
     public boolean isUltimaCayoZona() {return ultimaCayoZona;}

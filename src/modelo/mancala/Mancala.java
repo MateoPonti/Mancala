@@ -4,6 +4,7 @@ import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
 import modelo.clasesJuego.contenedor.IContenedor;
 import modelo.clasesJuego.partida.Partida;
+import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.usuario.*;
 
 import java.rmi.RemoteException;
@@ -70,11 +71,11 @@ public class Mancala extends ObservableRemoto implements IMancala{
         notificarObservadores(Notificacion.MOSTRARTABLEROS);
         notificarObservadores(resultado);
     }
-    public ArrayList<IContenedor> getTableroTurno(IUsuario jugador) throws  RemoteException {
+    public ITableroJugador getTableroTurno(IUsuario jugador) throws  RemoteException {
         if (partida!=null )  {return partida.getTableroJugador(jugador); }
         return null;
     }
-    public ArrayList<IContenedor> getTableroOponente(IUsuario jugador) throws  RemoteException {
+    public ITableroJugador getTableroOponente(IUsuario jugador) throws  RemoteException {
         if (partida!=null )  {return partida.getTableroOponente(jugador); }
         return null;
     }

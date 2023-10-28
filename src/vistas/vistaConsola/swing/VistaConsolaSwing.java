@@ -2,6 +2,7 @@ package vistas.vistaConsola.swing;
 
 import controlador.Controlador;
 import modelo.clasesJuego.contenedor.IContenedor;
+import modelo.clasesJuego.tablero.ITableroJugador;
 import vistas.IVista;
 
 import javax.swing.*;
@@ -76,7 +77,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
 
 
 
-    public void mostrarTablero(ArrayList<IContenedor> tableroJugador,ArrayList<IContenedor> tableroOponente){
+    public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente){
         int x;
         int y;
 
@@ -84,14 +85,11 @@ public class VistaConsolaSwing implements IVista, Serializable {
         principal.setSize(820,600);
 
         ArrayList<IContenedor> zonas= new ArrayList<>();
-        zonas.add(tableroJugador.get(tableroOponente.size()-1));
-        zonas.add(tableroOponente.get(tableroJugador.size()-1));
+        zonas.add(tableroJugador.getZona());
+        zonas.add(tableroOponente.getZona());
 
-        tableroJugador.remove(tableroJugador.size()-1);
-        tableroOponente.remove(tableroOponente.size()-1);
-
-        Collections.reverse(tableroOponente);
-        tableroJugador.addAll(tableroOponente);
+        ArrayList<IContenedor> tableros= tableroJugador.getAgujeros();
+        tableros.addAll(tableroOponente.getAgujerosVuelta());
 
 
         principal.removeAll();
@@ -110,12 +108,12 @@ public class VistaConsolaSwing implements IVista, Serializable {
         int labelHeight = 100;
 
         // agregar Los Agujeros
-        for (int i = 0; i < tableroJugador.size(); i++) {
+        for (int i = 0; i < tableros.size(); i++) {
             if (i==6){
                 j+=tam;
                 c=0;
             }
-            JLabel l=  new JLabel("<html>" + hacerAgujero(tableroJugador.get(i).getCantidad()) + "</html>");
+            JLabel l=  new JLabel("<html>" + hacerAgujero(tableros.get(i).getCantidad()) + "</html>");
             x = ( ((panelWidth - labelWidth) / 4)-80 )+c;
             l.setSize(labelWidth,labelHeight);
             y = ((panelHeight - labelHeight) / 2)-j;

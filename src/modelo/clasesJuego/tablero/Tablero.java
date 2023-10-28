@@ -1,6 +1,5 @@
 package modelo.clasesJuego.tablero;
 
-import modelo.clasesJuego.contenedor.IContenedor;
 import modelo.clasesJuego.haba.IHaba;
 
 import java.io.Serializable;
@@ -27,11 +26,11 @@ public class Tablero implements Serializable {
 
         if (tableroTurno.estaVacioContenedor(posicion)){
             return ResultadoJugada.PosicioInvalida;} // comprueba que el jugador no haya elegido una posicion donde no haya habas
-        ArrayList<IHaba> habasRepartidas=tableroTurno.repartirHabasTurno(posicion);
+        ArrayList<IHaba> habasRepartidas=tableroTurno.repartirHabas(posicion);
 
         while (!habasRepartidas.isEmpty()){
-            tableroOponente.repartirHabasOponente(habasRepartidas);
-            tableroTurno.repartirHabasTurno(habasRepartidas);
+            tableroOponente.repartirHabas(habasRepartidas);
+            tableroTurno.repartirHabas(habasRepartidas);
         }
         if (tableroTurno.isUltimaCayoVacio()){
             RobarPuntos(tableroTurno.getPosCayoVacio(),tableroTurno,tableroOponente);
@@ -72,9 +71,9 @@ public class Tablero implements Serializable {
     }
 
 
-    public ArrayList<IContenedor> getTablero(int indice)
+    public ITableroJugador getTablero(int indice)
     {
-        return tableroJugadores.get(indice).getTablero();
+        return (ITableroJugador) tableroJugadores.get(indice);
     }
 
     public int devolverPuntosJugador(int jugador)
