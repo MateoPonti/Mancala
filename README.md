@@ -1,5 +1,7 @@
  # Mancala 
 
+
+
 El juego de Mancala, conocido en algunas regiones como Kalaha, pertenece a una familia de juegos de tablero tradicionales con raíces africanas y una amplia difusión. Estos juegos comparten elementos comunes, como un tablero con hoyos o receptáculos y fichas o "semillas", y su mecanismo de juego se denomina "siembra". La designación "kalaha" podría tener relación con su uso frecuente en comunidades del desierto del Kalahari.
 
 Hallazgos arqueológicos han revelado evidencia del juego en diversas partes del mundo, incluyendo Israel, Eritrea y Etiopía, con dataciones que abarcan desde el siglo II hasta el siglo VII d.C. Además, se ha sugerido que el juego pudo haber sido mencionado en textos antiguos, como "Misterios del Cielo y de la Tierra" del siglo XIV, escrito por Giyorgis de Segla.
@@ -14,22 +16,23 @@ El juego de Mancala es apreciado por su simplicidad y profundidad estratégica, 
 
 ------------------------------------------------------------------------------------------------
 
-# Reglas del juego de Mancala:
+* Reglas del juego de Mancala*
 
 
-# Cómo mover las habas
+
+*  Cómo mover las habas*
 
 El jugador al que le toca mover, pulsa sobre un agujero (de la fila más cercana a él) que contenga al menos un haba. Mediante esta acción tomará todas las habas del agujero seleccionado y las colocará una por una en los siguientes agujeros siguiendo el sentido anti horario. En esta diseminación de las habas, la zona "casa" del jugador (al lado derecho del tablero desde su punto de vista) se emplea también y cuando un haba es colocada en ella, el jugador gana un punto. Los jugadores no pueden colocar habas dentro de la zona "casa" del adversario. 
 Si la última haba (del movimiento actual) se coloca sobre la zona "casa", el jugador continúa seleccionando otro agujero que no esté vacío. 
 
-# Cómo capturar las habas
+* Cómo capturar las habas *
 
 Si la última haba (del movimiento actual) se coloca sobre un agujero vacío (en el lado del jugador), todas las habas de la misma columna de la fila opuesta son capturadas y colocadas en la zona "casa" del jugador. 
 
 Si la última haba (del movimiento actual) se coloca sobre un agujero vacío (en el lado del jugador), todas las habas de la misma columna de la fila opuesta son capturadas y colocadas en la zona "casa" del jugador. 
 
 
-# Cómo se finaliza la partida
+* Cómo se finaliza la partida *
 
 La partida termina si uno de los jugadores no puede realizar ningún movimiento legal - no hay habas en su fila. Cuando esto ocurre, se suman todas las habas que quedan dentro de los agujeros del rival al marcador del rival. El jugador con el mayor número de puntos es el ganador.
 
@@ -54,7 +57,19 @@ Para poder ejecutar dos instancias de la misma clase en intellij para probar dos
 
 -----------------------------------------------------------------------------------------------------------------------------
 
+
+
+## Autor
+
+
 - [@MateoPonti](https://www.github.com/MateoPonti)
+
+
+  
+## 🚀 Acerca de mí
+
+Estudiante de Sistemas de Informacion en la Universidad Nacional de Luján 
+
   
 
 
