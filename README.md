@@ -24,21 +24,21 @@ El juego de Mancala es apreciado por su simplicidad y profundidad estratégica, 
 
 *  Cómo mover las habas
 
-El jugador al que le toca mover, pulsa sobre un agujero (de la fila más cercana a él) que contenga al menos un haba. Mediante esta acción tomará todas las habas del agujero seleccionado y las colocará una por una en los siguientes agujeros siguiendo el sentido anti horario. En esta diseminación de las habas, la zona "casa" del jugador (al lado derecho del tablero desde su punto de vista) se emplea también y cuando un haba es colocada en ella, el jugador gana un punto. Los jugadores no pueden colocar habas dentro de la zona "casa" del adversario. 
-Si la última haba (del movimiento actual) se coloca sobre la zona "casa", el jugador continúa seleccionando otro agujero que no esté vacío. 
+  El jugador al que le toca mover, pulsa sobre un agujero (de la fila más cercana a él) que contenga al menos un haba. Mediante esta acción tomará todas las habas del agujero seleccionado y las colocará una por una en los siguientes agujeros siguiendo el sentido anti horario. En esta diseminación de las habas, la zona "casa" del jugador (al lado derecho del tablero desde su punto de vista) se emplea también y cuando un haba es colocada en ella, el jugador gana un punto. Los jugadores no pueden colocar habas dentro de la zona "casa" del adversario. 
+  Si la última haba (del movimiento actual) se coloca sobre la zona "casa", el jugador continúa seleccionando otro agujero que no esté vacío. 
 
 
 * Cómo capturar las habas 
 
-Si la última haba (del movimiento actual) se coloca sobre un agujero vacío (en el lado del jugador), todas las habas de la misma columna de la fila opuesta son capturadas y colocadas en la zona "casa" del jugador. 
-
-Si la última haba (del movimiento actual) se coloca sobre un agujero vacío (en el lado del jugador), todas las habas de la misma columna de la fila opuesta son capturadas y colocadas en la zona "casa" del jugador. 
+  Si la última haba (del movimiento actual) se coloca sobre un agujero vacío (en el lado del jugador), todas las habas de la misma columna de la fila opuesta son capturadas y colocadas en la zona "casa" del jugador. 
+  
+  Si la última haba (del movimiento actual) se coloca sobre un agujero vacío (en el lado del jugador), todas las habas de la misma columna de la fila opuesta son capturadas y colocadas en la zona "casa" del jugador. 
 
 
 
 * Cómo se finaliza la partida 
 
-La partida termina si uno de los jugadores no puede realizar ningún movimiento legal - no hay habas en su fila. Cuando esto ocurre, se suman todas las habas que quedan dentro de los agujeros del rival al marcador del rival. El jugador con el mayor número de puntos es el ganador.
+  La partida termina si uno de los jugadores no puede realizar ningún movimiento legal - no hay habas en su fila. Cuando esto ocurre, se suman todas las habas que quedan dentro de los agujeros del rival al marcador del rival. El jugador con el mayor número de puntos es el ganador.
 
 
 
@@ -53,11 +53,17 @@ El juego, que se encuentra implementado en la rama Master del repositorio, fue r
 
 * Jugar al juego localmente
 
-Si se quiere jugar al juego localmente simplemente debe ejecutar el Main ( se encuentra en src/principal/Main.java). 
+ Si se quiere jugar al juego localmente simplemente debe ejecutar el Main ( se encuentra en src/principal/Main.java). 
 
 * Conexión con RMI
-Para poder jugar Mancala con RMI se deberá ejecutar una instancia del AppServidor ( se encuentra en src/server/servidor/AppServidor.java) y previo a ésto dos instancias del AppCliente( se encuentra en src/server/cliente/AppCliente.java).
-Para poder ejecutar dos instancias de la misma clase en intellij para probar dos clientes en una maquina, se debe agregar una nueva configuracion en el "Run/Debug Configurattions" con otro nombre. Por ejemplo "AppClienteDos" y configurar el build and run para que ejecute "server.cliente.AppCliente".
+
+  
+  Para poder jugar Mancala con RMI se deberá ejecutar una instancia del AppServidor ( se encuentra en    
+  src/server/servidor/AppServidor.java) y previo a ésto dos instancias del AppCliente( se encuentra en 
+  src/server/cliente/AppCliente.java).
+  Para poder ejecutar dos instancias de la misma clase en intellij para probar dos clientes en una maquina, se debe agregar 
+  una nueva configuracion en el "Run/Debug Configurattions" con otro nombre. Por ejemplo "AppClienteDos" y configurar el    
+  build and run para que ejecute "server.cliente.AppCliente".
 
 
 
