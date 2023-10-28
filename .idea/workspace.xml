@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Se crea Uusuario , ahora todo funciona con usuario y la partida crea a los jugadores">
-      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ITableroJugador.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="reduciendo warnings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/Mancala1610.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/Mancala1810.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +206,8 @@
       <workItem from="1698007607113" duration="546000" />
       <workItem from="1698267852200" duration="3895000" />
       <workItem from="1698280785918" duration="1121000" />
-      <workItem from="1698460488697" duration="2244000" />
+      <workItem from="1698460488697" duration="2563000" />
+      <workItem from="1698506386087" duration="350000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -544,7 +537,31 @@
       <option name="project" value="LOCAL" />
       <updated>1698282288302</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="cambios en vistas y nuevo UML">
+      <option name="closed" value="true" />
+      <created>1698462821086</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1698462821086</updated>
+    </task>
+    <task id="LOCAL-00043" summary="cambios en vistas y nuevo UML">
+      <option name="closed" value="true" />
+      <created>1698462949786</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1698462949786</updated>
+    </task>
+    <task id="LOCAL-00044" summary="reduciendo warnings">
+      <option name="closed" value="true" />
+      <created>1698463090003</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1698463090003</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,8 +579,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Haciendo grafica" />
-    <MESSAGE value="intentando ahcer vistaConsola" />
     <MESSAGE value="consola Visual swing" />
     <MESSAGE value="creando Observadores" />
     <MESSAGE value="actualizar" />
@@ -587,6 +602,8 @@
     <MESSAGE value="contenedor es abstracto" />
     <MESSAGE value="cambios en vista" />
     <MESSAGE value="Se crea Uusuario , ahora todo funciona con usuario y la partida crea a los jugadores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se crea Uusuario , ahora todo funciona con usuario y la partida crea a los jugadores" />
+    <MESSAGE value="cambios en vistas y nuevo UML" />
+    <MESSAGE value="reduciendo warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="reduciendo warnings" />
   </component>
 </project>

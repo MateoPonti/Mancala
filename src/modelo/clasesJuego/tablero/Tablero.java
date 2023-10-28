@@ -30,7 +30,7 @@ public class Tablero implements Serializable {
 
         while (!habasRepartidas.isEmpty()){
             tableroOponente.repartirHabas(habasRepartidas);
-            tableroTurno.repartirHabas(habasRepartidas);
+            tableroTurno.repartirHabasOponente(habasRepartidas);
         }
         if (tableroTurno.isUltimaCayoVacio()){
             RobarPuntos(tableroTurno.getPosCayoVacio(),tableroTurno,tableroOponente);
