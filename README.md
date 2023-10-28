@@ -51,11 +51,11 @@ La partida termina si uno de los jugadores no puede realizar ningún movimiento 
 El juego, que se encuentra implementado en la rama Master del repositorio, fue realizado en Java (jdk 18.0.2) con el editor de código  IntelliJ IDEA.
 
 
-# Jugar al juego localmente
+* Jugar al juego localmente
 
 Si se quiere jugar al juego localmente simplemente debe ejecutar el Main ( se encuentra en src/principal/Main.java). 
 
-# Conexión con RMI
+* Conexión con RMI
 Para poder jugar Mancala con RMI se deberá ejecutar una instancia del AppServidor ( se encuentra en src/server/servidor/AppServidor.java) y previo a ésto dos instancias del AppCliente( se encuentra en src/server/cliente/AppCliente.java).
 Para poder ejecutar dos instancias de la misma clase en intellij para probar dos clientes en una maquina, se debe agregar una nueva configuracion en el "Run/Debug Configurattions" con otro nombre. Por ejemplo "AppClienteDos" y configurar el build and run para que ejecute "server.cliente.AppCliente".
 
