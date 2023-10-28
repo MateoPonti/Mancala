@@ -11,7 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class VistaConsolaSwing implements IVista, Serializable {
     private JFrame frame;
@@ -66,12 +65,10 @@ public class VistaConsolaSwing implements IVista, Serializable {
 
     private String getNombre(JTextField j){
         String texto=j.getText();
-        switch (texto){
-            case "":
-                return "Jugador Anonimo";
-            default:
-                return texto;
+        if (texto.isEmpty()) {
+            return "Jugador Anonimo";
         }
+        return texto;
 
     }
 
@@ -248,7 +245,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
                 formattedAsciiArt += "┗━━━━━━━━━━┛";
                 break;
         }
-        formattedAsciiArt += "("+String.valueOf(cantidad)+")";
+        formattedAsciiArt += "("+(cantidad)+")";
         formattedAsciiArt += "</pre>";
         return formattedAsciiArt;
     }
@@ -353,7 +350,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
                 formattedAsciiArt += "┗━━━━━━━━━━┛";
                 break;
         }
-        formattedAsciiArt += "("+String.valueOf(cantidad)+")";
+        formattedAsciiArt += "("+cantidad+")";
         formattedAsciiArt += "</pre>";
         return formattedAsciiArt;
     }

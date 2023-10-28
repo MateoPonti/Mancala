@@ -73,7 +73,7 @@ public class Tablero implements Serializable {
 
     public ITableroJugador getTablero(int indice)
     {
-        return (ITableroJugador) tableroJugadores.get(indice);
+        return  tableroJugadores.get(indice);
     }
 
     public int devolverPuntosJugador(int jugador)

@@ -1,7 +1,6 @@
 package modelo.clasesJuego.partida;
 
 import controlador.Notificacion;
-import modelo.clasesJuego.contenedor.IContenedor;
 import modelo.clasesJuego.jugador.Jugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.tablero.ResultadoJugada;

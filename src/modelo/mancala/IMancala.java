@@ -1,12 +1,10 @@
 package modelo.mancala;
 
 import ar.edu.unlu.rmimvc.observer.IObservableRemoto;
-import modelo.clasesJuego.contenedor.IContenedor;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.usuario.IUsuario;
 
 import java.rmi.RemoteException;
-import java.util.ArrayList;
 
 public interface IMancala extends IObservableRemoto {
      void hacerJugada(int pos, IUsuario jugador) throws RemoteException;
