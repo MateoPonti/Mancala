@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="reduciendo warnings">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="cambiando cosas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Contenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Contenedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/IContenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/IContenedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/TipoContenedor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Zona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Zona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/haba/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/haba/Color.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" afterDir="false" />
     </list>
@@ -207,7 +213,8 @@
       <workItem from="1698267852200" duration="3895000" />
       <workItem from="1698280785918" duration="1121000" />
       <workItem from="1698460488697" duration="2563000" />
-      <workItem from="1698506386087" duration="350000" />
+      <workItem from="1698506386087" duration="416000" />
+      <workItem from="1698508242018" duration="608000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -561,7 +568,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698463090003</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="cambiando cosas">
+      <option name="closed" value="true" />
+      <created>1698506783314</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1698506783314</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +594,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="consola Visual swing" />
     <MESSAGE value="creando Observadores" />
     <MESSAGE value="actualizar" />
     <MESSAGE value="funcinoes partida" />
@@ -604,6 +618,7 @@
     <MESSAGE value="Se crea Uusuario , ahora todo funciona con usuario y la partida crea a los jugadores" />
     <MESSAGE value="cambios en vistas y nuevo UML" />
     <MESSAGE value="reduciendo warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="reduciendo warnings" />
+    <MESSAGE value="cambiando cosas" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambiando cosas" />
   </component>
 </project>

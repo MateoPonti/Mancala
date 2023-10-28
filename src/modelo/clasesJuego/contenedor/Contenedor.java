@@ -8,10 +8,8 @@ import java.util.ArrayList;
 
 public abstract class Contenedor implements IContenedor, Serializable {
     private ArrayList<IHaba> habas;
-    private TipoContenedor tipo;
 
-    public Contenedor(TipoContenedor tipo) {
-        this.tipo=tipo;
+    public Contenedor() {
         habas=new ArrayList<>();
     }
 
@@ -33,9 +31,6 @@ public abstract class Contenedor implements IContenedor, Serializable {
         return getCantidad()==0;
     }
 
-    public TipoContenedor getTipo() {
-        return tipo;
-    }
 
     public ArrayList<IHaba> getHabas(){
         return habas;

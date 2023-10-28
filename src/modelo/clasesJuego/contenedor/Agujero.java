@@ -7,7 +7,7 @@ public class Agujero extends Contenedor{
 
 
     public Agujero() {
-        super(TipoContenedor.Agujero);
+        super();
         inicializar();
     }
 

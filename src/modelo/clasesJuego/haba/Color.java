@@ -4,5 +4,13 @@ public enum Color {
     AMARILLO,
     VERDE,
     ROSA,
-    ROJO
+    ROJO,
+
+    PORP,
+    NARANJA,
+    AZUL
+    ,VIOLETA
+    ,ROSSA
+    ,PURPURA
+    ,SOL
 }

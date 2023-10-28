@@ -74,9 +74,9 @@ public class TableroJugador implements Serializable,ITableroJugador {
         while ((posicion<=cantidadAgujeros) && (!habas.isEmpty())){
             Contenedor contActual=tablero.get(posicion);
             tam= habas.size();
-            ultimaCayoVacio= tam==1  && contActual.estaVacio() && contActual.getTipo()== TipoContenedor.Agujero;
+            ultimaCayoVacio= tam==1  && contActual.estaVacio() && (contActual instanceof Agujero);
             if (ultimaCayoVacio){posCayoVacio=posicion;}
-            ultimaCayoZona= tam==1  && contActual.getTipo()== TipoContenedor.Zona;
+            ultimaCayoZona= tam==1  && (contActual instanceof Zona);
             contActual.agregar( habas.get(tam-1));
             posicion++;
             habas.remove(tam-1);
@@ -86,14 +86,10 @@ public class TableroJugador implements Serializable,ITableroJugador {
 
     public void repartirHabasOponente(ArrayList<IHaba> habas) {
         int tam;
-
         int posicion=0;
         while ((posicion<cantidadAgujeros) && (!habas.isEmpty())){
             Contenedor contActual=tablero.get(posicion);
             tam= habas.size();
-            ultimaCayoVacio= tam==1  && contActual.estaVacio() && contActual.getTipo()== TipoContenedor.Agujero;
-            if (ultimaCayoVacio){posCayoVacio=posicion;}
-            ultimaCayoZona= tam==1  && contActual.getTipo()== TipoContenedor.Zona;
             contActual.agregar( habas.get(tam-1));
             posicion++;
             habas.remove(tam-1);
