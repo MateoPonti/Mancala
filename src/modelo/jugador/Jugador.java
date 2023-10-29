@@ -4,7 +4,7 @@ import modelo.clasesJuego.usuario.IUsuario;
 import modelo.clasesJuego.usuario.Usuario;
 
 public class Jugador {
-    private int id;
+    private final int id;
     public Jugador(int id){
         this.id=id;
     }
