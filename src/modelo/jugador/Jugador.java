@@ -1,7 +1,6 @@
 package modelo.jugador;
 
 import modelo.clasesJuego.usuario.IUsuario;
-import modelo.clasesJuego.usuario.Usuario;
 
 public class Jugador {
     private final int id;

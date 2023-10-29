@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="se maneja con jugador , pero jugador no tiene el tablero solo se utiliza para saber que usuario es comparandolo con el jugador">
-      <change beforePath="$PROJECT_DIR$/src/modelo/jugador/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/jugador/Jugador.java" afterDir="false" />
-    </list>
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="se maneja con jugador , pero jugador no tiene el tablero solo se utiliza para saber que usuario es comparandolo con el jugador" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,23 +207,7 @@
       <workItem from="1698508242018" duration="745000" />
       <workItem from="1698510810361" duration="2041000" />
       <workItem from="1698595059161" duration="649000" />
-      <workItem from="1698610469177" duration="1144000" />
-    </task>
-    <task id="LOCAL-00001" summary="Creacion Mancala">
-      <option name="closed" value="true" />
-      <created>1696890827515</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1696890827515</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Creacion de contenedor para hacer el Tablero">
-      <option name="closed" value="true" />
-      <created>1696910350822</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1696910350822</updated>
+      <workItem from="1698610469177" duration="1281000" />
     </task>
     <task id="LOCAL-00003" summary="creando tablero , posicion , partida , nuevo concepto un tablero tiene administra los tableros de los jugadores , un jugador tiene un tablero">
       <option name="closed" value="true" />
@@ -603,7 +585,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698611614562</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="se maneja con jugador , pero jugador no tiene el tablero solo se utiliza para saber que usuario es comparandolo con el jugador">
+      <option name="closed" value="true" />
+      <created>1698611633695</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1698611633696</updated>
+    </task>
+    <task id="LOCAL-00051" summary="se maneja con jugador , pero jugador no tiene el tablero solo se utiliza para saber que usuario es comparandolo con el jugador">
+      <option name="closed" value="true" />
+      <created>1698611662571</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1698611662571</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
