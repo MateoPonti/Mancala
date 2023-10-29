@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class TableroJugador implements Serializable,ITableroJugador {
-    private final int cantidadAgujeros=6;
+    private static final int cantidadAgujeros=6;
     private  ArrayList<Contenedor> tablero;
 
     private boolean ultimaCayoVacio=false;

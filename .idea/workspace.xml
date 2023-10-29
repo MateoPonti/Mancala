@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="se maneja con jugador , pero jugador no tiene el tablero solo se utiliza para saber que usuario es comparandolo con el jugador" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="eliminando warnings">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +91,7 @@
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\recursos" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppCiente2">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="AppCiente2" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
       <option name="MAIN_CLASS_NAME" value="server.cliente.AppCliente" />
       <module name="Mancala" />
@@ -143,9 +146,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.AppCliente" />
         <item itemvalue="Application.AppServidor" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -208,14 +211,8 @@
       <workItem from="1698510810361" duration="2041000" />
       <workItem from="1698595059161" duration="649000" />
       <workItem from="1698610469177" duration="1281000" />
-    </task>
-    <task id="LOCAL-00003" summary="creando tablero , posicion , partida , nuevo concepto un tablero tiene administra los tableros de los jugadores , un jugador tiene un tablero">
-      <option name="closed" value="true" />
-      <created>1696931036477</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1696931036477</updated>
+      <workItem from="1698611772478" duration="44000" />
+      <workItem from="1698611926103" duration="48000" />
     </task>
     <task id="LOCAL-00004" summary="Haciendo logica del tablero">
       <option name="closed" value="true" />
@@ -601,7 +598,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698611662571</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="eliminando warnings">
+      <option name="closed" value="true" />
+      <created>1698611793287</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1698611793287</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,7 +624,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="haciendo inicializar y Partida , arreglando buggs" />
     <MESSAGE value="Haciendo Pruebas" />
     <MESSAGE value="Haciendo Vista" />
     <MESSAGE value="arreglando buggs" />
@@ -644,7 +648,8 @@
     <MESSAGE value="arreglando error tablero" />
     <MESSAGE value="elimine jugador , ahora solo se maneja con usuarios" />
     <MESSAGE value="se maneja con jugador , pero jugador no tiene el tablero solo se utiliza para saber que usuario es comparandolo con el jugador" />
-    <option name="LAST_COMMIT_MESSAGE" value="se maneja con jugador , pero jugador no tiene el tablero solo se utiliza para saber que usuario es comparandolo con el jugador" />
+    <MESSAGE value="eliminando warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="eliminando warnings" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
