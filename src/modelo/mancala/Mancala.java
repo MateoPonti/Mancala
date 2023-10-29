@@ -10,7 +10,7 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 public class Mancala extends ObservableRemoto implements IMancala{
-    private ArrayList<Usuario> usuarios;
+    private final ArrayList<Usuario> usuarios;
     private ArrayList<IUsuario> preparados;
 
     private static final int maxJugadores=2;

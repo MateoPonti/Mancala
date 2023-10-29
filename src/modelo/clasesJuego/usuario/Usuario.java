@@ -68,4 +68,8 @@ public class Usuario implements IUsuario, Serializable {
     public void agregarDerrota() {
         this.derrotas++;
     }
+
+    public boolean equals(IUsuario usuario) {
+        return getId()==usuario.getId();
+    }
 }

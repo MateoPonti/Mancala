@@ -1,40 +1,30 @@
 package modelo.clasesJuego.partida;
 
 import controlador.Notificacion;
-import modelo.clasesJuego.jugador.Jugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.tablero.ResultadoJugada;
 import modelo.clasesJuego.tablero.Tablero;
-import modelo.clasesJuego.tablero.TableroJugador;
 import modelo.clasesJuego.usuario.IUsuario;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Partida implements Serializable {
-    private Jugador turno;
+    private IUsuario turno;
 
-    private ArrayList<Jugador> jugadores;
+    private final ArrayList<IUsuario> jugadores;
 
-    private Tablero tablero;
+    private final Tablero tablero;
 
     private EstadoPartida estado;
 
     private String ganador;
 
     public Partida(ArrayList<IUsuario> usuarios) {
-        jugadores=new ArrayList<>();
-
-        for(IUsuario u: usuarios){
-            jugadores.add(new Jugador(u.getId()));
-        }
+        jugadores=usuarios;
         turno=jugadores.get(0);
-        ArrayList<TableroJugador> tablerosJugadores = new ArrayList<>();
-        tablerosJugadores.add(jugadores.get(0).getTableroJugador());
-        tablerosJugadores.add(jugadores.get(1).getTableroJugador());
-        tablero= new Tablero(tablerosJugadores);
+        tablero= new Tablero();
         estado=EstadoPartida.EnJuego;
-
     }
 
 
@@ -58,7 +48,7 @@ public class Partida implements Serializable {
     }
 
 
-    public Jugador getTurno() {
+    public IUsuario getTurno() {
         return turno;
     }
     public boolean isTurno(IUsuario jugador){

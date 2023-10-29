@@ -8,10 +8,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Tablero implements Serializable {
-    private ArrayList<TableroJugador> tableroJugadores;
+    private final ArrayList<TableroJugador> tableroJugadores;
 
-    public Tablero(ArrayList<TableroJugador> tablerosJugadores){
-        this.tableroJugadores=tablerosJugadores;
+    public Tablero(){
+        this.tableroJugadores= new ArrayList<>();
+        tableroJugadores.add(new TableroJugador());
+        tableroJugadores.add(new TableroJugador());
     }
 
     public ResultadoJugada  hacerJugada(int posicion,int jugadorTurno,int jugadorOponente){
