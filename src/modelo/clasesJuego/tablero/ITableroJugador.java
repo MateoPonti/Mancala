@@ -11,4 +11,5 @@ public interface ITableroJugador {
     ArrayList<IContenedor> getAgujerosVuelta();
 
     IContenedor getZona();
+
 }

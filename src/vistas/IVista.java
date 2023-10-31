@@ -8,7 +8,7 @@ public interface IVista {
      void setControlador(Controlador c);
      void inicializar();
 
-     void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente);
+     void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente,String turnoActual, String nombreJugador);
      
      void mostrarInicializarPartida();
 

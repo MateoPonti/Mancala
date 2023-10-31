@@ -60,7 +60,7 @@ public class Controlador implements IControladorRemoto, Serializable {
         if (cambio instanceof Notificacion) {
         if (cambio == Notificacion.MOSTRARTABLEROS) {
             try {
-                    vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador));
+                    vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador),modelo.getTurnoActual(), modelo.getJugador(this.jugador));
                 } catch (RemoteException e) {
                     throw new RuntimeException(e);
                 }}

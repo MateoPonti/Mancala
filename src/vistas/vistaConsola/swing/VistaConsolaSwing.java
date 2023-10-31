@@ -74,7 +74,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
 
 
 
-    public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente){
+    public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, String turnoActual, String nombreJugador){
         int x;
         int y;
 
@@ -123,6 +123,10 @@ public class VistaConsolaSwing implements IVista, Serializable {
             principal.add(l);
 
 
+
+
+
+
         }
 
         //Agrega las Zonas
@@ -167,6 +171,29 @@ public class VistaConsolaSwing implements IVista, Serializable {
         });
         principal.add(posicionIngreso);
         principal.add(butIngresoPos);
+
+
+
+
+
+
+        JLabel turno  = new JLabel(turnoActual);
+        JLabel jugadorVista  = new JLabel(nombreJugador);
+        turno.setSize(200,320);
+        jugadorVista.setSize(100,20);
+        x=(principal.getWidth()/2)-100;
+        y=(principal.getHeight()/4)-200;
+        turno.setBounds(x,y,turno.getWidth(),turno.getHeight());
+
+
+        x=(principal.getWidth()/2)-190;
+        y=(principal.getHeight()/4)+150;
+
+        jugadorVista.setBounds(x,y,turno.getWidth(),turno.getHeight());
+        principal.add(turno);
+        principal.add(jugadorVista);
+
+
 
         principal.revalidate();
         principal.repaint();

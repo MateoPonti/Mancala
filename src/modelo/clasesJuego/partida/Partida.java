@@ -36,7 +36,7 @@ public class Partida implements Serializable {
     public Notificacion hacerJugada(int posicion, IUsuario jugador){
         if (!isFinalizado()){
         if (isTurno(jugador)){
-           ResultadoJugada resultado= tablero.hacerJugada(posicion,determinarJugador(),determinarOponente());
+           ResultadoJugada resultado= tablero.hacerJugada(posicion,determinarJugador(turno),determinarOponente(turno));
            if (resultado==ResultadoJugada.Correcta){turnoSiguiente();}
            if (resultado==ResultadoJugada.Victoria){
                estado=EstadoPartida.Finalizado;
@@ -53,12 +53,7 @@ public class Partida implements Serializable {
     }
 
 
-    public Jugador getTurno() {
-        return turno;
-    }
-    public boolean isTurno(IUsuario jugador){
-        return  getTurno().equals(jugador);
-    }
+
 
     public boolean isFinalizado(){
         return estado==EstadoPartida.Finalizado;
@@ -96,12 +91,42 @@ public class Partida implements Serializable {
         }
     }
 
-    private int determinarJugador(){
-        if (jugadores.get(0).equals(turno)){ return 0;}
+
+    public String getTurnoActual() {
+        int jugadorTurno=determinarJugador(turno)+1;
+        return "Turno Actual: Jugador "+jugadorTurno;
+    }
+    public String getJugador(IUsuario usuario) {
+        int jugadorTurno=determinarJugador(usuario)+1;
+        return "Jugador "+jugadorTurno;
+    }
+
+
+
+
+    private int determinarJugador(Jugador j){
+        if (jugadores.get(0).equals(j)){ return 0;}
         return 1;
     }
-    private int determinarOponente(){
-        if (jugadores.get(0).equals(turno)){ return 1;}
+    private int determinarOponente(Jugador j){
+        if (jugadores.get(0).equals(j)){ return 1;}
         return 0;
     }
+
+    private int determinarJugador(IUsuario j){
+        if (jugadores.get(0).equals(j)){ return 0;}
+        return 1;
+    }
+
+
+    private Jugador getTurno() {
+        return turno;
+    }
+
+    private boolean isTurno(IUsuario jugador){
+        return  getTurno().equals(jugador);
+    }
+
+
+
 }

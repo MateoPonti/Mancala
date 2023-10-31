@@ -19,5 +19,9 @@ public interface IMancala extends IObservableRemoto {
 
      String getGanador() throws  RemoteException;
 
+    String getTurnoActual() throws  RemoteException;
+
+    String getJugador(IUsuario usuario) throws  RemoteException;
+
 
 }

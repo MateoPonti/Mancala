@@ -66,23 +66,6 @@ public class TableroJugador implements Serializable,ITableroJugador {
 
 
 
-    private void repartir(int posicion, ArrayList<IHaba> habas){
-        ultimaCayoVacio=false;
-        ultimaCayoZona=false;
-        int tam;
-
-        while ((posicion<=cantidadAgujeros) && (!habas.isEmpty())){
-            Contenedor contActual=tablero.get(posicion);
-            tam= habas.size();
-            ultimaCayoVacio= tam==1  && contActual.estaVacio() && (contActual instanceof Agujero);
-            if (ultimaCayoVacio){posCayoVacio=posicion;}
-            ultimaCayoZona= tam==1  && (contActual instanceof Zona);
-            contActual.agregar( habas.get(tam-1));
-            posicion++;
-            habas.remove(tam-1);
-        }
-
-    }
 
     public void repartirHabasOponente(ArrayList<IHaba> habas) {
         int tam;
@@ -143,6 +126,25 @@ public class TableroJugador implements Serializable,ITableroJugador {
         tablero.get(cantidadAgujeros).agregar(habas);
     }
 
+
+
+    private void repartir(int posicion, ArrayList<IHaba> habas){
+        ultimaCayoVacio=false;
+        ultimaCayoZona=false;
+        int tam;
+
+        while ((posicion<=cantidadAgujeros) && (!habas.isEmpty())){
+            Contenedor contActual=tablero.get(posicion);
+            tam= habas.size();
+            ultimaCayoVacio= tam==1  && contActual.estaVacio() && (contActual instanceof Agujero);
+            if (ultimaCayoVacio){posCayoVacio=posicion;}
+            ultimaCayoZona= tam==1  && (contActual instanceof Zona);
+            contActual.agregar( habas.get(tam-1));
+            posicion++;
+            habas.remove(tam-1);
+        }
+
+    }
 
     private ArrayList<IHaba> obtenerContenedor(int posicion) {
         return tablero.get(posicion).getHabas();

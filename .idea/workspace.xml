@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="elimine jugador , ahora solo se maneja con usuarios">
-      <change afterPath="$PROJECT_DIR$/src/modelo/jugador/Jugador.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change afterPath="$PROJECT_DIR$/src/test/TableroJugadorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mancala.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Mancala.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ITableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ITableroJugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +30,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -56,14 +66,22 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE&quot;: &quot;ToolWindow&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;ToolWindow&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
     &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Mateo/IdeaProjects/Mancala/src/modelo/clasesJuego/tablero&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Mateo/IdeaProjects/Mancala/src/RMILibreria.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -91,8 +109,14 @@
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\server" />
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\recursos" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="modelo.clasesJuego.tablero" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.AppCiente2">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="AppCiente2" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
       <option name="MAIN_CLASS_NAME" value="server.cliente.AppCliente" />
       <module name="Mancala" />
@@ -139,17 +163,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TableroJugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mancala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TableroJugadorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.AppCiente2" />
       <item itemvalue="Application.AppCliente" />
       <item itemvalue="Application.AppServidor" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.TableroJugadorTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TableroJugadorTest" />
         <item itemvalue="Application.AppCliente" />
         <item itemvalue="Application.AppServidor" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -212,6 +253,10 @@
       <workItem from="1698510810361" duration="2041000" />
       <workItem from="1698595059161" duration="649000" />
       <workItem from="1698610469177" duration="932000" />
+      <workItem from="1698613832970" duration="484000" />
+      <workItem from="1698704189644" duration="656000" />
+      <workItem from="1698708026263" duration="3253000" />
+      <workItem from="1698712691140" duration="2607000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion Mancala">
       <option name="closed" value="true" />
@@ -597,7 +642,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698611122934</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1698612118939</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1698612118939</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,8 +668,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="funcinoes partida" />
-    <MESSAGE value="haciendo inicializar y Partida , arreglando buggs" />
     <MESSAGE value="Haciendo Pruebas" />
     <MESSAGE value="Haciendo Vista" />
     <MESSAGE value="arreglando buggs" />
@@ -640,7 +691,9 @@
     <MESSAGE value="cambiando cosas" />
     <MESSAGE value="arreglando error tablero" />
     <MESSAGE value="elimine jugador , ahora solo se maneja con usuarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="elimine jugador , ahora solo se maneja con usuarios" />
+    <MESSAGE value="tablero ahora cant agujeros es static final" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
