@@ -5,6 +5,7 @@ import modelo.clasesJuego.haba.Haba;
 
 public class Agujero extends Contenedor{
 
+    private final int cantHabas=4;
 
     public Agujero() {
         super();
@@ -18,7 +19,7 @@ public class Agujero extends Contenedor{
             haba.setColor(c);
             agregar(haba);
             i++;
-            if (i==4){break;}
+            if (i==cantHabas){break;}
         }
 
     }
