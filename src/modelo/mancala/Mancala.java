@@ -5,6 +5,7 @@ import controlador.Notificacion;
 import modelo.clasesJuego.partida.Partida;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.usuario.*;
+import modelo.jugador.Jugador;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
@@ -34,6 +35,9 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
 
+    public IUsuario conectarAnonimo() throws  RemoteException{
+        return new Usuario("","",-1);
+    }
     public IUsuario conectarJugador(String nombre,String contra) throws RemoteException {
         Usuario nuevoJugador= new Usuario(nombre,contra, usuarios.size());
         usuarios.add(nuevoJugador);

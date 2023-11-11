@@ -205,12 +205,12 @@ public class VistaConsolaSwing implements IVista, Serializable {
         principal.removeAll();
         frame.setSize(600,300);
         principal.setSize(600,300);
-        principal.setBackground(Color.CYAN);
+        principal.setBackground(Color.blue);
 
         JButton arrancarPartida= new JButton("Inicializar Partida");
         arrancarPartida.setSize(200,20);
 
-        int x=(principal.getWidth()/2);
+        int x=(principal.getWidth()/4);
         int y=(principal.getHeight()/2);
         arrancarPartida.setBounds(x,y,arrancarPartida.getWidth(),arrancarPartida.getHeight());
         arrancarPartida.addActionListener(e -> {

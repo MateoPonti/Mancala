@@ -13,6 +13,8 @@ public interface IMancala extends IObservableRemoto {
 
     IUsuario conectarJugador(String nombre, String eqw) throws RemoteException;
 
+    IUsuario conectarAnonimo() throws RemoteException;
+
      ITableroJugador getTableroOponente(IUsuario jugador) throws  RemoteException;
 
      ITableroJugador getTableroTurno(IUsuario jugador) throws  RemoteException;
