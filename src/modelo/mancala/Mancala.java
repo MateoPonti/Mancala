@@ -5,7 +5,6 @@ import controlador.Notificacion;
 import modelo.clasesJuego.partida.Partida;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.usuario.*;
-import modelo.jugador.Jugador;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;

@@ -11,7 +11,7 @@ import java.rmi.RemoteException;
 
 public class Controlador implements IControladorRemoto, Serializable {
 
-    private IVista vista;
+    private final IVista vista;
     private IUsuario jugador;
     private IMancala modelo;
 

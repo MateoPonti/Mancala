@@ -52,14 +52,12 @@ public class VistaConsolaSwing implements IVista, Serializable {
         ingresoContra.setBounds(50,140,ingresoNombre.getWidth(),ingresoNombre.getHeight());
 
 
-        enviaBut.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                    String nombre = ingresoNombre.getText();
-                    String contrasenia = ingresoContra.getText();
-                    if (!nombre.isEmpty() && !contrasenia.isEmpty()) {
-                    controlador.conectarUsuario(nombre,contrasenia);
-                    enviaBut.setVisible(false);  }
-            }
+        enviaBut.addActionListener(e -> {
+                String nombre = ingresoNombre.getText();
+                String contrasenia = ingresoContra.getText();
+                if (!nombre.isEmpty() && !contrasenia.isEmpty()) {
+                controlador.conectarUsuario(nombre,contrasenia);
+                enviaBut.setVisible(false);  }
         });
 
         principal.add(ingresoNombre);
@@ -164,11 +162,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
 
         posicionIngreso.setBounds(x,y,posicionIngreso.getWidth(),posicionIngreso.getHeight());
         butIngresoPos.setBounds(x+100,y,posicionIngreso.getWidth(),posicionIngreso.getHeight());
-        butIngresoPos.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                controlador.hacerJugada( posicionIngreso.getText());
-            }
-        });
+        butIngresoPos.addActionListener(e -> controlador.hacerJugada( posicionIngreso.getText()));
         principal.add(posicionIngreso);
         principal.add(butIngresoPos);
 
