@@ -18,6 +18,8 @@ public class Main {
         IVista vista2 = new VistaConsolaSwing();
         Controlador controlador2 = new Controlador(vista2);
 
+
+
         modelo.agregarObservador(controlador1);
         modelo.agregarObservador(controlador2);
 
@@ -29,3 +31,4 @@ public class Main {
 
     }
 }
+

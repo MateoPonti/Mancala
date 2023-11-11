@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="agregue una variable final">
+      <change afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +22,8 @@
         <option value="Record" />
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -248,15 +251,9 @@
       <workItem from="1698708026263" duration="3253000" />
       <workItem from="1698712691140" duration="2739000" />
       <workItem from="1698860601584" duration="47000" />
-      <workItem from="1698860956318" duration="513000" />
-    </task>
-    <task id="LOCAL-00003" summary="creando tablero , posicion , partida , nuevo concepto un tablero tiene administra los tableros de los jugadores , un jugador tiene un tablero">
-      <option name="closed" value="true" />
-      <created>1696931036477</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1696931036477</updated>
+      <workItem from="1698860956318" duration="791000" />
+      <workItem from="1699421397441" duration="199000" />
+      <workItem from="1699663192010" duration="1045000" />
     </task>
     <task id="LOCAL-00004" summary="Haciendo logica del tablero">
       <option name="closed" value="true" />
@@ -642,7 +639,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698861414542</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="agregue una variable final">
+      <option name="closed" value="true" />
+      <created>1698861494900</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1698861494900</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

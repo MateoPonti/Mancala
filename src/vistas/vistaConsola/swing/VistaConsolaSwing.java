@@ -29,7 +29,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
     }
 
     private void pedirNombre() {
-        frame.setSize(500,200);
+        frame.setSize(400,300);
         frame.setVisible(true);
         principal= (JPanel) frame.getContentPane();
         principal.setLayout(null);
@@ -37,38 +37,38 @@ public class VistaConsolaSwing implements IVista, Serializable {
         JButton enviaBut= new JButton("Enviar");
 
         enviaBut.setSize(200,20);
-        enviaBut.setBounds(150,100,enviaBut.getWidth(),enviaBut.getHeight());
+        enviaBut.setBounds(50,190,enviaBut.getWidth(),enviaBut.getHeight());
 
 
-        principal.setBackground(Color.lightGray);
+        principal.setBackground(Color.blue);
         JTextField ingresoNombre = new JTextField();
-        ingresoNombre.setText("NOMBRE");
+        ingresoNombre.setText("Nombre");
         ingresoNombre.setSize(100,20);
         ingresoNombre.setBounds(50,100,ingresoNombre.getWidth(),ingresoNombre.getHeight());
+
+        JTextField ingresoContra = new JTextField();
+        ingresoContra.setText("Contraseña");
+        ingresoContra.setSize(100,20);
+        ingresoContra.setBounds(50,140,ingresoNombre.getWidth(),ingresoNombre.getHeight());
 
 
         enviaBut.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                    controlador.conectarUsuario(getNombre(ingresoNombre));
-                    enviaBut.setVisible(false);
+                    String nombre = ingresoNombre.getText();
+                    String contrasenia = ingresoContra.getText();
+                    if (!nombre.isEmpty() && !contrasenia.isEmpty()) {
+                    controlador.conectarUsuario(nombre,contrasenia);
+                    enviaBut.setVisible(false);  }
             }
         });
 
         principal.add(ingresoNombre);
+        principal.add(ingresoContra);
         principal.add(enviaBut);
 
         principal.revalidate();
         principal.repaint();
 
-
-    }
-
-    private String getNombre(JTextField j){
-        String texto=j.getText();
-        if (texto.isEmpty()) {
-            return "Jugador Anonimo";
-        }
-        return texto;
 
     }
 

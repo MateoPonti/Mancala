@@ -24,10 +24,10 @@ public class Controlador implements IControladorRemoto, Serializable {
 
 
 
-    public void conectarUsuario(String nombre)  {
+    public void conectarUsuario(String nombre,String contrasenia)  {
         try {
-            this.jugador= modelo.conectarJugador(nombre,"123");
-            modelo.inicializarPartida(jugador);
+            this.jugador= modelo.conectarJugador(nombre,contrasenia);
+            vista.mostrarInicializarPartida();
         } catch (RemoteException e) {
             throw new RuntimeException(e);
 
@@ -56,7 +56,7 @@ public class Controlador implements IControladorRemoto, Serializable {
 
 
     @Override
-    public void actualizar(IObservableRemoto IObserver, Object cambio)   {
+    public void actualizar(IObservableRemoto IObserver, Object cambio) throws RemoteException {
         if (cambio instanceof Notificacion) {
         if (cambio == Notificacion.MOSTRARTABLEROS) {
             try {
