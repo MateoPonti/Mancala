@@ -1,6 +1,7 @@
 package vistas.vistaGrafica;
 
 import controlador.Controlador;
+import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import vistas.IVista;
 
@@ -26,7 +27,7 @@ public class VistaGrafica implements IVista {
     }
 
     @Override
-    public void mostrarGanador(String ganador) {
+    public void mostrarGanador(IJugador ganador) {
 
     }
 }

@@ -1,6 +1,7 @@
 package vistas;
 
 import controlador.Controlador;
+import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 
 
@@ -12,5 +13,5 @@ public interface IVista {
      
      void mostrarInicializarPartida();
 
-     void mostrarGanador(String ganador);
+     void mostrarGanador(IJugador ganador);
 }

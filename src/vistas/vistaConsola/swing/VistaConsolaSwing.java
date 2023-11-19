@@ -2,6 +2,7 @@ package vistas.vistaConsola.swing;
 
 import controlador.Controlador;
 import modelo.clasesJuego.contenedor.IContenedor;
+import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import vistas.IVista;
 
@@ -214,8 +215,8 @@ public class VistaConsolaSwing implements IVista, Serializable {
     }
 
     @Override
-    public void mostrarGanador(String ganador) {
-        JOptionPane.showMessageDialog(null, ganador, "Ganador", JOptionPane.INFORMATION_MESSAGE);
+    public void mostrarGanador(IJugador ganador) {
+        JOptionPane.showMessageDialog(null, ganador.getNombre(), "Ganador", JOptionPane.INFORMATION_MESSAGE);
     }
 
     private String hacerAgujero(int cantidad) {

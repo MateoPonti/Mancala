@@ -2,6 +2,7 @@ package modelo.mancala;
 
 import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
+import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.partida.Partida;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.usuario.*;
@@ -89,8 +90,8 @@ public class Mancala extends ObservableRemoto implements IMancala{
         return null;
     }
 
-    public String getGanador() throws  RemoteException{
-        if (partida!=null){return partida.getGanador();}
+    public IJugador getGanador() throws  RemoteException{
+        if (partida!=null && partida.isFinalizado()){return partida.getGanador();}
         return null;
     }
 

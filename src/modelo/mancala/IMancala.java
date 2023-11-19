@@ -1,6 +1,7 @@
 package modelo.mancala;
 
 import ar.edu.unlu.rmimvc.observer.IObservableRemoto;
+import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.usuario.IUsuario;
 
@@ -18,7 +19,7 @@ public interface IMancala extends IObservableRemoto {
 
      ITableroJugador getTableroTurno(IUsuario jugador) throws  RemoteException;
 
-     String getGanador() throws  RemoteException;
+     IJugador getGanador() throws  RemoteException;
 
     String getTurnoActual() throws  RemoteException;
 

@@ -1,6 +1,7 @@
 package modelo.clasesJuego.partida;
 
 import controlador.Notificacion;
+import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.jugador.Jugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.tablero.ResultadoJugada;
@@ -19,12 +20,16 @@ public class Partida implements Serializable {
 
     private EstadoPartida estado;
 
-    private String ganador;
+    private IJugador ganador;
 
     public Partida(ArrayList<IUsuario> usuarios) {
         jugadores=new ArrayList<>();
+        int i=1;
+        String nombreJ="Jugador ";
         for(IUsuario u : usuarios){
-            jugadores.add(new Jugador(u.getId()));
+
+            jugadores.add(new Jugador(u.getId(),(nombreJ+i)));
+            i++;
         }
         turno=jugadores.get(0);
         tablero= new Tablero();
@@ -38,11 +43,11 @@ public class Partida implements Serializable {
            if (resultado==ResultadoJugada.Correcta){turnoSiguiente();}
            if (resultado==ResultadoJugada.Victoria){
                estado=EstadoPartida.Finalizado;
-               ganador="Jugador 1"; // Asume que gano el jugador 1
+               ganador= (IJugador) jugadores.get(0); // Asume que gano el jugador 1
                int puntosJugador1=tablero.devolverPuntosJugador(1);
                int puntosJugador2=tablero.devolverPuntosJugador(2);
-               if(puntosJugador2>puntosJugador1){ganador="Jugador 2";} // pregunta si gano el jugador 2
-               if(puntosJugador2==puntosJugador1){ganador="Empate.";} // se fija si hay empate
+               if(puntosJugador2>puntosJugador1){ganador=(IJugador) jugadores.get(1);} // pregunta si gano el jugador 2
+               if(puntosJugador2==puntosJugador1){ganador=(IJugador) new Jugador();} // se fija si hay empate
                return Notificacion.FINALIZOJUEGO;}
            return Notificacion.JUEGATURNO;
         }}
@@ -74,7 +79,7 @@ public class Partida implements Serializable {
 
     }
 
-    public String getGanador() {
+    public IJugador getGanador() {
         return ganador;
     }
 
