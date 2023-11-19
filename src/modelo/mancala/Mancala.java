@@ -96,12 +96,12 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
     @Override
-    public String getTurnoActual() throws RemoteException {
+    public IJugador getTurnoActual() throws RemoteException {
         return partida.getTurnoActual();
     }
 
     @Override
-    public String getJugador(IUsuario usuario) throws RemoteException {
+    public IJugador getJugador(IUsuario usuario) throws RemoteException {
         return partida.getJugador(usuario);
     }
 

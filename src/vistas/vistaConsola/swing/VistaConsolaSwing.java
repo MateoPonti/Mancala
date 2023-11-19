@@ -73,7 +73,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
 
 
 
-    public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, String turnoActual, String nombreJugador){
+    public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador){
         int x;
         int y;
 
@@ -172,8 +172,8 @@ public class VistaConsolaSwing implements IVista, Serializable {
 
 
 
-        JLabel turno  = new JLabel(turnoActual);
-        JLabel jugadorVista  = new JLabel(nombreJugador);
+        JLabel turno  = new JLabel("Turno: "+turnoActual.getNombre());
+        JLabel jugadorVista  = new JLabel( nombreJugador.getNombre());
         turno.setSize(200,320);
         jugadorVista.setSize(100,20);
         x=(principal.getWidth()/2)-100;

@@ -95,13 +95,13 @@ public class Partida implements Serializable {
     }
 
 
-    public String getTurnoActual() {
-        int jugadorTurno=determinarJugador(turno)+1;
-        return "Turno Actual: Jugador "+jugadorTurno;
+    public IJugador getTurnoActual() {
+        int jugadorTurno=determinarJugador(turno);
+        return jugadores.get(jugadorTurno);
     }
-    public String getJugador(IUsuario usuario) {
-        int jugadorTurno=determinarJugador(usuario)+1;
-        return "Jugador "+jugadorTurno;
+    public IJugador getJugador(IUsuario usuario) {
+        int jugadorTurno=determinarJugador(usuario);
+        return jugadores.get(jugadorTurno);
     }
 
 

@@ -17,7 +17,7 @@ public class VistaGrafica implements IVista {
     }
 
     @Override
-    public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, String turnoActual, String nombreJugador) {
+    public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador) {
 
     }
 
