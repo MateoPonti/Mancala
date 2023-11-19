@@ -47,7 +47,12 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
     public void inicializarPartida(IUsuario jugador) throws RemoteException {
         if (partida==null  || partida.isFinalizado()){
-         if(preparados==null && partida.isFinalizado()){preparados=new ArrayList<>();}
+         if(preparados == null) {
+             assert partida != null;
+             if (partida.isFinalizado()) {
+                 preparados = new ArrayList<>();
+             }
+         }
          agregarJugadorPreparados(jugador);
          if (isPreparados()){
             inicializarPartida();
