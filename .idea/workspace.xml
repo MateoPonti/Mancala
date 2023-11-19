@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="hice que mas de uno pueda ver el juego">
-      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/jugador/Jugador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="ahora mas de uno puede ver el juego solo si conecto el nombre y contra">
+      <change beforePath="$PROJECT_DIR$/UML/UML.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,23 +259,7 @@
       <workItem from="1699421397441" duration="199000" />
       <workItem from="1699663192010" duration="2095000" />
       <workItem from="1699806162871" duration="1335000" />
-      <workItem from="1700367127097" duration="2209000" />
-    </task>
-    <task id="LOCAL-00007" summary="Haciendo grafica">
-      <option name="closed" value="true" />
-      <created>1697007210301</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1697007210301</updated>
-    </task>
-    <task id="LOCAL-00008" summary="intentando ahcer vistaConsola">
-      <option name="closed" value="true" />
-      <created>1697154842524</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1697154842524</updated>
+      <workItem from="1700367127097" duration="3389000" />
     </task>
     <task id="LOCAL-00009" summary="consola Visual swing">
       <option name="closed" value="true" />
@@ -660,7 +637,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699665295520</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="ahora mas de uno puede ver el juego solo si conecto el nombre y contra">
+      <option name="closed" value="true" />
+      <created>1700369435108</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1700369435109</updated>
+    </task>
+    <task id="LOCAL-00057" summary="ahora mas de uno puede ver el juego solo si conecto el nombre y contra">
+      <option name="closed" value="true" />
+      <created>1700369524909</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1700369524910</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +671,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="buscando bugg" />
     <MESSAGE value="arreglando responsabilidades" />
     <MESSAGE value="agregando obtener ganador , permite a la vista saber quien gano y ademas creamos el inicializar partida en caso de que quieran seguir jugando" />
     <MESSAGE value="arreglando problemas" />
@@ -703,7 +695,8 @@
     <MESSAGE value="agregue una variable final" />
     <MESSAGE value="agregue que se pueda poner contra" />
     <MESSAGE value="hice que mas de uno pueda ver el juego" />
-    <option name="LAST_COMMIT_MESSAGE" value="hice que mas de uno pueda ver el juego" />
+    <MESSAGE value="ahora mas de uno puede ver el juego solo si conecto el nombre y contra" />
+    <option name="LAST_COMMIT_MESSAGE" value="ahora mas de uno puede ver el juego solo si conecto el nombre y contra" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
