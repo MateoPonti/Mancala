@@ -1,4 +1,4 @@
-package modelo.jugador;
+package modelo.clasesJuego.jugador;
 
 import modelo.clasesJuego.usuario.IUsuario;
 

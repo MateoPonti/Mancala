@@ -57,6 +57,7 @@ public class Controlador implements IControladorRemoto, Serializable {
 
     @Override
     public void actualizar(IObservableRemoto IObserver, Object cambio) throws RemoteException {
+        if (jugador!=null){
         if (cambio instanceof Notificacion) {
         if (cambio == Notificacion.MOSTRARTABLEROS) {
             try {
@@ -73,13 +74,12 @@ public class Controlador implements IControladorRemoto, Serializable {
             }
         }
 
-        }
+        } }
     }
 
     @Override
     public <T extends IObservableRemoto> void setModeloRemoto(T modeloRemoto) throws  RemoteException  {
         this.modelo= (IMancala) modeloRemoto;
-        this.jugador=modelo.conectarAnonimo();
     }
 
 

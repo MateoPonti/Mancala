@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="agregue que se pueda poner contra">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="hice que mas de uno pueda ver el juego">
+      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/jugador/Jugador.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +24,8 @@
       <list>
         <option value="Record" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -131,6 +133,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppCliente3" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="server.cliente.AppCliente" />
+      <module name="Mancala" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppServidor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.servidor.AppServidor" />
       <module name="Mancala" />
@@ -174,6 +183,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.AppCiente2" />
+      <item itemvalue="Application.AppCliente3" />
       <item itemvalue="Application.AppCliente" />
       <item itemvalue="Application.AppServidor" />
       <item itemvalue="Application.Main" />
@@ -182,9 +192,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TableroJugadorTest" />
         <item itemvalue="Application.AppCliente" />
         <item itemvalue="Application.AppServidor" />
+        <item itemvalue="JUnit.TableroJugadorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -254,23 +264,9 @@
       <workItem from="1698860601584" duration="47000" />
       <workItem from="1698860956318" duration="791000" />
       <workItem from="1699421397441" duration="199000" />
-      <workItem from="1699663192010" duration="1848000" />
-    </task>
-    <task id="LOCAL-00005" summary="Haciendo logica del tablero">
-      <option name="closed" value="true" />
-      <created>1696971203697</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1696971203697</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Haciendo logica del tablero">
-      <option name="closed" value="true" />
-      <created>1696972956798</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1696972956798</updated>
+      <workItem from="1699663192010" duration="2095000" />
+      <workItem from="1699806162871" duration="1335000" />
+      <workItem from="1700367127097" duration="2209000" />
     </task>
     <task id="LOCAL-00007" summary="Haciendo grafica">
       <option name="closed" value="true" />
@@ -648,7 +644,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699664480827</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="hice que mas de uno pueda ver el juego">
+      <option name="closed" value="true" />
+      <created>1699665206632</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1699665206632</updated>
+    </task>
+    <task id="LOCAL-00055" summary="hice que mas de uno pueda ver el juego">
+      <option name="closed" value="true" />
+      <created>1699665295520</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1699665295520</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +678,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="probando juego" />
     <MESSAGE value="buscando bugg" />
     <MESSAGE value="arreglando responsabilidades" />
     <MESSAGE value="agregando obtener ganador , permite a la vista saber quien gano y ademas creamos el inicializar partida en caso de que quieran seguir jugando" />
@@ -691,7 +702,8 @@
     <MESSAGE value="ahora la vista sabe que jugador juega  , tambien se agregaron test al tablero jugador" />
     <MESSAGE value="agregue una variable final" />
     <MESSAGE value="agregue que se pueda poner contra" />
-    <option name="LAST_COMMIT_MESSAGE" value="agregue que se pueda poner contra" />
+    <MESSAGE value="hice que mas de uno pueda ver el juego" />
+    <option name="LAST_COMMIT_MESSAGE" value="hice que mas de uno pueda ver el juego" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

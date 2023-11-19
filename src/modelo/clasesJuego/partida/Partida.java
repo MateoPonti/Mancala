@@ -1,12 +1,12 @@
 package modelo.clasesJuego.partida;
 
 import controlador.Notificacion;
+import modelo.clasesJuego.jugador.Jugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.tablero.ResultadoJugada;
 import modelo.clasesJuego.tablero.Tablero;
 import modelo.clasesJuego.usuario.IUsuario;
-import modelo.clasesJuego.usuario.Usuario;
-import modelo.jugador.Jugador;
+
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -15,7 +15,6 @@ public class Partida implements Serializable {
     private Jugador turno;
 
     private final ArrayList<Jugador> jugadores;
-
     private final Tablero tablero;
 
     private EstadoPartida estado;
@@ -25,12 +24,11 @@ public class Partida implements Serializable {
     public Partida(ArrayList<IUsuario> usuarios) {
         jugadores=new ArrayList<>();
         for(IUsuario u : usuarios){
-        jugadores.add(new Jugador(u.getId()));
+            jugadores.add(new Jugador(u.getId()));
         }
         turno=jugadores.get(0);
         tablero= new Tablero();
-        estado=EstadoPartida.EnJuego;
-    }
+        estado=EstadoPartida.EnJuego;}
 
 
     public Notificacion hacerJugada(int posicion, IUsuario jugador){

@@ -17,6 +17,7 @@ public class Usuario implements IUsuario, Serializable {
     }
 
 
+
     public String getNombre() {
         return nombre;
     }
