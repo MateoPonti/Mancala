@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="uml imagen">
-      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Ahora existe Jugador nombre">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,15 +263,7 @@
       <workItem from="1699663192010" duration="2095000" />
       <workItem from="1699806162871" duration="1335000" />
       <workItem from="1700367127097" duration="3655000" />
-      <workItem from="1700408674226" duration="771000" />
-    </task>
-    <task id="LOCAL-00010" summary="consola Visual swing">
-      <option name="closed" value="true" />
-      <created>1697157047231</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1697157047231</updated>
+      <workItem from="1700408674226" duration="2398000" />
     </task>
     <task id="LOCAL-00011" summary="creando Observadores">
       <option name="closed" value="true" />
@@ -662,7 +649,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700370577191</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Ahora existe Jugador nombre">
+      <option name="closed" value="true" />
+      <created>1700409490776</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1700409490776</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -680,7 +675,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="agregando obtener ganador , permite a la vista saber quien gano y ademas creamos el inicializar partida en caso de que quieran seguir jugando" />
     <MESSAGE value="arreglando problemas" />
     <MESSAGE value="Arreglando VistaConsolaSwing" />
     <MESSAGE value="uml Mancala 16/10/2023" />
@@ -705,7 +699,8 @@
     <MESSAGE value="hice que mas de uno pueda ver el juego" />
     <MESSAGE value="ahora mas de uno puede ver el juego solo si conecto el nombre y contra" />
     <MESSAGE value="uml imagen" />
-    <option name="LAST_COMMIT_MESSAGE" value="uml imagen" />
+    <MESSAGE value="Ahora existe Jugador nombre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ahora existe Jugador nombre" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

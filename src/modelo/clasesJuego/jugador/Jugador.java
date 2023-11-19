@@ -2,7 +2,7 @@ package modelo.clasesJuego.jugador;
 
 import modelo.clasesJuego.usuario.IUsuario;
 
-public class Jugador {
+public class Jugador implements  IJugador{
     private final int id;
 
     public String getNombre() {

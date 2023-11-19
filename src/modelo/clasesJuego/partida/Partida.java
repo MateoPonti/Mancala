@@ -43,11 +43,11 @@ public class Partida implements Serializable {
            if (resultado==ResultadoJugada.Correcta){turnoSiguiente();}
            if (resultado==ResultadoJugada.Victoria){
                estado=EstadoPartida.Finalizado;
-               ganador= (IJugador) jugadores.get(0); // Asume que gano el jugador 1
+               ganador= jugadores.get(0); // Asume que gano el jugador 1
                int puntosJugador1=tablero.devolverPuntosJugador(1);
                int puntosJugador2=tablero.devolverPuntosJugador(2);
-               if(puntosJugador2>puntosJugador1){ganador=(IJugador) jugadores.get(1);} // pregunta si gano el jugador 2
-               if(puntosJugador2==puntosJugador1){ganador=(IJugador) new Jugador();} // se fija si hay empate
+               if(puntosJugador2>puntosJugador1){ganador=jugadores.get(1);} // pregunta si gano el jugador 2
+               if(puntosJugador2==puntosJugador1){ganador= new Jugador();}
                return Notificacion.FINALIZOJUEGO;}
            return Notificacion.JUEGATURNO;
         }}
