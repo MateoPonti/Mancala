@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="cambio">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="hice para agregar victoria y derrota , y estoy probando cosas con la vista grafica">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/PanelConImagen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/PanelConImagen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,15 +266,8 @@
       <workItem from="1700442096536" duration="1206000" />
       <workItem from="1700445468548" duration="1105000" />
       <workItem from="1700491031556" duration="935000" />
-      <workItem from="1700515930824" duration="5291000" />
-    </task>
-    <task id="LOCAL-00019" summary="Haciendo Vista">
-      <option name="closed" value="true" />
-      <created>1697419348732</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1697419348732</updated>
+      <workItem from="1700515930824" duration="5586000" />
+      <workItem from="1700521948351" duration="587000" />
     </task>
     <task id="LOCAL-00020" summary="Haciendo Vista">
       <option name="closed" value="true" />
@@ -667,7 +653,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700517394118</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="hice para agregar victoria y derrota , y estoy probando cosas con la vista grafica">
+      <option name="closed" value="true" />
+      <created>1700521436387</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1700521436387</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,7 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cambiando resolucion pantalla" />
     <MESSAGE value="anda con rmi" />
     <MESSAGE value="contenedor es abstracto" />
     <MESSAGE value="cambios en vista" />
@@ -710,7 +703,8 @@
     <MESSAGE value="hice jugador serializable" />
     <MESSAGE value="cambio interface" />
     <MESSAGE value="cambio" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambio" />
+    <MESSAGE value="hice para agregar victoria y derrota , y estoy probando cosas con la vista grafica" />
+    <option name="LAST_COMMIT_MESSAGE" value="hice para agregar victoria y derrota , y estoy probando cosas con la vista grafica" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
