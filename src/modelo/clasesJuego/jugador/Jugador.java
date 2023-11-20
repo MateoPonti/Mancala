@@ -2,7 +2,9 @@ package modelo.clasesJuego.jugador;
 
 import modelo.clasesJuego.usuario.IUsuario;
 
-public class Jugador implements  IJugador{
+import java.io.Serializable;
+
+public class Jugador implements  IJugador, Serializable {
     private final int id;
 
     public String getNombre() {

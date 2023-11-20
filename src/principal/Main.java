@@ -23,7 +23,6 @@ public class Main {
         Controlador controlador3 = new Controlador(vista3);
 
 
-
         modelo.agregarObservador(controlador1);
         modelo.agregarObservador(controlador2);
         modelo.agregarObservador(controlador3);
