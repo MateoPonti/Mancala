@@ -2,7 +2,7 @@
 
 
 
-El juego de Mancala, conocido en algunas regiones como Kalaha, pertenece a una familia de juegos de tablero tradicionales con raíces africanas y una amplia difusión. Estos juegos comparten elementos comunes, como un tablero con hoyos o receptáculos y semillas o "habas", y su mecanismo de juego se denomina "siembra". La designación "kalaha" podría tener relación con su uso frecuente en comunidades del desierto del Kalahari.
+El juego Mancala, conocido en algunas regiones como Kalaha, pertenece a una familia de juegos de tablero tradicionales con raíces africanas y una amplia difusión. Estos juegos comparten elementos comunes, como un tablero con hoyos o receptáculos y semillas o "habas", y su mecanismo de juego se denomina "siembra". La designación "kalaha" podría tener relación con su uso frecuente en comunidades del desierto del Kalahari.
 
 Hallazgos arqueológicos han revelado evidencia del juego en diversas partes del mundo, incluyendo Israel, Eritrea y Etiopía, con dataciones que abarcan desde el siglo II hasta el siglo VII d.C. Además, se ha sugerido que el juego pudo haber sido mencionado en textos antiguos, como "Misterios del Cielo y de la Tierra" del siglo XIV, escrito por Giyorgis de Segla.
 
