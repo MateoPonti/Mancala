@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="ahora el turno actual y el nombre del jugador son interfaces IJugador">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="cambios de uml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -264,15 +262,7 @@
       <workItem from="1700423482912" duration="799000" />
       <workItem from="1700424402572" duration="201000" />
       <workItem from="1700442096536" duration="1206000" />
-      <workItem from="1700445468548" duration="317000" />
-    </task>
-    <task id="LOCAL-00013" summary="funcinoes partida">
-      <option name="closed" value="true" />
-      <created>1697318541730</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1697318541730</updated>
+      <workItem from="1700445468548" duration="979000" />
     </task>
     <task id="LOCAL-00014" summary="funcinoes partida">
       <option name="closed" value="true" />
@@ -658,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700413212514</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="cambios de uml">
+      <option name="closed" value="true" />
+      <created>1700445848698</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1700445848699</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +674,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="uml Mancala 16/10/2023" />
     <MESSAGE value="Creando Servidor" />
     <MESSAGE value="actualizando UML" />
     <MESSAGE value="servidor creado y probado" />
@@ -701,7 +698,8 @@
     <MESSAGE value="Ahora existe Jugador nombre" />
     <MESSAGE value="error que no daba victoria" />
     <MESSAGE value="ahora el turno actual y el nombre del jugador son interfaces IJugador" />
-    <option name="LAST_COMMIT_MESSAGE" value="ahora el turno actual y el nombre del jugador son interfaces IJugador" />
+    <MESSAGE value="cambios de uml" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios de uml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
