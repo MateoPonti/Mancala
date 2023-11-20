@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="hice para agregar victoria y derrota , y estoy probando cosas con la vista grafica">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="ahora se resetea al ganar">
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,15 +268,7 @@
       <workItem from="1700445468548" duration="1105000" />
       <workItem from="1700491031556" duration="935000" />
       <workItem from="1700515930824" duration="5586000" />
-      <workItem from="1700521948351" duration="587000" />
-    </task>
-    <task id="LOCAL-00020" summary="Haciendo Vista">
-      <option name="closed" value="true" />
-      <created>1697423359529</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1697423359529</updated>
+      <workItem from="1700521948351" duration="932000" />
     </task>
     <task id="LOCAL-00021" summary="arreglando buggs">
       <option name="closed" value="true" />
@@ -661,7 +654,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700521436387</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="ahora se resetea al ganar">
+      <option name="closed" value="true" />
+      <created>1700523261207</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1700523261208</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +680,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="anda con rmi" />
     <MESSAGE value="contenedor es abstracto" />
     <MESSAGE value="cambios en vista" />
     <MESSAGE value="Se crea Uusuario , ahora todo funciona con usuario y la partida crea a los jugadores" />
@@ -704,7 +704,8 @@
     <MESSAGE value="cambio interface" />
     <MESSAGE value="cambio" />
     <MESSAGE value="hice para agregar victoria y derrota , y estoy probando cosas con la vista grafica" />
-    <option name="LAST_COMMIT_MESSAGE" value="hice para agregar victoria y derrota , y estoy probando cosas con la vista grafica" />
+    <MESSAGE value="ahora se resetea al ganar" />
+    <option name="LAST_COMMIT_MESSAGE" value="ahora se resetea al ganar" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
