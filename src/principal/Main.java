@@ -6,6 +6,7 @@ import modelo.mancala.IMancala;
 import modelo.mancala.Mancala;
 import vistas.IVista;
 import vistas.vistaConsola.swing.VistaConsolaSwing;
+import vistas.vistaGrafica.VistaGrafica;
 
 import java.rmi.RemoteException;
 

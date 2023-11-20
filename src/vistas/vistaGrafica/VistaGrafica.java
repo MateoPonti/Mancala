@@ -1,6 +1,7 @@
 package vistas.vistaGrafica;
 
 import controlador.Controlador;
+import modelo.clasesJuego.contenedor.IContenedor;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import vistas.IVista;
@@ -8,13 +9,12 @@ import vistas.IVista;
 import javax.swing.*;
 import java.awt.*;
 import java.io.Serializable;
-
+import java.util.ArrayList;
 
 
 public class VistaGrafica implements IVista, Serializable {
         private JFrame frame;
         private JPanel principal;
-
         private Controlador controlador;
 
 
@@ -70,9 +70,90 @@ public class VistaGrafica implements IVista, Serializable {
 
 
         public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador){
+            frame.setSize(820,600);
+            principal.setSize(820,600);
+
+            ArrayList<IContenedor> zonas= new ArrayList<>();
+            zonas.add(tableroJugador.getZona());
+            zonas.add(tableroOponente.getZona());
+
+            ArrayList<IContenedor> tableros= tableroJugador.getAgujeros();
+            tableros.addAll(tableroOponente.getAgujerosVuelta());
 
 
 
+
+            String color = "#3b1b0f";
+            principal.removeAll();
+            principal.setBackground(Color.decode(color));
+
+            int c = 0 ;
+            int j = 0;
+
+            int tam= 0;
+            int labelWidth = 100;
+            int labelHeight = 100;
+
+            int panelWidth = principal.getWidth();
+            int panelHeight = principal.getHeight();
+
+
+            int x;
+            int y;
+
+            // agregar Los Agujeros
+            for (int i = 0; i < tableros.size(); i++) {
+                if (i==6){
+                    j+=tam;
+                    c=0;
+                }
+                PanelConImagen p=  new PanelConImagen("src/recursos/Agujero.png",100,100,color);
+
+                x = ( ((panelWidth - labelWidth) / 4)-80 )+c;
+                p.setSize(labelWidth,labelHeight);
+                y = ((panelHeight - labelHeight) / 2)-j;
+                p.setBounds(x, y, labelWidth, labelHeight);
+
+                tam= p.getHeight();
+                c+=p.getWidth();
+
+                principal.add(p);
+            }
+            //Agrega las Zonas
+            PanelConImagen zonaTurno = new PanelConImagen("src/recursos/Zona.png",300,300,color);
+            PanelConImagen zonaOponente= new PanelConImagen("src/recursos/Zona.png",300,300,color);
+
+
+
+            x = zonaOponente.getWidth()/2 -150;
+            y = ((panelHeight - zonaOponente.getHeight()) / 2)-50;
+
+            zonaOponente.setBounds(x, y, zonaOponente.getWidth(), zonaOponente.getHeight());
+
+            x=(principal.getWidth())-115;
+
+            zonaTurno.setBounds(x,y,zonaTurno.getWidth(),zonaTurno.getHeight());
+
+            principal.add(zonaOponente);
+            principal.add(zonaTurno);
+
+            JLabel turno  = new JLabel("Turno: "+turnoActual.getNombre());
+            JLabel jugadorVista  = new JLabel( nombreJugador.getNombre());
+            turno.setSize(200,320);
+            jugadorVista.setSize(100,20);
+            x=(principal.getWidth()/2)-100;
+            y=(principal.getHeight()/4)-200;
+            turno.setBounds(x,y,turno.getWidth(),turno.getHeight());
+
+            x=(principal.getWidth()/2)-190;
+            y=(principal.getHeight()/4)+150;
+
+            jugadorVista.setBounds(x,y,turno.getWidth(),turno.getHeight());
+            principal.add(turno);
+            principal.add(jugadorVista);
+
+            principal.revalidate();
+            principal.repaint();
 
         }
 

@@ -8,8 +8,7 @@ import vistas.IVista;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -110,6 +109,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
                 c=0;
             }
             JLabel l=  new JLabel("<html>" + hacerAgujero(tableros.get(i).getCantidad()) + "</html>");
+
             x = ( ((panelWidth - labelWidth) / 4)-80 )+c;
             l.setSize(labelWidth,labelHeight);
             y = ((panelHeight - labelHeight) / 2)-j;

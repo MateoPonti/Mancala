@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="cambio interface" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="cambio">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/PanelConImagen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/PanelConImagen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +112,7 @@
       <recent name="modelo.clasesJuego.tablero" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppCiente2">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="AppCiente2" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
       <option name="MAIN_CLASS_NAME" value="server.cliente.AppCliente" />
       <module name="Mancala" />
@@ -182,9 +191,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.AppCliente" />
         <item itemvalue="Application.AppServidor" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TableroJugadorTest" />
       </list>
     </recent_temporary>
@@ -264,15 +273,7 @@
       <workItem from="1700442096536" duration="1206000" />
       <workItem from="1700445468548" duration="1105000" />
       <workItem from="1700491031556" duration="935000" />
-      <workItem from="1700515930824" duration="1376000" />
-    </task>
-    <task id="LOCAL-00018" summary="Haciendo Vista">
-      <option name="closed" value="true" />
-      <created>1697352512552</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1697352512552</updated>
+      <workItem from="1700515930824" duration="5291000" />
     </task>
     <task id="LOCAL-00019" summary="Haciendo Vista">
       <option name="closed" value="true" />
@@ -658,7 +659,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700517279760</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="cambio">
+      <option name="closed" value="true" />
+      <created>1700517394118</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1700517394118</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +685,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="servidor creado y probado" />
     <MESSAGE value="cambiando resolucion pantalla" />
     <MESSAGE value="anda con rmi" />
     <MESSAGE value="contenedor es abstracto" />
@@ -701,7 +709,8 @@
     <MESSAGE value="cambios de uml" />
     <MESSAGE value="hice jugador serializable" />
     <MESSAGE value="cambio interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambio interface" />
+    <MESSAGE value="cambio" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambio" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

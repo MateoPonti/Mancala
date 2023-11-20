@@ -57,7 +57,6 @@ public class Mancala extends ObservableRemoto implements IMancala{
          agregarJugadorPreparados(jugador);
          if (isPreparados()){
             inicializarPartida();
-            preparados=null;
             notificarObservadores(Notificacion.MOSTRARTABLEROS);
 
         }
@@ -79,8 +78,29 @@ public class Mancala extends ObservableRemoto implements IMancala{
     public void hacerJugada(int pos, IUsuario jugador) throws  RemoteException{
         Notificacion resultado = partida.hacerJugada(pos,jugador);
         notificarObservadores(Notificacion.MOSTRARTABLEROS);
+        if (resultado==Notificacion.FINALIZOJUEGO){
+            IJugador ganador= partida.getGanador();
+            if (ganador!=null){
+            if (ganador.equals(preparados.get(0))){
+                Usuario usuarioGanador = encontrarUsuario(preparados.get(0));
+                Usuario usuarioPerdedor = encontrarUsuario(preparados.get(1));
+                assert usuarioGanador != null;
+                usuarioGanador.agregarVictoria();
+                assert usuarioPerdedor != null;
+                usuarioPerdedor.agregarDerrota();
+            }
+            else{
+                Usuario usuarioGanador = encontrarUsuario(preparados.get(1));
+                Usuario usuarioPerdedor = encontrarUsuario(preparados.get(0));
+                assert usuarioGanador != null;
+                usuarioGanador.agregarVictoria();
+                assert usuarioPerdedor != null;
+                usuarioPerdedor.agregarDerrota();
+            } }
+        }
         notificarObservadores(resultado);
     }
+
     public ITableroJugador getTableroTurno(IUsuario jugador) throws  RemoteException {
         if (partida!=null )  {return partida.getTableroJugador(jugador); }
         return null;
@@ -124,6 +144,15 @@ public class Mancala extends ObservableRemoto implements IMancala{
         preparados.add(usuario);
         return true;
 
+    }
+
+    private Usuario encontrarUsuario(IUsuario j){
+        for (Usuario u:usuarios){
+            if (j.equals(u)){
+                return u;
+            }
+        }
+        return null;
     }
 
 

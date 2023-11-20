@@ -58,7 +58,7 @@ public class Usuario implements IUsuario, Serializable {
         return victorias;
     }
 
-    public void agregarVictoria(int victorias) {
+    public void agregarVictoria() {
         this.victorias++;
     }
 

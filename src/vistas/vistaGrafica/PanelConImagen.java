@@ -12,11 +12,12 @@ public class PanelConImagen extends JPanel {
     private int newWidth;
     private int newHeight;
 
-    public PanelConImagen(String rutaImagen,int w,int h) {
+    public PanelConImagen(String rutaImagen,int w,int h,String color) {
         try {
             imagenDeFondo = ImageIO.read(new File(rutaImagen));
             this.newHeight=h;
             this.newWidth=w;
+            this.setBackground(Color.decode(color));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -36,6 +37,6 @@ public class PanelConImagen extends JPanel {
             g2d.dispose();
 
             // Dibuja la imagen escalada
-            g.drawImage(scaledImage, 0, 0, this);
+            g.drawImage(scaledImage, 200, 50, this);
         }
     }}
