@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="cambios de uml" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="cambios de uml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/MancalaGrafico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VentanaPrincipal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +112,7 @@
       <recent name="modelo.clasesJuego.tablero" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppServidor">
+  <component name="RunManager" selected="Application.AppCiente2">
     <configuration name="AppCiente2" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
       <option name="MAIN_CLASS_NAME" value="server.cliente.AppCliente" />
       <module name="Mancala" />
@@ -182,9 +191,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AppCliente" />
         <item itemvalue="Application.AppServidor" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.AppCliente" />
         <item itemvalue="JUnit.TableroJugadorTest" />
       </list>
     </recent_temporary>
@@ -262,15 +271,9 @@
       <workItem from="1700423482912" duration="799000" />
       <workItem from="1700424402572" duration="201000" />
       <workItem from="1700442096536" duration="1206000" />
-      <workItem from="1700445468548" duration="979000" />
-    </task>
-    <task id="LOCAL-00014" summary="funcinoes partida">
-      <option name="closed" value="true" />
-      <created>1697335918724</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1697335918724</updated>
+      <workItem from="1700445468548" duration="1105000" />
+      <workItem from="1700491031556" duration="935000" />
+      <workItem from="1700515930824" duration="1039000" />
     </task>
     <task id="LOCAL-00015" summary="funcinoes partida">
       <option name="closed" value="true" />
@@ -656,7 +659,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700445848699</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="cambios de uml">
+      <option name="closed" value="true" />
+      <created>1700447387796</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1700447387796</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
