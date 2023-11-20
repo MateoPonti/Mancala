@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="cambios de uml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/MancalaGrafico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VentanaPrincipal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" afterDir="false" />
-    </list>
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="cambio interface" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -273,31 +264,7 @@
       <workItem from="1700442096536" duration="1206000" />
       <workItem from="1700445468548" duration="1105000" />
       <workItem from="1700491031556" duration="935000" />
-      <workItem from="1700515930824" duration="1039000" />
-    </task>
-    <task id="LOCAL-00015" summary="funcinoes partida">
-      <option name="closed" value="true" />
-      <created>1697345086275</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1697345086275</updated>
-    </task>
-    <task id="LOCAL-00016" summary="haciendo inicializar y Partida , arreglando buggs">
-      <option name="closed" value="true" />
-      <created>1697348273424</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1697348273424</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Haciendo Pruebas">
-      <option name="closed" value="true" />
-      <created>1697350868890</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1697350868890</updated>
+      <workItem from="1700515930824" duration="1376000" />
     </task>
     <task id="LOCAL-00018" summary="Haciendo Vista">
       <option name="closed" value="true" />
@@ -667,7 +634,31 @@
       <option name="project" value="LOCAL" />
       <updated>1700447387796</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="hice jugador serializable">
+      <option name="closed" value="true" />
+      <created>1700517011191</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1700517011191</updated>
+    </task>
+    <task id="LOCAL-00065" summary="hice jugador serializable">
+      <option name="closed" value="true" />
+      <created>1700517083374</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1700517083374</updated>
+    </task>
+    <task id="LOCAL-00066" summary="cambio interface">
+      <option name="closed" value="true" />
+      <created>1700517279760</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1700517279760</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,8 +676,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creando Servidor" />
-    <MESSAGE value="actualizando UML" />
     <MESSAGE value="servidor creado y probado" />
     <MESSAGE value="cambiando resolucion pantalla" />
     <MESSAGE value="anda con rmi" />
@@ -710,7 +699,9 @@
     <MESSAGE value="error que no daba victoria" />
     <MESSAGE value="ahora el turno actual y el nombre del jugador son interfaces IJugador" />
     <MESSAGE value="cambios de uml" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambios de uml" />
+    <MESSAGE value="hice jugador serializable" />
+    <MESSAGE value="cambio interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambio interface" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
