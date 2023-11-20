@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="error que no daba victoria">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="ahora el turno actual y el nombre del jugador son interfaces IJugador">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +105,7 @@
       <recent name="modelo.clasesJuego.tablero" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.AppServidor">
     <configuration name="AppCiente2" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
       <option name="MAIN_CLASS_NAME" value="server.cliente.AppCliente" />
       <module name="Mancala" />
@@ -190,9 +184,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AppServidor" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.AppCliente" />
-        <item itemvalue="Application.AppServidor" />
         <item itemvalue="JUnit.TableroJugadorTest" />
       </list>
     </recent_temporary>
@@ -266,15 +260,11 @@
       <workItem from="1699663192010" duration="2095000" />
       <workItem from="1699806162871" duration="1335000" />
       <workItem from="1700367127097" duration="3655000" />
-      <workItem from="1700408674226" duration="3212000" />
-    </task>
-    <task id="LOCAL-00012" summary="actualizar">
-      <option name="closed" value="true" />
-      <created>1697317943429</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1697317943429</updated>
+      <workItem from="1700408674226" duration="3309000" />
+      <workItem from="1700423482912" duration="799000" />
+      <workItem from="1700424402572" duration="201000" />
+      <workItem from="1700442096536" duration="1206000" />
+      <workItem from="1700445468548" duration="317000" />
     </task>
     <task id="LOCAL-00013" summary="funcinoes partida">
       <option name="closed" value="true" />
@@ -660,7 +650,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700412442648</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="ahora el turno actual y el nombre del jugador son interfaces IJugador">
+      <option name="closed" value="true" />
+      <created>1700413212513</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1700413212514</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +676,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Arreglando VistaConsolaSwing" />
     <MESSAGE value="uml Mancala 16/10/2023" />
     <MESSAGE value="Creando Servidor" />
     <MESSAGE value="actualizando UML" />
@@ -703,7 +700,8 @@
     <MESSAGE value="uml imagen" />
     <MESSAGE value="Ahora existe Jugador nombre" />
     <MESSAGE value="error que no daba victoria" />
-    <option name="LAST_COMMIT_MESSAGE" value="error que no daba victoria" />
+    <MESSAGE value="ahora el turno actual y el nombre del jugador son interfaces IJugador" />
+    <option name="LAST_COMMIT_MESSAGE" value="ahora el turno actual y el nombre del jugador son interfaces IJugador" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
