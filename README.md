@@ -28,7 +28,7 @@ El juego de Mancala es apreciado por su simplicidad y profundidad estratégica, 
          siguiendo 
     el sentido anti horario. En esta diseminación de las habas, la zona "casa" del jugador (al lado derecho del tablero desde su punto de vista) se emplea también y cuando un haba es colocada en ella, el jugador gana un punto. Los jugadores no pueden colocar habas dentro de la zona "casa" del adversario. 
   
-   Si la última haba (del movimiento actual) se coloca sobre la zona "casa", el jugador continúa seleccionando otro agujero que no esté vacío. 
+        Si la última haba (del movimiento actual) se coloca sobre la zona "casa", el jugador continúa seleccionando otro agujero que no esté vacío. 
 
 
 * Cómo capturar las habas 
