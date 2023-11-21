@@ -9,6 +9,8 @@ import vistas.IVista;
 import javax.swing.*;
 import java.awt.*;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -161,6 +163,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
         butIngresoPos.setText("Enviar");
 
 
+
         posicionIngreso.setBounds(x,y,posicionIngreso.getWidth(),posicionIngreso.getHeight());
         butIngresoPos.setBounds(x+100,y,posicionIngreso.getWidth(),posicionIngreso.getHeight());
         butIngresoPos.addActionListener(e -> controlador.hacerJugada( posicionIngreso.getText()));
@@ -183,6 +186,29 @@ public class VistaConsolaSwing implements IVista, Serializable {
 
         x=(principal.getWidth()/2)-190;
         y=(principal.getHeight()/4)+150;
+
+
+        posicionIngreso.addKeyListener(new KeyListener(){
+
+
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode()== KeyEvent.VK_ENTER){
+                    butIngresoPos.doClick();
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
+
 
         jugadorVista.setBounds(x,y,turno.getWidth(),turno.getHeight());
         principal.add(turno);
