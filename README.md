@@ -22,9 +22,10 @@ El juego de Mancala es apreciado por su simplicidad y profundidad estratégica, 
 
 
 
-*  Cómo mover las habas
+ *  Cómo mover las habas
 
-  El jugador al que le toca mover,en vista consola ingresa un numero del 1 al 6,en vista gráfica pulsa sobre un agujero (de la fila más cercana a él) que contenga al menos un haba. Mediante esta acción tomará todas las habas del agujero seleccionado y las colocará una por una en los siguientes agujeros siguiendo el sentido anti horario. En esta diseminación de las habas, la zona "casa" del jugador (al lado derecho del tablero desde su punto de vista) se emplea también y cuando un haba es colocada en ella, el jugador gana un punto. Los jugadores no pueden colocar habas dentro de la zona "casa" del adversario. 
+  El jugador al que le toca mover,en vista consola ingresa un numero del 1 al 6,en vista gráfica pulsa sobre un agujero (de la fila más cercana a él) que contenga al menos un haba. Mediante esta acción tomará todas las habas del agujero seleccionado y las colocará una por una en los siguientes agujeros siguiendo 
+  el sentido anti horario. En esta diseminación de las habas, la zona "casa" del jugador (al lado derecho del tablero desde su punto de vista) se emplea también y cuando un haba es colocada en ella, el jugador gana un punto. Los jugadores no pueden colocar habas dentro de la zona "casa" del adversario. 
   Si la última haba (del movimiento actual) se coloca sobre la zona "casa", el jugador continúa seleccionando otro agujero que no esté vacío. 
 
 
