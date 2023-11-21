@@ -71,6 +71,24 @@ El juego, que se encuentra implementado en la rama Master del repositorio, fue r
 
 -----------------------------------------------------------------------------------------------------------------------------
 
+## UML
+
+
+
+
+![UML](https://github.com/MateoPonti/Mancala/blob/master/UML/UMLCOMPLETO.png?raw=true)
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 ## Autor
@@ -80,9 +98,7 @@ El juego, que se encuentra implementado en la rama Master del repositorio, fue r
 
 
   
-## 🚀 Acerca de mí
 
-Estudiante de Sistemas de Informacion en la Universidad Nacional de Luján 
 
   
 
