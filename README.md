@@ -34,7 +34,6 @@ El juego de Mancala es apreciado por su simplicidad y profundidad estratégica, 
 
   Si la última haba (del movimiento actual) se coloca sobre un agujero vacío (en el lado del jugador), todas las habas de la misma columna de la fila opuesta son capturadas y colocadas en la zona "casa" del jugador. 
   
-  Si la última haba (del movimiento actual) se coloca sobre un agujero vacío (en el lado del jugador), todas las habas de la misma columna de la fila opuesta son capturadas y colocadas en la zona "casa" del jugador. 
 
 
 
