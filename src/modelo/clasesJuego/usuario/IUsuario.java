@@ -5,6 +5,8 @@ public interface IUsuario {
     double getWinRate();
     int getVictorias();
     int getDerrotas();
+
+    int getEmpates();
     int getId();
 
     int getTotalPartidas();

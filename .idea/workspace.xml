@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="arreglo ganar">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="ahora puedo hacer entre en enviar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/IUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/IUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,15 +271,11 @@
       <workItem from="1700491031556" duration="935000" />
       <workItem from="1700515930824" duration="5586000" />
       <workItem from="1700521948351" duration="1164000" />
-      <workItem from="1700525746957" duration="291000" />
-    </task>
-    <task id="LOCAL-00022" summary="probando juego">
-      <option name="closed" value="true" />
-      <created>1697458098014</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1697458098014</updated>
+      <workItem from="1700525746957" duration="404000" />
+      <workItem from="1700528426839" duration="141000" />
+      <workItem from="1700581511573" duration="316000" />
+      <workItem from="1700583561026" duration="558000" />
+      <workItem from="1700584164292" duration="58000" />
     </task>
     <task id="LOCAL-00023" summary="probando juego">
       <option name="closed" value="true" />
@@ -663,7 +661,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700523443719</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="ahora puedo hacer entre en enviar">
+      <option name="closed" value="true" />
+      <created>1700526148272</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1700526148273</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,7 +687,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cambios en vista" />
     <MESSAGE value="Se crea Uusuario , ahora todo funciona con usuario y la partida crea a los jugadores" />
     <MESSAGE value="cambios en vistas y nuevo UML" />
     <MESSAGE value="reduciendo warnings" />
@@ -706,7 +711,8 @@
     <MESSAGE value="hice para agregar victoria y derrota , y estoy probando cosas con la vista grafica" />
     <MESSAGE value="ahora se resetea al ganar" />
     <MESSAGE value="arreglo ganar" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglo ganar" />
+    <MESSAGE value="ahora puedo hacer entre en enviar" />
+    <option name="LAST_COMMIT_MESSAGE" value="ahora puedo hacer entre en enviar" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -97,6 +97,14 @@ public class Mancala extends ObservableRemoto implements IMancala{
                 assert usuarioPerdedor != null;
                 usuarioPerdedor.agregarDerrota();
             } }
+            else {
+                Usuario jugador1 = encontrarUsuario(preparados.get(1));
+                Usuario jugador2 = encontrarUsuario(preparados.get(0));
+                assert jugador1 != null;
+                jugador1.agregarEmpate();
+                assert jugador2 != null;
+                jugador2.agregarEmpate();
+            }
             preparados=null;
         }
         notificarObservadores(resultado);

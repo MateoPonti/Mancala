@@ -9,6 +9,8 @@ public class Usuario implements IUsuario, Serializable {
     private int victorias;
     private int derrotas;
 
+    private int empates;
+
 
     public Usuario(String nombre, String contrasenia, int id) {
         this.nombre = nombre;
@@ -64,6 +66,15 @@ public class Usuario implements IUsuario, Serializable {
 
     public int getDerrotas() {
         return derrotas;
+    }
+
+    @Override
+    public int getEmpates() {
+        return empates;
+    }
+
+    public void agregarEmpate() {
+        this.empates++;
     }
 
     public void agregarDerrota() {
