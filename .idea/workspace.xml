@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="ahora puedo hacer entre en enviar">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/IUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/IUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-    </list>
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="ahora hay empates" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -276,14 +271,7 @@
       <workItem from="1700581511573" duration="316000" />
       <workItem from="1700583561026" duration="558000" />
       <workItem from="1700584164292" duration="58000" />
-    </task>
-    <task id="LOCAL-00023" summary="probando juego">
-      <option name="closed" value="true" />
-      <created>1697460239098</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1697460239098</updated>
+      <workItem from="1700584286988" duration="69000" />
     </task>
     <task id="LOCAL-00024" summary="buscando bugg">
       <option name="closed" value="true" />
@@ -669,7 +657,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700526148273</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="ahora hay empates">
+      <option name="closed" value="true" />
+      <created>1700584327643</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1700584327645</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,7 +683,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Se crea Uusuario , ahora todo funciona con usuario y la partida crea a los jugadores" />
     <MESSAGE value="cambios en vistas y nuevo UML" />
     <MESSAGE value="reduciendo warnings" />
     <MESSAGE value="cambiando cosas" />
@@ -712,7 +707,8 @@
     <MESSAGE value="ahora se resetea al ganar" />
     <MESSAGE value="arreglo ganar" />
     <MESSAGE value="ahora puedo hacer entre en enviar" />
-    <option name="LAST_COMMIT_MESSAGE" value="ahora puedo hacer entre en enviar" />
+    <MESSAGE value="ahora hay empates" />
+    <option name="LAST_COMMIT_MESSAGE" value="ahora hay empates" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
