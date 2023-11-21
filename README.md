@@ -54,7 +54,7 @@ El juego, que se encuentra implementado en la rama Master del repositorio, fue r
 
 * Jugar al juego localmente
 
- Si se quiere jugar al juego localmente simplemente debe ejecutar el Main ( se encuentra en src/principal/Main.java). 
+  Si se quiere jugar al juego localmente simplemente debe ejecutar el Main ( se encuentra en src/principal/Main.java). 
 
 * Conexión con RMI
 
