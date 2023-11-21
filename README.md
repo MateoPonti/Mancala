@@ -83,6 +83,11 @@ El juego, que se encuentra implementado en la rama Master del repositorio, fue r
 
 
 
+Para acceder a esta imagen ir a la Rama Master y luego al directorio UML.
+
+
+
+
 
 
 -----------------------------------------------------------------------------------------------------------------------------
