@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="ahora hay empates" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="umlSimplificado">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Contenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Contenedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/IContenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/IContenedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/haba/Color.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/haba/Haba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/haba/IHaba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TableroJugadorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TableroJugadorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,6 +103,7 @@
       <recent name="modelo.jugador" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mateo\IdeaProjects\Mancala\UML" />
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src" />
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\server\LibreriaRMIMVC.jar!\doc" />
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\server" />
@@ -272,14 +285,8 @@
       <workItem from="1700583561026" duration="558000" />
       <workItem from="1700584164292" duration="58000" />
       <workItem from="1700584286988" duration="69000" />
-    </task>
-    <task id="LOCAL-00024" summary="buscando bugg">
-      <option name="closed" value="true" />
-      <created>1697467488555</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1697467488555</updated>
+      <workItem from="1700590488147" duration="152000" />
+      <workItem from="1700971697406" duration="2060000" />
     </task>
     <task id="LOCAL-00025" summary="buscando bugg">
       <option name="closed" value="true" />
@@ -665,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700584327645</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="umlSimplificado">
+      <option name="closed" value="true" />
+      <created>1700590583822</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1700590583823</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +698,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cambios en vistas y nuevo UML" />
     <MESSAGE value="reduciendo warnings" />
     <MESSAGE value="cambiando cosas" />
     <MESSAGE value="arreglando error tablero" />
@@ -708,7 +722,8 @@
     <MESSAGE value="arreglo ganar" />
     <MESSAGE value="ahora puedo hacer entre en enviar" />
     <MESSAGE value="ahora hay empates" />
-    <option name="LAST_COMMIT_MESSAGE" value="ahora hay empates" />
+    <MESSAGE value="umlSimplificado" />
+    <option name="LAST_COMMIT_MESSAGE" value="umlSimplificado" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

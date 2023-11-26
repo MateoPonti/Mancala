@@ -1,52 +1,36 @@
 package modelo.clasesJuego.contenedor;
-
-import modelo.clasesJuego.haba.Haba;
-import modelo.clasesJuego.haba.IHaba;
-
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public abstract class Contenedor implements IContenedor, Serializable {
-    private ArrayList<IHaba> habas;
+    private int habas;
 
-    public Contenedor() {
-        habas=new ArrayList<>();
-    }
 
-    public void agregar(IHaba haba){
-        this.habas.add(haba);
+    public void agregar(){
+        this.habas++;
     }
-    public void agregar(ArrayList<IHaba> habas){
-        this.habas.addAll(habas);
+    public void agregar(int cantidad){
+        this.habas+=cantidad;
     }
 
 
 
 
-    public int getCantidad(){
-        return habas.size();
-    }
 
     public boolean estaVacio(){
-        return getCantidad()==0;
+        return habas==0;
     }
 
 
-    public ArrayList<IHaba> getHabas(){
+    public int getHabas(){
         return habas;
     }
 
 
 
-    public ArrayList<IHaba> sacarHabas() {
-        ArrayList<IHaba> arrayHabas=new ArrayList<>();
-        for(IHaba haba :habas){
-            Haba h=new Haba();
-            h.setColor(haba.getColor());
-            arrayHabas.add(h);
-        }
-        habas.clear();
-        return arrayHabas;
+    public int sacarHabas() {
+        int habas = this.habas;
+        this.habas=0;
+        return habas;
     }
 
 }

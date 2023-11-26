@@ -110,7 +110,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
                 j+=tam;
                 c=0;
             }
-            JLabel l=  new JLabel("<html>" + hacerAgujero(tableros.get(i).getCantidad()) + "</html>");
+            JLabel l=  new JLabel("<html>" + hacerAgujero(tableros.get(i).getHabas()) + "</html>");
 
             x = ( ((panelWidth - labelWidth) / 4)-80 )+c;
             l.setSize(labelWidth,labelHeight);
@@ -131,8 +131,8 @@ public class VistaConsolaSwing implements IVista, Serializable {
         }
 
         //Agrega las Zonas
-        JLabel zonaTurno =  new JLabel("<html>" + hacerZona(zonas.get(0).getCantidad()) + "</html>");
-        JLabel zonaOponente= new JLabel("<html>" + hacerZona(zonas.get(1).getCantidad()) + "</html>");
+        JLabel zonaTurno =  new JLabel("<html>" + hacerZona(zonas.get(0).getHabas()) + "</html>");
+        JLabel zonaOponente= new JLabel("<html>" + hacerZona(zonas.get(1).getHabas()) + "</html>");
 
         zonaOponente.setSize(300,300);
         zonaTurno.setSize(300,300);

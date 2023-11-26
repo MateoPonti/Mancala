@@ -1,7 +1,6 @@
 package modelo.clasesJuego.tablero;
 
 import modelo.clasesJuego.contenedor.*;
-import modelo.clasesJuego.haba.IHaba;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -55,28 +54,28 @@ public class TableroJugador implements Serializable,ITableroJugador {
         tablero.add(new Zona());
     }
 
-    public ArrayList<IHaba> repartirHabas(int posicion){
+    public int repartirHabasP(int posicion){
         Contenedor contenedor=  tablero.get(posicion);
-        ArrayList<IHaba> habas= contenedor.sacarHabas();
-        repartir(posicion+1,habas);
+        int habas= contenedor.sacarHabas();
+        habas= repartir(posicion+1,habas);
         return habas;
     }
 
-    public void repartirHabas(ArrayList<IHaba> habas){repartir(0,habas);}
+    public int repartirHabas(int habas){
+        return repartir(0,habas);}
 
 
 
 
-    public void repartirHabasOponente(ArrayList<IHaba> habas) {
-        int tam;
+    public int repartirHabasOponente(int habas) {
         int posicion=0;
-        while ((posicion<cantidadAgujeros) && (!habas.isEmpty())){
+        while ((posicion<cantidadAgujeros) && (habas>0)){
             Contenedor contActual=tablero.get(posicion);
-            tam= habas.size();
-            contActual.agregar( habas.get(tam-1));
+            contActual.agregar();
             posicion++;
-            habas.remove(tam-1);
+            habas--;
         }
+        return habas;
     }
 
 
@@ -88,20 +87,18 @@ public class TableroJugador implements Serializable,ITableroJugador {
 
 
     public boolean estaVacioContenedor(int posicion) {
-        return obtenerContenedor(posicion).isEmpty();
+        return obtenerContenedor(posicion)==0;
     }
 
-    public void  sumarPuntos(ArrayList<IHaba> habas){
-        for (IHaba haba:habas){
-            tablero.get(cantidadAgujeros).agregar(haba);
-        }
+    public void  sumarPuntos(int habas){
+        tablero.get(cantidadAgujeros).agregar(habas);
     }
 
     public int  obtenerPuntos(){
-        return tablero.get(cantidadAgujeros).getCantidad();
+        return tablero.get(cantidadAgujeros).getHabas();
     }
 
-    public ArrayList<IHaba> sacarHabas(int pos){
+    public int sacarHabas(int pos){
         return tablero.get(pos).sacarHabas();
     }
 
@@ -117,10 +114,10 @@ public class TableroJugador implements Serializable,ITableroJugador {
     }
 
     public void sumarHabasRestante(){
-        ArrayList<IHaba> habas= new ArrayList<>();
+        int habas=0;
         int i=0;
         while (i<cantidadAgujeros){
-            habas.addAll(tablero.get(i).sacarHabas());
+            habas+=(tablero.get(i).sacarHabas());
             i++;
         }
         tablero.get(cantidadAgujeros).agregar(habas);
@@ -128,25 +125,27 @@ public class TableroJugador implements Serializable,ITableroJugador {
 
 
 
-    private void repartir(int posicion, ArrayList<IHaba> habas){
+    private int repartir(int posicion, int habas){
         ultimaCayoVacio=false;
         ultimaCayoZona=false;
         int tam;
 
-        while ((posicion<=cantidadAgujeros) && (!habas.isEmpty())){
+        while ((posicion<=cantidadAgujeros) && (habas>0)){
             Contenedor contActual=tablero.get(posicion);
-            tam= habas.size();
-            ultimaCayoVacio= tam==1  && contActual.estaVacio() && (contActual instanceof Agujero);
+            ultimaCayoVacio= habas==1  && contActual.estaVacio() && (contActual instanceof Agujero);
             if (ultimaCayoVacio){posCayoVacio=posicion;}
-            ultimaCayoZona= tam==1  && (contActual instanceof Zona);
-            contActual.agregar( habas.get(tam-1));
+            ultimaCayoZona= habas==1  && (contActual instanceof Zona);
+            contActual.agregar();
             posicion++;
-            habas.remove(tam-1);
+            habas--;
         }
+
+        System.out.println(ultimaCayoZona);
+        return  habas;
 
     }
 
-    private ArrayList<IHaba> obtenerContenedor(int posicion) {
+    private int obtenerContenedor(int posicion) {
         return tablero.get(posicion).getHabas();
     }
 

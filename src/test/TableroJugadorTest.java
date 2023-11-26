@@ -24,7 +24,7 @@ class TableroJugadorTest {
         tablero.repartirHabas(pos);
         boolean condicion=true;
         for (int p=pos+1; p<=pos+cantHabas; p++){
-            condicion= (tablero.getAgujeros().get(p).getCantidad()==cantHabas+1) && condicion;
+            condicion= (tablero.getAgujeros().get(p).getHabas()==cantHabas+1) && condicion;
         }
         Assertions.assertTrue(condicion);
 
@@ -34,7 +34,7 @@ class TableroJugadorTest {
     void probarQueUltimaHabaCayoEnUnContenedorVacio(){
         tablero.repartirHabas(5);
         tablero.repartirHabas(6);
-        System.out.println(tablero.getTablero().get(6).getCantidad());
+        System.out.println(tablero.getTablero().get(6).getHabas());
 
     }
 

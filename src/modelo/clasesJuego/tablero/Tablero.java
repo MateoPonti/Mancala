@@ -1,6 +1,5 @@
 package modelo.clasesJuego.tablero;
 
-import modelo.clasesJuego.haba.IHaba;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -28,11 +27,14 @@ public class Tablero implements Serializable {
 
         if (tableroTurno.estaVacioContenedor(posicion)){
             return ResultadoJugada.PosicioInvalida;} // comprueba que el jugador no haya elegido una posicion donde no haya habas
-        ArrayList<IHaba> habasRepartidas=tableroTurno.repartirHabas(posicion);
 
-        while (!habasRepartidas.isEmpty()){
-            tableroOponente.repartirHabasOponente(habasRepartidas);
-            tableroTurno.repartirHabas(habasRepartidas);
+
+        int  habasRepartidas=tableroTurno.repartirHabasP(posicion);
+        System.out.println(habasRepartidas);
+
+        while (habasRepartidas>0){
+            habasRepartidas = tableroOponente.repartirHabasOponente(habasRepartidas);
+            habasRepartidas = tableroTurno.repartirHabas(habasRepartidas);
         }
         if (tableroTurno.isUltimaCayoVacio()){
             RobarPuntos(tableroTurno.getPosCayoVacio(),tableroTurno,tableroOponente);
@@ -57,7 +59,7 @@ public class Tablero implements Serializable {
         parejas.put(4, 1);
         parejas.put(1, 4);
 
-        ArrayList<IHaba> habas= oponente.sacarHabas(parejas.get(posCayoVacio));
+        int habas= oponente.sacarHabas(parejas.get(posCayoVacio));
         turno.sumarPuntos(habas);
     }
 
