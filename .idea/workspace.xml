@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="No Existe Mas La Clase Haba">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Se borro test tableroJugador">
+      <change afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/Notificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Notificacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/cliente/AppCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/cliente/AppCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +29,8 @@
         <option value="Record" />
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -278,14 +289,15 @@
       <workItem from="1700590488147" duration="152000" />
       <workItem from="1700971697406" duration="2249000" />
       <workItem from="1700975997533" duration="208000" />
-    </task>
-    <task id="LOCAL-00026" summary="arreglando responsabilidades">
-      <option name="closed" value="true" />
-      <created>1697468537894</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1697468537894</updated>
+      <workItem from="1700976347971" duration="58000" />
+      <workItem from="1700976454528" duration="26000" />
+      <workItem from="1701122465300" duration="1953000" />
+      <workItem from="1701194432363" duration="2565000" />
+      <workItem from="1701552318358" duration="907000" />
+      <workItem from="1701634957431" duration="906000" />
+      <workItem from="1701645306564" duration="2842000" />
+      <workItem from="1701664592846" duration="28000" />
+      <workItem from="1702769280067" duration="3573000" />
     </task>
     <task id="LOCAL-00027" summary="arreglando responsabilidades">
       <option name="closed" value="true" />
@@ -671,7 +683,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700973845757</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Se borro test tableroJugador">
+      <option name="closed" value="true" />
+      <created>1700976387676</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1700976387676</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -689,7 +709,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cambiando cosas" />
     <MESSAGE value="arreglando error tablero" />
     <MESSAGE value="elimine jugador , ahora solo se maneja con usuarios" />
     <MESSAGE value="tablero ahora cant agujeros es static final" />
@@ -714,7 +733,8 @@
     <MESSAGE value="ahora hay empates" />
     <MESSAGE value="umlSimplificado" />
     <MESSAGE value="No Existe Mas La Clase Haba" />
-    <option name="LAST_COMMIT_MESSAGE" value="No Existe Mas La Clase Haba" />
+    <MESSAGE value="Se borro test tableroJugador" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se borro test tableroJugador" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

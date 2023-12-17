@@ -3,6 +3,7 @@ package modelo.mancala;
 import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
 import modelo.clasesJuego.jugador.IJugador;
+import modelo.clasesJuego.jugador.Jugador;
 import modelo.clasesJuego.partida.Partida;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.usuario.*;
@@ -34,6 +35,17 @@ public class Mancala extends ObservableRemoto implements IMancala{
         preparados=new ArrayList<>();
     }
 
+
+    public void  desconectarJugador(IUsuario j){
+        for(Usuario u:usuarios){
+            if (u.equals(j)){
+                usuarios.remove(u);
+                break;
+            }
+
+        }
+
+    }
 
 
     public IUsuario conectarJugador(String nombre,String contra) throws RemoteException {
@@ -77,7 +89,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
     public void hacerJugada(int pos, IUsuario jugador) throws  RemoteException{
         Notificacion resultado = partida.hacerJugada(pos,jugador);
-        notificarObservadores(Notificacion.MOSTRARTABLEROS);
+        if (resultado!=Notificacion.POSICIONINVALIDA  && resultado!=null){notificarObservadores(Notificacion.MOSTRARTABLEROS);}
         if (resultado==Notificacion.FINALIZOJUEGO){
             IJugador ganador= partida.getGanador();
             if (ganador!=null){

@@ -40,6 +40,7 @@ public class Partida implements Serializable {
         if (!isFinalizado()){
         if (isTurno(jugador)){
            ResultadoJugada resultado= tablero.hacerJugada(posicion,determinarJugador(turno),determinarOponente(turno));
+           if (resultado==ResultadoJugada.PosicioInvalida){return Notificacion.POSICIONINVALIDA;}
            if (resultado==ResultadoJugada.Correcta){turnoSiguiente();}
            if (resultado==ResultadoJugada.Victoria){
                estado=EstadoPartida.Finalizado;

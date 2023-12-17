@@ -140,7 +140,6 @@ public class TableroJugador implements Serializable,ITableroJugador {
             habas--;
         }
 
-        System.out.println(ultimaCayoZona);
         return  habas;
 
     }

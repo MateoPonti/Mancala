@@ -7,6 +7,7 @@ public enum Notificacion implements Serializable {
     FINALIZOJUEGO,
     JUEGATURNO,
 
-    MOSTRARTABLEROS
+    MOSTRARTABLEROS,
 
+    POSICIONINVALIDA
 }

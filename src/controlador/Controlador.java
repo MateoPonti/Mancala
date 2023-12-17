@@ -50,6 +50,9 @@ public class Controlador implements IControladorRemoto, Serializable {
         }
     }
 
+    public void desconectarJugador() {
+        modelo.desconectarJugador(jugador);
+    }
 
 
 

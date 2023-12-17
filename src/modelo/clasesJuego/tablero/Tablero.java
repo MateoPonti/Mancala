@@ -30,7 +30,6 @@ public class Tablero implements Serializable {
 
 
         int  habasRepartidas=tableroTurno.repartirHabasP(posicion);
-        System.out.println(habasRepartidas);
 
         while (habasRepartidas>0){
             habasRepartidas = tableroOponente.repartirHabasOponente(habasRepartidas);
