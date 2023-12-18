@@ -32,9 +32,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
 
     private JButton butIngresoPos;
 
-    private JLabel turno;
 
-    private JLabel jugadorVista;
 
     private JPanel pIngreso;
 
@@ -62,8 +60,6 @@ public class VistaConsolaSwing implements IVista, Serializable {
     agujeros = new JTextArea();
     posicionIngreso=new JTextField();
     butIngresoPos=new JButton();
-    turno=new JLabel();
-    jugadorVista=new JLabel();
     pIngreso= new JPanel();
     arrancarPartida= new JButton("Inicializar Partida");
     scrollPane=new JScrollPane(agujeros);
@@ -82,8 +78,6 @@ public class VistaConsolaSwing implements IVista, Serializable {
     enviaBut.setVisible(false);
     ingresoNombre.setVisible(false);
     ingresoContra.setVisible(false);
-    turno.setVisible(false);
-    jugadorVista.setVisible(false);
     pIngreso.setVisible(false);
     scrollPane.setVisible(false);
 
@@ -152,8 +146,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
 
         arrancarPartida.setVisible(false);
         pIngreso.setVisible(false);
-        turno.setVisible(false);
-        jugadorVista.setVisible(false);
+
         butIngresoPos.setVisible(false);
         agujeros.setVisible(false);
         enviaBut.setVisible(true);
@@ -172,9 +165,6 @@ public class VistaConsolaSwing implements IVista, Serializable {
         ingresoContra.setSize(100,20);
         ingresoContra.setBounds(50,140,ingresoNombre.getWidth(),ingresoNombre.getHeight());
 
-
-        principal.add(turno);
-        principal.add(jugadorVista);
         principal.add(arrancarPartida);
 
         pIngreso.setLayout(new FlowLayout());
@@ -196,11 +186,11 @@ public class VistaConsolaSwing implements IVista, Serializable {
 
 
 
-        if (!posicionIngreso.isVisible()){
+        if (!agujeros.isVisible()){
 
             scrollPane.setVisible(true);
             principal= (JPanel) frame.getContentPane();
-            principal.setSize(1000,600);
+            principal.setSize(1100,700);
             principal.setLayout(new BorderLayout());
             principal.setBackground(color);
             butIngresoPos.setVisible(true);
@@ -211,8 +201,6 @@ public class VistaConsolaSwing implements IVista, Serializable {
             ingresoContra.setVisible(false);
             agujeros.setSize(tam);
             agujeros.setEditable(false);
-            turno.setVisible(true);
-            jugadorVista.setVisible(true);
             pIngreso.setVisible(true);
             arrancarPartida.setVisible(false);
             pIngreso.setBackground(color);
@@ -247,25 +235,16 @@ public class VistaConsolaSwing implements IVista, Serializable {
             tableroJugadorTurno.append("(").append(agujerosCont.get(i).getHabas()).append(")");
         }
         agujeros.append(strZonaOp+"   "+tableroJugadorOponente.toString()+"   "+strZonaTurno+"\n");
-        agujeros.append("      "+ tableroJugadorTurno.toString()+"\n");
+        agujeros.append("        "+ tableroJugadorTurno.toString()+"\n");
+        agujeros.append("\n"+nombreJugador.getNombre()+", Turno: "+ turnoActual.getNombre()+"\n");
         agujeros.append("------------------------------------------------------"+"\n");
 
 
-
-
-
-        turno  = new JLabel("Turno: "+turnoActual.getNombre());
-        jugadorVista  = new JLabel( nombreJugador.getNombre());
-        turno.setSize(200,320);
-        jugadorVista.setSize(100,20);
         x=(principal.getWidth()/2)-100;
         y=(principal.getHeight()/4)-200;
-        turno.setBounds(x,y,turno.getWidth(),turno.getHeight());
 
         x=(principal.getWidth()/2)-190;
         y=(principal.getHeight()/4)+150;
-
-        jugadorVista.setBounds(x,y,turno.getWidth(),turno.getHeight());
 
     }
 
