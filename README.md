@@ -16,7 +16,7 @@ El juego de Mancala es apreciado por su simplicidad y profundidad estratégica, 
 
 ------------------------------------------------------------------------------------------------
 
-# Reglas del juego de Mancala
+# Reglas del juego Mancala
 
 
 
