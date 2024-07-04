@@ -264,6 +264,7 @@ public class VistaConsolaSwing implements IVista, Serializable {
         scrollPane.setVisible(false);
         pIngreso.setVisible(false);
         agujeros.setText("");
+        posicionIngreso.setText("      ");
 
 
         int x=(principal.getWidth()/4);
