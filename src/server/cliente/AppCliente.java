@@ -11,7 +11,7 @@ import ar.edu.unlu.rmimvc.Util;
 import ar.edu.unlu.rmimvc.cliente.Cliente;
 import controlador.Controlador;
 import vistas.IVista;
-import vistas.vistaConsola.swing.VistaConsolaSwing2;
+import vistas.vistaConsola.swing.VistaConsolaSwing;
 
 public class AppCliente {
 
@@ -49,7 +49,7 @@ public class AppCliente {
                 null,
                 8888
         );
-        IVista vista = new VistaConsolaSwing2();
+        IVista vista = new VistaConsolaSwing();
         Controlador controlador = new Controlador(vista);
         Cliente c = new Cliente(ip, Integer.parseInt(port), ipServidor, Integer.parseInt(portServidor));
         vista.inicializar();
