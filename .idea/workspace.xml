@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="arreglando vista consola swing">
+      <change afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/IJugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/IUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/IUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,14 +52,12 @@
       </list>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="47121aa7-8505-4d58-a158-8e8beb1120b5" />
-        <option name="url" value="https://github.com/MateoPonti/Mancala" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MateoPonti/Mancala.git&quot;,
+    &quot;accountId&quot;: &quot;91fa56b6-3d0e-45e0-8b92-86d174bcf7a5&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -83,6 +89,7 @@
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
     &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/Mateo/IdeaProjects/Mancala/src/modelo/clasesJuego/tablero&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Mateo/IdeaProjects/Mancala/src/RMILibreria.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -302,14 +309,6 @@
       <workItem from="1702769280067" duration="3640000" />
       <workItem from="1702845657559" duration="570000" />
       <workItem from="1702865074125" duration="1058000" />
-    </task>
-    <task id="LOCAL-00032" summary="uml Mancala 16/10/2023">
-      <option name="closed" value="true" />
-      <created>1697483137753</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1697483137753</updated>
     </task>
     <task id="LOCAL-00033" summary="Creando Servidor">
       <option name="closed" value="true" />
@@ -695,7 +694,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720075813303</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="arreglando vista consola swing">
+      <option name="closed" value="true" />
+      <created>1720076117452</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1720076117452</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -713,7 +720,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ahora la vista sabe que jugador juega  , tambien se agregaron test al tablero jugador" />
     <MESSAGE value="agregue una variable final" />
     <MESSAGE value="agregue que se pueda poner contra" />
     <MESSAGE value="hice que mas de uno pueda ver el juego" />
@@ -738,7 +744,8 @@
     <MESSAGE value="cambios versiones" />
     <MESSAGE value="Haciendo vista consola listo" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="arreglando vista consola swing" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglando vista consola swing" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

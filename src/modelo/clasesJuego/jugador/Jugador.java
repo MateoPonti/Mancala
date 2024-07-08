@@ -3,6 +3,7 @@ package modelo.clasesJuego.jugador;
 import modelo.clasesJuego.usuario.IUsuario;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Jugador implements  IJugador, Serializable {
     private final int id;
@@ -21,11 +22,16 @@ public class Jugador implements  IJugador, Serializable {
         this.nombre=nombre;
     }
 
+
     public Jugador(){
-        this.nombre="Empate";
         this.id=-1;
+        this.nombre="Empate";
     }
 
+
+    public boolean esValido(){
+        return id!=-1;
+    }
     public int getId() {
         return id;
     }

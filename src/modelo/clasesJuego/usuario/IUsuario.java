@@ -10,4 +10,7 @@ public interface IUsuario {
     int getId();
 
     int getTotalPartidas();
+
+
+    boolean equals(IUsuario usuario);
 }

@@ -6,4 +6,5 @@ import modelo.clasesJuego.usuario.Usuario;
 public interface IJugador  {
      String getNombre();
      boolean equals(IUsuario usuario);
+     boolean esValido();
 }
