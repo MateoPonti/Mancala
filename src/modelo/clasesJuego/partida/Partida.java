@@ -12,7 +12,7 @@ import modelo.clasesJuego.usuario.IUsuario;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Partida implements Serializable {
+public class Partida implements Serializable,IPartida {
     private Jugador turno;
 
     private final ArrayList<Jugador> jugadores;
@@ -38,20 +38,20 @@ public class Partida implements Serializable {
 
     public Notificacion hacerJugada(int posicion, IUsuario jugador){
         if (!isFinalizado()){
-        if (isTurno(jugador)){
-           ResultadoJugada resultado= tablero.hacerJugada(posicion,determinarJugador(turno),determinarOponente(turno));
-           if (resultado==ResultadoJugada.PosicioInvalida){return Notificacion.POSICIONINVALIDA;}
-           if (resultado==ResultadoJugada.Correcta){turnoSiguiente();}
-           if (resultado==ResultadoJugada.Victoria){
-               estado=EstadoPartida.Finalizado;
-               ganador= jugadores.get(0); // Asume que gano el jugador 1
-               int puntosJugador1=tablero.devolverPuntosJugador(1);
-               int puntosJugador2=tablero.devolverPuntosJugador(2);
-               if(puntosJugador2>puntosJugador1){ganador=jugadores.get(1);} // pregunta si gano el jugador 2
-               if(puntosJugador2==puntosJugador1){ganador= new Jugador();}
-               return Notificacion.FINALIZOJUEGO;}
-           return Notificacion.JUEGATURNO;
-        }}
+            if (isTurno(jugador)){
+                ResultadoJugada resultado= tablero.hacerJugada(posicion,determinarJugador(turno),determinarOponente(turno));
+                if (resultado==ResultadoJugada.PosicioInvalida){return Notificacion.POSICIONINVALIDA;}
+                if (resultado==ResultadoJugada.Correcta){turnoSiguiente();}
+                if (resultado==ResultadoJugada.Victoria){
+                    estado=EstadoPartida.Finalizado;
+                    ganador= jugadores.get(0); // Asume que gano el jugador 1
+                    int puntosJugador1=tablero.devolverPuntosJugador(1);
+                    int puntosJugador2=tablero.devolverPuntosJugador(2);
+                    if(puntosJugador2>puntosJugador1){ganador=jugadores.get(1);} // pregunta si gano el jugador 2
+                    if(puntosJugador2==puntosJugador1){ganador=new Jugador();} // es empate
+                    return Notificacion.FINALIZOJUEGO;}
+                return Notificacion.JUEGATURNO;
+            }}
 
         return null;
     }
@@ -132,5 +132,8 @@ public class Partida implements Serializable {
     }
 
 
-
+    @Override
+    public boolean esta(IUsuario jugador) {
+        return jugadores.get(0).equals(jugador) || jugadores.get(1).equals(jugador) ;
+    }
 }

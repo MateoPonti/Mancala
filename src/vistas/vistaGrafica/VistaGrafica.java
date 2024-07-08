@@ -11,7 +11,7 @@ import java.awt.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-
+/*
 public class VistaGrafica implements IVista, Serializable {
         private JFrame frame;
         private JPanel principal;
@@ -107,12 +107,12 @@ public class VistaGrafica implements IVista, Serializable {
                     j+=tam;
                     c=0;
                 }
-                PanelConImagen p=  new PanelConImagen("src/recursos/Agujero.png",100,100,color);
+                //PanelConImagen p=  new PanelConImagen("src/recursos/Agujero.png",100,100,color);
 
                 x = ( ((panelWidth - labelWidth) / 4)-80 )+c;
-                p.setSize(labelWidth,labelHeight);
+               // p.setSize(labelWidth,labelHeight);
                 y = ((panelHeight - labelHeight) / 2)-j;
-                p.setBounds(x, y, labelWidth, labelHeight);
+                //p.setBounds(x, y, labelWidth, labelHeight);
 
                 tam= p.getHeight();
                 c+=p.getWidth();
@@ -191,3 +191,6 @@ public class VistaGrafica implements IVista, Serializable {
         }
     }
 
+
+
+ */

@@ -52,6 +52,11 @@ public class Usuario implements IUsuario, Serializable {
         return getVictorias()+getDerrotas();
     }
 
+    @Override
+    public boolean equals(IUsuario usuario) {
+        return usuario.getId()== id;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -81,7 +86,9 @@ public class Usuario implements IUsuario, Serializable {
         this.derrotas++;
     }
 
-    public boolean equals(IUsuario usuario) {
-        return getId()==usuario.getId();
+    public int getElo() {
+        return  getVictorias()*5+getEmpates()-getDerrotas()*2;
     }
+
+
 }

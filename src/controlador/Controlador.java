@@ -28,6 +28,7 @@ public class Controlador implements IControladorRemoto, Serializable {
         try {
             this.jugador= modelo.conectarJugador(nombre,contrasenia);
             vista.mostrarInicializarPartida();
+            inicializarPartida();
         } catch (RemoteException e) {
             throw new RuntimeException(e);
 
@@ -50,7 +51,7 @@ public class Controlador implements IControladorRemoto, Serializable {
         }
     }
 
-    public void desconectarJugador() {
+    public void desconectarJugador() throws  RemoteException {
         modelo.desconectarJugador(jugador);
     }
 

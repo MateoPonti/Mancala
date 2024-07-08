@@ -4,8 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Cambios para manejar elo y empate">
+      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/IPartida.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/IConectado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/ITipo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/imagenes/Fondo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/imagenes/Icono.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagenes/Agujero 1 haba.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 1 haba.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagenes/Agujero 2 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 2 Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagenes/Agujero 3 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 3 Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagenes/Agujero 4 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 4 Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagenes/Agujero 5 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 5 Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagenes/Agujero vacio.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero vacio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagenes/Casa 1 Haba.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa 1 Haba.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagenes/Casa 2 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa 2 Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagenes/Casa 3 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa 3 Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagenes/Casa 4 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa 4 Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagenes/Casa 5+ Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa 5+ Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagenes/Casa Vacia.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa Vacia.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/cliente/AppCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/cliente/AppCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaConsola/swing/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/PanelConImagen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +48,8 @@
         <option value="Record" />
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -44,14 +74,12 @@
       </list>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="47121aa7-8505-4d58-a158-8e8beb1120b5" />
-        <option name="url" value="https://github.com/MateoPonti/Mancala" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MateoPonti/Mancala.git&quot;,
+    &quot;accountId&quot;: &quot;91fa56b6-3d0e-45e0-8b92-86d174bcf7a5&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -67,6 +95,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.AppServidor.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
@@ -83,6 +112,7 @@
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
     &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/Mateo/IdeaProjects/Mancala/src/modelo/clasesJuego/tablero&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Mateo/IdeaProjects/Mancala/src/RMILibreria.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -106,11 +136,11 @@
       <recent name="modelo.jugador" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\vistas\imagenes" />
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\UML" />
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src" />
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\server\LibreriaRMIMVC.jar!\doc" />
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\server" />
-      <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\recursos" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -199,8 +229,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.AppCliente" />
         <item itemvalue="Application.AppServidor" />
+        <item itemvalue="Application.AppCliente" />
         <item itemvalue="JUnit.TableroJugadorTest" />
       </list>
     </recent_temporary>
@@ -302,22 +332,6 @@
       <workItem from="1702769280067" duration="3640000" />
       <workItem from="1702845657559" duration="570000" />
       <workItem from="1702865074125" duration="1058000" />
-    </task>
-    <task id="LOCAL-00032" summary="uml Mancala 16/10/2023">
-      <option name="closed" value="true" />
-      <created>1697483137753</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1697483137753</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Creando Servidor">
-      <option name="closed" value="true" />
-      <created>1697606182055</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1697606182055</updated>
     </task>
     <task id="LOCAL-00034" summary="actualizando UML">
       <option name="closed" value="true" />
@@ -695,7 +709,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720075813303</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="arreglando vista consola swing">
+      <option name="closed" value="true" />
+      <created>1720076117452</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1720076117452</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Cambios para manejar elo y empate">
+      <option name="closed" value="true" />
+      <created>1720411136741</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1720411136741</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -713,8 +743,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ahora la vista sabe que jugador juega  , tambien se agregaron test al tablero jugador" />
-    <MESSAGE value="agregue una variable final" />
     <MESSAGE value="agregue que se pueda poner contra" />
     <MESSAGE value="hice que mas de uno pueda ver el juego" />
     <MESSAGE value="ahora mas de uno puede ver el juego solo si conecto el nombre y contra" />
@@ -738,7 +766,9 @@
     <MESSAGE value="cambios versiones" />
     <MESSAGE value="Haciendo vista consola listo" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="arreglando vista consola swing" />
+    <MESSAGE value="Cambios para manejar elo y empate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios para manejar elo y empate" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -3,7 +3,6 @@ package modelo.mancala;
 import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
 import modelo.clasesJuego.jugador.IJugador;
-import modelo.clasesJuego.jugador.Jugador;
 import modelo.clasesJuego.partida.Partida;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import modelo.clasesJuego.usuario.*;
@@ -36,7 +35,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
 
-    public void  desconectarJugador(IUsuario j){
+    public void  desconectarJugador(IUsuario j) throws  RemoteException{
         for(Usuario u:usuarios){
             if (u.equals(j)){
                 usuarios.remove(u);
@@ -59,7 +58,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
 
     public void inicializarPartida(IUsuario jugador) throws RemoteException {
-        if (partida==null  || partida.isFinalizado()){
+        if ( (partida==null  || partida.isFinalizado()) && estaJugando(jugador)){
          if(preparados == null) {
              assert partida != null;
              if (partida.isFinalizado()) {
@@ -77,6 +76,9 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
 
+
+
+
     public void hacerJugada(String pos, IUsuario jugador) throws RemoteException{
         try {
             int posInt= Integer.parseInt(pos.trim());
@@ -92,7 +94,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
         if (resultado!=Notificacion.POSICIONINVALIDA  && resultado!=null){notificarObservadores(Notificacion.MOSTRARTABLEROS);}
         if (resultado==Notificacion.FINALIZOJUEGO){
             IJugador ganador= partida.getGanador();
-            if (ganador!=null){
+            if (ganador.esValido()){
             if (ganador.equals(preparados.get(0))){
                 Usuario usuarioGanador = encontrarUsuario(preparados.get(0));
                 Usuario usuarioPerdedor = encontrarUsuario(preparados.get(1));
@@ -118,6 +120,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
                 jugador2.agregarEmpate();
             }
             preparados=null;
+
         }
         notificarObservadores(resultado);
     }
@@ -158,12 +161,11 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
     private boolean agregarJugadorPreparados(IUsuario usuario){
-
-        for(IUsuario u : preparados){
-            if (u.equals(usuario)){return  false;}
-        }
+        if (estaJugando(usuario)){
         preparados.add(usuario);
         return true;
+        }
+        return false;
 
     }
 
@@ -174,6 +176,17 @@ public class Mancala extends ObservableRemoto implements IMancala{
             }
         }
         return null;
+    }
+
+    private boolean estaJugando(IUsuario jugador){
+        if (preparados!=null){
+          for (IUsuario j: preparados)  {
+            if (jugador.equals(j)){
+            return false;
+           }
+          }
+       }
+       return true;
     }
 
 
