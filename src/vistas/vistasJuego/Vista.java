@@ -8,7 +8,6 @@ import vistas.ITipo;
 import vistas.IVista;
 import vistas.Menu.VistaMenu;
 
-import javax.swing.*;
 import java.io.Serializable;
 
 public  class Vista implements IVista, Serializable, IConectado {
@@ -49,7 +48,7 @@ public  class Vista implements IVista, Serializable, IConectado {
     @Override
     public  void mostrarInicializarPartida(){
         menu.mostrarMenu();
-        tipo = new VistaConsolaSwing();
+        tipo = new VistaConsolaSwing(controlador);
     };
 
 

@@ -8,5 +8,4 @@ public interface ITipo {
 
     void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador);
     void mostrarGanador(IJugador ganador);
-    void setControlador(Controlador c);
 }

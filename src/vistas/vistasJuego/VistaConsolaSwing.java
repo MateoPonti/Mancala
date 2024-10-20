@@ -5,25 +5,26 @@ import modelo.clasesJuego.contenedor.IContenedor;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import vistas.ITipo;
-import vistas.IVista;
 
 import javax.swing.*;
 import java.awt.*;
 
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class VistaConsolaSwing implements ITipo {
     private JFrame frame;
     private JPanel PAgujeros;
     private JPanel PEnvioPosicion;
-
     private JTextArea agujeros;
-
     private JTextField posicionIngreso;
-
     private JButton bIngresoPos;
+
+
+
+
 
 
 
@@ -34,7 +35,7 @@ public class VistaConsolaSwing implements ITipo {
 
 
 
-    public VistaConsolaSwing(){
+    public VistaConsolaSwing(Controlador c){
         //definicion
         frame = new JFrame();
         PAgujeros= new JPanel();
@@ -42,6 +43,7 @@ public class VistaConsolaSwing implements ITipo {
         agujeros= new JTextArea();
         posicionIngreso= new JTextField(5);
         bIngresoPos= new JButton();
+        scrollPane= new JScrollPane(agujeros);
 
 
         //layout
@@ -53,14 +55,18 @@ public class VistaConsolaSwing implements ITipo {
         frame.setMinimumSize(minSize);
         bIngresoPos.setSize(new Dimension(50,50));
         posicionIngreso.setSize(new Dimension(20,100));
-        agujeros.setSize(new Dimension(300,300));
 
         //config
         Color color = Color.decode("#3b1b0f");
         agujeros.setEditable(false);
         PAgujeros.setBackground(color);
         bIngresoPos.setText("Enviar");
-
+        bIngresoPos.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                c.hacerJugada(posicionIngreso.getText());
+            }
+        });
 
     }
 
@@ -91,8 +97,10 @@ public class VistaConsolaSwing implements ITipo {
         }
 
 
-        agujeros.append(strZonaOp+"   "+tableroJugadorOponente.toString()+"   "+strZonaTurno+"\n");
-        agujeros.append("        "+ tableroJugadorTurno.toString()+"\n");
+        String espacio = "   ";
+        String espacioTurno="        ";
+        agujeros.append(strZonaOp+espacio+tableroJugadorOponente.toString()+espacio+strZonaTurno+"\n");
+        agujeros.append(espacioTurno+ tableroJugadorTurno.toString()+"\n");
         agujeros.append("\n"+nombreJugador.getNombre()+", Turno: "+ turnoActual.getNombre()+"\n");
         agujeros.append("------------------------------------------------------"+"\n");
         x=(PAgujeros.getWidth()/2)-100;
@@ -100,7 +108,8 @@ public class VistaConsolaSwing implements ITipo {
         x=(PAgujeros.getWidth()/2)-190;
         y=(PAgujeros.getHeight()/4)+150;
 
-        PAgujeros.add(agujeros);
+        scrollPane.setVisible(true);
+        PAgujeros.add(scrollPane);
         PEnvioPosicion.add(posicionIngreso);
         PEnvioPosicion.add(bIngresoPos);
 
@@ -118,45 +127,19 @@ public class VistaConsolaSwing implements ITipo {
 
     @Override
     public void mostrarGanador(IJugador ganador) {
-        JOptionPane.showMessageDialog(null, ganador.getNombre(), "Ganador", JOptionPane.INFORMATION_MESSAGE);
-        frame.setVisible(false);
+        bIngresoPos.setVisible(false);
+        posicionIngreso.setVisible(false);
+
+        agujeros.append("Ganador: "+ ganador.getNombre()+" !!!!!!!");
+
+
+
+        frame.revalidate();
+        frame.repaint();
 
     }
 
-    @Override
-    public void setControlador(Controlador c) {
 
-    }
-
-
-
-    /*
-    @Override
-    public void mostrarInicializarPartida() {
-        frame.setSize(600,300);
-        principal.setSize(600,300);
-        principal.setBackground(Color.blue);
-
-        arrancarPartida.setVisible(true);
-        arrancarPartida.setSize(200,20);
-        ingresoContra.setVisible(false);
-        ingresoNombre.setVisible(false);
-        butIngresoPos.setVisible(false);
-        agujeros.setVisible(false);
-        butIngresoPos.setVisible(false);
-        scrollPane.setVisible(false);
-        pIngreso.setVisible(false);
-        agujeros.setText("");
-        posicionIngreso.setText("      ");
-
-
-        int x=(principal.getWidth()/4);
-        int y=(principal.getHeight()/2);
-        arrancarPartida.setBounds(x,y,arrancarPartida.getWidth(),arrancarPartida.getHeight());
-
-        principal.add(arrancarPartida);
-    }
-   */
 
 
 
