@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Refactoring Master">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="VistaConsola">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/ITipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/ITipo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" afterDir="false" />
     </list>
@@ -66,44 +67,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AppServidor.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE": "ToolWindow",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE": "ToolWindow",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "RefactoringMaster",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/Mateo/IdeaProjects/Mancala/src/modelo/clasesJuego/tablero",
-    "last_opened_file_path": "C:/Users/Mateo/IdeaProjects/Mancala/src/RMILibreria.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AppServidor.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE&quot;: &quot;ToolWindow&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;ToolWindow&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;RefactoringMaster&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Mateo/IdeaProjects/Mancala/src/modelo/clasesJuego/tablero&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mateo/IdeaProjects/Mancala/src/RMILibreria.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="modelo.jugador" />
@@ -305,14 +306,6 @@
       <workItem from="1702769280067" duration="3640000" />
       <workItem from="1702845657559" duration="570000" />
       <workItem from="1702865074125" duration="1058000" />
-    </task>
-    <task id="LOCAL-00035" summary="actualizando UML">
-      <option name="closed" value="true" />
-      <created>1697606309185</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1697606309185</updated>
     </task>
     <task id="LOCAL-00036" summary="servidor creado y probado">
       <option name="closed" value="true" />
@@ -698,7 +691,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729408090461</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="VistaConsola">
+      <option name="closed" value="true" />
+      <created>1729417975890</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1729417975891</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -716,7 +717,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="agregue que se pueda poner contra" />
     <MESSAGE value="hice que mas de uno pueda ver el juego" />
     <MESSAGE value="ahora mas de uno puede ver el juego solo si conecto el nombre y contra" />
     <MESSAGE value="uml imagen" />
@@ -741,7 +741,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="arreglando vista consola swing" />
     <MESSAGE value="Cambios para manejar elo y empate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios para manejar elo y empate" />
+    <MESSAGE value="VistaConsola" />
+    <option name="LAST_COMMIT_MESSAGE" value="VistaConsola" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

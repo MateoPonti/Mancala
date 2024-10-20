@@ -12,9 +12,10 @@ import java.awt.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class VistaConsolaSwing implements ITipo {
+public class VistaConsolaSwing implements ITipo, Serializable {
     private JFrame frame;
     private JPanel PAgujeros;
     private JPanel PEnvioPosicion;
@@ -35,7 +36,7 @@ public class VistaConsolaSwing implements ITipo {
 
 
 
-    public VistaConsolaSwing(Controlador c){
+    public VistaConsolaSwing(){
         //definicion
         frame = new JFrame();
         PAgujeros= new JPanel();
@@ -61,12 +62,7 @@ public class VistaConsolaSwing implements ITipo {
         agujeros.setEditable(false);
         PAgujeros.setBackground(color);
         bIngresoPos.setText("Enviar");
-        bIngresoPos.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                c.hacerJugada(posicionIngreso.getText());
-            }
-        });
+
 
     }
 
@@ -139,9 +135,15 @@ public class VistaConsolaSwing implements ITipo {
 
     }
 
-
-
-
+    @Override
+    public void modificarInput(Controlador controlador) {
+        bIngresoPos.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                controlador.hacerJugada(posicionIngreso.getText());
+            }
+        });
+    }
 
 
 }

@@ -67,13 +67,10 @@ public class VistaMenu {
         JPanel panelDatos = new JPanel() {
             final ImageIcon imagenFondo = new ImageIcon("src/vistas/imagenes/Fondo.png"); // Ruta de la imagen
 
-            // Sobrescribir el método paintComponent para dibujar la imagen
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                // Obtener el tamaño del panel
                 Dimension size = getSize();
-                // Dibujar la imagen en todo el panel, ajustando su tamaño al del panel
                 g.drawImage(imagenFondo.getImage(), 0, 0, size.width, size.height, this);
             }
         };
