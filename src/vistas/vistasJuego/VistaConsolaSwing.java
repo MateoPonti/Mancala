@@ -68,11 +68,6 @@ public class VistaConsolaSwing implements ITipo, Serializable {
 
 
     public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador){
-        int x;
-        int y;
-
-        x=(PAgujeros.getWidth()/2)-100;
-        y=(PAgujeros.getHeight()/4)+300;
 
 
         String strZonaTurno= "("+ tableroJugador.getZona().getHabas()+")";
@@ -99,10 +94,7 @@ public class VistaConsolaSwing implements ITipo, Serializable {
         agujeros.append(espacioTurno+ tableroJugadorTurno.toString()+"\n");
         agujeros.append("\n"+nombreJugador.getNombre()+", Turno: "+ turnoActual.getNombre()+"\n");
         agujeros.append("------------------------------------------------------"+"\n");
-        x=(PAgujeros.getWidth()/2)-100;
-        y=(PAgujeros.getHeight()/4)-200;
-        x=(PAgujeros.getWidth()/2)-190;
-        y=(PAgujeros.getHeight()/4)+150;
+
 
         PAgujeros.add(scrollPane,BorderLayout.CENTER);
         PEnvioPosicion.add(posicionIngreso);
