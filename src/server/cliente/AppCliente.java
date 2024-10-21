@@ -55,10 +55,7 @@ public class AppCliente {
 
         try {
             c.iniciar(controlador);
-        } catch (RemoteException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (RMIMVCException e) {
+        } catch (RemoteException | RMIMVCException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
