@@ -41,7 +41,7 @@ public class VistaConsolaSwing implements ITipo, Serializable {
         frame = new JFrame();
         PAgujeros= new JPanel();
         PEnvioPosicion= new JPanel();
-        agujeros= new JTextArea();
+        agujeros= new JTextArea(30,50);
         posicionIngreso= new JTextField(5);
         bIngresoPos= new JButton();
         scrollPane= new JScrollPane(agujeros);
@@ -104,12 +104,11 @@ public class VistaConsolaSwing implements ITipo, Serializable {
         x=(PAgujeros.getWidth()/2)-190;
         y=(PAgujeros.getHeight()/4)+150;
 
-        scrollPane.setVisible(true);
-        PAgujeros.add(scrollPane);
+        PAgujeros.add(scrollPane,BorderLayout.CENTER);
         PEnvioPosicion.add(posicionIngreso);
         PEnvioPosicion.add(bIngresoPos);
 
-        frame.add(PAgujeros,BorderLayout.CENTER);
+        frame.add(PAgujeros);
         frame.add(PEnvioPosicion,BorderLayout.SOUTH);
 
         frame.revalidate();
@@ -125,10 +124,7 @@ public class VistaConsolaSwing implements ITipo, Serializable {
     public void mostrarGanador(IJugador ganador) {
         bIngresoPos.setVisible(false);
         posicionIngreso.setVisible(false);
-
         agujeros.append("Ganador: "+ ganador.getNombre()+" !!!!!!!");
-
-
 
         frame.revalidate();
         frame.repaint();
