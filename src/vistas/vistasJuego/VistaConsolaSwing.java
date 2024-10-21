@@ -16,24 +16,13 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class VistaConsolaSwing implements ITipo, Serializable {
-    private JFrame frame;
-    private JPanel PAgujeros;
-    private JPanel PEnvioPosicion;
-    private JTextArea agujeros;
-    private JTextField posicionIngreso;
-    private JButton bIngresoPos;
-
-
-
-
-
-
-
-
-    private    JScrollPane scrollPane;
-
-    private  final Dimension minSize = new Dimension(800,800);
-
+    private final JFrame frame;
+    private final JPanel PAgujeros;
+    private final JPanel PEnvioPosicion;
+    private final JTextArea agujeros;
+    private final JTextField posicionIngreso;
+    private final JButton bIngresoPos;
+    private final JScrollPane scrollPane;
 
 
     public VistaConsolaSwing(){
@@ -53,6 +42,7 @@ public class VistaConsolaSwing implements ITipo, Serializable {
 
 
         //size
+        Dimension minSize = new Dimension(800, 800);
         frame.setMinimumSize(minSize);
         bIngresoPos.setSize(new Dimension(50,50));
         posicionIngreso.setSize(new Dimension(20,100));
@@ -90,8 +80,8 @@ public class VistaConsolaSwing implements ITipo, Serializable {
 
         String espacio = "   ";
         String espacioTurno="        ";
-        agujeros.append(strZonaOp+espacio+tableroJugadorOponente.toString()+espacio+strZonaTurno+"\n");
-        agujeros.append(espacioTurno+ tableroJugadorTurno.toString()+"\n");
+        agujeros.append(strZonaOp+espacio+tableroJugadorOponente+espacio+strZonaTurno+"\n");
+        agujeros.append(espacioTurno+ tableroJugadorTurno+"\n");
         agujeros.append("\n"+nombreJugador.getNombre()+", Turno: "+ turnoActual.getNombre()+"\n");
         agujeros.append("------------------------------------------------------"+"\n");
 
@@ -125,12 +115,7 @@ public class VistaConsolaSwing implements ITipo, Serializable {
 
     @Override
     public void modificarInput(Controlador controlador) {
-        bIngresoPos.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                controlador.hacerJugada(posicionIngreso.getText());
-            }
-        });
+        bIngresoPos.addActionListener(e -> controlador.hacerJugada(posicionIngreso.getText()));
     }
 
 
