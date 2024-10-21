@@ -11,7 +11,7 @@ import ar.edu.unlu.rmimvc.Util;
 import ar.edu.unlu.rmimvc.cliente.Cliente;
 import controlador.Controlador;
 import vistas.IVista;
-import vistas.vistasJuego.VistaConsolaSwing;
+import vistas.vistasJuego.Vista;
 
 public class AppCliente {
 
@@ -49,10 +49,10 @@ public class AppCliente {
                 null,
                 8888
         );
-        /*IVista vista = new VistaConsolaSwing();
+        IVista vista = new Vista();
         Controlador controlador = new Controlador(vista);
         Cliente c = new Cliente(ip, Integer.parseInt(port), ipServidor, Integer.parseInt(portServidor));
-        vista.inicializar();
+
         try {
             c.iniciar(controlador);
         } catch (RemoteException e) {
@@ -62,7 +62,7 @@ public class AppCliente {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        */
+
 
     }
 

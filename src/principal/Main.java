@@ -7,7 +7,6 @@ import modelo.mancala.Mancala;
 import vistas.IVista;
 import vistas.vistasJuego.Vista;
 
-import javax.naming.ldap.Control;
 import java.rmi.RemoteException;
 
 public class Main {
