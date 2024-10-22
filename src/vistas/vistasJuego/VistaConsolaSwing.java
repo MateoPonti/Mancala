@@ -52,6 +52,7 @@ public class VistaConsolaSwing implements ITipo, Serializable {
         PAgujeros.setBackground(color);
         bIngresoPos.setText("Enviar");
 
+        PAgujeros.add(scrollPane,BorderLayout.CENTER);
 
     }
 
@@ -85,7 +86,6 @@ public class VistaConsolaSwing implements ITipo, Serializable {
         agujeros.append("------------------------------------------------------"+"\n");
 
 
-        PAgujeros.add(scrollPane,BorderLayout.CENTER);
         PEnvioPosicion.add(posicionIngreso);
         PEnvioPosicion.add(bIngresoPos);
 
