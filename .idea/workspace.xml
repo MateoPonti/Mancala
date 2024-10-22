@@ -4,10 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="VistaConsola">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="probando el online con la vista consola">
+      <change afterPath="$PROJECT_DIR$/src/vistas/ImagenPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/cliente/AppCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/cliente/AppCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/ITipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/ITipo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 1 haba.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero_1Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 2 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero_2Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 3 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero_3Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 4 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero_4Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 5 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero_5Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Agujero vacio.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero_Vacio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Casa 1 Haba.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa_1Haba.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Casa 2 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa_2Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Casa 3 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa_3Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Casa 4 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa_4Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Casa 5+ Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa_5+_Habas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Casa Vacia.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa_Vacio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +38,8 @@
         <option value="Record" />
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,46 +83,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AppCiente2.executor": "Run",
-    "Application.AppCliente.executor": "Run",
-    "Application.AppServidor.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE": "ToolWindow",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE": "ToolWindow",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "RefactoringMaster",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/Mateo/IdeaProjects/Mancala/src/modelo/clasesJuego/tablero",
-    "last_opened_file_path": "C:/Users/Mateo/IdeaProjects/Mancala/src/RMILibreria.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AppCiente2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AppCliente.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AppServidor.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE&quot;: &quot;ToolWindow&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;ToolWindow&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;RefactoringMaster&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Mateo/IdeaProjects/Mancala/src/modelo/clasesJuego/tablero&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mateo/IdeaProjects/Mancala/src/RMILibreria.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="modelo.jugador" />
@@ -123,7 +141,7 @@
       <recent name="modelo.clasesJuego.tablero" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppCliente">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="AppCiente2" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
       <option name="MAIN_CLASS_NAME" value="server.cliente.AppCliente" />
       <module name="Mancala" />
@@ -202,9 +220,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.AppCliente" />
         <item itemvalue="Application.AppServidor" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TableroJugadorTest" />
       </list>
     </recent_temporary>
@@ -306,22 +324,6 @@
       <workItem from="1702769280067" duration="3640000" />
       <workItem from="1702845657559" duration="570000" />
       <workItem from="1702865074125" duration="1058000" />
-    </task>
-    <task id="LOCAL-00041" summary="Se crea Uusuario , ahora todo funciona con usuario y la partida crea a los jugadores">
-      <option name="closed" value="true" />
-      <created>1698282288302</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1698282288302</updated>
-    </task>
-    <task id="LOCAL-00042" summary="cambios en vistas y nuevo UML">
-      <option name="closed" value="true" />
-      <created>1698462821086</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1698462821086</updated>
     </task>
     <task id="LOCAL-00043" summary="cambios en vistas y nuevo UML">
       <option name="closed" value="true" />
@@ -699,7 +701,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729503756857</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="probando el online con la vista consola">
+      <option name="closed" value="true" />
+      <created>1729504066593</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1729504066593</updated>
+    </task>
+    <task id="LOCAL-00091" summary="probando el online con la vista consola">
+      <option name="closed" value="true" />
+      <created>1729504115213</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1729504115213</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -717,7 +735,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="hice que mas de uno pueda ver el juego" />
     <MESSAGE value="ahora mas de uno puede ver el juego solo si conecto el nombre y contra" />
     <MESSAGE value="uml imagen" />
     <MESSAGE value="Ahora existe Jugador nombre" />
@@ -742,7 +759,8 @@
     <MESSAGE value="arreglando vista consola swing" />
     <MESSAGE value="Cambios para manejar elo y empate" />
     <MESSAGE value="VistaConsola" />
-    <option name="LAST_COMMIT_MESSAGE" value="VistaConsola" />
+    <MESSAGE value="probando el online con la vista consola" />
+    <option name="LAST_COMMIT_MESSAGE" value="probando el online con la vista consola" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

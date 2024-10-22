@@ -6,6 +6,7 @@ import modelo.clasesJuego.usuario.IUsuario;
 import modelo.mancala.IMancala;
 import vistas.IVista;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.rmi.RemoteException;
 
@@ -32,6 +33,14 @@ public class Controlador implements IControladorRemoto, Serializable {
         } catch (RemoteException e) {
             throw new RuntimeException(e);
 
+        }
+    }
+
+    public void hacerJugada(int val)  {
+        try {
+            modelo.hacerJugada(val,jugador);
+        } catch (RemoteException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -65,10 +74,11 @@ public class Controlador implements IControladorRemoto, Serializable {
         if (cambio instanceof Notificacion) {
         if (cambio == Notificacion.MOSTRARTABLEROS) {
             try {
-                    vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador),modelo.getTurnoActual(), modelo.getJugador(this.jugador));
-                } catch (RemoteException e) {
-                    throw new RuntimeException(e);
-                }}
+                vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador),modelo.getTurnoActual(), modelo.getJugador(this.jugador));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
          if (cambio == Notificacion.FINALIZOJUEGO) {
             try {
                 vista.mostrarGanador(modelo.getGanador());

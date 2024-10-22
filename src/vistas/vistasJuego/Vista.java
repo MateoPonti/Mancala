@@ -8,6 +8,7 @@ import vistas.ITipo;
 import vistas.IVista;
 import vistas.Menu.VistaMenu;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 public  class Vista implements IVista, Serializable, IConectado {
@@ -29,7 +30,7 @@ public  class Vista implements IVista, Serializable, IConectado {
 
 
     @Override
-    public  void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador){
+    public  void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador) throws IOException {
          if (tipo!=null){tipo.mostrarTablero(tableroJugador,tableroOponente,turnoActual,nombreJugador);}
     };
 
@@ -48,7 +49,7 @@ public  class Vista implements IVista, Serializable, IConectado {
     @Override
     public  void mostrarInicializarPartida(){
         menu.mostrarMenu();
-        tipo = new VistaConsolaSwing();
+        tipo = new VistaGrafica();
         tipo.modificarInput(controlador);
     };
 
@@ -62,7 +63,9 @@ public  class Vista implements IVista, Serializable, IConectado {
 
     @Override
     public void conectarUsuario(String nombre, String contrasenia) {
-        this.controlador.conectarUsuario(nombre,contrasenia);
+        if (controlador!= null) {
+        this.controlador.conectarUsuario(nombre,contrasenia); }
+        
     }
 
     @Override
