@@ -95,13 +95,13 @@ public class VistaGrafica implements ITipo, Serializable {
 
 
     private String obtenerImagen(int habas, String contenedor) {
-        contenedor= "src/vistas/imagenes/"+contenedor;
+        String ruta= "src/vistas/imagenes/"+contenedor;
         if (habas == 0) {
-            return contenedor + "_Vacio.png";
+            return ruta + "_Vacio.png";
         }
         if (habas >= 5) {
-            return contenedor + "_5+Habas.png";
+            return ruta + "_5+Habas.png";
         }
-        return contenedor + "_" + habas + "Habas.png";
+        return ruta + "_" + habas + "Habas.png";
     }
 }
