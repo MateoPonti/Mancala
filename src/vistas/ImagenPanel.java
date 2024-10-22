@@ -6,8 +6,8 @@ import java.awt.image.BufferedImage;
 
 public class ImagenPanel extends JPanel {
     private BufferedImage imagen;
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     public ImagenPanel() {
         this.imagen = null;

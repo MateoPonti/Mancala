@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.Serializable;
 
 public  class Vista implements IVista, Serializable, IConectado {
-    private VistaMenu menu;
+    private final VistaMenu menu;
     private Controlador controlador;
     private ITipo tipo;
 
@@ -32,7 +32,7 @@ public  class Vista implements IVista, Serializable, IConectado {
     @Override
     public  void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador) throws IOException {
          if (tipo!=null){tipo.mostrarTablero(tableroJugador,tableroOponente,turnoActual,nombreJugador);}
-    };
+    }
 
 
 
@@ -42,7 +42,7 @@ public  class Vista implements IVista, Serializable, IConectado {
             tipo.mostrarGanador(ganador);
             menu.mostrarMenu();
         }
-    };
+    }
 
 
 
@@ -51,7 +51,7 @@ public  class Vista implements IVista, Serializable, IConectado {
         menu.mostrarMenu();
         tipo = new VistaGrafica();
         tipo.modificarInput(controlador);
-    };
+    }
 
 
     @Override

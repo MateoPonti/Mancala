@@ -4,28 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="probando el online con la vista consola">
-      <change afterPath="$PROJECT_DIR$/src/vistas/ImagenPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/ITipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/ITipo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 1 haba.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero_1Habas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 2 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero_2Habas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 3 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero_3Habas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 4 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero_4Habas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Agujero 5 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero_5Habas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Agujero vacio.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Agujero_Vacio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Casa 1 Haba.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa_1Haba.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Casa 2 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa_2Habas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Casa 3 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa_3Habas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Casa 4 Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa_4Habas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Casa 5+ Habas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa_5+_Habas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Casa Vacia.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Casa_Vacio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistaGrafica/VistaGrafica2.java" beforeDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo la Vista Grafica">
+      <change beforePath="$PROJECT_DIR$/src/vistas/ImagenPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/ImagenPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,14 +306,6 @@
       <workItem from="1702769280067" duration="3640000" />
       <workItem from="1702845657559" duration="570000" />
       <workItem from="1702865074125" duration="1058000" />
-    </task>
-    <task id="LOCAL-00043" summary="cambios en vistas y nuevo UML">
-      <option name="closed" value="true" />
-      <created>1698462949786</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1698462949786</updated>
     </task>
     <task id="LOCAL-00044" summary="reduciendo warnings">
       <option name="closed" value="true" />
@@ -717,7 +691,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729504115213</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Haciendo la Vista Grafica">
+      <option name="closed" value="true" />
+      <created>1729582556960</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1729582556960</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -735,7 +717,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ahora mas de uno puede ver el juego solo si conecto el nombre y contra" />
     <MESSAGE value="uml imagen" />
     <MESSAGE value="Ahora existe Jugador nombre" />
     <MESSAGE value="error que no daba victoria" />
@@ -760,7 +741,8 @@
     <MESSAGE value="Cambios para manejar elo y empate" />
     <MESSAGE value="VistaConsola" />
     <MESSAGE value="probando el online con la vista consola" />
-    <option name="LAST_COMMIT_MESSAGE" value="probando el online con la vista consola" />
+    <MESSAGE value="Haciendo la Vista Grafica" />
+    <option name="LAST_COMMIT_MESSAGE" value="Haciendo la Vista Grafica" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
