@@ -13,6 +13,8 @@ public class ImagenPanel extends JPanel {
         this.imagen = null;
         this.x = 0;
         this.y = 0;
+        this.setBorder(null);
+        this.setLayout(null);
     }
 
     @Override

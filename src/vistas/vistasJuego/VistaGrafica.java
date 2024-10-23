@@ -1,6 +1,7 @@
 package vistas.vistasJuego;
 
 import controlador.Controlador;
+import modelo.clasesJuego.contenedor.Agujero;
 import modelo.clasesJuego.contenedor.IContenedor;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
@@ -23,19 +24,17 @@ public class VistaGrafica implements ITipo, Serializable {
     private final JPanel pAgujero;
     private final  ImagenPanel JPanelCasa;
     private final ImagenPanel JPanelCasaOp;
-    private final ArrayList<ImagenPanel> pAgujeros;
     private final  ArrayList<JLabel> lAgujeros;
     private  final ArrayList<JLabel> lCasas;
 
 
-    public VistaGrafica(){
+    public VistaGrafica() {
         //definicion
         frame = new JFrame();
-        JPanelJuego= new JPanel();
+        JPanelJuego = new JPanel();
         pAgujero = new JPanel();
-        pAgujeros= new ArrayList<>();
-        JPanelCasa=new ImagenPanel();
-        JPanelCasaOp= new ImagenPanel();
+        JPanelCasa = new ImagenPanel();
+        JPanelCasaOp = new ImagenPanel();
 
 
         //layout
@@ -45,38 +44,36 @@ public class VistaGrafica implements ITipo, Serializable {
         //size
         Dimension minSize = new Dimension(800, 800);
         frame.setMinimumSize(minSize);
-        Color color = Color.decode("#3b1b0f");
         JPanelJuego.setLayout(new BorderLayout());
-        JPanelJuego.setMinimumSize(new Dimension(300,300));
-        pAgujero.setBackground(color);
-        pAgujero.setLayout(new GridLayout(2,6));
+        JPanelJuego.setMinimumSize(new Dimension(300, 300));
+        pAgujero.setLayout(new GridLayout(2, 6,2,2));
         lAgujeros = new ArrayList<>();
-        lCasas= new ArrayList<>();
+        lCasas = new ArrayList<>();
 
-        int c = 0;
-        for (int j = 0 ; j<12; j++){
-            JLabel l =  new JLabel();
-            ImagenPanel i = new ImagenPanel();
-            if ((j+c)%2==0){i.setBackground(Color.BLACK);}
-            else { i.setBackground(Color.white);}
-            if (j ==5){c++;}
-            i.add(l);
+        for (int j = 0; j < 12; j++) {
+            JLabel l = new JLabel();
             lAgujeros.add(l);
-            pAgujeros.add(i);
-            pAgujero.add(i);
 
+            JPanel p = new JPanel();
+
+            p.add(l);
+            pAgujero.add(p);
 
         }
 
         JLabel l =  new JLabel();
+        l.setSize(new Dimension(100,100));
         lCasas.add(l);
         JPanelCasa.add(l);
         l = new JLabel();
+        l.setSize(new Dimension(100,100));
         lCasas.add(l);
         JPanelCasaOp.add(l);
 
-        JPanelJuego.add(JPanelCasa,BorderLayout.EAST);
-        JPanelJuego.add(JPanelCasaOp,BorderLayout.WEST);
+        JPanelJuego.setPreferredSize(new Dimension(350,350));
+
+        frame.add(JPanelCasa,BorderLayout.EAST);
+        frame.add(JPanelCasaOp,BorderLayout.WEST);
         JPanelJuego.add(pAgujero,BorderLayout.CENTER);
         frame.add(JPanelJuego,BorderLayout.CENTER);
 
@@ -85,45 +82,21 @@ public class VistaGrafica implements ITipo, Serializable {
 
     @Override
     public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador) throws IOException {
-        ArrayList<IContenedor> agujerosContOp=tableroOponente.getAgujerosVuelta();
         ArrayList<IContenedor> agujerosCont=tableroJugador.getAgujeros();
+        ArrayList<IContenedor> agujerosContOp=tableroOponente.getAgujerosVuelta();
 
+        setImagenAgujeros(agujerosCont,0);
+        setImagenAgujeros(agujerosContOp,6);
 
-        for(int i = 0 ; i <=5 ; i++) {
-            int habas=agujerosCont.get(i).getHabas();
-            String imagen = obtenerImagen(habas,"Agujero");
-            ImagenPanel panel = pAgujeros.get(i);
-            panel.dibujarImagen(ImageIO.read(new File(imagen)));
-            lAgujeros.get(i).setText(String.valueOf(habas));
-        }
-
-
-        for(int i = 0 ; i <=5 ; i++) {
-            int habas=agujerosContOp.get(i).getHabas();
-            String imagen = obtenerImagen(habas,"Agujero");
-            ImagenPanel panel = pAgujeros.get(i+6);
-            panel.dibujarImagen(ImageIO.read(new File(imagen)));
-            lAgujeros.get(i+6).setText(String.valueOf(habas));
-        }
-
-        int habas=tableroOponente.getZona().getHabas();
-        String imagen = obtenerImagen(tableroOponente.getZona().getHabas(),"Casa");
-        lCasas.get(1).setText(String.valueOf(habas));
-        JPanelCasaOp.dibujarImagen(ImageIO.read(new File(imagen)));
-
-        habas=tableroJugador.getZona().getHabas();
-        imagen = obtenerImagen(habas,"Casa");
-        lCasas.get(0).setText(String.valueOf(habas));
-        JPanelCasa.dibujarImagen(ImageIO.read(new File(imagen)));
+        setImagenCasa(tableroJugador,0);
+        setImagenCasa(tableroOponente,1);
 
 
         frame.revalidate();
         frame.repaint();
-
         frame.setVisible(true);
-
-
     }
+
 
 
 
@@ -136,11 +109,9 @@ public class VistaGrafica implements ITipo, Serializable {
 
     @Override
     public void modificarInput(Controlador controlador) {
-
-
         for(int i =0 ;i<=5;i++){
             int finalI = i;
-            pAgujeros.get(i).addMouseListener(new MouseAdapter() {
+            lAgujeros.get(i).addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     controlador.hacerJugada(finalI+1);
@@ -149,8 +120,6 @@ public class VistaGrafica implements ITipo, Serializable {
 
             });
         }
-
-
     }
 
 
@@ -165,4 +134,40 @@ public class VistaGrafica implements ITipo, Serializable {
         }
         return ruta + contenedor + "_" + habas + "Habas.png";
     }
+
+    private void setImagenAgujeros(ArrayList<IContenedor> contenedor,int parte){
+        try {
+
+            for(int i = 0 ; i <=5 ; i++) {
+                int habas=contenedor.get(i).getHabas();
+                String imagen = obtenerImagen(habas,"Agujero");
+                JLabel l = lAgujeros.get(i+parte);
+
+                ImageIcon icon = new ImageIcon(imagen);
+                l.setText(String.valueOf(habas));
+                l.setHorizontalTextPosition(SwingConstants.LEFT);
+                l.setIcon(icon);
+            }
+
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        }
+
+
+    private void setImagenCasa(ITableroJugador tableroJugador,int parte){
+        try {
+            int habas=tableroJugador.getZona().getHabas();
+            String imagen = obtenerImagen(habas,"Casa");
+            JLabel l = lCasas.get(parte);
+            l.setText(String.valueOf(habas));
+            l.setVerticalTextPosition(SwingConstants.TOP);
+            l.setHorizontalAlignment(SwingConstants.LEFT);
+            l.setIcon(new ImageIcon(imagen));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
