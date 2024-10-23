@@ -49,7 +49,7 @@ public  class Vista implements IVista, Serializable, IConectado {
     @Override
     public  void mostrarInicializarPartida(){
         menu.mostrarMenu();
-        tipo = new VistaGrafica();
+        tipo = new VistaConsolaSwing();
         tipo.modificarInput(controlador,menu);
     }
 

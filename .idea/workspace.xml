@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo la Vista Grafica">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Terminando la Vista Grafica">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,14 +308,6 @@
       <workItem from="1702769280067" duration="3640000" />
       <workItem from="1702845657559" duration="570000" />
       <workItem from="1702865074125" duration="1058000" />
-    </task>
-    <task id="LOCAL-00050" summary="ahora la vista sabe que jugador juega  , tambien se agregaron test al tablero jugador">
-      <option name="closed" value="true" />
-      <created>1698716370756</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1698716370756</updated>
     </task>
     <task id="LOCAL-00051" summary="agregue una variable final">
       <option name="closed" value="true" />
@@ -698,7 +693,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729667448950</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="Terminando la Vista Grafica">
+      <option name="closed" value="true" />
+      <created>1729671913577</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1729671913577</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -716,7 +719,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="uml imagen" />
     <MESSAGE value="Ahora existe Jugador nombre" />
     <MESSAGE value="error que no daba victoria" />
     <MESSAGE value="ahora el turno actual y el nombre del jugador son interfaces IJugador" />
@@ -741,7 +743,8 @@
     <MESSAGE value="VistaConsola" />
     <MESSAGE value="probando el online con la vista consola" />
     <MESSAGE value="Haciendo la Vista Grafica" />
-    <option name="LAST_COMMIT_MESSAGE" value="Haciendo la Vista Grafica" />
+    <MESSAGE value="Terminando la Vista Grafica" />
+    <option name="LAST_COMMIT_MESSAGE" value="Terminando la Vista Grafica" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

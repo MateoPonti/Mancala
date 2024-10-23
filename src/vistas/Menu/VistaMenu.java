@@ -6,21 +6,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
 
 
 public class VistaMenu {
-
-
-
     private IConectado conectado;
     private JFrame frame;
-
-
-
-
-
-
 
     public VistaMenu(IConectado conectado) {
         frame = new JFrame();
@@ -32,7 +22,6 @@ public class VistaMenu {
         pedirNombre();
     }
 
-
     private void pedirNombre(){
 
         frame.setMinimumSize(new Dimension(500,500));
@@ -43,8 +32,6 @@ public class VistaMenu {
         JTextField ingresoNombre = new JTextField(5);
         JPasswordField ingresoContra = new JPasswordField(5);
         JButton botonEnvioDatos = new JButton();
-
-
 
         botonEnvioDatos.addActionListener(new ActionListener() {
             @Override
@@ -74,19 +61,14 @@ public class VistaMenu {
                 g.drawImage(imagenFondo.getImage(), 0, 0, size.width, size.height, this);
             }
         };
-
         panelDatos.setBackground(new Color(255, 255, 224));
         panelDatos.setLayout(new FlowLayout());
-
 
         nombre.setSize(new Dimension(20,20));
         contra.setSize(new Dimension(20,20));
         ingresoContra.setSize(new Dimension(100,20));
         ingresoNombre.setSize(new Dimension(100,20));
-
         botonEnvioDatos.setSize(new Dimension(60,60));
-
-
 
         panelDatos.add(nombre);
         panelDatos.add(ingresoNombre);
@@ -94,18 +76,11 @@ public class VistaMenu {
         panelDatos.add(ingresoContra);
         panelDatos.add(botonEnvioDatos);
 
-
         frame.add(panelDatos,BorderLayout.CENTER);
-
         frame.revalidate();
         frame.repaint();
-
-
         frame.setVisible(true);
     }
-
-
-
     public  void mostrarMenu(){
         frame.setVisible(true);
         frame.setSize(new Dimension(800,600));
@@ -113,18 +88,7 @@ public class VistaMenu {
 
     }
 
-
-
-
-
     public  void cerrarMenu(){
         frame.setVisible(false);
-
     }
-
-
-
-
-
-
 }
