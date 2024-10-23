@@ -24,6 +24,7 @@ public class VistaGrafica implements ITipo, Serializable {
     private final  JLabel lCasa;
     private final JLabel lCasaOp;
     private final  ArrayList<JLabel> lAgujeros;
+    private  final  ArrayList<JLabel> lAgujH;
     private  final JButton botSalir;
 
 
@@ -47,12 +48,15 @@ public class VistaGrafica implements ITipo, Serializable {
         Dimension minSize = new Dimension(800, 600);
         frame.setMinimumSize(minSize);
         pAgujero.setLayout(new GridLayout(2, 6,0,0));
-        pAgujero.setPreferredSize(new Dimension(400,300));
+        pAgujero.setPreferredSize(new Dimension(450,450));
         lAgujeros = new ArrayList<>();
+        lAgujH=new ArrayList<>();
+
         botSalir.setPreferredSize(new Dimension(100,20));
         botSalir.setText("Salir");
         pAgujero.setBackground(color);
         jPanelJuego.setBackground(color);
+        jPanelJuego.setPreferredSize(new Dimension(600,600));
 
         frame.setBackground(color);
         lCasa.setForeground(Color.white);
@@ -61,12 +65,19 @@ public class VistaGrafica implements ITipo, Serializable {
 
 
         for (int j = 0; j < 12; j++) {
-            JLabel l = new JLabel();
-            lAgujeros.add(l);
-            JPanel p = new JPanel();
-            p.add(l);
-            l.setBackground(color);
-            l.setForeground(Color.white);
+            JLabel lImagen = new JLabel();
+            JLabel lHabas = new JLabel();
+
+            lHabas.setForeground(Color.blue);
+
+            lAgujeros.add(lImagen);
+            lAgujH.add(lHabas);
+
+            JPanel p = new JPanel(new FlowLayout());
+            p.add(lHabas);
+            p.add(lImagen);
+            p.setBackground(color);
+            p.setPreferredSize(new Dimension(30,30));
             pAgujero.add(p);
 
         }
@@ -94,6 +105,7 @@ public class VistaGrafica implements ITipo, Serializable {
         lTurno.setForeground(Color.white);
 
         jPanelJuego.add(lTurno,BorderLayout.NORTH);
+
         frame.revalidate();
         frame.repaint();
         frame.setVisible(true);
@@ -154,11 +166,12 @@ public class VistaGrafica implements ITipo, Serializable {
                 int habas=contenedor.get(i).getHabas();
                 String imagen = obtenerImagen(habas,"Agujero");
                 JLabel l = lAgujeros.get(i+parte);
-
                 ImageIcon icon = new ImageIcon(imagen);
-                l.setText(String.valueOf(habas));
-                l.setHorizontalTextPosition(SwingConstants.LEFT);
                 l.setIcon(icon);
+
+                l = lAgujH.get(i+parte);
+                l.setText(String.valueOf(habas));
+
             }
 
 
