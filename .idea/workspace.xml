@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo la Vista Grafica">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/ImagenPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/ImagenPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/ITipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/ITipo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/ImagenPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -306,14 +310,6 @@
       <workItem from="1702769280067" duration="3640000" />
       <workItem from="1702845657559" duration="570000" />
       <workItem from="1702865074125" duration="1058000" />
-    </task>
-    <task id="LOCAL-00048" summary="elimine jugador , ahora solo se maneja con usuarios">
-      <option name="closed" value="true" />
-      <created>1698611122934</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1698611122934</updated>
     </task>
     <task id="LOCAL-00049" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
@@ -699,7 +695,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729589107165</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Haciendo la Vista Grafica">
+      <option name="closed" value="true" />
+      <created>1729651034501</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1729651034501</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

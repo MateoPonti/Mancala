@@ -110,7 +110,6 @@ public class VistaMenu {
         frame.setVisible(true);
         frame.setSize(new Dimension(800,600));
         frame.setMinimumSize(new Dimension(800,600));
-        cerrarMenu();
 
     }
 

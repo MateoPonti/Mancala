@@ -50,7 +50,7 @@ public  class Vista implements IVista, Serializable, IConectado {
     public  void mostrarInicializarPartida(){
         menu.mostrarMenu();
         tipo = new VistaGrafica();
-        tipo.modificarInput(controlador);
+        tipo.modificarInput(controlador,menu);
     }
 
 
