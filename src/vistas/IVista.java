@@ -8,9 +8,9 @@ import java.io.IOException;
 
 
 public interface IVista {
+     void inicializar();
      void setControlador(Controlador c);
      void mostrarInicializarPartida();
-
      void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente,IJugador turnoActual, IJugador nombreJugador) throws IOException;
      void mostrarGanador(IJugador ganador);
 }

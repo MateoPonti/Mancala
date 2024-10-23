@@ -28,6 +28,9 @@ public class Main {
         controlador1.setModeloRemoto((IMancala)modelo);
         controlador2.setModeloRemoto((IMancala)modelo);
 
+        vista.inicializar();
+        vista2.inicializar();
+
 
 
 

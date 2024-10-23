@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.Serializable;
 
 public  class Vista implements IVista, Serializable, IConectado {
-    private final VistaMenu menu;
+    private VistaMenu menu;
     private Controlador controlador;
     private ITipo tipo;
 
@@ -22,10 +22,7 @@ public  class Vista implements IVista, Serializable, IConectado {
 
 
 
-    public Vista(){
-       menu = new VistaMenu(this);
 
-    }
 
 
 
@@ -53,6 +50,11 @@ public  class Vista implements IVista, Serializable, IConectado {
         tipo.modificarInput(controlador,menu);
     }
 
+
+    @Override
+    public void inicializar() {
+        menu = new VistaMenu(this);
+    }
 
     @Override
     public void setControlador(Controlador c) {
