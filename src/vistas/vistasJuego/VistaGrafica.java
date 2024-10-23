@@ -45,10 +45,11 @@ public class VistaGrafica implements ITipo, Serializable {
 
         //size
         Color color = new Color(50,20,30);
-        Dimension minSize = new Dimension(800, 600);
+        Dimension minSize = new Dimension(950,700);
         frame.setMinimumSize(minSize);
+
         pAgujero.setLayout(new GridLayout(2, 6,0,0));
-        pAgujero.setPreferredSize(new Dimension(450,450));
+        pAgujero.setPreferredSize(new Dimension(600,600));
         lAgujeros = new ArrayList<>();
         lAgujH=new ArrayList<>();
 
@@ -56,7 +57,7 @@ public class VistaGrafica implements ITipo, Serializable {
         botSalir.setText("Salir");
         pAgujero.setBackground(color);
         jPanelJuego.setBackground(color);
-        jPanelJuego.setPreferredSize(new Dimension(600,600));
+        jPanelJuego.setPreferredSize(new Dimension(700,600));
 
         frame.setBackground(color);
         lCasa.setForeground(Color.white);
@@ -68,7 +69,7 @@ public class VistaGrafica implements ITipo, Serializable {
             JLabel lImagen = new JLabel();
             JLabel lHabas = new JLabel();
 
-            lHabas.setForeground(Color.blue);
+            lHabas.setForeground(Color.white);
 
             lAgujeros.add(lImagen);
             lAgujH.add(lHabas);
