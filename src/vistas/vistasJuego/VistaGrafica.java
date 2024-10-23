@@ -26,6 +26,7 @@ public class VistaGrafica implements ITipo, Serializable {
     private final  ArrayList<JLabel> lAgujeros;
     private  final  ArrayList<JLabel> lAgujH;
     private  final JButton botSalir;
+    private final    JLabel lTurno;
 
 
     public VistaGrafica() {
@@ -36,6 +37,7 @@ public class VistaGrafica implements ITipo, Serializable {
         lCasa = new JLabel();
         lCasaOp = new JLabel();
         botSalir= new JButton();
+        lTurno= new JLabel();
 
 
         //layout
@@ -47,21 +49,24 @@ public class VistaGrafica implements ITipo, Serializable {
         Color color = new Color(50,20,30);
         Dimension minSize = new Dimension(950,700);
         frame.setMinimumSize(minSize);
-
-        pAgujero.setLayout(new GridLayout(2, 6,0,0));
+        jPanelJuego.setPreferredSize(new Dimension(700,600));
+        botSalir.setPreferredSize(new Dimension(100,20));
         pAgujero.setPreferredSize(new Dimension(600,600));
+
+
+        //config
+        frame.setTitle("Mancala");
+        pAgujero.setLayout(new GridLayout(2, 6,0,0));
         lAgujeros = new ArrayList<>();
         lAgujH=new ArrayList<>();
-
-        botSalir.setPreferredSize(new Dimension(100,20));
         botSalir.setText("Salir");
         pAgujero.setBackground(color);
         jPanelJuego.setBackground(color);
-        jPanelJuego.setPreferredSize(new Dimension(700,600));
-
+        lTurno.setForeground(Color.white);
         frame.setBackground(color);
         lCasa.setForeground(Color.white);
         lCasaOp.setForeground(Color.white);
+
 
 
 
@@ -88,6 +93,7 @@ public class VistaGrafica implements ITipo, Serializable {
         jPanelJuego.add(lCasa,BorderLayout.EAST);
         jPanelJuego.add(pAgujero,BorderLayout.CENTER);
         jPanelJuego.add(lCasaOp,BorderLayout.WEST);
+        jPanelJuego.add(lTurno,BorderLayout.NORTH);
         frame.add(jPanelJuego,BorderLayout.CENTER);
     }
 
@@ -102,10 +108,7 @@ public class VistaGrafica implements ITipo, Serializable {
         setImagenCasa(tableroJugador,lCasa);
         setImagenCasa(tableroOponente,lCasaOp);
 
-        JLabel lTurno = new JLabel(nombreJugador.getNombre()+" ,Turno Actual:"+ turnoActual.getNombre());
-        lTurno.setForeground(Color.white);
-
-        jPanelJuego.add(lTurno,BorderLayout.NORTH);
+        lTurno.setText(nombreJugador.getNombre()+" ,Turno Actual:"+ turnoActual.getNombre());
 
         frame.revalidate();
         frame.repaint();

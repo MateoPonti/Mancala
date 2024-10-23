@@ -48,6 +48,7 @@ public class VistaConsolaSwing implements ITipo, Serializable {
         botSalir.setSize(new Dimension(100,20));
 
         //config
+        frame.setTitle("Mancala");
         Color color = Color.decode("#3b1b0f");
         agujeros.setEditable(false);
         PAgujeros.setBackground(color);

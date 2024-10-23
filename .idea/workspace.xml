@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Vistas casi que finalizadas">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Vistas Terminadas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" afterDir="false" />
     </list>
@@ -307,14 +306,6 @@
       <workItem from="1702769280067" duration="3640000" />
       <workItem from="1702845657559" duration="570000" />
       <workItem from="1702865074125" duration="1058000" />
-    </task>
-    <task id="LOCAL-00052" summary="agregue una variable final">
-      <option name="closed" value="true" />
-      <created>1698861494900</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1698861494900</updated>
     </task>
     <task id="LOCAL-00053" summary="agregue que se pueda poner contra">
       <option name="closed" value="true" />
@@ -700,7 +691,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729672771911</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Vistas Terminadas">
+      <option name="closed" value="true" />
+      <created>1729675196695</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1729675196695</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -718,7 +717,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="error que no daba victoria" />
     <MESSAGE value="ahora el turno actual y el nombre del jugador son interfaces IJugador" />
     <MESSAGE value="cambios de uml" />
     <MESSAGE value="hice jugador serializable" />
@@ -743,7 +741,8 @@
     <MESSAGE value="Haciendo la Vista Grafica" />
     <MESSAGE value="Terminando la Vista Grafica" />
     <MESSAGE value="Vistas casi que finalizadas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vistas casi que finalizadas" />
+    <MESSAGE value="Vistas Terminadas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vistas Terminadas" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
