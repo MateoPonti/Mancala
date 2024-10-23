@@ -47,7 +47,7 @@ public class VistaGrafica implements ITipo, Serializable {
 
         //size
         Color color = new Color(50,20,30);
-        Dimension minSize = new Dimension(950,700);
+        Dimension minSize = new Dimension(1000 ,800);
         frame.setMinimumSize(minSize);
         jPanelJuego.setPreferredSize(new Dimension(700,600));
         botSalir.setPreferredSize(new Dimension(100,20));
@@ -75,6 +75,7 @@ public class VistaGrafica implements ITipo, Serializable {
             JLabel lHabas = new JLabel();
 
             lHabas.setForeground(Color.white);
+            lHabas.setSize(new Dimension(20,20));
 
             lAgujeros.add(lImagen);
             lAgujH.add(lHabas);
@@ -84,6 +85,7 @@ public class VistaGrafica implements ITipo, Serializable {
             p.add(lImagen);
             p.setBackground(color);
             p.setPreferredSize(new Dimension(30,30));
+
             pAgujero.add(p);
 
         }
@@ -133,10 +135,22 @@ public class VistaGrafica implements ITipo, Serializable {
     public void modificarInput(Controlador controlador, VistaMenu vista) {
         for(int i =0 ;i<=5;i++){
             int finalI = i;
-            lAgujeros.get(i).addMouseListener(new MouseAdapter() {
+            JLabel l  =lAgujeros.get(i);
+            l.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     controlador.hacerJugada(finalI+1);
+                }
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    // Cambiar el cursor a la mano cuando el mouse esté sobre el JLabel
+                    l.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    // Cambiar el cursor de vuelta al predeterminado cuando el mouse salga del JLabel
+                    l.setCursor(Cursor.getDefaultCursor());
                 }
 
             });
@@ -147,6 +161,7 @@ public class VistaGrafica implements ITipo, Serializable {
                 vista.mostrarMenu();
                 frame.dispose();
             }
+
         });
     }
 
@@ -183,8 +198,6 @@ public class VistaGrafica implements ITipo, Serializable {
             throw new RuntimeException(e);
         }
         }
-
-
     private void setImagenCasa(ITableroJugador tableroJugador,JLabel l){
         try {
             int habas=tableroJugador.getZona().getHabas();

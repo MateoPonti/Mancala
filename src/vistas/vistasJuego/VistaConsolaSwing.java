@@ -41,7 +41,7 @@ public class VistaConsolaSwing implements ITipo, Serializable {
 
 
         //size
-        Dimension minSize = new Dimension(950,700);
+        Dimension minSize = new Dimension(1000 ,800);
         frame.setMinimumSize(minSize);
         bIngresoPos.setSize(new Dimension(50,50));
         posicionIngreso.setSize(new Dimension(20,100));
