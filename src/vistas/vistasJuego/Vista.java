@@ -74,8 +74,8 @@ public  class Vista implements IVista, Serializable, IConectado {
     }
 
     @Override
-    public void Jugar() {
-        tipo = new VistaGrafica();
+    public void jugar(ITipo tipo) {
+        this.tipo = tipo;
         tipo.modificarInput(controlador,menu);
         menu.cerrarMenu();
         controlador.inicializarPartida();

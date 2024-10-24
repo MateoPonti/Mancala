@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Terminando">
-      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/administrador/AdministradorPartidas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/administrador/AdministradorUsuarios.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Vista Menu jugar rank  y nickname">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/IUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/IUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/IConectado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IConectado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,14 +308,6 @@
       <workItem from="1702769280067" duration="3640000" />
       <workItem from="1702845657559" duration="570000" />
       <workItem from="1702865074125" duration="1058000" />
-    </task>
-    <task id="LOCAL-00058" summary="uml imagen">
-      <option name="closed" value="true" />
-      <created>1700370577191</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1700370577191</updated>
     </task>
     <task id="LOCAL-00059" summary="Ahora existe Jugador nombre">
       <option name="closed" value="true" />
@@ -701,7 +693,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729743572231</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Vista Menu jugar rank  y nickname">
+      <option name="closed" value="true" />
+      <created>1729753456642</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1729753456642</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -719,7 +719,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cambio interface" />
     <MESSAGE value="cambio" />
     <MESSAGE value="hice para agregar victoria y derrota , y estoy probando cosas con la vista grafica" />
     <MESSAGE value="ahora se resetea al ganar" />
@@ -744,24 +743,25 @@
     <MESSAGE value="Solo falta el desconectarJugador en ambas vistas" />
     <MESSAGE value="Cambios en server , agrego inicializar a interface Ivista" />
     <MESSAGE value="Terminando" />
-    <option name="LAST_COMMIT_MESSAGE" value="Terminando" />
+    <MESSAGE value="Vista Menu jugar rank  y nickname" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vista Menu jugar rank  y nickname" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>127</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>125</line>
-          <properties class="vistas.Menu.VistaMenu" method="pedirNombre">
+          <line>110</line>
+          <properties class="vistas.Menu.VistaMenu" method="setMenuConfig">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

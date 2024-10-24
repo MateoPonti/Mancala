@@ -9,7 +9,7 @@ public interface IConectado {
 
      void conectarUsuario(String nombre,String contrasenia);
      ArrayList<IUsuario> mostrarTopRank();
-     void Jugar();
+     void jugar(ITipo tipo);
 
 
 }

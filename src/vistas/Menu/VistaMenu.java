@@ -3,9 +3,15 @@ package vistas.Menu;
 import modelo.clasesJuego.usuario.IUsuario;
 import vistas.IConectado;
 import vistas.vistasJuego.IMenu;
+import vistas.vistasJuego.VistaConsolaSwing;
+import vistas.vistasJuego.VistaGrafica;
 
 import javax.swing.*;
+import javax.swing.text.Style;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
 import java.awt.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -17,9 +23,12 @@ public class VistaMenu implements IMenu {
     private final JButton botJugar;
     private final JButton botRank;
     private final JLabel nombreJugador;
+    private String nombreUsuario;
     private JPanel panelDatos;
-    private final JTextArea textRank;
+    private final JTextPane textRank;
     private final JScrollPane scrollpane;
+    private final JRadioButton radGrafica;
+    private final JRadioButton radConsola;
 
 
     // metodos publicos
@@ -31,8 +40,15 @@ public class VistaMenu implements IMenu {
         botJugar = new JButton();
         botRank = new JButton();
         nombreJugador= new JLabel();
-        textRank= new JTextArea(10,10);
-        scrollpane= new JScrollPane();
+        textRank = new JTextPane();
+        scrollpane = new JScrollPane();
+        radGrafica= new JRadioButton("Vista Gráfica");
+        radConsola=new JRadioButton("Vista Consola");
+        radConsola.setSelected(true);
+        ButtonGroup bgSelec  = new ButtonGroup();
+        bgSelec.add(radGrafica);
+        bgSelec.add(radConsola);
+        nombreUsuario= "";
 
 
         //size
@@ -47,6 +63,9 @@ public class VistaMenu implements IMenu {
         nombreJugador.setVisible(false);
         scrollpane.setVisible(false);
         textRank.setEditable(false);
+        radConsola.setVisible(false);
+        radGrafica.setVisible(false);
+
         scrollpane.setViewportView(textRank);
         scrollpane.setPreferredSize(new Dimension(100,100));
 
@@ -62,7 +81,17 @@ public class VistaMenu implements IMenu {
         botJugar.setText("Jugar");
         botRank.setText("Rank");
 
-        botJugar.addActionListener(e -> conectado.Jugar());
+        botJugar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (radConsola.isSelected()){
+                    conectado.jugar(new VistaConsolaSwing());
+                }
+                else {
+                    conectado.jugar(new VistaGrafica());
+                }
+            }
+        });
 
 
 
@@ -80,14 +109,18 @@ public class VistaMenu implements IMenu {
 
 
     public void setMenuConfig(String nombreJugador) {
-        this.nombreJugador.setText("Nickname: "+nombreJugador);
-        this.nombreJugador.setForeground(Color.white);
+        nombreUsuario=nombreJugador;
+        this.nombreJugador.setText("Nickname: "+nombreUsuario);
+        this.nombreJugador.setForeground(new Color(255, 255, 128));
         frame.setSize(new Dimension(800,600));
         frame.setMinimumSize(new Dimension(800,600));
         panelDatos.setVisible(false);
+        scrollpane.setVisible(false);
         botJugar.setVisible(true);
         botRank.setVisible(true);
         this.nombreJugador.setVisible(true);
+        radGrafica.setVisible(true);
+        radConsola.setVisible(true);
 
         JPanel panel= new JPanel(new BorderLayout());
         JPanel panelBot = new JPanel();
@@ -101,6 +134,8 @@ public class VistaMenu implements IMenu {
 
 
         panelNombreJugador.add(this.nombreJugador,BorderLayout.WEST);
+        panelBot.add(radConsola);
+        panelBot.add(radGrafica);
         panelBot.add(botJugar);
         panelBot.add(botRank);
 
@@ -135,12 +170,12 @@ public class VistaMenu implements IMenu {
         JButton botonEnvioDatos = new JButton();
 
         botonEnvioDatos.addActionListener(e -> {
-            String nombre1 = ingresoNombre.getText().trim().toLowerCase();
-            String contra1 = ingresoContra.getText().trim();
+            String nombreS = ingresoNombre.getText().trim();
+            String contraS = ingresoContra.getText().trim();
 
-            if (!(nombre1.isEmpty() || contra1.isEmpty()))
+            if (!(nombreS.isEmpty() || contraS.isEmpty()))
             {
-                conectado.conectarUsuario(nombre1, contra1);
+                conectado.conectarUsuario(nombreS, contraS);
             }
         });
 
@@ -184,23 +219,31 @@ public class VistaMenu implements IMenu {
         textRank.setVisible(true);
         frame.revalidate();
         frame.repaint();
+
         ArrayList<IUsuario> usuarios = conectado.mostrarTopRank();
         textRank.setText("");
-        int i  = 1;
+        int i = 1;
+        String cantEspacios = "                           ";
+
+        StyledDocument doc = textRank.getStyledDocument();
+        Style styleNick = textRank.addStyle("Nickname", null);
+        StyleConstants.setForeground(styleNick, new Color(255, 140, 0));
         try {
-            for (IUsuario u : usuarios){
-                String puesto  = i + ") " +u.getNickname()  + ",Victorias: "+u.getVictorias()+ " ,Derrotas: "+u.getDerrotas()+ ",Empates: "+ u.getEmpates()+"\n";
-                textRank.append(puesto);
+            for (IUsuario u : usuarios) {
+                String nombreNick = u.getNickname();
+                String puesto = i + ") " + nombreNick + cantEspacios + "Victorias: " + u.getVictorias() + " , Derrotas: " + u.getDerrotas() + " , Empates: " + u.getEmpates() + ", Partidas: " + u.getTotalPartidas() + ", Elo: " + u.getElo() + "\n";
+
+                if (nombreNick.equals(this.nombreUsuario)) {
+                    doc.insertString(doc.getLength(), puesto, styleNick);
+                } else {
+                    doc.insertString(doc.getLength(), puesto, null);
+                }
+
                 i++;
-
             }
-
-        } catch (Exception ignored) {
-
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-
     }
-
 
 }

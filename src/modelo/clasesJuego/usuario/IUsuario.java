@@ -4,7 +4,7 @@ public interface IUsuario {
     String getNickname();
     int getVictorias();
     int getDerrotas();
-
+    int getElo();
     int getEmpates();
     int getId();
 
