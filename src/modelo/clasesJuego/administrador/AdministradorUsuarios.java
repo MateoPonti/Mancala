@@ -1,6 +1,5 @@
 package modelo.clasesJuego.administrador;
 
-import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.usuario.IUsuario;
 import modelo.clasesJuego.usuario.Usuario;
 

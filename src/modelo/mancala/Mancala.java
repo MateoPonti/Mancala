@@ -2,7 +2,6 @@ package modelo.mancala;
 
 import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
-import modelo.clasesJuego.administrador.AdministradorPartidas;
 import modelo.clasesJuego.administrador.AdministradorUsuarios;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.partida.Partida;

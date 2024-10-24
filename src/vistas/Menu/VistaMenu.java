@@ -81,15 +81,12 @@ public class VistaMenu implements IMenu {
         botJugar.setText("Jugar");
         botRank.setText("Rank");
 
-        botJugar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (radConsola.isSelected()){
-                    conectado.jugar(new VistaConsolaSwing());
-                }
-                else {
-                    conectado.jugar(new VistaGrafica());
-                }
+        botJugar.addActionListener(e -> {
+            if (radConsola.isSelected()){
+                conectado.jugar(new VistaConsolaSwing());
+            }
+            else {
+                conectado.jugar(new VistaGrafica());
             }
         });
 
