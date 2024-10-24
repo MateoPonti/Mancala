@@ -2,6 +2,8 @@ package modelo.mancala;
 
 import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
+import modelo.clasesJuego.administrador.AdministradorPartidas;
+import modelo.clasesJuego.administrador.AdministradorUsuarios;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.partida.Partida;
 import modelo.clasesJuego.tablero.ITableroJugador;
@@ -48,7 +50,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
     @Override
     public ArrayList<IUsuario> obtenerRank() {
-        return null;
+        return AdministradorUsuarios.obtenerRank();
     }
 
 

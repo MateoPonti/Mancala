@@ -19,6 +19,7 @@ public class VistaMenu implements IMenu {
     private final JLabel nombreJugador;
     private JPanel panelDatos;
     private final JTextArea textRank;
+    private final JScrollPane scrollpane;
 
 
     // metodos publicos
@@ -30,7 +31,8 @@ public class VistaMenu implements IMenu {
         botJugar = new JButton();
         botRank = new JButton();
         nombreJugador= new JLabel();
-        textRank= new JTextArea(30,30);
+        textRank= new JTextArea(10,10);
+        scrollpane= new JScrollPane();
 
 
         //size
@@ -42,9 +44,13 @@ public class VistaMenu implements IMenu {
 
         botJugar.setVisible(false);
         botRank.setVisible(false);
-        textRank.setVisible(false);
         nombreJugador.setVisible(false);
+        scrollpane.setVisible(false);
         textRank.setEditable(false);
+        scrollpane.setViewportView(textRank);
+        scrollpane.setPreferredSize(new Dimension(100,100));
+
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Mancala");
         Image icono = Toolkit.getDefaultToolkit().getImage("src/vistas/imagenes/Icono.png");
@@ -83,18 +89,27 @@ public class VistaMenu implements IMenu {
         botRank.setVisible(true);
         this.nombreJugador.setVisible(true);
 
+        JPanel panel= new JPanel(new BorderLayout());
+        JPanel panelBot = new JPanel();
+        JPanel panelNombreJugador = new JPanel(new BorderLayout());
 
 
+        Color color=new Color(108,50,37);
+        panel.setBackground( color);
+        panelBot.setBackground(color);
+        panelNombreJugador.setBackground(color);
 
-        JPanel panel= new JPanel();
-        panel.setBackground( new Color(108,50,37));
-        panel.add(this.nombreJugador);
-        panel.add(botJugar);
-        panel.add(botRank);
+
+        panelNombreJugador.add(this.nombreJugador,BorderLayout.WEST);
+        panelBot.add(botJugar);
+        panelBot.add(botRank);
+
+        panel.add(panelBot,BorderLayout.CENTER);
+        panel.add(panelNombreJugador,BorderLayout.NORTH);
+
         frame.setLayout(new BorderLayout());
         frame.add(panel,BorderLayout.CENTER);
-        frame.add(textRank,BorderLayout.SOUTH);
-
+        frame.add(scrollpane,BorderLayout.SOUTH);
     }
 
     public    void cerrarMenu(){
@@ -165,19 +180,25 @@ public class VistaMenu implements IMenu {
     }
 
     private void mostrarRank() {
+        scrollpane.setVisible(true);
         textRank.setVisible(true);
+        frame.revalidate();
+        frame.repaint();
         ArrayList<IUsuario> usuarios = conectado.mostrarTopRank();
         textRank.setText("");
         int i  = 1;
         try {
             for (IUsuario u : usuarios){
-                String puesto  = i + ") " +u.getNickname()  + ",Victorias: "+u.getVictorias()+ " ,Derrotas: "+u.getDerrotas()+ ",Empates: "+ u.getEmpates();
+                String puesto  = i + ") " +u.getNickname()  + ",Victorias: "+u.getVictorias()+ " ,Derrotas: "+u.getDerrotas()+ ",Empates: "+ u.getEmpates()+"\n";
                 textRank.append(puesto);
                 i++;
+
             }
+
         } catch (Exception ignored) {
 
         }
+
 
     }
 

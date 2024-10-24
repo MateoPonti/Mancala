@@ -52,7 +52,6 @@ public class Controlador implements IControladorRemoto, Serializable {
     public void inicializarPartida()  {
         try {
             modelo.inicializarPartida(jugador);
-            System.out.println("Conectado");
         } catch (RemoteException e) {
             throw new RuntimeException(e);
         }
