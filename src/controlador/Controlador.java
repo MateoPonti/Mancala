@@ -2,13 +2,16 @@ package controlador;
 
 import ar.edu.unlu.rmimvc.cliente.IControladorRemoto;
 import ar.edu.unlu.rmimvc.observer.IObservableRemoto;
+import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.usuario.IUsuario;
 import modelo.mancala.IMancala;
 import vistas.IVista;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 public class Controlador implements IControladorRemoto, Serializable {
 
@@ -22,14 +25,10 @@ public class Controlador implements IControladorRemoto, Serializable {
     }
 
 
-
-
-
-    public void conectarUsuario(String nombre,String contrasenia)  {
+    public String conectarUsuario(String nombre,String contrasenia)  {
         try {
             this.jugador= modelo.conectarJugador(nombre,contrasenia);
-            vista.mostrarInicializarPartida();
-            inicializarPartida();
+            return jugador.getNickname();
         } catch (RemoteException e) {
             throw new RuntimeException(e);
 
@@ -55,6 +54,7 @@ public class Controlador implements IControladorRemoto, Serializable {
     public void inicializarPartida()  {
         try {
             modelo.inicializarPartida(jugador);
+            System.out.println("Conectado");
         } catch (RemoteException e) {
             throw new RuntimeException(e);
         }
@@ -67,6 +67,9 @@ public class Controlador implements IControladorRemoto, Serializable {
 
 
 
+    public ArrayList<IUsuario> obtenerRank(){
+        return  modelo.obtenerRank();
+    }
 
     @Override
     public void actualizar(IObservableRemoto IObserver, Object cambio) throws RemoteException {
@@ -82,7 +85,6 @@ public class Controlador implements IControladorRemoto, Serializable {
          if (cambio == Notificacion.FINALIZOJUEGO) {
             try {
                 vista.mostrarGanador(modelo.getGanador());
-                vista.mostrarInicializarPartida();
             } catch (RemoteException e) {
                 throw new RuntimeException(e);
             }

@@ -49,11 +49,11 @@ public class AppCliente {
                 null,
                 8888
         );
+        IVista vista = new Vista();
+        Controlador controlador = new Controlador(vista);
         Cliente c = new Cliente(ip, Integer.parseInt(port), ipServidor, Integer.parseInt(portServidor));
 
         try {
-            IVista vista = new Vista();
-            Controlador controlador = new Controlador(vista);
             c.iniciar(controlador);
             vista.inicializar();
         } catch (RemoteException | RMIMVCException e) {

@@ -3,6 +3,7 @@ package vistas.vistasJuego;
 import controlador.Controlador;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
+import modelo.clasesJuego.usuario.IUsuario;
 import vistas.IConectado;
 import vistas.ITipo;
 import vistas.IVista;
@@ -10,6 +11,7 @@ import vistas.Menu.VistaMenu;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public  class Vista implements IVista, Serializable, IConectado {
     private VistaMenu menu;
@@ -43,12 +45,7 @@ public  class Vista implements IVista, Serializable, IConectado {
 
 
 
-    @Override
-    public  void mostrarInicializarPartida(){
-        menu.mostrarMenu();
-        tipo = new VistaGrafica();
-        tipo.modificarInput(controlador,menu);
-    }
+
 
 
     @Override
@@ -66,18 +63,22 @@ public  class Vista implements IVista, Serializable, IConectado {
     @Override
     public void conectarUsuario(String nombre, String contrasenia) {
         if (controlador!= null) {
-        this.controlador.conectarUsuario(nombre,contrasenia); }
-        
+        menu.setMenuConfig(controlador.conectarUsuario(nombre,contrasenia));
+        menu.mostrarMenu();
+        }
     }
 
     @Override
-    public String mostrarTopRank() {
-        return "";
+    public ArrayList<IUsuario> mostrarTopRank() {
+        return controlador.obtenerRank();
     }
 
     @Override
     public void Jugar() {
-
+        tipo = new VistaGrafica();
+        tipo.modificarInput(controlador,menu);
+        menu.cerrarMenu();
+        controlador.inicializarPartida();
     }
 
 

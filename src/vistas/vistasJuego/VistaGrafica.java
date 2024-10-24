@@ -132,7 +132,7 @@ public class VistaGrafica implements ITipo, Serializable {
     }
 
     @Override
-    public void modificarInput(Controlador controlador, VistaMenu vista) {
+    public void modificarInput(Controlador controlador, IMenu vista) {
         for(int i =0 ;i<=5;i++){
             int finalI = i;
             JLabel l  =lAgujeros.get(i);

@@ -1,7 +1,7 @@
 package modelo.clasesJuego.usuario;
 
 public interface IUsuario {
-    String getNombre();
+    String getNickname();
     double getWinRate();
     int getVictorias();
     int getDerrotas();

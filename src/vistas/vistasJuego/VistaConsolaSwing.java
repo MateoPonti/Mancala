@@ -4,6 +4,7 @@ import modelo.clasesJuego.contenedor.IContenedor;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import vistas.ITipo;
+import vistas.IVista;
 import vistas.Menu.VistaMenu;
 import javax.swing.*;
 import java.awt.*;
@@ -110,7 +111,7 @@ public class VistaConsolaSwing implements ITipo, Serializable {
     }
 
     @Override
-    public void modificarInput(Controlador controlador, VistaMenu vista) {
+    public void modificarInput(Controlador controlador, IMenu vista) {
         bIngresoPos.addActionListener(e -> controlador.hacerJugada(posicionIngreso.getText()));
         botSalir.addActionListener(new ActionListener() {
             @Override

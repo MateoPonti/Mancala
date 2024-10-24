@@ -3,25 +3,28 @@ package modelo.clasesJuego.usuario;
 import java.io.Serializable;
 
 public class Usuario implements IUsuario, Serializable {
+    private String nickname;
     private String nombre;
     private String contrasenia;
     private int id;
     private int victorias;
     private int derrotas;
-
     private int empates;
+
 
 
     public Usuario(String nombre, String contrasenia, int id) {
         this.nombre = nombre;
         this.contrasenia = contrasenia;
+        this.nickname= nombre+"#"+ id;
         this.id = id;
     }
 
 
 
-    public String getNombre() {
-        return nombre;
+    @Override
+    public String getNickname() {
+        return nickname;
     }
 
     @Override
