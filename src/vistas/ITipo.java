@@ -3,7 +3,6 @@ package vistas;
 import controlador.Controlador;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
-import vistas.Menu.VistaMenu;
 import vistas.vistasJuego.IMenu;
 
 import java.io.IOException;

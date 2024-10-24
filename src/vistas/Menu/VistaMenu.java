@@ -12,13 +12,13 @@ import java.util.ArrayList;
 
 
 public class VistaMenu implements IMenu {
-    private IConectado conectado;
-    private JFrame frame;
-    private JButton botJugar;
-    private JButton botRank;
-    private  JLabel nombreJugador;
+    private final IConectado conectado;
+    private final JFrame frame;
+    private final JButton botJugar;
+    private final JButton botRank;
+    private final JLabel nombreJugador;
     private JPanel panelDatos;
-    private JTextArea textRank;
+    private final JTextArea textRank;
 
 
     // metodos publicos
@@ -56,21 +56,11 @@ public class VistaMenu implements IMenu {
         botJugar.setText("Jugar");
         botRank.setText("Rank");
 
-        botJugar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                conectado.Jugar();
-            }
-        });
+        botJugar.addActionListener(e -> conectado.Jugar());
 
 
 
-        botRank.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mostrarRank();
-            }
-        });
+        botRank.addActionListener(e -> mostrarRank());
 
 
     }
@@ -129,16 +119,13 @@ public class VistaMenu implements IMenu {
         JPasswordField ingresoContra = new JPasswordField(5);
         JButton botonEnvioDatos = new JButton();
 
-        botonEnvioDatos.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String nombre = ingresoNombre.getText().trim().toLowerCase();
-                String contra = ingresoContra.getText().trim();
+        botonEnvioDatos.addActionListener(e -> {
+            String nombre1 = ingresoNombre.getText().trim().toLowerCase();
+            String contra1 = ingresoContra.getText().trim();
 
-                if (!(nombre.isEmpty() || contra.isEmpty()))
-                {
-                    conectado.conectarUsuario(nombre,contra);
-                }
+            if (!(nombre1.isEmpty() || contra1.isEmpty()))
+            {
+                conectado.conectarUsuario(nombre1, contra1);
             }
         });
 

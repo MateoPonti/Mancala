@@ -3,7 +3,7 @@ package modelo.clasesJuego.usuario;
 import java.io.Serializable;
 
 public class Usuario implements IUsuario, Serializable {
-    private String nickname;
+    private final String nickname;
     private String nombre;
     private String contrasenia;
     private int id;
@@ -27,10 +27,6 @@ public class Usuario implements IUsuario, Serializable {
         return nickname;
     }
 
-    @Override
-    public double getWinRate() {
-        return  victorias==0 ? 0: (double) (getTotalPartidas() * 100) /victorias;
-    }
 
 
 

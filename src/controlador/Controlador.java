@@ -2,14 +2,12 @@ package controlador;
 
 import ar.edu.unlu.rmimvc.cliente.IControladorRemoto;
 import ar.edu.unlu.rmimvc.observer.IObservableRemoto;
-import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.usuario.IUsuario;
 import modelo.mancala.IMancala;
 import vistas.IVista;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 

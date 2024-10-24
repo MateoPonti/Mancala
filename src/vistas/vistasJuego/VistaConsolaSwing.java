@@ -4,8 +4,6 @@ import modelo.clasesJuego.contenedor.IContenedor;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import vistas.ITipo;
-import vistas.IVista;
-import vistas.Menu.VistaMenu;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
