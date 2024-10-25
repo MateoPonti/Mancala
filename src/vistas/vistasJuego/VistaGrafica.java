@@ -13,10 +13,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.ArrayList;
 
-public class VistaGrafica implements ITipo, Serializable {
+public class VistaGrafica implements ITipo {
     private final JFrame frame;
     private  final  JPanel jPanelJuego;
     private final JPanel pAgujero;

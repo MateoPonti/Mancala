@@ -29,5 +29,5 @@ public interface IMancala extends IObservableRemoto {
     void desconectarJugador(IUsuario u) throws RemoteException;
 
 
-    ArrayList<IUsuario> obtenerRank();
+    ArrayList<IUsuario> obtenerRank() throws  RemoteException;
 }

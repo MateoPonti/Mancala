@@ -2,6 +2,7 @@ package modelo.mancala;
 
 import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
+import controlador.Notificador;
 import modelo.clasesJuego.administrador.AdministradorUsuarios;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.partida.Partida;
@@ -61,10 +62,14 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
 
-
-
     public void inicializarPartida(IUsuario jugador) throws RemoteException {
+        ArrayList<IUsuario> jugadores= new ArrayList<>();
+        jugadores.add(jugador);
+
+
+        // si la partida no esta iniciada
         if ( (partida==null  || partida.isFinalizado()) && estaJugando(jugador)){
+         {
          if(preparados == null) {
              assert partida != null;
              if (partida.isFinalizado()) {
@@ -74,13 +79,16 @@ public class Mancala extends ObservableRemoto implements IMancala{
          agregarJugadorPreparados(jugador);
          if (isPreparados()){
             inicializarPartida();
-            notificarObservadores(Notificacion.MOSTRARTABLEROS);
-
+            notificarObservadores(new Notificador(Notificacion.MOSTRARTABLEROS,preparados ));
+         }
+         else {
+             notificarObservadores(new Notificador(Notificacion.PARTIDAESPERA,jugadores ));}
+         }}
+        // partidaIniciada
+        else {
+        notificarObservadores(new Notificador(Notificacion.PARTIDALLENA,jugadores ));
         }
-        }
-
     }
-
 
 
 
@@ -97,39 +105,45 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
     public void hacerJugada(int pos, IUsuario jugador) throws  RemoteException{
         Notificacion resultado = partida.hacerJugada(pos,jugador);
-        if (resultado!=Notificacion.POSICIONINVALIDA  && resultado!=null){notificarObservadores(Notificacion.MOSTRARTABLEROS);}
+
+        if (resultado!=Notificacion.POSICIONINVALIDA  && resultado!=null){
+            notificarObservadores(new Notificador(Notificacion.MOSTRARTABLEROS,preparados));
+        }
         if (resultado==Notificacion.FINALIZOJUEGO){
             IJugador ganador= partida.getGanador();
-            if (ganador.esValido()){
-            if (ganador.equals(preparados.get(0))){
-                Usuario usuarioGanador = encontrarUsuario(preparados.get(0));
-                Usuario usuarioPerdedor = encontrarUsuario(preparados.get(1));
-                assert usuarioGanador != null;
-                usuarioGanador.agregarVictoria();
-                assert usuarioPerdedor != null;
-                usuarioPerdedor.agregarDerrota();
-            }
-            else{
-                Usuario usuarioGanador = encontrarUsuario(preparados.get(1));
-                Usuario usuarioPerdedor = encontrarUsuario(preparados.get(0));
-                assert usuarioGanador != null;
-                usuarioGanador.agregarVictoria();
-                assert usuarioPerdedor != null;
-                usuarioPerdedor.agregarDerrota();
-            } }
-            else {
-                Usuario jugador1 = encontrarUsuario(preparados.get(1));
-                Usuario jugador2 = encontrarUsuario(preparados.get(0));
-                assert jugador1 != null;
-                jugador1.agregarEmpate();
-                assert jugador2 != null;
-                jugador2.agregarEmpate();
-            }
+            asignarPuntos(ganador);
             preparados=null;
-
         }
-        notificarObservadores(resultado);
+        new Notificador(resultado,preparados);
     }
+
+
+    private void  asignarPuntos(IJugador ganador){
+        if (ganador.esValido()){
+        if (ganador.equals(preparados.get(0))){
+            Usuario usuarioGanador = encontrarUsuario(preparados.get(0));
+            Usuario usuarioPerdedor = encontrarUsuario(preparados.get(1));
+            assert usuarioGanador != null;
+            usuarioGanador.agregarVictoria();
+            assert usuarioPerdedor != null;
+            usuarioPerdedor.agregarDerrota();
+        }
+        else{
+            Usuario usuarioGanador = encontrarUsuario(preparados.get(1));
+            Usuario usuarioPerdedor = encontrarUsuario(preparados.get(0));
+            assert usuarioGanador != null;
+            usuarioGanador.agregarVictoria();
+            assert usuarioPerdedor != null;
+            usuarioPerdedor.agregarDerrota();
+        } }
+            else {
+        Usuario jugador1 = encontrarUsuario(preparados.get(1));
+        Usuario jugador2 = encontrarUsuario(preparados.get(0));
+        assert jugador1 != null;
+        jugador1.agregarEmpate();
+        assert jugador2 != null;
+        jugador2.agregarEmpate();
+    } }
 
     public ITableroJugador getTableroTurno(IUsuario jugador) throws  RemoteException {
         if (partida!=null )  {return partida.getTableroJugador(jugador); }

@@ -8,10 +8,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.Serializable;
 import java.util.ArrayList;
 
-public class VistaConsolaSwing implements ITipo, Serializable {
+public class VistaConsolaSwing implements ITipo {
     private final JFrame frame;
     private final JPanel PAgujeros;
     private final JPanel PEnvioPosicion;

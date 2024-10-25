@@ -14,6 +14,7 @@ import java.awt.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 
@@ -92,7 +93,13 @@ public class VistaMenu implements IMenu {
 
 
 
-        botRank.addActionListener(e -> mostrarRank());
+        botRank.addActionListener(e -> {
+            try {
+                mostrarRank();
+            } catch (RemoteException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
 
 
     }
@@ -148,8 +155,11 @@ public class VistaMenu implements IMenu {
         frame.setVisible(false);
     }
 
+    public void mostrarPartidaLLena() {
+    }
 
-
+    public void mostrarPartidaEspera() {
+    }
     // metodos privados
 
 
@@ -211,7 +221,7 @@ public class VistaMenu implements IMenu {
         frame.setVisible(true);
     }
 
-    private void mostrarRank() {
+    private void mostrarRank() throws RemoteException {
         scrollpane.setVisible(true);
         textRank.setVisible(true);
         frame.revalidate();
@@ -242,5 +252,6 @@ public class VistaMenu implements IMenu {
             e.printStackTrace();
         }
     }
+
 
 }

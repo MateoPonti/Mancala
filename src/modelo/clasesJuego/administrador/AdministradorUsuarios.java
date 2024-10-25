@@ -18,4 +18,14 @@ public class AdministradorUsuarios {
         }
         return usuarios;
     }
+
+    public IUsuario buscarUsuario(IUsuario usuario){
+        return null;
+    }
+
+    public static void agregarUsuario(IUsuario usuario){
+    }
+
+
 }
+

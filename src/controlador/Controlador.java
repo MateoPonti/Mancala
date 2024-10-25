@@ -64,31 +64,45 @@ public class Controlador implements IControladorRemoto, Serializable {
 
 
 
-    public ArrayList<IUsuario> obtenerRank(){
+    public ArrayList<IUsuario> obtenerRank() throws RemoteException {
         return  modelo.obtenerRank();
     }
 
     @Override
     public void actualizar(IObservableRemoto IObserver, Object cambio) throws RemoteException {
         if (jugador!=null){
-        if (cambio instanceof Notificacion) {
-        if (cambio == Notificacion.MOSTRARTABLEROS) {
-            try {
-                vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador),modelo.getTurnoActual(), modelo.getJugador(this.jugador));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-         if (cambio == Notificacion.FINALIZOJUEGO) {
-            try {
-                vista.mostrarGanador(modelo.getGanador());
-            } catch (RemoteException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
-        } }
+        if (cambio instanceof Notificador)   {
+            if ( ((Notificador) cambio).esAfectado(jugador) ){
+                Notificacion notificacion = ((Notificador)cambio).getNotificacion();
+                if (notificacion == Notificacion.MOSTRARTABLEROS) {
+                    try {
+                        vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador),modelo.getTurnoActual(), modelo.getJugador(this.jugador));
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+                if (notificacion == Notificacion.FINALIZOJUEGO) {
+                    try {
+                        vista.mostrarGanador(modelo.getGanador());
+                    } catch (RemoteException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+                if (notificacion == Notificacion.PARTIDAESPERA) {
+                    try {
+                        vista.mostrarPartidaEspera();
+                    } catch (RemoteException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+                if (notificacion == Notificacion.PARTIDALLENA) {
+                    try {
+                        vista.mostrarPartidaLLena();
+                    } catch (RemoteException e) {
+                        throw new RuntimeException(e);
+                    }}}}}
     }
+
 
     @Override
     public <T extends IObservableRemoto> void setModeloRemoto(T modeloRemoto) throws  RemoteException  {

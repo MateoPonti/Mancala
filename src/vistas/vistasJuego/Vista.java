@@ -11,6 +11,7 @@ import vistas.Menu.VistaMenu;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 public  class Vista implements IVista, Serializable, IConectado {
@@ -20,33 +21,27 @@ public  class Vista implements IVista, Serializable, IConectado {
 
 
 
-
-
-
-
-
-
-
-
     @Override
     public  void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador) throws IOException {
          if (tipo!=null){tipo.mostrarTablero(tableroJugador,tableroOponente,turnoActual,nombreJugador);}
     }
 
-
-
     @Override
     public   void mostrarGanador(IJugador ganador){
         if (tipo!=null){
             tipo.mostrarGanador(ganador);
-            menu.mostrarMenu();
         }
     }
 
+    @Override
+    public void mostrarPartidaLLena() throws RemoteException {
+        menu.mostrarPartidaLLena();
+    }
 
-
-
-
+    @Override
+    public void mostrarPartidaEspera() throws RemoteException {
+        menu.mostrarPartidaEspera();
+    }
 
     @Override
     public void inicializar() {
@@ -69,7 +64,7 @@ public  class Vista implements IVista, Serializable, IConectado {
     }
 
     @Override
-    public ArrayList<IUsuario> mostrarTopRank() {
+    public ArrayList<IUsuario> mostrarTopRank() throws RemoteException {
         return controlador.obtenerRank();
     }
 

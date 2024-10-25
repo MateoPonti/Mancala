@@ -5,6 +5,7 @@ import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 
 import java.io.IOException;
+import java.rmi.RemoteException;
 
 
 public interface IVista {
@@ -12,4 +13,6 @@ public interface IVista {
      void setControlador(Controlador c);
      void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente,IJugador turnoActual, IJugador nombreJugador) throws IOException;
      void mostrarGanador(IJugador ganador);
+     void mostrarPartidaLLena()  throws RemoteException;
+     void mostrarPartidaEspera() throws RemoteException;
 }
