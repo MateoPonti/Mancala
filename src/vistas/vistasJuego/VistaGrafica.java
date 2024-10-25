@@ -98,7 +98,7 @@ public class VistaGrafica implements ITipo {
     }
 
     @Override
-    public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador) throws IOException {
+    public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador) {
         ArrayList<IContenedor> agujerosCont=tableroJugador.getAgujeros();
         ArrayList<IContenedor> agujerosContOp=tableroOponente.getAgujerosVuelta();
 
