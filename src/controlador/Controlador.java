@@ -70,39 +70,57 @@ public class Controlador implements IControladorRemoto, Serializable {
 
     @Override
     public void actualizar(IObservableRemoto IObserver, Object cambio) throws RemoteException {
-        if (jugador!=null){
-        if (cambio instanceof Notificador)   {
-            if ( ((Notificador) cambio).esAfectado(jugador) ){
-                Notificacion notificacion = ((Notificador)cambio).getNotificacion();
-                if (notificacion == Notificacion.MOSTRARTABLEROS) {
-                    try {
-                        vista.mostrarTablero(modelo.getTableroTurno(jugador),modelo.getTableroOponente(jugador),modelo.getTurnoActual(), modelo.getJugador(this.jugador));
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
+        if (jugador != null && cambio instanceof Notificador notificador) {
+            if (notificador.esAfectado(jugador)) {
+                Notificacion notificacion = notificador.getNotificacion();
+                try {
+                    switch (notificacion) {
+                        case MOSTRARTABLEROS:
+                            mostrarTableros();
+                            break;
+
+                        case FINALIZOJUEGO:
+                            mostrarGanador();
+                            break;
+
+                        case PARTIDAESPERA:
+                            mostrarPartidaEspera();
+                            break;
+
+                        case PARTIDALLENA:
+                            mostrarPartidaLlena();
+                            break;
+
+                        }
+                } catch (IOException ignored) {
+
                 }
-                if (notificacion == Notificacion.FINALIZOJUEGO) {
-                    try {
-                        vista.mostrarGanador(modelo.getGanador());
-                    } catch (RemoteException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-                if (notificacion == Notificacion.PARTIDAESPERA) {
-                    try {
-                        vista.mostrarPartidaEspera();
-                    } catch (RemoteException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-                if (notificacion == Notificacion.PARTIDALLENA) {
-                    try {
-                        vista.mostrarPartidaLLena();
-                    } catch (RemoteException e) {
-                        throw new RuntimeException(e);
-                    }}}}}
+            }
+        }
     }
 
+
+
+    private void mostrarTableros() throws IOException {
+        vista.mostrarTablero(
+                modelo.getTableroTurno(jugador),
+                modelo.getTableroOponente(jugador),
+                modelo.getTurnoActual(),
+                modelo.getJugador(this.jugador)
+        );
+    }
+
+    private void mostrarGanador() throws RemoteException {
+        vista.mostrarGanador(modelo.getGanador());
+    }
+
+    private void mostrarPartidaEspera() throws RemoteException {
+        vista.mostrarPartidaEspera();
+    }
+
+    private void mostrarPartidaLlena() throws RemoteException {
+        vista.mostrarPartidaLLena();
+    }
 
     @Override
     public <T extends IObservableRemoto> void setModeloRemoto(T modeloRemoto) throws  RemoteException  {

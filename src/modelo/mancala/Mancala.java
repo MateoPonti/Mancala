@@ -112,9 +112,10 @@ public class Mancala extends ObservableRemoto implements IMancala{
         if (resultado==Notificacion.FINALIZOJUEGO){
             IJugador ganador= partida.getGanador();
             asignarPuntos(ganador);
+            notificarObservadores(new Notificador(resultado,preparados));
             preparados=null;
         }
-        new Notificador(resultado,preparados);
+
     }
 
 
