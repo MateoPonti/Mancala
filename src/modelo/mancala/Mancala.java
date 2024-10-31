@@ -22,6 +22,8 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
     private static Mancala instancia;
 
+    private  AdministradorUsuarios administrador;
+
 
 
     public static Mancala getInstancia(){
@@ -34,6 +36,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
     private Mancala(){
         usuarios=new ArrayList<>();
         preparados=new ArrayList<>();
+        administrador = new AdministradorUsuarios();
     }
 
 
@@ -55,7 +58,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
 
     public IUsuario conectarJugador(String nombre,String contra) throws RemoteException {
-        Usuario nuevoJugador= new Usuario(nombre,contra, usuarios.size()+1);
+        Usuario nuevoJugador= administrador.buscarUsuario(nombre,contra);
         usuarios.add(nuevoJugador);
         return nuevoJugador;
 

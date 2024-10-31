@@ -2,6 +2,7 @@ package principal;
 
 
 import controlador.Controlador;
+import controlador.UtilHash;
 import modelo.mancala.IMancala;
 import modelo.mancala.Mancala;
 import vistas.IVista;
@@ -11,7 +12,6 @@ import java.rmi.RemoteException;
 
 public class Main {
     public static void main(String[] args) throws RemoteException {
-
         Mancala modelo= Mancala.getInstancia();
 
         IVista vista = new Vista();
@@ -37,7 +37,6 @@ public class Main {
         vista.inicializar();
         vista2.inicializar();
         vista3.inicializar();
-
 
     }
 }

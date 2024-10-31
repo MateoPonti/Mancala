@@ -8,19 +8,13 @@ import java.util.ArrayList;
 public class AdministradorUsuarios {
 
     public static  ArrayList<IUsuario> obtenerRank(){
-        ArrayList<IUsuario> usuarios= new ArrayList<>();
-        for (int i =  0 ; i<5;i++){
-           Usuario u = new Usuario("Usuario"+i,"Contra",i);
-            u.agregarEmpate();
-            u.agregarVictoria();
-            u.agregarDerrota();
-            usuarios.add(u);
-        }
-        return usuarios;
+       return null;
     }
 
-    public IUsuario buscarUsuario(IUsuario usuario){
-        return null;
+    public Usuario buscarUsuario(String nombre , String contra){
+        Usuario u=  new Usuario(nombre,contra,3);
+
+        return u;
     }
 
     public static void agregarUsuario(IUsuario usuario){

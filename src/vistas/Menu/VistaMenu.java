@@ -247,8 +247,7 @@ public class VistaMenu implements IMenu {
 
                 i++;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ignored) {
         }
     }
 

@@ -11,6 +11,8 @@ import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
+import static controlador.UtilHash.hashearContrasena;
+
 public class Controlador implements IControladorRemoto, Serializable {
 
     private final IVista vista;
@@ -25,7 +27,7 @@ public class Controlador implements IControladorRemoto, Serializable {
 
     public String conectarUsuario(String nombre,String contrasenia)  {
         try {
-            this.jugador= modelo.conectarJugador(nombre,contrasenia);
+            this.jugador= modelo.conectarJugador(nombre,hashearContrasena(contrasenia));
             return jugador.getNickname();
         } catch (RemoteException e) {
             throw new RuntimeException(e);
