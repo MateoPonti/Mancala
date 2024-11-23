@@ -1,0 +1,58 @@
+package modelo.clasesJuego.serializacion.administrador;
+
+import modelo.clasesJuego.usuario.Usuario;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Objects;
+
+public class AdministradorUsuarios {
+    private  ArrayList<Usuario> usuarios;
+    private HashMap<String,Integer> posicionUsuarios;
+    private static AdministradorUsuarios instancia;
+
+
+    public AdministradorUsuarios getInstancia(){
+        if (instancia==null){
+            instancia=new AdministradorUsuarios();
+        }
+        return instancia;
+    }
+
+
+
+    private AdministradorUsuarios(){
+        super();
+        posicionUsuarios= new HashMap<>();
+    }
+
+    public Usuario buscarPorNickName(String nickname){
+        return null;
+    }
+
+    public boolean estaVacio(){
+        return usuarios.isEmpty();
+    }
+
+    public boolean remove(Objects o){
+        return usuarios.remove(o);
+    }
+
+    public boolean addAll(Collection<? extends Usuario> c){
+        return usuarios.addAll(c);
+    }
+
+    public void clear(){
+        usuarios.clear();
+    }
+
+
+    public Usuario get(int index){
+        return usuarios.get(index);
+    }
+
+
+
+}
+

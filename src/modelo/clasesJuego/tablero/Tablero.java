@@ -1,12 +1,16 @@
 package modelo.clasesJuego.tablero;
 
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Tablero implements Serializable {
+    @Serial
+    private static final long serialVersionUID=1;
+
     private final ArrayList<TableroJugador> tableroJugadores;
 
     public Tablero(){

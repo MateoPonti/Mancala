@@ -2,11 +2,15 @@ package modelo.clasesJuego.tablero;
 
 import modelo.clasesJuego.contenedor.*;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class TableroJugador implements Serializable,ITableroJugador {
+    @Serial
+    private static final long serialVersionUID=1;
+
     private static final int cantidadAgujeros=6;
     private  ArrayList<Contenedor> tablero;
 

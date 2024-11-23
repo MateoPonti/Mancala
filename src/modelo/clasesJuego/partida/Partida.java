@@ -8,11 +8,13 @@ import modelo.clasesJuego.tablero.ResultadoJugada;
 import modelo.clasesJuego.tablero.Tablero;
 import modelo.clasesJuego.usuario.IUsuario;
 
-
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Partida implements Serializable,IPartida {
+
+    private static final long serialVersionUID=1;
+
     private Jugador turno;
 
     private final ArrayList<Jugador> jugadores;

@@ -3,9 +3,11 @@ package modelo.clasesJuego.jugador;
 import modelo.clasesJuego.usuario.IUsuario;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 public class Jugador implements  IJugador, Serializable {
+
+    private static final long serialVersionUID=1;
+
     private final int id;
 
     public String getNombre() {

@@ -2,6 +2,11 @@ package modelo.clasesJuego.contenedor;
 import java.io.Serializable;
 
 public abstract class Contenedor implements IContenedor, Serializable {
+
+
+    private static final long serialVersionUID=1;
+
+
     private int habas;
 
 

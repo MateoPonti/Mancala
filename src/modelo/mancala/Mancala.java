@@ -3,7 +3,7 @@ package modelo.mancala;
 import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
 import controlador.Notificador;
-import modelo.clasesJuego.administrador.AdministradorUsuarios;
+import modelo.clasesJuego.serializacion.administrador.AdministradorUsuarios;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.partida.Partida;
 import modelo.clasesJuego.tablero.ITableroJugador;
@@ -14,8 +14,8 @@ import java.util.ArrayList;
 
 public class Mancala extends ObservableRemoto implements IMancala{
     private final ArrayList<Usuario> usuarios;
-    private ArrayList<IUsuario> preparados;
 
+    private ArrayList<IUsuario> preparados;
     private static final int maxJugadores=2;
 
     private Partida partida;
@@ -36,7 +36,6 @@ public class Mancala extends ObservableRemoto implements IMancala{
     private Mancala(){
         usuarios=new ArrayList<>();
         preparados=new ArrayList<>();
-        administrador = new AdministradorUsuarios();
     }
 
 
@@ -53,12 +52,12 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
     @Override
     public ArrayList<IUsuario> obtenerRank() {
-        return AdministradorUsuarios.obtenerRank();
+        //return AdministradorUsuarios.obtenerRank();
     }
 
 
     public IUsuario conectarJugador(String nombre,String contra) throws RemoteException {
-        Usuario nuevoJugador= administrador.buscarUsuario(nombre,contra);
+        //Usuario nuevoJugador= administrador.buscarUsuario(nombre,contra);
         usuarios.add(nuevoJugador);
         return nuevoJugador;
 
