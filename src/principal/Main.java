@@ -3,6 +3,8 @@ package principal;
 
 import controlador.Controlador;
 import controlador.UtilHash;
+import modelo.clasesJuego.serializacion.administrador.SerializadorUsuarios;
+import modelo.clasesJuego.usuario.Usuario;
 import modelo.mancala.IMancala;
 import modelo.mancala.Mancala;
 import vistas.IVista;
@@ -12,6 +14,7 @@ import java.rmi.RemoteException;
 
 public class Main {
     public static void main(String[] args) throws RemoteException {
+        /*
         Mancala modelo= Mancala.getInstancia();
 
         IVista vista = new Vista();
@@ -37,6 +40,27 @@ public class Main {
         vista.inicializar();
         vista2.inicializar();
         vista3.inicializar();
+
+
+         */
+
+        SerializadorUsuarios s = new SerializadorUsuarios();
+        System.out.println("usuarios : ");
+        s.mostrarUsuarios();
+        Usuario u= new Usuario("ewqew","ewqwe",3);
+
+        s.agregarUsuario(u);
+
+        System.out.println("-----------------");
+        System.out.println("usuarios : ");
+        s.mostrarUsuarios();
+        System.out.println("-----------------");
+        s.escribirUsuarios();
+        s.cargarUsuarios();
+        System.out.println("usuarios : ");
+        s.mostrarUsuarios();
+        System.out.println("-----------------");
+
 
     }
 }

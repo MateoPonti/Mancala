@@ -1,4 +1,4 @@
-package modelo.clasesJuego.serializacion.administrador;
+package modelo.clasesJuego.serializacion.administrador.dominio;
 
 import modelo.clasesJuego.usuario.Usuario;
 
@@ -13,7 +13,7 @@ public class AdministradorUsuarios {
     private static AdministradorUsuarios instancia;
 
 
-    public AdministradorUsuarios getInstancia(){
+    public static AdministradorUsuarios getInstancia(){
         if (instancia==null){
             instancia=new AdministradorUsuarios();
         }
@@ -25,6 +25,7 @@ public class AdministradorUsuarios {
     private AdministradorUsuarios(){
         super();
         posicionUsuarios= new HashMap<>();
+        usuarios=new ArrayList<>();
     }
 
     public Usuario buscarPorNickName(String nickname){
@@ -52,7 +53,12 @@ public class AdministradorUsuarios {
         return usuarios.get(index);
     }
 
+    public int getTam(){
+        return usuarios.size();
+    }
 
-
+    public void add(Usuario o) {
+        usuarios.add(o);
+    }
 }
 

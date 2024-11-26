@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Usuario implements IUsuario, Serializable {
     private static final long serialVersionUID=1;
-    private final String nickname;
+    private String nickname;
     private String nombre;
     private String contrasenia;
     private int id;
@@ -17,7 +17,7 @@ public class Usuario implements IUsuario, Serializable {
     public Usuario(String nombre, String contrasenia, int id) {
         this.nombre = nombre;
         this.contrasenia = contrasenia;
-        this.nickname= nombre+"#"+ id;
+        this.nickname= nombre+"#"+id ;
         this.id = id;
     }
 
@@ -33,6 +33,10 @@ public class Usuario implements IUsuario, Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     public String getContrasenia() {
@@ -91,4 +95,8 @@ public class Usuario implements IUsuario, Serializable {
     }
 
 
+    @Override
+    public String toString() {
+         return "Nombre: " + getNombre() + "\n" + "Nickname: " + nickname + "\n";
+    }
 }

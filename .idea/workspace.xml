@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Ahora te muestra si la partida esta llena y si estas en espera">
-      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/administrador/AdministradorUsuarios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/administrador/SerializadorPartida.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/administrador/SerializadorUsuarios.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo Serializacion">
+      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/administrador/servicios/AddableObjectOutputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/administrador/servicios/Serializador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/administrador/AdministradorPartidas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/administrador/AdministradorPartidas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/administrador/AdministradorUsuarios.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Contenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Contenedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/jugador/Jugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/administrador/AdministradorPartidas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/administrador/dominio/AdministradorPartidas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/administrador/AdministradorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/administrador/dominio/AdministradorUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/administrador/SerializadorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/administrador/SerializadorUsuarios.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,15 +327,11 @@
       <workItem from="1732340644979" duration="1076000" />
       <workItem from="1732388222385" duration="1509000" />
       <workItem from="1732396102477" duration="2873000" />
-      <workItem from="1732400789617" duration="3127000" />
-    </task>
-    <task id="LOCAL-00063" summary="cambios de uml">
-      <option name="closed" value="true" />
-      <created>1700447387796</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1700447387796</updated>
+      <workItem from="1732400789617" duration="4400000" />
+      <workItem from="1732558003780" duration="1709000" />
+      <workItem from="1732578726538" duration="3082000" />
+      <workItem from="1732586081762" duration="2296000" />
+      <workItem from="1732599830241" duration="2496000" />
     </task>
     <task id="LOCAL-00064" summary="hice jugador serializable">
       <option name="closed" value="true" />
@@ -725,7 +717,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729827142802</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Haciendo Serializacion">
+      <option name="closed" value="true" />
+      <created>1732403981405</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1732403981406</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -743,7 +743,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ahora se resetea al ganar" />
     <MESSAGE value="arreglo ganar" />
     <MESSAGE value="ahora puedo hacer entre en enviar" />
     <MESSAGE value="ahora hay empates" />
@@ -768,7 +767,8 @@
     <MESSAGE value="Vista Menu jugar rank  y nickname" />
     <MESSAGE value="Ya se puede elegir con que vista jugar" />
     <MESSAGE value="Ahora te muestra si la partida esta llena y si estas en espera" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ahora te muestra si la partida esta llena y si estas en espera" />
+    <MESSAGE value="Haciendo Serializacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Haciendo Serializacion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
