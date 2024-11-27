@@ -1,6 +1,7 @@
 package modelo.clasesJuego.usuario;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Usuario implements IUsuario, Serializable {
     private static final long serialVersionUID=1;
@@ -59,6 +60,11 @@ public class Usuario implements IUsuario, Serializable {
     @Override
     public boolean equals(IUsuario usuario) {
         return usuario.getId()== id;
+    }
+
+
+    public boolean equals(Usuario usuario) {
+        return Objects.equals(usuario.getNombre(), getNombre()) && Objects.equals(usuario.getContrasenia(), getContrasenia());
     }
 
     public void setId(int id) {

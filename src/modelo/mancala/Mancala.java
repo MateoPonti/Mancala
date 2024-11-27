@@ -3,6 +3,7 @@ package modelo.mancala;
 import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
 import controlador.Notificador;
+import modelo.clasesJuego.serializacion.SerializadorUsuarios;
 import modelo.clasesJuego.serializacion.dominio.AdministradorUsuarios;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.partida.Partida;
@@ -22,7 +23,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
     private static Mancala instancia;
 
-    private  AdministradorUsuarios administrador;
+    private SerializadorUsuarios serializadorUsuarios;
 
 
 
@@ -36,6 +37,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
     private Mancala(){
         usuarios=new ArrayList<>();
         preparados=new ArrayList<>();
+        serializadorUsuarios=new SerializadorUsuarios();
     }
 
 
@@ -57,7 +59,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
 
     public IUsuario conectarJugador(String nombre,String contra) throws RemoteException {
-        Usuario nuevoJugador= new Usuario("eqw","wqewe",4);
+        Usuario nuevoJugador= serializadorUsuarios.agregarUsuario(nombre, contra);
         usuarios.add(nuevoJugador);
         return nuevoJugador;
 
@@ -122,31 +124,28 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
 
     private void  asignarPuntos(IJugador ganador){
+        Usuario jugador1 = encontrarUsuario(preparados.get(0));
+        Usuario jugador2= encontrarUsuario(preparados.get(1));
+        try{
         if (ganador.esValido()){
         if (ganador.equals(preparados.get(0))){
-            Usuario usuarioGanador = encontrarUsuario(preparados.get(0));
-            Usuario usuarioPerdedor = encontrarUsuario(preparados.get(1));
-            assert usuarioGanador != null;
-            usuarioGanador.agregarVictoria();
-            assert usuarioPerdedor != null;
-            usuarioPerdedor.agregarDerrota();
+            jugador1.agregarVictoria();
+            jugador2.agregarDerrota();
         }
         else{
-            Usuario usuarioGanador = encontrarUsuario(preparados.get(1));
-            Usuario usuarioPerdedor = encontrarUsuario(preparados.get(0));
-            assert usuarioGanador != null;
-            usuarioGanador.agregarVictoria();
-            assert usuarioPerdedor != null;
-            usuarioPerdedor.agregarDerrota();
+            jugador1.agregarDerrota();
+            jugador2.agregarVictoria();
         } }
-            else {
-        Usuario jugador1 = encontrarUsuario(preparados.get(1));
-        Usuario jugador2 = encontrarUsuario(preparados.get(0));
-        assert jugador1 != null;
-        jugador1.agregarEmpate();
-        assert jugador2 != null;
-        jugador2.agregarEmpate();
-    } }
+        else {
+         jugador1.agregarEmpate();
+         jugador2.agregarEmpate();
+         }
+        serializadorUsuarios.actualizarUsuario(jugador1);
+        serializadorUsuarios.actualizarUsuario(jugador2);
+        } catch (Exception ignored) {
+        }
+
+    }
 
     public ITableroJugador getTableroTurno(IUsuario jugador) throws  RemoteException {
         if (partida!=null )  {return partida.getTableroJugador(jugador); }

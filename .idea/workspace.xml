@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo Serializacion">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mancala.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Mancala.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PosicionUsuario.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -335,22 +337,8 @@
       <workItem from="1732695383478" duration="178000" />
       <workItem from="1732695566676" duration="14000" />
       <workItem from="1732695595633" duration="27000" />
-    </task>
-    <task id="LOCAL-00067" summary="cambio">
-      <option name="closed" value="true" />
-      <created>1700517394118</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1700517394118</updated>
-    </task>
-    <task id="LOCAL-00068" summary="hice para agregar victoria y derrota , y estoy probando cosas con la vista grafica">
-      <option name="closed" value="true" />
-      <created>1700521436387</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1700521436387</updated>
+      <workItem from="1732695624565" duration="272000" />
+      <workItem from="1732695936185" duration="797000" />
     </task>
     <task id="LOCAL-00069" summary="ahora se resetea al ganar">
       <option name="closed" value="true" />
@@ -728,7 +716,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732694689037</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="Haciendo Serializacion">
+      <option name="closed" value="true" />
+      <created>1732695635210</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1732695635210</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Haciendo Serializacion">
+      <option name="closed" value="true" />
+      <created>1732695652209</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1732695652209</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -812,6 +816,24 @@
           </properties>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
+          <line>169</line>
+          <properties class="modelo.mancala.Mancala" method="getJugador">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
+          <line>43</line>
+          <properties class="modelo.mancala.Mancala" method="desconectarJugador">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
           <line>108</line>
@@ -824,13 +846,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>98</line>
+          <line>100</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/controlador/Controlador.java</url>
           <line>83</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

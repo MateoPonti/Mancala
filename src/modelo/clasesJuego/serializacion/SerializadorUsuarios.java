@@ -34,6 +34,7 @@ public class SerializadorUsuarios {
         return null;
     }
     public void actualizarUsuario(Usuario usuario ) {
+        cargarPosicion();
         if (posicionHash != null) {
         administrador.cambiar(usuario,posicionHash.get(usuario.getNombre()+usuario.getContrasenia()));
         escribirUsuarios();
@@ -43,6 +44,7 @@ public class SerializadorUsuarios {
 
 
     public void mostrarTodo(){
+        cargarPosicion();
         if (administrador!= null && posicionHash != null){
             System.out.println("Usuarios : ");
             for(int i = 0 ; i<administrador.getTam();i++){
