@@ -41,24 +41,6 @@ public class SerializadorUsuarios {
        }
     }
 
-
-
-    public void mostrarTodo(){
-        cargarPosicion();
-        if (administrador!= null && posicionHash != null){
-            System.out.println("Usuarios : ");
-            for(int i = 0 ; i<administrador.getTam();i++){
-                System.out.println(administrador.get(i));
-            }
-
-            System.out.println("PosicionesHash: ");
-            System.out.println(posicionHash);
-
-        }
-    }
-
-
-
     private void escribirUsuarios(){
 
         if (!administrador.estaVacio()) {
@@ -91,10 +73,16 @@ public class SerializadorUsuarios {
         } catch (Exception ignored) {
         }
     }
+
+
+    @SuppressWarnings("unchecked")
     private HashMap<String, Integer> cargarPosicion(){
         HashMap<String,Integer> posicion = null;
         try {
-            posicion  = (HashMap<String,Integer>) serializadorPosicionUsuarios.readFirstObject();
+            Object  object= serializadorUsuarios.readFirstObject();
+            if (object instanceof HashMap) {
+                posicion = (HashMap<String, Integer>) object;
+            }
         } catch (Exception ignored) {
         }
         return posicion;

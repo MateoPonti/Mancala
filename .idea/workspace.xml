@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo Serializacion">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Se pueden serializar usuarios , falta probar y optimizar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PosicionUsuario.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuarios.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/usuario/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,15 +333,7 @@
       <workItem from="1732695566676" duration="14000" />
       <workItem from="1732695595633" duration="27000" />
       <workItem from="1732695624565" duration="272000" />
-      <workItem from="1732695936185" duration="797000" />
-    </task>
-    <task id="LOCAL-00069" summary="ahora se resetea al ganar">
-      <option name="closed" value="true" />
-      <created>1700523261207</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1700523261208</updated>
+      <workItem from="1732695936185" duration="2114000" />
     </task>
     <task id="LOCAL-00070" summary="arreglo ganar">
       <option name="closed" value="true" />
@@ -732,7 +719,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732695652209</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Se pueden serializar usuarios , falta probar y optimizar">
+      <option name="closed" value="true" />
+      <created>1732696821945</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1732696821946</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -750,7 +745,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="arreglo ganar" />
     <MESSAGE value="ahora puedo hacer entre en enviar" />
     <MESSAGE value="ahora hay empates" />
     <MESSAGE value="umlSimplificado" />
@@ -775,7 +769,8 @@
     <MESSAGE value="Ya se puede elegir con que vista jugar" />
     <MESSAGE value="Ahora te muestra si la partida esta llena y si estas en espera" />
     <MESSAGE value="Haciendo Serializacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Haciendo Serializacion" />
+    <MESSAGE value="Se pueden serializar usuarios , falta probar y optimizar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se pueden serializar usuarios , falta probar y optimizar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -856,8 +851,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>85</line>
+          <line>67</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
