@@ -35,7 +35,7 @@ public class SerializadorUsuarios {
     }
     public void actualizarUsuario(Usuario usuario ) {
         if (posicionHash != null) {
-        administrador.cambiar(usuario,posicionHash.get(usuario.getNombre()+usuario.getContrasenia());
+        administrador.cambiar(usuario,posicionHash.get(usuario.getNombre()+usuario.getContrasenia()));
         escribirUsuarios();
        }
     }

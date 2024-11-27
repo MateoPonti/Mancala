@@ -39,6 +39,7 @@ public class Main {
          */
 
         SerializadorUsuarios s = new SerializadorUsuarios();
+        s.mostrarTodo();
     }
 }
 
