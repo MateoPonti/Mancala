@@ -39,7 +39,7 @@ public class VistaConsolaSwing implements ITipo {
 
 
         //size
-        Dimension minSize = new Dimension(1000 ,800);
+        Dimension minSize = new Dimension(900 ,600);
         frame.setMinimumSize(minSize);
         bIngresoPos.setSize(new Dimension(50,50));
         posicionIngreso.setSize(new Dimension(20,100));

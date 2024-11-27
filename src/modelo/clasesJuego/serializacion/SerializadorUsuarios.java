@@ -34,10 +34,11 @@ public class SerializadorUsuarios {
         return null;
     }
     public void actualizarUsuario(Usuario usuario ) {
-        cargarPosicion();
+        posicionHash = cargarPosicion();
+        System.out.println(posicionHash);
         if (posicionHash != null) {
-        administrador.cambiar(usuario,posicionHash.get(usuario.getNombre()+usuario.getContrasenia()));
-        escribirUsuarios();
+            administrador.cambiar(usuario,posicionHash.get(usuario.getNombre()+usuario.getContrasenia()));
+            escribirUsuarios();
        }
     }
 
@@ -79,7 +80,7 @@ public class SerializadorUsuarios {
     private HashMap<String, Integer> cargarPosicion(){
         HashMap<String,Integer> posicion = null;
         try {
-            Object  object= serializadorUsuarios.readFirstObject();
+            Object  object= serializadorPosicionUsuarios.readFirstObject();
             if (object instanceof HashMap) {
                 posicion = (HashMap<String, Integer>) object;
             }

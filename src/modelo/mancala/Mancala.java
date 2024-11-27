@@ -54,7 +54,8 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
     @Override
     public ArrayList<IUsuario> obtenerRank() {
-       return null;
+       ArrayList<IUsuario> n = new ArrayList<>(usuarios);
+       return n;
     }
 
 

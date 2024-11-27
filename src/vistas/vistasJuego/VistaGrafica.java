@@ -45,7 +45,7 @@ public class VistaGrafica implements ITipo {
 
         //size
         Color color = new Color(50,20,30);
-        Dimension minSize = new Dimension(1000 ,800);
+        Dimension minSize = new Dimension(900 ,600);
         frame.setMinimumSize(minSize);
         jPanelJuego.setPreferredSize(new Dimension(700,600));
         botSalir.setPreferredSize(new Dimension(100,20));
