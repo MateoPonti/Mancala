@@ -1,4 +1,4 @@
-package modelo.clasesJuego.serializacion.administrador.servicios;
+package modelo.clasesJuego.serializacion.servicios;
 
 import java.io.*;
 import java.util.ArrayList;

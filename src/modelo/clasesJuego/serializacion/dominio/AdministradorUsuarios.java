@@ -1,4 +1,4 @@
-package modelo.clasesJuego.serializacion.administrador.dominio;
+package modelo.clasesJuego.serializacion.dominio;
 
 import modelo.clasesJuego.usuario.Usuario;
 
@@ -9,7 +9,6 @@ import java.util.Objects;
 
 public class AdministradorUsuarios {
     private  ArrayList<Usuario> usuarios;
-    private HashMap<String,Integer> posicionUsuarios;
     private static AdministradorUsuarios instancia;
 
 
@@ -24,7 +23,6 @@ public class AdministradorUsuarios {
 
     private AdministradorUsuarios(){
         super();
-        posicionUsuarios= new HashMap<>();
         usuarios=new ArrayList<>();
     }
 
@@ -59,6 +57,10 @@ public class AdministradorUsuarios {
 
     public void add(Usuario o) {
         usuarios.add(o);
+    }
+
+    public void cambiar(Usuario o , Integer posicion){
+        usuarios.set(posicion,o);
     }
 }
 
