@@ -40,6 +40,20 @@ public class Main {
 
         SerializadorUsuarios s = new SerializadorUsuarios();
         s.mostrarTodo();
+
+
+
+        Usuario u = s.agregarUsuario("Mateo", "Ponti");
+        Usuario j = s.agregarUsuario("Juan", "Perez");
+        Usuario p = s.agregarUsuario("Mateo","Ponti");
+
+        System.out.println(u);
+        System.out.println(j);
+        System.out.println(p);
+
+
+        s.mostrarTodo();
+
     }
 }
 

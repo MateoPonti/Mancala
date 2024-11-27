@@ -26,9 +26,6 @@ public class AdministradorUsuarios {
         usuarios=new ArrayList<>();
     }
 
-    public Usuario buscarPorNickName(String nickname){
-        return null;
-    }
 
     public boolean estaVacio(){
         return usuarios.isEmpty();
@@ -63,4 +60,3 @@ public class AdministradorUsuarios {
         usuarios.set(posicion,o);
     }
 }
-
