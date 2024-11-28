@@ -1,24 +1,36 @@
 package modelo.clasesJuego.serializacion;
 
 import modelo.clasesJuego.serializacion.dominio.AdministradorUsuarios;
+import modelo.clasesJuego.serializacion.dominio.RankingUsuario;
 import modelo.clasesJuego.serializacion.servicios.Serializador;
+import modelo.clasesJuego.usuario.IUsuario;
 import modelo.clasesJuego.usuario.Usuario;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class SerializadorUsuarios {
     private static AdministradorUsuarios administrador;
     private HashMap<String,Integer> posicionHash;
+    private RankingUsuario ranking;
     private static Serializador serializadorUsuarios;
     private static Serializador serializadorPosicionUsuarios;
+    private static Serializador serializadorRanking;
 
     public SerializadorUsuarios(){
         administrador = AdministradorUsuarios.getInstancia();
         serializadorUsuarios= new Serializador("Usuarios.dat");
         serializadorPosicionUsuarios= new Serializador("PosicionUsuario.dat");
+        serializadorRanking = new Serializador("RankingUsuario.dat");
+
+    }
+
+    public void inicializar(){
         cargarUsuarios();
         posicionHash = cargarPosicion();
+        ranking = cargarRanking();
     }
+
     public Usuario agregarUsuario(String nombre, String contra) {
         if (administrador!=null){
         Usuario nuevoUsuario = new Usuario(nombre,contra,administrador.getTam());
@@ -35,11 +47,34 @@ public class SerializadorUsuarios {
     }
     public void actualizarUsuario(Usuario usuario ) {
         posicionHash = cargarPosicion();
-        System.out.println(posicionHash);
         if (posicionHash != null) {
             administrador.cambiar(usuario,posicionHash.get(usuario.getNombre()+usuario.getContrasenia()));
             escribirUsuarios();
+            if (ranking.compararRanking(usuario)){
+                escribirRanking();
+            }
        }
+    }
+
+
+    public ArrayList<IUsuario> obtenerRank() {
+        if (ranking!=null){
+            return  new ArrayList<>(ranking.getRanking());}
+        return null;
+    }
+
+    private void escribirRanking() {
+        if (ranking != null) {
+            ArrayList<Usuario> rank = ranking.getRanking();
+            if (!rank.isEmpty()){
+                Usuario u = rank.get(0);
+                serializadorRanking.writeOneObject(u);
+                for (int i=1 ; i<rank.size();i++){
+                    u= rank.get(i);
+                    serializadorRanking.addOneObject(u);
+                }
+            }
+        }
     }
 
     private void escribirUsuarios(){
@@ -57,14 +92,7 @@ public class SerializadorUsuarios {
             serializadorPosicionUsuarios.writeOneObject(posicionUsuarios);
         }
     }
-    private  Usuario buscarUsuario(String nombre,String contra){
-       Usuario u = null;
-        if (posicionHash!=null){
-            Integer posicion = posicionHash.get(nombre+contra);
-            u = administrador.get(posicion);
-        }
-        return u;
-    }
+
     private void cargarUsuarios(){
         try {
             Object[] usuarios = serializadorUsuarios.readObjects();
@@ -74,7 +102,6 @@ public class SerializadorUsuarios {
         } catch (Exception ignored) {
         }
     }
-
 
     @SuppressWarnings("unchecked")
     private HashMap<String, Integer> cargarPosicion(){
@@ -88,4 +115,19 @@ public class SerializadorUsuarios {
         }
         return posicion;
     }
+
+    @SuppressWarnings("unchecked")
+    private RankingUsuario cargarRanking(){
+        RankingUsuario rank = new RankingUsuario();
+        try {
+            Object[] usuarios = serializadorRanking.readObjects();
+            for(Object o : usuarios){
+                rank.compararRanking((Usuario) o);
+            }
+        } catch (Exception ignored) {
+        }
+        return rank;
+    }
+
+
 }

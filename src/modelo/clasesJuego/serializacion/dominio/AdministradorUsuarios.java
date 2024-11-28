@@ -4,11 +4,10 @@ import modelo.clasesJuego.usuario.Usuario;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Objects;
 
 public class AdministradorUsuarios {
-    private  ArrayList<Usuario> usuarios;
+    private static ArrayList<Usuario> usuarios;
     private static AdministradorUsuarios instancia;
 
 

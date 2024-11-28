@@ -38,6 +38,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
         usuarios=new ArrayList<>();
         preparados=new ArrayList<>();
         serializadorUsuarios=new SerializadorUsuarios();
+        serializadorUsuarios.inicializar();
     }
 
 
@@ -54,8 +55,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
     @Override
     public ArrayList<IUsuario> obtenerRank() {
-       ArrayList<IUsuario> n = new ArrayList<>(usuarios);
-       return n;
+       return serializadorUsuarios.obtenerRank();
     }
 
 
