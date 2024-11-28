@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class VistaMenu implements IMenu {
     private final IConectado conectado;
     private final JFrame frame;
+    private final JPanel panel;
     private final JButton botJugar;
     private final JButton botRank;
     private final JLabel nombreJugador;
@@ -31,12 +32,14 @@ public class VistaMenu implements IMenu {
     private final JRadioButton radConsola;
 
 
+
     // metodos publicos
 
     public VistaMenu(IConectado conectado) {
         // definicion
         this.conectado=conectado;
         frame = new JFrame();
+        panel=new JPanel(new BorderLayout());
         botJugar = new JButton();
         botRank = new JButton();
         nombreJugador= new JLabel();
@@ -50,11 +53,14 @@ public class VistaMenu implements IMenu {
         bgSelec.add(radConsola);
         nombreUsuario= "";
 
+        iniciarVista();
+    }
 
+
+    private   void iniciarVista(){
         //size
         botJugar.setPreferredSize(new Dimension(100,40));
         botRank.setPreferredSize(new Dimension(100,40));
-
 
         //config
 
@@ -76,8 +82,6 @@ public class VistaMenu implements IMenu {
         frame.setIconImage(icono);
         pedirNombre();
 
-
-
         botJugar.setText("Jugar");
         botRank.setText("Rank");
 
@@ -90,8 +94,6 @@ public class VistaMenu implements IMenu {
             }
         });
 
-
-
         botRank.addActionListener(e -> {
             try {
                 mostrarRank();
@@ -99,15 +101,10 @@ public class VistaMenu implements IMenu {
                 throw new RuntimeException(ex);
             }
         });
-
-
     }
-
-
 
     public  void mostrarMenu(){
         frame.setVisible(true);
-
     }
 
 
@@ -125,7 +122,6 @@ public class VistaMenu implements IMenu {
         radGrafica.setVisible(true);
         radConsola.setVisible(true);
 
-        JPanel panel= new JPanel(new BorderLayout());
         JPanel panelBot = new JPanel();
         JPanel panelNombreJugador = new JPanel(new BorderLayout());
 
@@ -155,9 +151,19 @@ public class VistaMenu implements IMenu {
     }
 
     public void mostrarPartidaLLena() {
+        mostrarMenu();
+        JOptionPane.showMessageDialog(null, " Intente mas tarde , ya hay una partida en juego", "Partida Llena", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void mostrarPartidaEspera() {
+        mostrarMenu();
+        botJugar.setVisible(false);
+        botRank.setVisible(false);
+        radConsola.setVisible(false);
+        radGrafica.setVisible(false);
+        panel.add(new JLabel("Esperando Jugadores,  Jugadores 1/2 "),BorderLayout.CENTER);
+        frame.revalidate();
+        frame.repaint();
     }
     // metodos privados
 

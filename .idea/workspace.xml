@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="ranking">
-      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorPartidas.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Intentando Serializar las Partidas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Notificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Notificacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorPartida.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorPartidas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorPartidas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/ITipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/ITipo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/IVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" afterDir="false" />
@@ -348,15 +342,7 @@
       <workItem from="1732745494396" duration="3184000" />
       <workItem from="1732755116190" duration="1892000" />
       <workItem from="1732758938007" duration="2363000" />
-      <workItem from="1732770295578" duration="2140000" />
-    </task>
-    <task id="LOCAL-00075" summary="Se borro test tableroJugador">
-      <option name="closed" value="true" />
-      <created>1700976387676</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1700976387676</updated>
+      <workItem from="1732770295578" duration="5305000" />
     </task>
     <task id="LOCAL-00076" summary="haciendo vista consola">
       <option name="closed" value="true" />
@@ -742,7 +728,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732760473445</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="Intentando Serializar las Partidas">
+      <option name="closed" value="true" />
+      <created>1732772463701</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1732772463701</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -760,7 +754,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="umlSimplificado" />
     <MESSAGE value="No Existe Mas La Clase Haba" />
     <MESSAGE value="Se borro test tableroJugador" />
     <MESSAGE value="haciendo vista consola" />
@@ -785,41 +778,15 @@
     <MESSAGE value="Se pueden serializar usuarios , falta probar y optimizar" />
     <MESSAGE value="Se puede serializar usuarios , y guarda victorias derrotas , y cambie la dimension de la vista a 900 600" />
     <MESSAGE value="ranking" />
-    <option name="LAST_COMMIT_MESSAGE" value="ranking" />
+    <MESSAGE value="Intentando Serializar las Partidas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Intentando Serializar las Partidas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>113</line>
-          <properties class="vistas.Menu.VistaMenu" method="setMenuConfig">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>35</line>
-          <properties class="vistas.Menu.VistaMenu" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>152</line>
-          <properties class="vistas.Menu.VistaMenu" method="cerrarMenu">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>166</line>
+          <line>175</line>
           <properties class="vistas.Menu.VistaMenu" method="pedirNombre">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -828,7 +795,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>177</line>
+          <line>183</line>
           <properties class="modelo.mancala.Mancala" method="getJugador">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -837,7 +804,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>45</line>
+          <line>46</line>
           <properties class="modelo.mancala.Mancala" method="desconectarJugador">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -853,9 +820,27 @@
           </properties>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
+          <line>155</line>
+          <properties class="vistas.Menu.VistaMenu" method="mostrarPartidaLLena">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
+          <line>231</line>
+          <properties class="vistas.Menu.VistaMenu" method="mostrarRank">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>108</line>
+          <line>109</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -865,7 +850,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>108</line>
+          <line>114</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -885,7 +870,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>69</line>
+          <line>75</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -895,8 +880,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>47</line>
+          <line>48</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

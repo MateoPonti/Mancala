@@ -8,11 +8,9 @@ import vistas.ITipo;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.io.IOException;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 public class VistaGrafica implements ITipo {
@@ -38,8 +36,17 @@ public class VistaGrafica implements ITipo {
         botSalir= new JButton();
         lTurno= new JLabel();
         panelAbandonar = new JPanel();
+        lAgujeros = new ArrayList<>();
+        lAgujH=new ArrayList<>();
+
+        inicializar();
 
 
+    }
+
+
+
+    public void inicializar() {
         //layout
         frame.setLayout(new BorderLayout());
         jPanelJuego.setLayout(new BorderLayout());
@@ -57,8 +64,6 @@ public class VistaGrafica implements ITipo {
         //config
         frame.setTitle("Mancala");
         pAgujero.setLayout(new GridLayout(2, 6,0,0));
-        lAgujeros = new ArrayList<>();
-        lAgujH=new ArrayList<>();
         botSalir.setText("Salir");
         pAgujero.setBackground(color);
         jPanelJuego.setBackground(color);
@@ -66,9 +71,6 @@ public class VistaGrafica implements ITipo {
         frame.setBackground(color);
         lCasa.setForeground(Color.white);
         lCasaOp.setForeground(Color.white);
-
-
-
 
         for (int j = 0; j < 12; j++) {
             JLabel lImagen = new JLabel();
@@ -89,15 +91,14 @@ public class VistaGrafica implements ITipo {
             pAgujero.add(p);
 
         }
-
-
-
         jPanelJuego.add(lCasa,BorderLayout.EAST);
         jPanelJuego.add(pAgujero,BorderLayout.CENTER);
         jPanelJuego.add(lCasaOp,BorderLayout.WEST);
         jPanelJuego.add(lTurno,BorderLayout.NORTH);
         frame.add(jPanelJuego,BorderLayout.CENTER);
     }
+
+
 
     @Override
     public void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador) {
@@ -169,7 +170,19 @@ public class VistaGrafica implements ITipo {
         });
     }
 
-
+    @Override
+    public void asignarAbandono(Vista vista) {
+        frame.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                try {
+                    vista.desconectar();
+                } catch (RemoteException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
+    }
 
 
     private String obtenerImagen(int habas, String contenedor) {

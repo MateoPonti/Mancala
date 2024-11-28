@@ -23,7 +23,9 @@ public  class Vista implements IVista, Serializable, IConectado {
 
     @Override
     public  void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador) throws IOException {
-         if (tipo!=null){tipo.mostrarTablero(tableroJugador,tableroOponente,turnoActual,nombreJugador);}
+         if (tipo!=null){
+             menu.cerrarMenu();
+             tipo.mostrarTablero(tableroJugador,tableroOponente,turnoActual,nombreJugador);}
     }
 
     @Override
@@ -76,13 +78,13 @@ public  class Vista implements IVista, Serializable, IConectado {
     @Override
     public void jugar(ITipo tipo) {
         this.tipo = tipo;
+        tipo.asignarAbandono(this);
         tipo.modificarInput(controlador,menu);
-        menu.cerrarMenu();
         controlador.inicializarPartida();
     }
 
 
-
-
-
+    public void desconectar() throws RemoteException {
+        controlador.desconectarJugador();
+    }
 }

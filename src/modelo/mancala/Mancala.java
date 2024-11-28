@@ -40,6 +40,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
         preparados=new ArrayList<>();
         serializadorUsuarios=new SerializadorUsuarios();
         serializadorUsuarios.inicializar();
+        serializadorPartidas= new SerializadorPartidas();
     }
 
 
@@ -83,9 +84,8 @@ public class Mancala extends ObservableRemoto implements IMancala{
         ArrayList<IUsuario> jugadores= new ArrayList<>();
         jugadores.add(jugador);
 
-
         // si la partida no esta iniciada
-        if ( (partida==null  || partida.isFinalizado()) && estaJugando(jugador)){
+        if ( (partida==null  || partida.isFinalizado()) || estaJugando(jugador)){
          {
          if(preparados == null) {
              assert partida != null;
@@ -94,7 +94,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
              }
          }
          agregarJugadorPreparados(jugador);
-         if (isPreparados()){
+         if (isPreparados() ){
             inicializarPartida();
             notificarObservadores(new Notificador(Notificacion.MOSTRARTABLEROS,preparados ));
          }
@@ -196,7 +196,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
     private boolean agregarJugadorPreparados(IUsuario usuario){
-        if (estaJugando(usuario)){
+        if ( ! estaJugando(usuario)){
         preparados.add(usuario);
         return true;
         }
@@ -217,11 +217,11 @@ public class Mancala extends ObservableRemoto implements IMancala{
         if (preparados!=null){
           for (IUsuario j: preparados)  {
             if (jugador.equals(j)){
-            return false;
+            return true;
            }
           }
        }
-       return true;
+       return false;
     }
 
 
