@@ -99,9 +99,7 @@ public class VistaConsolaSwing implements ITipo {
 
     @Override
     public void mostrarGanador(IJugador ganador) {
-        botSalir.setVisible(true);
-        bIngresoPos.setVisible(false);
-        posicionIngreso.setVisible(false);
+        mostrarAbandonar();
         agujeros.append("Ganador: "+ ganador.getNombre()+" !!!!!!!");
         frame.revalidate();
         frame.repaint();
@@ -117,5 +115,14 @@ public class VistaConsolaSwing implements ITipo {
                 frame.dispose();
             }
         });
+    }
+
+    @Override
+    public void mostrarAbandonar() {
+        botSalir.setVisible(true);
+        bIngresoPos.setVisible(false);
+        posicionIngreso.setVisible(false);
+        frame.revalidate();
+        frame.repaint();
     }
 }

@@ -78,6 +78,8 @@ public class SerializadorUsuarios {
     }
 
     private void escribirUsuarios(){
+        try{
+
 
         if (!administrador.estaVacio()) {
             HashMap<String,Integer> posicionUsuarios = new HashMap<>();
@@ -90,6 +92,8 @@ public class SerializadorUsuarios {
                 serializadorUsuarios.addOneObject(u);
             }
             serializadorPosicionUsuarios.writeOneObject(posicionUsuarios);
+        } } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -99,7 +103,8 @@ public class SerializadorUsuarios {
             for(Object o : usuarios){
                 administrador.add((Usuario) o);
             }
-        } catch (Exception ignored) {
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -124,7 +129,8 @@ public class SerializadorUsuarios {
             for(Object o : usuarios){
                 rank.compararRanking((Usuario) o);
             }
-        } catch (Exception ignored) {
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return rank;
     }

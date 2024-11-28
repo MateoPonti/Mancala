@@ -92,15 +92,21 @@ public class Controlador implements IControladorRemoto, Serializable {
                         case PARTIDALLENA:
                             mostrarPartidaLlena();
                             break;
-
+                        case JUGADORSEFUE:
+                            abandonarPartida();
+                            break;
                         }
-                } catch (IOException ignored) {
 
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
         }
     }
 
+    private void abandonarPartida() {
+        vista.abandonarPartida();
+    }
 
 
     private void mostrarTableros() throws IOException {

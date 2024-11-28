@@ -25,6 +25,7 @@ public class VistaGrafica implements ITipo {
     private  final  ArrayList<JLabel> lAgujH;
     private  final JButton botSalir;
     private final    JLabel lTurno;
+    private final  JPanel panelAbandonar;
 
 
     public VistaGrafica() {
@@ -36,6 +37,7 @@ public class VistaGrafica implements ITipo {
         lCasaOp = new JLabel();
         botSalir= new JButton();
         lTurno= new JLabel();
+        panelAbandonar = new JPanel();
 
 
         //layout
@@ -122,11 +124,15 @@ public class VistaGrafica implements ITipo {
 
     @Override
     public void mostrarGanador(IJugador ganador) {
-        JPanel panelGanador  = new JPanel();
+        mostrarAbandonar();
         JLabel lGanador = new JLabel("Ganador: "+ganador.getNombre());
-        panelGanador.add(lGanador);
-        panelGanador.add(botSalir);
-        frame.add(panelGanador,BorderLayout.SOUTH);
+        panelAbandonar.add(lGanador);
+    }
+
+    @Override
+    public void mostrarAbandonar() {
+        panelAbandonar.add(botSalir);
+        frame.add(panelAbandonar,BorderLayout.SOUTH);
     }
 
     @Override
@@ -162,6 +168,7 @@ public class VistaGrafica implements ITipo {
 
         });
     }
+
 
 
 

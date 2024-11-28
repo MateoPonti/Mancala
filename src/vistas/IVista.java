@@ -15,4 +15,6 @@ public interface IVista {
      void mostrarGanador(IJugador ganador);
      void mostrarPartidaLLena()  throws RemoteException;
      void mostrarPartidaEspera() throws RemoteException;
+
+    void abandonarPartida();
 }

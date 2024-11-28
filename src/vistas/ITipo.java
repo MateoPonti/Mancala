@@ -13,4 +13,6 @@ public interface ITipo {
     void mostrarGanador(IJugador ganador);
     // darle los action listener y establecer que funcion hacer con el controlador pasado por parametro
     void modificarInput(Controlador controlador, IMenu vista);
+
+    void mostrarAbandonar();
 }

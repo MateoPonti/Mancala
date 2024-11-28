@@ -3,8 +3,8 @@ package modelo.mancala;
 import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
 import controlador.Notificador;
+import modelo.clasesJuego.serializacion.SerializadorPartidas;
 import modelo.clasesJuego.serializacion.SerializadorUsuarios;
-import modelo.clasesJuego.serializacion.dominio.AdministradorUsuarios;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.partida.Partida;
 import modelo.clasesJuego.tablero.ITableroJugador;
@@ -24,6 +24,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
     private static Mancala instancia;
 
     private SerializadorUsuarios serializadorUsuarios;
+    private SerializadorPartidas serializadorPartidas;
 
 
 
@@ -43,12 +44,23 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
 
     public void  desconectarJugador(IUsuario j) throws  RemoteException{
+        guardarPartida(j);
         for(Usuario u:usuarios){
             if (u.equals(j)){
                 usuarios.remove(u);
                 break;
             }
 
+        }
+
+    }
+
+    private void guardarPartida(IUsuario j) throws  RemoteException {
+        if  ( (! partida.isFinalizado()) && (preparados.get(0).equals(j) || preparados.get(1).equals(j))){
+            serializadorPartidas.guardarPartida(partida);
+            partida=null;
+            preparados.remove(j);
+            notificarObservadores(new Notificador(Notificacion.JUGADORSEFUE,preparados));
         }
 
     }

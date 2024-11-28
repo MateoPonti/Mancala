@@ -44,6 +44,11 @@ public  class Vista implements IVista, Serializable, IConectado {
     }
 
     @Override
+    public void abandonarPartida() {
+        tipo.mostrarAbandonar();
+    }
+
+    @Override
     public void inicializar() {
         menu = new VistaMenu(this);
     }
