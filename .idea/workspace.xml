@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Se puede serializar usuarios , y guarda victorias derrotas , y cambie la dimension de la vista a 900 600">
-      <change afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/RankingUsuario.java" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="ranking">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PosicionUsuario.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuarios.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/RankingUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/RankingUsuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,15 +336,7 @@
       <workItem from="1732695936185" duration="2134000" />
       <workItem from="1732745494396" duration="3184000" />
       <workItem from="1732755116190" duration="1892000" />
-      <workItem from="1732758938007" duration="1234000" />
-    </task>
-    <task id="LOCAL-00073" summary="umlSimplificado">
-      <option name="closed" value="true" />
-      <created>1700590583822</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1700590583823</updated>
+      <workItem from="1732758938007" duration="1437000" />
     </task>
     <task id="LOCAL-00074" summary="No Existe Mas La Clase Haba">
       <option name="closed" value="true" />
@@ -735,7 +722,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732748210882</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="ranking">
+      <option name="closed" value="true" />
+      <created>1732760188918</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1732760188918</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -753,7 +748,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ahora hay empates" />
     <MESSAGE value="umlSimplificado" />
     <MESSAGE value="No Existe Mas La Clase Haba" />
     <MESSAGE value="Se borro test tableroJugador" />
@@ -778,7 +772,8 @@
     <MESSAGE value="Haciendo Serializacion" />
     <MESSAGE value="Se pueden serializar usuarios , falta probar y optimizar" />
     <MESSAGE value="Se puede serializar usuarios , y guarda victorias derrotas , y cambie la dimension de la vista a 900 600" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se puede serializar usuarios , y guarda victorias derrotas , y cambie la dimension de la vista a 900 600" />
+    <MESSAGE value="ranking" />
+    <option name="LAST_COMMIT_MESSAGE" value="ranking" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

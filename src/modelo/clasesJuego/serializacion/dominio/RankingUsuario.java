@@ -23,16 +23,20 @@ public class RankingUsuario {
         if(ranking.size()<5){
             ranking.add(usuario);
             cambio=true;
+            ordenarRanking();
         }
         else{
             if (usuario.getElo()>ranking.get(ranking.size()-1).getElo()){
                 ranking.set(ranking.size()-1, usuario);
-                ranking.sort(Comparator.comparingInt(Usuario::getElo).reversed());
                 cambio=true;
+                ordenarRanking();
             }
         }
         return cambio;
     }
 
 
+    private void ordenarRanking(){
+        ranking.sort(Comparator.comparingInt(Usuario::getElo).reversed());
+    }
 }
