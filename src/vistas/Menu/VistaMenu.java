@@ -105,6 +105,7 @@ public class VistaMenu implements IMenu {
 
     public  void mostrarMenu(){
         frame.setVisible(true);
+        configurarVisibilidad(true);
     }
 
 
@@ -157,13 +158,7 @@ public class VistaMenu implements IMenu {
 
     public void mostrarPartidaEspera() {
         mostrarMenu();
-        botJugar.setVisible(false);
-        botRank.setVisible(false);
-        radConsola.setVisible(false);
-        radGrafica.setVisible(false);
-        panel.add(new JLabel("Esperando Jugadores,  Jugadores 1/2 "),BorderLayout.CENTER);
-        frame.revalidate();
-        frame.repaint();
+        configurarVisibilidad(false);
     }
     // metodos privados
 
@@ -258,4 +253,11 @@ public class VistaMenu implements IMenu {
     }
 
 
+    private  void  configurarVisibilidad(boolean b){
+        botJugar.setVisible(b);
+        botRank.setVisible(b);
+        radConsola.setVisible(b);
+        radGrafica.setVisible(b);
+
+    }
 }

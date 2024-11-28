@@ -12,6 +12,7 @@ public class SerializadorPartidas {
 
     public SerializadorPartidas() {
         partidas = AdministradorPartidas.getInstancia();
+        serializadorPartida= new Serializador("Partidas.dat");
     }
 
 
@@ -56,8 +57,7 @@ public class SerializadorPartidas {
             for(Object p : partidas){
                 SerializadorPartidas.partidas.add((Partida) p);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ignored) {
         }
     }
 

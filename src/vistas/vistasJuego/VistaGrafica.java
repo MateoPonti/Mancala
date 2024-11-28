@@ -134,6 +134,8 @@ public class VistaGrafica implements ITipo {
     public void mostrarAbandonar() {
         panelAbandonar.add(botSalir);
         frame.add(panelAbandonar,BorderLayout.SOUTH);
+        frame.revalidate();
+        frame.repaint();
     }
 
     @Override

@@ -103,8 +103,7 @@ public class SerializadorUsuarios {
             for(Object o : usuarios){
                 administrador.add((Usuario) o);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ignored) {
         }
     }
 
@@ -129,8 +128,7 @@ public class SerializadorUsuarios {
             for(Object o : usuarios){
                 rank.compararRanking((Usuario) o);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ignored) {
         }
         return rank;
     }
