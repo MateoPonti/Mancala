@@ -1,5 +1,6 @@
 package modelo.clasesJuego.serializacion.dominio;
 
+import modelo.clasesJuego.usuario.IUsuario;
 import modelo.clasesJuego.usuario.Usuario;
 
 import java.util.ArrayList;
@@ -53,15 +54,17 @@ public class AdministradorUsuarios {
     }
 
     public void add(Usuario o) {
-        usuarios.add(o);
+        usuarios.add(o) ;
     }
 
     public void cambiar(Usuario o , Integer posicion){
         usuarios.set(posicion,o);
     }
 
-    public   ArrayList<Usuario> getUsuarios(){
-        return new ArrayList<>(usuarios);
-    }
 
+    public ArrayList<IUsuario> obtenerRank() {
+        ArrayList<IUsuario> usuariosOrdenados = new ArrayList<> (usuarios);
+        usuariosOrdenados.sort(Comparator.comparing(IUsuario::getElo).reversed());
+        return usuariosOrdenados;
+    }
 }

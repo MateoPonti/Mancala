@@ -218,8 +218,8 @@ public class Mancala extends ObservableRemoto implements IMancala{
                 usuarios.remove(u);
                 break;
             }
-
         }
+        preparados=null;
 
     }
 

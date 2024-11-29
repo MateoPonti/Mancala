@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="ranking hecho , ya solo me falta lo de las partidas">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Ultimos cambios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorPartidas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorPartidas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorUsuarios.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
@@ -345,15 +344,7 @@
       <workItem from="1732819375628" duration="39000" />
       <workItem from="1732839267701" duration="1253000" />
       <workItem from="1732841262785" duration="29000" />
-      <workItem from="1732920509792" duration="2573000" />
-    </task>
-    <task id="LOCAL-00080" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <option name="closed" value="true" />
-      <created>1720075813303</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1720075813303</updated>
+      <workItem from="1732920509792" duration="2990000" />
     </task>
     <task id="LOCAL-00081" summary="arreglando vista consola swing">
       <option name="closed" value="true" />
@@ -739,7 +730,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732922177940</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="Ultimos cambios">
+      <option name="closed" value="true" />
+      <created>1732923188667</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1732923188667</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -757,7 +756,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Haciendo vista consola listo" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="arreglando vista consola swing" />
     <MESSAGE value="Cambios para manejar elo y empate" />
@@ -782,7 +780,8 @@
     <MESSAGE value="haciendo guardar partida" />
     <MESSAGE value="arreglar el rank" />
     <MESSAGE value="ranking hecho , ya solo me falta lo de las partidas" />
-    <option name="LAST_COMMIT_MESSAGE" value="ranking hecho , ya solo me falta lo de las partidas" />
+    <MESSAGE value="Ultimos cambios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ultimos cambios" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -807,7 +806,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>92</line>
+          <line>87</line>
           <properties class="modelo.clasesJuego.serializacion.SerializadorUsuarios" method="cargarPosicion">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -863,12 +862,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>82</line>
+          <line>77</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>91</line>
+          <line>86</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -890,6 +889,11 @@
           <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
           <line>112</line>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
+          <line>214</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
