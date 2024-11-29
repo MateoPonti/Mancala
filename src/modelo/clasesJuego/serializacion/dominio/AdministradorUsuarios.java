@@ -4,6 +4,7 @@ import modelo.clasesJuego.usuario.Usuario;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Objects;
 
 public class AdministradorUsuarios {
@@ -58,4 +59,9 @@ public class AdministradorUsuarios {
     public void cambiar(Usuario o , Integer posicion){
         usuarios.set(posicion,o);
     }
+
+    public   ArrayList<Usuario> obtenerUsuarios(){
+        return new ArrayList<>(usuarios);
+    }
+
 }

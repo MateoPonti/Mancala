@@ -76,7 +76,6 @@ public class Mancala extends ObservableRemoto implements IMancala{
     public void guardarCambios() {
         serializadorPartidas.escribirPartidas();
         serializadorUsuarios.escribirUsuarios();
-        serializadorUsuarios.escribirRanking();
     }
 
 

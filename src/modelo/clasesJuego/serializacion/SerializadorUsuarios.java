@@ -1,18 +1,17 @@
 package modelo.clasesJuego.serializacion;
 
 import modelo.clasesJuego.serializacion.dominio.AdministradorUsuarios;
-import modelo.clasesJuego.serializacion.dominio.RankingUsuario;
 import modelo.clasesJuego.serializacion.servicios.Serializador;
 import modelo.clasesJuego.usuario.IUsuario;
 import modelo.clasesJuego.usuario.Usuario;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 
 public class SerializadorUsuarios {
     private static AdministradorUsuarios administrador;
     private HashMap<String,Integer> posicionHash;
-    private RankingUsuario ranking;
     private static Serializador serializadorUsuarios;
     private static Serializador serializadorPosicionUsuarios;
     private static Serializador serializadorRanking;
@@ -28,7 +27,6 @@ public class SerializadorUsuarios {
     public void inicializar(){
         cargarUsuarios();
         posicionHash = cargarPosicion();
-        ranking = cargarRanking();
     }
 
     public Usuario agregarUsuario(String nombre, String contra) {
@@ -49,30 +47,20 @@ public class SerializadorUsuarios {
         posicionHash = cargarPosicion();
         if (posicionHash != null) {
             administrador.cambiar(usuario,posicionHash.get(usuario.getNombre()+usuario.getContrasenia()));
-            ranking.compararRanking(usuario);
        }
     }
 
 
     public ArrayList<IUsuario> obtenerRank() {
-        if (ranking!=null){
-            return  new ArrayList<>(ranking.getRanking());}
+        if (administrador!=null){
+           ArrayList<Usuario> usuariosOrdenados = (administrador.obtenerUsuarios());
+           usuariosOrdenados.sort(Comparator.comparing(Usuario::getElo).reversed());
+            System.out.println(usuariosOrdenados.get(0).getNombre());
+           return new ArrayList<>(usuariosOrdenados);
+        }
         return null;
     }
 
-    public void escribirRanking() {
-        if (ranking != null) {
-            ArrayList<Usuario> rank = ranking.getRanking();
-            if (!rank.isEmpty()){
-                Usuario u = rank.get(0);
-                serializadorRanking.writeOneObject(u);
-                for (int i=1 ; i<rank.size();i++){
-                    u= rank.get(i);
-                    serializadorRanking.addOneObject(u);
-                }
-            }
-        }
-    }
 
     public void escribirUsuarios(){
         try{
@@ -115,18 +103,6 @@ public class SerializadorUsuarios {
         return posicion;
     }
 
-    @SuppressWarnings("unchecked")
-    private RankingUsuario cargarRanking(){
-        RankingUsuario rank = new RankingUsuario();
-        try {
-            Object[] usuarios = serializadorRanking.readObjects();
-            for(Object o : usuarios){
-                rank.compararRanking((Usuario) o);
-            }
-        } catch (Exception ignored) {
-        }
-        return rank;
-    }
 
 
 }
