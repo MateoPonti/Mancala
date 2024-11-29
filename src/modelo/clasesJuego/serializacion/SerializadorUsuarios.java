@@ -49,10 +49,7 @@ public class SerializadorUsuarios {
         posicionHash = cargarPosicion();
         if (posicionHash != null) {
             administrador.cambiar(usuario,posicionHash.get(usuario.getNombre()+usuario.getContrasenia()));
-            escribirUsuarios();
-            if (ranking.compararRanking(usuario)){
-                escribirRanking();
-            }
+            ranking.compararRanking(usuario);
        }
     }
 
@@ -63,7 +60,7 @@ public class SerializadorUsuarios {
         return null;
     }
 
-    private void escribirRanking() {
+    public void escribirRanking() {
         if (ranking != null) {
             ArrayList<Usuario> rank = ranking.getRanking();
             if (!rank.isEmpty()){
@@ -77,10 +74,8 @@ public class SerializadorUsuarios {
         }
     }
 
-    private void escribirUsuarios(){
+    public void escribirUsuarios(){
         try{
-
-
         if (!administrador.estaVacio()) {
             HashMap<String,Integer> posicionUsuarios = new HashMap<>();
             Usuario u = administrador.get(0);

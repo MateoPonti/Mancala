@@ -38,7 +38,14 @@ public class Main {
         vista2.inicializar();
         vista3.inicializar();
 
-
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            System.out.println("Guardando cambios antes de cerrar...");
+            try {
+                modelo.guardarCambios(); // Llamada al método de guardado
+            } catch (Exception e) {
+                System.err.println("Error al guardar los cambios: " + e.getMessage());
+            }
+        }));
 
 
 

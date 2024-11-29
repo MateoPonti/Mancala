@@ -30,4 +30,6 @@ public interface IMancala extends IObservableRemoto {
 
 
     ArrayList<IUsuario> obtenerRank() throws  RemoteException;
+
+    void guardarCambios();
 }

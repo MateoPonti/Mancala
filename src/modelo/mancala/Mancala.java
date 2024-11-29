@@ -72,6 +72,13 @@ public class Mancala extends ObservableRemoto implements IMancala{
        return serializadorUsuarios.obtenerRank();
     }
 
+    @Override
+    public void guardarCambios() {
+        serializadorPartidas.escribirPartidas();
+        serializadorUsuarios.escribirUsuarios();
+        serializadorUsuarios.escribirRanking();
+    }
+
 
     public IUsuario conectarJugador(String nombre,String contra) throws RemoteException {
         Usuario nuevoJugador= serializadorUsuarios.agregarUsuario(nombre, contra);

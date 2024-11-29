@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="3 jugadores pueden entrar  , 2 son lo mismo deberia dejar verle la partida y no aparecer como si estuviera llena">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="haciendo guardar partida">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorPartidas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorPartidas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/servidor/AppServidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/servidor/AppServidor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,15 +342,10 @@
       <workItem from="1732745494396" duration="3184000" />
       <workItem from="1732755116190" duration="1892000" />
       <workItem from="1732758938007" duration="2363000" />
-      <workItem from="1732770295578" duration="7775000" />
-    </task>
-    <task id="LOCAL-00077" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <option name="closed" value="true" />
-      <created>1720075600302</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1720075600302</updated>
+      <workItem from="1732770295578" duration="7886000" />
+      <workItem from="1732816743324" duration="228000" />
+      <workItem from="1732819375628" duration="39000" />
+      <workItem from="1732839267701" duration="1253000" />
     </task>
     <task id="LOCAL-00078" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
@@ -736,7 +731,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732775722987</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="haciendo guardar partida">
+      <option name="closed" value="true" />
+      <created>1732778191219</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1732778191219</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -754,7 +757,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Se borro test tableroJugador" />
     <MESSAGE value="haciendo vista consola" />
     <MESSAGE value="cambios versiones" />
     <MESSAGE value="Haciendo vista consola listo" />
@@ -779,7 +781,8 @@
     <MESSAGE value="ranking" />
     <MESSAGE value="Intentando Serializar las Partidas" />
     <MESSAGE value="3 jugadores pueden entrar  , 2 son lo mismo deberia dejar verle la partida y no aparecer como si estuviera llena" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 jugadores pueden entrar  , 2 son lo mismo deberia dejar verle la partida y no aparecer como si estuviera llena" />
+    <MESSAGE value="haciendo guardar partida" />
+    <option name="LAST_COMMIT_MESSAGE" value="haciendo guardar partida" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -795,7 +798,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>183</line>
+          <line>190</line>
           <properties class="modelo.mancala.Mancala" method="getJugador">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -813,7 +816,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>110</line>
+          <line>105</line>
           <properties class="modelo.clasesJuego.serializacion.SerializadorUsuarios" method="cargarPosicion">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -859,7 +862,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>114</line>
+          <line>121</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -869,17 +872,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>100</line>
+          <line>95</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>109</line>
+          <line>104</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>76</line>
+          <line>83</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -894,7 +897,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>84</line>
+          <line>91</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

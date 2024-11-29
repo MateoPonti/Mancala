@@ -33,10 +33,9 @@ public class SerializadorPartidas {
 
     public void guardarPartida(Partida partida){
         partidas.add(partida);
-        escribirPartida(partida);
     }
 
-    private void escribirPartida(Partida partida){
+    public void escribirPartidas(){
         try{
         if (!partidas.estaVacio()) {
             Partida p = partidas.get(0);
