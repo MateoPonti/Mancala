@@ -53,10 +53,9 @@ public class SerializadorUsuarios {
 
     public ArrayList<IUsuario> obtenerRank() {
         if (administrador!=null){
-           ArrayList<Usuario> usuariosOrdenados = (administrador.obtenerUsuarios());
-           usuariosOrdenados.sort(Comparator.comparing(Usuario::getElo).reversed());
-            System.out.println(usuariosOrdenados.get(0).getNombre());
-           return new ArrayList<>(usuariosOrdenados);
+           ArrayList<IUsuario> usuariosOrdenados = new ArrayList<> (administrador.getUsuarios());
+           usuariosOrdenados.sort(Comparator.comparing(IUsuario::getElo).reversed());
+           return usuariosOrdenados;
         }
         return null;
     }

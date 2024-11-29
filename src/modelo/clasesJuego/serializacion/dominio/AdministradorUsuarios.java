@@ -60,7 +60,7 @@ public class AdministradorUsuarios {
         usuarios.set(posicion,o);
     }
 
-    public   ArrayList<Usuario> obtenerUsuarios(){
+    public   ArrayList<Usuario> getUsuarios(){
         return new ArrayList<>(usuarios);
     }
 

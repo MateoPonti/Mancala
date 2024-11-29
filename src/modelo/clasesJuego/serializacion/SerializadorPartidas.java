@@ -3,7 +3,10 @@ package modelo.clasesJuego.serializacion;
 import modelo.clasesJuego.partida.Partida;
 import modelo.clasesJuego.serializacion.dominio.AdministradorPartidas;
 import modelo.clasesJuego.serializacion.servicios.Serializador;
+import modelo.clasesJuego.usuario.IUsuario;
 import modelo.clasesJuego.usuario.Usuario;
+
+import java.util.ArrayList;
 
 
 public class SerializadorPartidas {
@@ -19,10 +22,10 @@ public class SerializadorPartidas {
     public void inicializar() {
         cargarPartidas();
     }
-    public Partida buscarPartida(Usuario usuario, Usuario usuario2) {
-        Partida partida = null;
+    public Partida buscarPartida(ArrayList<IUsuario> usuarios) {
+        Partida partida = new Partida(usuarios);
         for (int i = 0 ; i<partidas.getTam(); i++){
-          if (partidas.get(i).esta(usuario) && partidas.get(i).esta(usuario2) ) {
+          if (partidas.get(i).esta(usuarios.get(0)) && partidas.get(i).esta(usuarios.get(1)) ) {
               partida = partidas.get(i);
               partidas.remove(partida);
           }

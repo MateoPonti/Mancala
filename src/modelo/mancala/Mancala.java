@@ -45,27 +45,6 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
 
-    public void  desconectarJugador(IUsuario j) throws  RemoteException{
-        guardarPartida(j);
-        for(Usuario u:usuarios){
-            if (u.equals(j)){
-                usuarios.remove(u);
-                break;
-            }
-
-        }
-
-    }
-
-    private void guardarPartida(IUsuario j) throws  RemoteException {
-        if  (  (partida != null) && (! partida.isFinalizado()) && (estaJugando(j))){
-            serializadorPartidas.guardarPartida(partida);
-            partida=null;
-            preparados.remove(j);
-            notificarObservadores(new Notificador(Notificacion.JUGADORSEFUE,preparados));
-        }
-
-    }
 
     @Override
     public ArrayList<IUsuario> obtenerRank() {
@@ -193,7 +172,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
 
     private void inicializarPartida() throws RemoteException {
-        partida= new Partida(preparados);
+        partida= serializadorPartidas.buscarPartida(preparados);
 
     }
 
@@ -229,6 +208,29 @@ public class Mancala extends ObservableRemoto implements IMancala{
           }
        }
        return false;
+    }
+
+
+    public void  desconectarJugador(IUsuario j) throws  RemoteException{
+        guardarPartida(j);
+        for(Usuario u:usuarios){
+            if (u.equals(j)){
+                usuarios.remove(u);
+                break;
+            }
+
+        }
+
+    }
+
+    private void guardarPartida(IUsuario j) throws  RemoteException {
+        if  (  (partida != null) && (! partida.isFinalizado()) && (estaJugando(j))){
+            serializadorPartidas.guardarPartida(partida);
+            partida=null;
+            preparados.remove(j);
+            notificarObservadores(new Notificador(Notificacion.JUGADORSEFUE,preparados));
+        }
+
     }
 
 
