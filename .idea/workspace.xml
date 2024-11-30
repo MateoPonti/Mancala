@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Ultimos cambios" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Ultimos cambios">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/Notificador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Notificador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/IMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/IMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +131,7 @@
       <recent name="modelo.clasesJuego.tablero" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.AppCliente">
     <configuration name="AppCiente2" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
       <option name="MAIN_CLASS_NAME" value="server.cliente.AppCliente" />
       <module name="Mancala" />
@@ -202,9 +210,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.AppCliente" />
         <item itemvalue="Application.AppServidor" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TableroJugadorTest" />
       </list>
     </recent_temporary>
@@ -340,14 +348,8 @@
       <workItem from="1732839267701" duration="1253000" />
       <workItem from="1732841262785" duration="29000" />
       <workItem from="1732920509792" duration="4316000" />
-    </task>
-    <task id="LOCAL-00083" summary="Cambios para manejar elo y empate">
-      <option name="closed" value="true" />
-      <created>1729408090460</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1729408090461</updated>
+      <workItem from="1732924924475" duration="1386000" />
+      <workItem from="1732936564097" duration="561000" />
     </task>
     <task id="LOCAL-00084" summary="VistaConsola">
       <option name="closed" value="true" />
@@ -733,7 +735,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732924893065</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="Ultimos cambios">
+      <option name="closed" value="true" />
+      <created>1732924929147</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1732924929147</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -783,7 +793,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>177</line>
+          <line>181</line>
           <properties class="vistas.Menu.VistaMenu" method="pedirNombre">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -801,7 +811,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>87</line>
+          <line>86</line>
           <properties class="modelo.clasesJuego.serializacion.SerializadorUsuarios" method="cargarPosicion">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -810,7 +820,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>163</line>
+          <line>167</line>
           <properties class="vistas.Menu.VistaMenu" method="mostrarPartidaLLena">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -819,7 +829,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>233</line>
+          <line>237</line>
           <properties class="vistas.Menu.VistaMenu" method="mostrarRank">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -828,7 +838,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>116</line>
+          <line>120</line>
           <properties class="vistas.Menu.VistaMenu" method="setMenuConfig">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -837,7 +847,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>111</line>
+          <line>110</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -857,12 +867,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>77</line>
+          <line>76</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>86</line>
+          <line>85</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -877,7 +887,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java</url>
-          <line>117</line>
+          <line>121</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

@@ -79,7 +79,6 @@ public class VistaMenu implements IMenu {
         scrollpane.setPreferredSize(new Dimension(100,100));
 
 
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Mancala");
         Image icono = Toolkit.getDefaultToolkit().getImage("src/vistas/imagenes/Icono.png");
         frame.setIconImage(icono);
@@ -111,6 +110,11 @@ public class VistaMenu implements IMenu {
     public  void mostrarMenu(){
         frame.setVisible(true);
         configurarVisibilidad(true);
+    }
+
+    @Override
+    public void desconectar() {
+        frame.dispose();
     }
 
 

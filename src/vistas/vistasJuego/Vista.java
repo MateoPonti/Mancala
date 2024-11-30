@@ -88,5 +88,6 @@ public  class Vista implements IVista, Serializable, IConectado {
 
     public void desconectar() throws RemoteException {
         controlador.desconectarJugador();
+        menu.desconectar();
     }
 }

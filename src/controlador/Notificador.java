@@ -2,9 +2,10 @@ package controlador;
 
 import modelo.clasesJuego.usuario.IUsuario;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Notificador {
+public class Notificador implements Serializable {
     private Notificacion notificacion;
     private ArrayList<IUsuario> jugadoresAfectados;
 

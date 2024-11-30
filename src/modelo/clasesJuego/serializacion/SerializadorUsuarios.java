@@ -38,7 +38,6 @@ public class SerializadorUsuarios {
            }
         }
         administrador.add(nuevoUsuario);
-        escribirUsuarios();
         return nuevoUsuario;
         }
         return null;
