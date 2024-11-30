@@ -3,6 +3,7 @@ package vistas.Menu;
 import modelo.clasesJuego.usuario.IUsuario;
 import vistas.IConectado;
 import vistas.vistasJuego.IMenu;
+import vistas.vistasJuego.Vista;
 import vistas.vistasJuego.VistaConsolaSwing;
 import vistas.vistasJuego.VistaGrafica;
 
@@ -13,6 +14,8 @@ import javax.swing.text.StyledDocument;
 import java.awt.*;
 
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
@@ -80,6 +83,8 @@ public class VistaMenu implements IMenu {
         frame.setTitle("Mancala");
         Image icono = Toolkit.getDefaultToolkit().getImage("src/vistas/imagenes/Icono.png");
         frame.setIconImage(icono);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
         pedirNombre();
 
         botJugar.setText("Jugar");
@@ -139,12 +144,17 @@ public class VistaMenu implements IMenu {
         panelBot.add(botJugar);
         panelBot.add(botRank);
 
+
+
         panel.add(panelBot,BorderLayout.CENTER);
         panel.add(panelNombreJugador,BorderLayout.NORTH);
 
         frame.setLayout(new BorderLayout());
         frame.add(panel,BorderLayout.CENTER);
         frame.add(scrollpane,BorderLayout.SOUTH);
+
+
+
     }
 
     public    void cerrarMenu(){

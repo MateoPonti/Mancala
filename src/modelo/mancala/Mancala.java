@@ -65,34 +65,33 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
     }
 
-
     public void inicializarPartida(IUsuario jugador) throws RemoteException {
-        ArrayList<IUsuario> jugadores= new ArrayList<>();
+        ArrayList<IUsuario> jugadores = new ArrayList<>();
         jugadores.add(jugador);
 
-        // si la partida no esta iniciada
-        if ( (partida==null  || partida.isFinalizado()) || estaJugando(jugador)){
-         {
-         if(preparados == null) {
-             assert partida != null;
-             if (partida.isFinalizado()) {
-                 preparados = new ArrayList<>();
-             }
-         }
-         agregarJugadorPreparados(jugador);
-         if (isPreparados() ){
-            inicializarPartida();
-            notificarObservadores(new Notificador(Notificacion.MOSTRARTABLEROS,preparados ));
-         }
-         else {
-             notificarObservadores(new Notificador(Notificacion.PARTIDAESPERA,jugadores ));}
-         }}
-        // partidaIniciada
-        else {
-        notificarObservadores(new Notificador(Notificacion.PARTIDALLENA,jugadores ));
+        // Verifica si el jugador puede unirse a la partida
+        if (partida == null || partida.isFinalizado() || estaJugando(jugador)) {
+            // Inicializa la lista de jugadores preparados si no existe
+            if (preparados == null) {
+                preparados = new ArrayList<>();
+            }
+
+            // Agrega al jugador a la lista de preparados
+            agregarJugadorPreparados(jugador);
+
+            // Si los jugadores están listos, inicia la partida
+            if (isPreparados()) {
+                inicializarPartida(); // Método para configurar la partida
+                notificarObservadores(new Notificador(Notificacion.MOSTRARTABLEROS, preparados));
+            } else {
+                // Notifica que la partida está esperando más jugadores
+                notificarObservadores(new Notificador(Notificacion.PARTIDAESPERA, jugadores));
+            }
+        } else {
+            // Notifica que la partida está llena o en progreso
+            notificarObservadores(new Notificador(Notificacion.PARTIDALLENA, jugadores));
         }
     }
-
 
 
 
@@ -172,7 +171,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
 
 
     private void inicializarPartida() throws RemoteException {
-        partida= serializadorPartidas.buscarPartida(preparados);
+        partida = serializadorPartidas.buscarPartida(preparados);
 
     }
 
@@ -220,7 +219,6 @@ public class Mancala extends ObservableRemoto implements IMancala{
             }
         }
         preparados=null;
-
     }
 
     private void guardarPartida(IUsuario j) throws  RemoteException {
