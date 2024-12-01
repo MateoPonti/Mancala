@@ -216,17 +216,14 @@ public class Mancala extends ObservableRemoto implements IMancala{
                 break;
             }
         }
-
         preparados=null;
     }
 
     private void guardarPartida(IUsuario j) throws  RemoteException {
         if  (  (partida != null) && (! partida.isFinalizado()) && (estaJugando(j))){
             serializadorPartidas.guardarPartida(partida);
-
-            partida=null;
-            preparados.remove(j);
             notificarObservadores(new Notificador(Notificacion.JUGADORSEFUE,preparados));
+            partida=null;
         }
 
     }

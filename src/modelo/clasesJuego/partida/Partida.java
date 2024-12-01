@@ -100,7 +100,6 @@ public class Partida implements Serializable,IPartida {
 
 
     public IJugador getTurnoActual() {
-        System.out.println(turno.getId());
         int jugadorTurno=determinarJugador(turno);
         return jugadores.get(jugadorTurno);
     }
@@ -140,6 +139,7 @@ public class Partida implements Serializable,IPartida {
     public boolean esta(IUsuario jugador) {
         return jugadores.get(0).equals(jugador) || jugadores.get(1).equals(jugador) ;
     }
+
 
 
 }

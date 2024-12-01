@@ -46,6 +46,7 @@ public class SerializadorPartidas {
                 p = partidas.get(i);
                 serializadorPartida.addOneObject(p);
             }
+
         }
         } catch (Exception e) {
             e.printStackTrace();
