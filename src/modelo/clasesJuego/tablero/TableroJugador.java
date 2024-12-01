@@ -40,7 +40,7 @@ public class TableroJugador implements Serializable,ITableroJugador {
 
     @Override
     public ArrayList<IContenedor> getAgujerosVuelta() {
-        ArrayList<IContenedor> agujerosDadoVuelta =getAgujeros();
+        ArrayList<IContenedor> agujerosDadoVuelta = getAgujeros();
         Collections.reverse(agujerosDadoVuelta);
         return agujerosDadoVuelta;
     }

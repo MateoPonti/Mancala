@@ -9,5 +9,6 @@ public enum Notificacion implements Serializable {
     POSICIONINVALIDA,
     PARTIDALLENA,
     PARTIDAESPERA,
-    JUGADORSEFUE
+    JUGADORSEFUE,
+
 }

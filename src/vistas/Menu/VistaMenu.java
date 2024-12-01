@@ -2,8 +2,6 @@ package vistas.Menu;
 
 import modelo.clasesJuego.usuario.IUsuario;
 import vistas.IConectado;
-import vistas.vistasJuego.IMenu;
-import vistas.vistasJuego.Vista;
 import vistas.vistasJuego.VistaConsolaSwing;
 import vistas.vistasJuego.VistaGrafica;
 
@@ -14,8 +12,6 @@ import javax.swing.text.StyledDocument;
 import java.awt.*;
 
 
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
@@ -116,6 +112,8 @@ public class VistaMenu implements IMenu {
     public void desconectar() {
         frame.dispose();
     }
+
+
 
 
     public void setMenuConfig(String nombreJugador) {

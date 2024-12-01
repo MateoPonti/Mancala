@@ -4,7 +4,6 @@ import modelo.clasesJuego.partida.Partida;
 import modelo.clasesJuego.serializacion.dominio.AdministradorPartidas;
 import modelo.clasesJuego.serializacion.servicios.Serializador;
 import modelo.clasesJuego.usuario.IUsuario;
-import modelo.clasesJuego.usuario.Usuario;
 
 import java.util.ArrayList;
 

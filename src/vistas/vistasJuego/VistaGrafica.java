@@ -5,11 +5,11 @@ import modelo.clasesJuego.contenedor.IContenedor;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import vistas.ITipo;
+import vistas.Menu.IMenu;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.IOException;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
@@ -139,6 +139,11 @@ public class VistaGrafica implements ITipo {
     }
 
     @Override
+    public void desconectar() {
+        frame.dispose();
+    }
+
+    @Override
     public void modificarInput(Controlador controlador, IMenu vista) {
         for(int i =0 ;i<=5;i++){
             int finalI = i;
@@ -166,7 +171,7 @@ public class VistaGrafica implements ITipo {
             @Override
             public void actionPerformed(ActionEvent e) {
                 vista.mostrarMenu();
-                frame.dispose();
+                frame.setVisible(false);
             }
 
         });

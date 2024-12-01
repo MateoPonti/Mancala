@@ -2,7 +2,7 @@ package modelo.clasesJuego.tablero;
 
 public enum ResultadoJugada {
     Correcta,
-    PosicioInvalida,
+    PosicionInvalida,
 
     OtroTurno,
     Victoria

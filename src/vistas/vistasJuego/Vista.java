@@ -47,6 +47,8 @@ public  class Vista implements IVista, Serializable, IConectado {
         tipo.mostrarAbandonar();
     }
 
+
+
     @Override
     public void inicializar() {
         if (controlador!=null){
@@ -89,5 +91,6 @@ public  class Vista implements IVista, Serializable, IConectado {
     public void desconectar() throws RemoteException {
         controlador.desconectarJugador();
         menu.desconectar();
+        tipo.desconectar();
     }
 }

@@ -4,6 +4,8 @@ import modelo.clasesJuego.contenedor.IContenedor;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
 import vistas.ITipo;
+import vistas.Menu.IMenu;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -115,7 +117,7 @@ public class VistaConsolaSwing implements ITipo {
             @Override
             public void actionPerformed(ActionEvent e) {
                 vista.mostrarMenu();
-                frame.dispose();
+                frame.setVisible(false);
             }
         });
     }
@@ -141,5 +143,10 @@ public class VistaConsolaSwing implements ITipo {
         posicionIngreso.setVisible(false);
         frame.revalidate();
         frame.repaint();
+    }
+
+    @Override
+    public void desconectar() {
+        frame.dispose();
     }
 }

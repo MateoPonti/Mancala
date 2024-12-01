@@ -95,7 +95,9 @@ public class Controlador implements IControladorRemoto, Serializable {
                         case JUGADORSEFUE:
                             abandonarPartida();
                             break;
-                        }
+
+                    }
+
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -103,6 +105,8 @@ public class Controlador implements IControladorRemoto, Serializable {
             }
         }
     }
+
+
 
     private void abandonarPartida() {
         vista.abandonarPartida();

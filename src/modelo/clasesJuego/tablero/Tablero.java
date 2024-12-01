@@ -22,7 +22,7 @@ public class Tablero implements Serializable {
     public ResultadoJugada  hacerJugada(int posicion,int jugadorTurno,int jugadorOponente){
         posicion--;
 
-        if (!Posicion.validarPosicion(posicion)){ return ResultadoJugada.PosicioInvalida;}
+        if (!Posicion.validarPosicion(posicion)){ return ResultadoJugada.PosicionInvalida;}
 
         TableroJugador tableroTurno= tableroJugadores.get(jugadorTurno);
         TableroJugador tableroOponente=tableroJugadores.get(jugadorOponente);
@@ -30,7 +30,7 @@ public class Tablero implements Serializable {
 
 
         if (tableroTurno.estaVacioContenedor(posicion)){
-            return ResultadoJugada.PosicioInvalida;} // comprueba que el jugador no haya elegido una posicion donde no haya habas
+            return ResultadoJugada.PosicionInvalida;} // comprueba que el jugador no haya elegido una posicion donde no haya habas
 
 
         int  habasRepartidas=tableroTurno.repartirHabasP(posicion);

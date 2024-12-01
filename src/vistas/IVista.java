@@ -17,4 +17,5 @@ public interface IVista {
      void mostrarPartidaEspera() throws RemoteException;
 
     void abandonarPartida();
+
 }

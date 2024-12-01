@@ -42,8 +42,9 @@ public class Partida implements Serializable,IPartida {
         if (!isFinalizado()){
             if (isTurno(jugador)){
                 ResultadoJugada resultado= tablero.hacerJugada(posicion,determinarJugador(turno),determinarOponente(turno));
-                if (resultado==ResultadoJugada.PosicioInvalida){return Notificacion.POSICIONINVALIDA;}
-                if (resultado==ResultadoJugada.Correcta){turnoSiguiente();}
+                if (resultado==ResultadoJugada.PosicionInvalida){return Notificacion.POSICIONINVALIDA;}
+                if (resultado==ResultadoJugada.Correcta){
+                    turnoSiguiente();}
                 if (resultado==ResultadoJugada.Victoria){
                     estado=EstadoPartida.Finalizado;
                     ganador= jugadores.get(0); // Asume que gano el jugador 1
@@ -99,6 +100,7 @@ public class Partida implements Serializable,IPartida {
 
 
     public IJugador getTurnoActual() {
+        System.out.println(turno.getId());
         int jugadorTurno=determinarJugador(turno);
         return jugadores.get(jugadorTurno);
     }
@@ -138,4 +140,6 @@ public class Partida implements Serializable,IPartida {
     public boolean esta(IUsuario jugador) {
         return jugadores.get(0).equals(jugador) || jugadores.get(1).equals(jugador) ;
     }
+
+
 }

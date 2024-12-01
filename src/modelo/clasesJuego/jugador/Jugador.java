@@ -41,4 +41,12 @@ public class Jugador implements  IJugador, Serializable {
     public boolean equals(IUsuario u) {
         return u.getId()==getId();
     }
+
+    @Override
+    public String toString() {
+        return "Jugador{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                '}';
+    }
 }

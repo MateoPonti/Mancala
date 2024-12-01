@@ -70,6 +70,8 @@ public class Mancala extends ObservableRemoto implements IMancala{
         jugadores.add(jugador);
 
         // Verifica si el jugador puede unirse a la partida
+
+
         if (partida == null || partida.isFinalizado() || estaJugando(jugador)) {
             // Inicializa la lista de jugadores preparados si no existe
             if (preparados == null) {
@@ -106,8 +108,8 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
     public void hacerJugada(int pos, IUsuario jugador) throws  RemoteException{
+        if(partida!= null){
         Notificacion resultado = partida.hacerJugada(pos,jugador);
-
         if (resultado!=Notificacion.POSICIONINVALIDA  && resultado!=null){
             notificarObservadores(new Notificador(Notificacion.MOSTRARTABLEROS,preparados));
         }
@@ -116,7 +118,7 @@ public class Mancala extends ObservableRemoto implements IMancala{
             asignarPuntos(ganador);
             notificarObservadores(new Notificador(resultado,preparados));
             preparados=null;
-        }
+        } }
 
     }
 
@@ -170,10 +172,6 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
 
-    private void inicializarPartida() throws RemoteException {
-        partida = serializadorPartidas.buscarPartida(preparados);
-
-    }
 
 
     private boolean isPreparados(){
@@ -218,18 +216,24 @@ public class Mancala extends ObservableRemoto implements IMancala{
                 break;
             }
         }
+
         preparados=null;
     }
 
     private void guardarPartida(IUsuario j) throws  RemoteException {
         if  (  (partida != null) && (! partida.isFinalizado()) && (estaJugando(j))){
             serializadorPartidas.guardarPartida(partida);
+
             partida=null;
             preparados.remove(j);
             notificarObservadores(new Notificador(Notificacion.JUGADORSEFUE,preparados));
         }
 
     }
+    private void inicializarPartida() throws RemoteException {
+        partida = serializadorPartidas.buscarPartida(preparados);
+    }
+
 
 
 

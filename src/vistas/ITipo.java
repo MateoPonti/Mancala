@@ -3,7 +3,7 @@ package vistas;
 import controlador.Controlador;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
-import vistas.vistasJuego.IMenu;
+import vistas.Menu.IMenu;
 import vistas.vistasJuego.Vista;
 
 import java.io.IOException;
@@ -16,4 +16,6 @@ public interface ITipo {
     void modificarInput(Controlador controlador, IMenu vista);
     void asignarAbandono(Vista vista);
     void mostrarAbandonar();
+
+    void desconectar();
 }
