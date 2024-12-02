@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="arreglando que desconecte el controlador" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="arreglando que desconecte el controladorRemoto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -347,15 +351,9 @@
       <workItem from="1732948584771" duration="922000" />
       <workItem from="1733020754183" duration="5315000" />
       <workItem from="1733104738960" duration="2186000" />
-      <workItem from="1733106963336" duration="134000" />
-    </task>
-    <task id="LOCAL-00088" summary="VistaConsola">
-      <option name="closed" value="true" />
-      <created>1729503749705</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1729503749705</updated>
+      <workItem from="1733106963336" duration="436000" />
+      <workItem from="1733110785204" duration="140000" />
+      <workItem from="1733167147016" duration="177000" />
     </task>
     <task id="LOCAL-00089" summary="VistaConsola">
       <option name="closed" value="true" />
@@ -741,7 +739,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733107072740</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="arreglando que desconecte el controladorRemoto">
+      <option name="closed" value="true" />
+      <created>1733107103332</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1733107103332</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -759,7 +765,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VistaConsola" />
     <MESSAGE value="probando el online con la vista consola" />
     <MESSAGE value="Haciendo la Vista Grafica" />
     <MESSAGE value="Terminando la Vista Grafica" />
@@ -784,7 +789,8 @@
     <MESSAGE value="juego Terminado" />
     <MESSAGE value="arreglando errores" />
     <MESSAGE value="arreglando que desconecte el controlador" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglando que desconecte el controlador" />
+    <MESSAGE value="arreglando que desconecte el controladorRemoto" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglando que desconecte el controladorRemoto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

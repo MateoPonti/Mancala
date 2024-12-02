@@ -10,7 +10,7 @@ public class Agujero extends Contenedor{
     }
 
     private void inicializar() {
-        final int cantHabas = 1;
+        final int cantHabas = 4;
         agregar(cantHabas);
     }
 
