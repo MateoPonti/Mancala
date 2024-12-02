@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="arreglando errores">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuarios.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Usuarios.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/IMancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/IConectado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/IConectado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Menu/VistaMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaConsolaSwing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/VistaGrafica.java" afterDir="false" />
-    </list>
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="arreglando que desconecte el controlador" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -358,15 +347,7 @@
       <workItem from="1732948584771" duration="922000" />
       <workItem from="1733020754183" duration="5315000" />
       <workItem from="1733104738960" duration="2186000" />
-      <workItem from="1733106963336" duration="100000" />
-    </task>
-    <task id="LOCAL-00087" summary="VistaConsola">
-      <option name="closed" value="true" />
-      <created>1729503735037</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1729503735037</updated>
+      <workItem from="1733106963336" duration="134000" />
     </task>
     <task id="LOCAL-00088" summary="VistaConsola">
       <option name="closed" value="true" />
@@ -752,7 +733,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733027467092</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="arreglando que desconecte el controlador">
+      <option name="closed" value="true" />
+      <created>1733107072739</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1733107072740</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -770,7 +759,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cambios para manejar elo y empate" />
     <MESSAGE value="VistaConsola" />
     <MESSAGE value="probando el online con la vista consola" />
     <MESSAGE value="Haciendo la Vista Grafica" />
@@ -795,7 +783,8 @@
     <MESSAGE value="Ultimos cambios" />
     <MESSAGE value="juego Terminado" />
     <MESSAGE value="arreglando errores" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglando errores" />
+    <MESSAGE value="arreglando que desconecte el controlador" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglando que desconecte el controlador" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
