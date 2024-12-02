@@ -12,6 +12,8 @@ import javax.swing.text.StyledDocument;
 import java.awt.*;
 
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
@@ -51,6 +53,18 @@ public class VistaMenu implements IMenu {
         bgSelec.add(radGrafica);
         bgSelec.add(radConsola);
         nombreUsuario= "";
+
+        frame.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                try {
+                    conectado.desconectar();
+                } catch (RemoteException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
+
 
         iniciarVista();
     }
@@ -101,6 +115,9 @@ public class VistaMenu implements IMenu {
                 throw new RuntimeException(ex);
             }
         });
+
+
+
     }
 
     public  void mostrarMenu(){
@@ -110,6 +127,7 @@ public class VistaMenu implements IMenu {
 
     @Override
     public void desconectar() {
+
         frame.dispose();
     }
 

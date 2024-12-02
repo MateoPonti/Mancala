@@ -24,7 +24,9 @@ public  class Vista implements IVista, Serializable, IConectado {
     @Override
     public  void mostrarTablero(ITableroJugador tableroJugador, ITableroJugador tableroOponente, IJugador turnoActual, IJugador nombreJugador) throws IOException {
         menu.cerrarMenu();
-        tipo.mostrarTablero(tableroJugador,tableroOponente,turnoActual,nombreJugador);}
+        tipo.mostrarTablero(tableroJugador,tableroOponente,turnoActual,nombreJugador);
+
+    }
 
 
     @Override
@@ -92,5 +94,9 @@ public  class Vista implements IVista, Serializable, IConectado {
         controlador.desconectarJugador();
         menu.desconectar();
         tipo.desconectar();
+        controlador=null;
+        menu=null;
+        tipo=null;
+
     }
 }

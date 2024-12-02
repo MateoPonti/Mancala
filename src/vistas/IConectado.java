@@ -13,4 +13,5 @@ public interface IConectado {
      void jugar(ITipo tipo);
 
 
+    void desconectar() throws  RemoteException;
 }

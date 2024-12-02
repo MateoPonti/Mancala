@@ -172,6 +172,7 @@ public class VistaGrafica implements ITipo {
             public void actionPerformed(ActionEvent e) {
                 vista.mostrarMenu();
                 frame.setVisible(false);
+                botSalir.setVisible(false);
             }
 
         });

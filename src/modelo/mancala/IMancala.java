@@ -1,5 +1,6 @@
 package modelo.mancala;
 
+import ar.edu.unlu.rmimvc.cliente.IControladorRemoto;
 import ar.edu.unlu.rmimvc.observer.IObservableRemoto;
 import modelo.clasesJuego.jugador.IJugador;
 import modelo.clasesJuego.tablero.ITableroJugador;
@@ -26,7 +27,7 @@ public interface IMancala extends IObservableRemoto {
 
     IJugador getJugador(IUsuario usuario) throws  RemoteException;
 
-    void desconectarJugador(IUsuario u) throws RemoteException;
+    void desconectarJugador(IUsuario u, IControladorRemoto c) throws RemoteException;
 
 
     ArrayList<IUsuario> obtenerRank() throws  RemoteException;

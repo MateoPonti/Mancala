@@ -60,7 +60,7 @@ public class Controlador implements IControladorRemoto, Serializable {
     }
 
     public void desconectarJugador() throws  RemoteException {
-        modelo.desconectarJugador(jugador);
+        modelo.desconectarJugador(jugador,this);
     }
 
 

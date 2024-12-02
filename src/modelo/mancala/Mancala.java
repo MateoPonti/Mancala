@@ -1,5 +1,6 @@
 package modelo.mancala;
 
+import ar.edu.unlu.rmimvc.cliente.IControladorRemoto;
 import ar.edu.unlu.rmimvc.observer.ObservableRemoto;
 import controlador.Notificacion;
 import controlador.Notificador;
@@ -172,8 +173,6 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
 
-
-
     private boolean isPreparados(){
         return preparados.size()==maxJugadores ;
     }
@@ -208,14 +207,10 @@ public class Mancala extends ObservableRemoto implements IMancala{
     }
 
 
-    public void  desconectarJugador(IUsuario j) throws  RemoteException{
+    @Override
+    public void  desconectarJugador(IUsuario j, IControladorRemoto c) throws  RemoteException{
         guardarPartida(j);
-        for(Usuario u:usuarios){
-            if (u.equals(j)){
-                usuarios.remove(u);
-                break;
-            }
-        }
+        removerObservador(c);
         preparados=null;
     }
 
