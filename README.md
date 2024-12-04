@@ -76,7 +76,7 @@ El juego, que se encuentra implementado en la rama Master del repositorio, fue r
 
 
 
-![UML](https://github.com/MateoPonti/Mancala/blob/master/UML/DiagramaUML.png?raw=true)
+![UML](https://github.com/MateoPonti/Mancala/blob/main/DiagramaUML.png?raw=true)
 
 
 
