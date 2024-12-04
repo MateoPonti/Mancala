@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="arreglando que desconecte el controladorRemoto">
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Terminado por ahora">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuarios.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/contenedor/Agujero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorPartidas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorPartidas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ITableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ITableroJugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Posicion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ResultadoJugada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ResultadoJugada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,8 +214,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.AppCliente" />
         <item itemvalue="Application.AppServidor" />
+        <item itemvalue="Application.AppCliente" />
         <item itemvalue="JUnit.TableroJugadorTest" />
       </list>
     </recent_temporary>
@@ -353,15 +359,14 @@
       <workItem from="1733104738960" duration="2186000" />
       <workItem from="1733106963336" duration="436000" />
       <workItem from="1733110785204" duration="140000" />
-      <workItem from="1733167147016" duration="177000" />
-    </task>
-    <task id="LOCAL-00089" summary="VistaConsola">
-      <option name="closed" value="true" />
-      <created>1729503756857</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1729503756857</updated>
+      <workItem from="1733167147016" duration="7185000" />
+      <workItem from="1733182382984" duration="1287000" />
+      <workItem from="1733222655563" duration="1058000" />
+      <workItem from="1733225900747" duration="303000" />
+      <workItem from="1733274674159" duration="6876000" />
+      <workItem from="1733281603430" duration="168000" />
+      <workItem from="1733281775781" duration="2429000" />
+      <workItem from="1733329292471" duration="831000" />
     </task>
     <task id="LOCAL-00090" summary="probando el online con la vista consola">
       <option name="closed" value="true" />
@@ -747,7 +752,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733107103332</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="Terminado por ahora">
+      <option name="closed" value="true" />
+      <created>1733167334035</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1733167334035</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -765,7 +778,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="probando el online con la vista consola" />
     <MESSAGE value="Haciendo la Vista Grafica" />
     <MESSAGE value="Terminando la Vista Grafica" />
     <MESSAGE value="Vistas casi que finalizadas" />
@@ -790,7 +802,8 @@
     <MESSAGE value="arreglando errores" />
     <MESSAGE value="arreglando que desconecte el controlador" />
     <MESSAGE value="arreglando que desconecte el controladorRemoto" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglando que desconecte el controladorRemoto" />
+    <MESSAGE value="Terminado por ahora" />
+    <option name="LAST_COMMIT_MESSAGE" value="Terminado por ahora" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -857,12 +870,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>76</line>
+          <line>74</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>85</line>
+          <line>83</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -872,7 +885,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java</url>
-          <line>32</line>
+          <line>30</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -889,6 +902,11 @@
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
           <line>111</line>
           <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

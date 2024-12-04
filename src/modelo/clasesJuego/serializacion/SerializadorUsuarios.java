@@ -14,13 +14,11 @@ public class SerializadorUsuarios {
     private HashMap<String,Integer> posicionHash;
     private static Serializador serializadorUsuarios;
     private static Serializador serializadorPosicionUsuarios;
-    private static Serializador serializadorRanking;
 
     public SerializadorUsuarios(){
         administrador = AdministradorUsuarios.getInstancia();
         serializadorUsuarios= new Serializador("Usuarios.dat");
         serializadorPosicionUsuarios= new Serializador("PosicionUsuario.dat");
-        serializadorRanking = new Serializador("RankingUsuario.dat");
 
     }
 

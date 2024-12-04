@@ -32,19 +32,6 @@ public class AdministradorUsuarios {
         return usuarios.isEmpty();
     }
 
-    public boolean remove(Objects o){
-        return usuarios.remove(o);
-    }
-
-    public boolean addAll(Collection<? extends Usuario> c){
-        return usuarios.addAll(c);
-    }
-
-    public void clear(){
-        usuarios.clear();
-    }
-
-
     public Usuario get(int index){
         return usuarios.get(index);
     }
@@ -60,7 +47,6 @@ public class AdministradorUsuarios {
     public void cambiar(Usuario o , Integer posicion){
         usuarios.set(posicion,o);
     }
-
 
     public ArrayList<IUsuario> obtenerRank() {
         ArrayList<IUsuario> usuariosOrdenados = new ArrayList<> (usuarios);

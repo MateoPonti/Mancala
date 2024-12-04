@@ -25,9 +25,7 @@ public class TableroJugador implements Serializable,ITableroJugador {
         inicializar();
     }
 
-    public ArrayList<IContenedor> getTablero() {
-        return new ArrayList<>(this.tablero);
-    }
+
 
     @Override
     public ArrayList<IContenedor> getAgujeros() {
@@ -50,15 +48,8 @@ public class TableroJugador implements Serializable,ITableroJugador {
         return tablero.get(cantidadAgujeros);
     }
 
-    private void inicializar(){
-        tablero=new ArrayList<>();
-        for(int i=0;i<cantidadAgujeros;i++){
-            tablero.add(new Agujero());
-        }
-        tablero.add(new Zona());
-    }
 
-    public int repartirHabasP(int posicion){
+    public int repartirHabasContenedor(int posicion){
         Contenedor contenedor=  tablero.get(posicion);
         int habas= contenedor.sacarHabas();
         habas= repartir(posicion+1,habas);
@@ -117,6 +108,9 @@ public class TableroJugador implements Serializable,ITableroJugador {
         return nHayHabas;
     }
 
+
+
+
     public void sumarHabasRestante(){
         int habas=0;
         int i=0;
@@ -126,6 +120,16 @@ public class TableroJugador implements Serializable,ITableroJugador {
         }
         tablero.get(cantidadAgujeros).agregar(habas);
     }
+
+
+    private void inicializar(){
+        tablero=new ArrayList<>();
+        for(int i=0;i<cantidadAgujeros;i++){
+            tablero.add(new Agujero());
+        }
+        tablero.add(new Zona());
+    }
+
 
 
 

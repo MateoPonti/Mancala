@@ -4,7 +4,6 @@ import modelo.clasesJuego.partida.Partida;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Objects;
 
 public class AdministradorPartidas {
     private static ArrayList<Partida> partidas;
@@ -20,10 +19,7 @@ public class AdministradorPartidas {
 
 
 
-    private AdministradorPartidas(){
-        super();
-        partidas=new ArrayList<>();
-    }
+
 
 
     public boolean estaVacio(){
@@ -34,13 +30,8 @@ public class AdministradorPartidas {
         return partidas.remove(o);
     }
 
-    public boolean addAll(Collection<? extends Partida> c){
-        return partidas.addAll(c);
-    }
 
-    public void clear(){
-        partidas.clear();
-    }
+
 
 
     public Partida get(int index){
@@ -55,8 +46,11 @@ public class AdministradorPartidas {
         partidas.add(o);
     }
 
-    public void cambiar(Partida o , Integer posicion){
-        partidas.set(posicion,o);
+
+    private AdministradorPartidas(){
+        super();
+        partidas=new ArrayList<>();
     }
+
 
 }

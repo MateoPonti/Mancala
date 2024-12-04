@@ -33,7 +33,7 @@ public class Tablero implements Serializable {
             return ResultadoJugada.PosicionInvalida;} // comprueba que el jugador no haya elegido una posicion donde no haya habas
 
 
-        int  habasRepartidas=tableroTurno.repartirHabasP(posicion);
+        int  habasRepartidas=tableroTurno.repartirHabasContenedor(posicion);
 
         while (habasRepartidas>0){
             habasRepartidas = tableroOponente.repartirHabasOponente(habasRepartidas);
@@ -45,13 +45,24 @@ public class Tablero implements Serializable {
         if (tableroTurno.isUltimaCayoZona()){
             resultado=ResultadoJugada.OtroTurno;
         }
-        TableroJugador tableroConHabasRestante = comprobarVictoria(tableroTurno,tableroOponente); // si uno de los 2 jugadores no tiene habas , al otro le suma las habas que tiene en sus agujeros en la Zona en caso de tener.
+        TableroJugador tableroConHabasRestante = comprobarFinalizo(tableroTurno,tableroOponente); // si uno de los 2 jugadores no tiene habas , al otro le suma las habas que tiene en sus agujeros en la Zona en caso de tener.
         if(tableroConHabasRestante!=null){
             resultado=ResultadoJugada.Victoria;
             tableroConHabasRestante.sumarHabasRestante();
         }
         return resultado;
     }
+
+    public ITableroJugador getTablero(int indice)
+    {
+        return  tableroJugadores.get(indice);
+    }
+
+    public int devolverPuntosJugador(int jugador)
+    {
+        return tableroJugadores.get(jugador-1).obtenerPuntos();
+    }
+
 
     private void RobarPuntos(int posCayoVacio,TableroJugador turno,TableroJugador oponente) {
         Map<Integer, Integer> parejas = new HashMap<>();
@@ -67,7 +78,7 @@ public class Tablero implements Serializable {
     }
 
 
-    private TableroJugador comprobarVictoria(TableroJugador turno,TableroJugador oponete){
+    private TableroJugador comprobarFinalizo(TableroJugador turno, TableroJugador oponete){
         if (turno.noHayHabas()) {
             return oponete;
         }
@@ -78,13 +89,5 @@ public class Tablero implements Serializable {
     }
 
 
-    public ITableroJugador getTablero(int indice)
-    {
-        return  tableroJugadores.get(indice);
-    }
 
-    public int devolverPuntosJugador(int jugador)
-    {
-        return tableroJugadores.get(jugador-1).obtenerPuntos();
-    }
 }
