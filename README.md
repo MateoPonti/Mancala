@@ -11,7 +11,6 @@ El juego de Mancala se popularizó en varias regiones de Europa, como el Báltic
 En los Estados Unidos, Mancala ha tenido una presencia más notoria, con versiones tradicionales como "Warra" jugadas en Luisiana a principios del siglo XX. En la década de 1940, una versión comercial conocida como "Kalah" se volvió popular. Además, se menciona que el juego se introdujo en los Estados Unidos a través de comunidades caboverdianas en Nueva Inglaterra.
 El juego de Mancala es apreciado por su simplicidad y profundidad estratégica, y se ha adaptado en diversas culturas a lo largo de la historia, manteniendo su atractivo como un pasatiempo intemporal.
 
-![MancalaJuegoPNG](https://github.com/MateoPonti/Mancala/blob/main/mancala.jpg?raw=true)
 
 
 ------------------------------------------------------------------------------------------------
@@ -77,7 +76,7 @@ El juego, que se encuentra implementado en la rama Master del repositorio, fue r
 
 
 
-![UML](https://github.com/MateoPonti/Mancala/blob/master/UML/UMLCOMPLETO.png?raw=true)
+![UML](https://github.com/MateoPonti/Mancala/blob/master/UML/DiagramaUML.png?raw=true)
 
 
 
