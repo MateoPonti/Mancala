@@ -20,8 +20,6 @@ public class MenuV2 implements IMenu {
     private final JLabel nombreJugador;
     private String nombreUsuario;
     private PanelConFondo panelDatos;
-    private final JTextPane textRank;
-    private final JScrollPane scrollpane;
     private final JRadioButton radGrafica;
     private final JRadioButton radConsola;
 
@@ -38,8 +36,6 @@ public class MenuV2 implements IMenu {
         botJugar = new JButton();
         botRank = new JButton();
         nombreJugador= new JLabel();
-        textRank = new JTextPane();
-        scrollpane = new JScrollPane();
         radGrafica= new JRadioButton("Vista Gráfica");
         radConsola=new JRadioButton("Vista Consola");
         radConsola.setSelected(true);
@@ -74,13 +70,9 @@ public class MenuV2 implements IMenu {
         botJugar.setVisible(false);
         botRank.setVisible(false);
         nombreJugador.setVisible(false);
-        scrollpane.setVisible(false);
-        textRank.setEditable(false);
         radConsola.setVisible(false);
         radGrafica.setVisible(false);
 
-        scrollpane.setViewportView(textRank);
-        scrollpane.setPreferredSize(new Dimension(100,100));
 
 
         frame.setTitle("Mancala");
@@ -135,7 +127,7 @@ public class MenuV2 implements IMenu {
         frame.setSize(new Dimension(800,600));
         frame.setMinimumSize(new Dimension(800,600));
         panelDatos.setVisible(false);
-        scrollpane.setVisible(false);
+
         botJugar.setVisible(true);
         botRank.setVisible(true);
         this.nombreJugador.setVisible(true);
@@ -153,9 +145,20 @@ public class MenuV2 implements IMenu {
 
 
         panelNombreJugador.add(this.nombreJugador,BorderLayout.WEST);
+
+
+        panel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        panelBot.setLayout(new BoxLayout(panelBot, BoxLayout.Y_AXIS));
+        panelBot.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+
+        panelBot.add(Box.createVerticalStrut(10));
         panelBot.add(radConsola);
+        panelBot.add(Box.createVerticalStrut(10));
         panelBot.add(radGrafica);
+        panelBot.add(Box.createVerticalStrut(10));
         panelBot.add(botJugar);
+        panelBot.add(Box.createVerticalStrut(10));
         panelBot.add(botRank);
 
 
@@ -165,8 +168,6 @@ public class MenuV2 implements IMenu {
 
         frame.setLayout(new BorderLayout());
         frame.add(panel,BorderLayout.CENTER);
-        frame.add(scrollpane,BorderLayout.SOUTH);
-
 
 
     }
@@ -215,6 +216,7 @@ public class MenuV2 implements IMenu {
         botonEnvioDatos.setText("Enviar");
 
         panelDatos = new PanelConFondo("src/vistas/imagenes/Menu/Lobby.jpg");
+
         panelDatos.setBackground(new Color(255, 255, 224));
         panelDatos.setLayout(new FlowLayout());
 
