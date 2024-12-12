@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Terminado por ahora">
-      <change afterPath="$PROJECT_DIR$/src/vistas/Menu/menu2/MenuV2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vistas/Menu/menu2/PanelConFondo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vistas/imagenes/Menu/Lobby.jpg" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo Otro Menu">
+      <change afterPath="$PROJECT_DIR$/src/vistas/Menu/MenuVersion2/VistaRanking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/imagenes/Menu/ranking.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Secundarias/Casa_1Habas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Secundarias/Casa_2Habas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Secundarias/Casa_3Habas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Secundarias/Casa_4Habas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Secundarias/Casa_5Habas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Secundarias/Casa_Vacio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Partidas.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PosicionUsuario.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/Menu/menu2/MenuV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Menu/MenuVersion2/MenuV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/Menu/menu2/PanelConFondo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Menu/MenuVersion2/PanelConFondo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -384,23 +380,7 @@
       <workItem from="1733882192884" duration="595000" />
       <workItem from="1733964948199" duration="207000" />
       <workItem from="1733965675227" duration="317000" />
-      <workItem from="1733993588679" duration="1529000" />
-    </task>
-    <task id="LOCAL-00091" summary="probando el online con la vista consola">
-      <option name="closed" value="true" />
-      <created>1729504115213</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1729504115213</updated>
-    </task>
-    <task id="LOCAL-00092" summary="Haciendo la Vista Grafica">
-      <option name="closed" value="true" />
-      <created>1729582556960</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1729582556960</updated>
+      <workItem from="1733993588679" duration="6108000" />
     </task>
     <task id="LOCAL-00093" summary="Haciendo la Vista Grafica">
       <option name="closed" value="true" />
@@ -778,7 +758,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733336189720</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="Haciendo Otro Menu">
+      <option name="closed" value="true" />
+      <created>1733996932850</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1733996932850</updated>
+    </task>
+    <task id="LOCAL-00141" summary="Haciendo Otro Menu">
+      <option name="closed" value="true" />
+      <created>1733996968218</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1733996968218</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -796,7 +792,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Haciendo la Vista Grafica" />
     <MESSAGE value="Terminando la Vista Grafica" />
     <MESSAGE value="Vistas casi que finalizadas" />
     <MESSAGE value="Vistas Terminadas" />
@@ -821,7 +816,8 @@
     <MESSAGE value="arreglando que desconecte el controlador" />
     <MESSAGE value="arreglando que desconecte el controladorRemoto" />
     <MESSAGE value="Terminado por ahora" />
-    <option name="LAST_COMMIT_MESSAGE" value="Terminado por ahora" />
+    <MESSAGE value="Haciendo Otro Menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Haciendo Otro Menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

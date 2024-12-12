@@ -1,20 +1,15 @@
-package vistas.Menu.menu2;
+package vistas.Menu.MenuVersion2;
 
-import modelo.clasesJuego.usuario.IUsuario;
 import vistas.IConectado;
 import vistas.Menu.IMenu;
 import vistas.vistasJuego.VistaConsolaSwing;
 import vistas.vistasJuego.VistaGrafica;
 
 import javax.swing.*;
-import javax.swing.text.Style;
-import javax.swing.text.StyleConstants;
-import javax.swing.text.StyledDocument;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.rmi.RemoteException;
-import java.util.ArrayList;
 
 public class MenuV2 implements IMenu {
     private final IConectado conectado;
@@ -38,6 +33,7 @@ public class MenuV2 implements IMenu {
         // definicion
         this.conectado=conectado;
         frame = new JFrame();
+        frame.setLocationRelativeTo(null);
         panel=new JPanel(new BorderLayout());
         botJugar = new JButton();
         botRank = new JButton();
@@ -241,34 +237,8 @@ public class MenuV2 implements IMenu {
     }
 
     private void mostrarRank() throws RemoteException {
-        scrollpane.setVisible(true);
-        textRank.setVisible(true);
-        frame.revalidate();
-        frame.repaint();
+        new VistaRanking(conectado.mostrarTopRank(),nombreUsuario);
 
-        ArrayList<IUsuario> usuarios = conectado.mostrarTopRank();
-        textRank.setText("");
-        int i = 1;
-        String cantEspacios = "                           ";
-
-        StyledDocument doc = textRank.getStyledDocument();
-        Style styleNick = textRank.addStyle("Nickname", null);
-        StyleConstants.setForeground(styleNick, new Color(255, 140, 0));
-        try {
-            for (IUsuario u : usuarios) {
-                String nombreNick = u.getNickname();
-                String puesto = i + ") " + nombreNick + cantEspacios + "Victorias: " + u.getVictorias() + " , Derrotas: " + u.getDerrotas() + " , Empates: " + u.getEmpates() + ", Partidas: " + u.getTotalPartidas() + ", Elo: " + u.getElo() + "\n";
-
-                if (nombreNick.equals(this.nombreUsuario)) {
-                    doc.insertString(doc.getLength(), puesto, styleNick);
-                } else {
-                    doc.insertString(doc.getLength(), puesto, null);
-                }
-
-                i++;
-            }
-        } catch (Exception ignored) {
-        }
     }
 
 

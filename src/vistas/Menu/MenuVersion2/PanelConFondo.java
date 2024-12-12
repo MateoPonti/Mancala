@@ -1,4 +1,4 @@
-package vistas.Menu.menu2;
+package vistas.Menu.MenuVersion2;
 
 import javax.swing.*;
 import java.awt.*;

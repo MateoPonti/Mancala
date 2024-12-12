@@ -51,6 +51,6 @@ public class AdministradorUsuarios {
     public ArrayList<IUsuario> obtenerRank() {
         ArrayList<IUsuario> usuariosOrdenados = new ArrayList<> (usuarios);
         usuariosOrdenados.sort(Comparator.comparing(IUsuario::getElo).reversed());
-        return usuariosOrdenados;
+        return new ArrayList<>(usuariosOrdenados.subList(0, Math.min(5, usuariosOrdenados.size())));
     }
 }
