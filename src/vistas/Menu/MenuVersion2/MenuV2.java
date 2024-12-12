@@ -217,7 +217,8 @@ public class MenuV2 implements IMenu {
         panelDatos = new PanelConFondo("src/vistas/imagenes/Menu/inicioSesion.jpg");
 
         panelDatos.setBackground(new Color(255, 255, 224));
-        panelDatos.setLayout(new FlowLayout());
+        panelDatos.setLayout(new BoxLayout(panelDatos, BoxLayout.Y_AXIS));
+
 
         nombre.setSize(new Dimension(20,20));
         contra.setSize(new Dimension(20,20));
@@ -225,10 +226,29 @@ public class MenuV2 implements IMenu {
         ingresoNombre.setSize(new Dimension(100,20));
         botonEnvioDatos.setSize(new Dimension(60,60));
 
+        ingresoContra.setMaximumSize(new Dimension(100,20));
+        ingresoNombre.setMaximumSize(new Dimension(100,20));
+
+
+        nombre.setAlignmentX(Component.CENTER_ALIGNMENT);
+        contra.setAlignmentX(Component.CENTER_ALIGNMENT);
+        ingresoNombre.setAlignmentX(Component.CENTER_ALIGNMENT);
+        botonEnvioDatos.setAlignmentX(Component.CENTER_ALIGNMENT);
+        botonEnvioDatos.setBackground(Color.white);
+        ingresoNombre.setAlignmentX(Component.CENTER_ALIGNMENT);
+        ingresoContra.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+
+        panelDatos.add(Box.createVerticalStrut(100));
         panelDatos.add(nombre);
+        panelDatos.add(Box.createVerticalStrut(10));
         panelDatos.add(ingresoNombre);
+        panelDatos.add(Box.createVerticalStrut(10));
         panelDatos.add(contra);
+        panelDatos.add(Box.createVerticalStrut(10));
         panelDatos.add(ingresoContra);
+        panelDatos.add(Box.createVerticalStrut(10));
+
         panelDatos.add(botonEnvioDatos);
 
         frame.add(panelDatos,BorderLayout.CENTER);
