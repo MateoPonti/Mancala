@@ -14,7 +14,7 @@ import java.rmi.RemoteException;
 public class MenuV2 implements IMenu {
     private final IConectado conectado;
     private final JFrame frame;
-    private final JPanel panel;
+    private final PanelConFondo panelJuego;
     private final JButton botJugar;
     private final JButton botRank;
     private final JLabel nombreJugador;
@@ -32,7 +32,9 @@ public class MenuV2 implements IMenu {
         this.conectado=conectado;
         frame = new JFrame();
         frame.setLocationRelativeTo(null);
-        panel=new JPanel(new BorderLayout());
+        panelJuego=new PanelConFondo("src/vistas/imagenes/Menu/Lobby.jpg");
+        panelJuego.setLayout(new BorderLayout());
+        panelJuego.setAlignmentX(Component.CENTER_ALIGNMENT);
         botJugar = new JButton();
         botRank = new JButton();
         nombreJugador= new JLabel();
@@ -121,11 +123,11 @@ public class MenuV2 implements IMenu {
 
 
     public void setMenuConfig(String nombreJugador) {
-        nombreUsuario=nombreJugador;
-        this.nombreJugador.setText("Nickname: "+nombreUsuario);
-        this.nombreJugador.setForeground(new Color(255, 255, 128));
-        frame.setSize(new Dimension(800,600));
-        frame.setMinimumSize(new Dimension(800,600));
+        nombreUsuario = nombreJugador;
+        this.nombreJugador.setText("Nickname: " + nombreUsuario);
+        this.nombreJugador.setForeground(new Color(255, 230, 128));
+        frame.setSize(new Dimension(800, 600));
+        frame.setMinimumSize(new Dimension(800, 600));
         panelDatos.setVisible(false);
 
         botJugar.setVisible(true);
@@ -134,43 +136,40 @@ public class MenuV2 implements IMenu {
         radGrafica.setVisible(true);
         radConsola.setVisible(true);
 
-        JPanel panelBot = new JPanel();
+        botJugar.setBackground(new Color(Color.white.getRGB()));
+        botRank.setBackground(new Color(Color.white.getRGB()));
+        radGrafica.setBackground(new Color(Color.WHITE.getRGB()));
+        radConsola.setBackground(new Color(Color.WHITE.getRGB()));
+        // Paneles
+        JPanel panelBot = new JPanel(new GridBagLayout());
         JPanel panelNombreJugador = new JPanel(new BorderLayout());
 
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.insets = new Insets(10, 10, 10, 10);
 
-        Color color=new Color(108,50,37);
-        panel.setBackground( color);
-        panelBot.setBackground(color);
-        panelNombreJugador.setBackground(color);
+        panelNombreJugador.add(this.nombreJugador, BorderLayout.WEST);
 
+        gbc.gridy = 0;
+        panelBot.add(botJugar, gbc);
+        gbc.gridy = 1;
+        panelBot.add(radConsola, gbc);
+        gbc.gridy = 2;
+        panelBot.add(radGrafica, gbc);
+        gbc.gridy = 3;
+        panelBot.add(botRank, gbc);
 
-        panelNombreJugador.add(this.nombreJugador,BorderLayout.WEST);
+        panelBot.setOpaque(false);
+        panelNombreJugador.setOpaque(false);
 
-
-        panel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        panelBot.setLayout(new BoxLayout(panelBot, BoxLayout.Y_AXIS));
-        panelBot.setAlignmentX(Component.CENTER_ALIGNMENT);
-
-
-        panelBot.add(Box.createVerticalStrut(10));
-        panelBot.add(radConsola);
-        panelBot.add(Box.createVerticalStrut(10));
-        panelBot.add(radGrafica);
-        panelBot.add(Box.createVerticalStrut(10));
-        panelBot.add(botJugar);
-        panelBot.add(Box.createVerticalStrut(10));
-        panelBot.add(botRank);
-
-
-
-        panel.add(panelBot,BorderLayout.CENTER);
-        panel.add(panelNombreJugador,BorderLayout.NORTH);
+        panelJuego.add(panelBot, BorderLayout.CENTER);
+        panelJuego.add(panelNombreJugador, BorderLayout.NORTH);
 
         frame.setLayout(new BorderLayout());
-        frame.add(panel,BorderLayout.CENTER);
-
-
+        frame.add(panelJuego, BorderLayout.CENTER);
     }
+
 
     public    void cerrarMenu(){
         frame.setVisible(false);
@@ -215,7 +214,7 @@ public class MenuV2 implements IMenu {
 
         botonEnvioDatos.setText("Enviar");
 
-        panelDatos = new PanelConFondo("src/vistas/imagenes/Menu/Lobby.jpg");
+        panelDatos = new PanelConFondo("src/vistas/imagenes/Menu/inicioSesion.jpg");
 
         panelDatos.setBackground(new Color(255, 255, 224));
         panelDatos.setLayout(new FlowLayout());

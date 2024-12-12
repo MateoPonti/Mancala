@@ -8,7 +8,9 @@ import vistas.IConectado;
 import vistas.ITipo;
 import vistas.IVista;
 import vistas.Menu.MenuVersion2.MenuV2;
+import vistas.Menu.VistaMenu;
 
+import java.awt.*;
 import java.io.IOException;
 import java.io.Serializable;
 import java.rmi.RemoteException;
