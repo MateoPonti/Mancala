@@ -55,7 +55,6 @@ public class Partida implements Serializable,IPartida {
                     return Notificacion.FINALIZOJUEGO;}
                 return Notificacion.JUEGATURNO;
             }}
-
         return null;
     }
 

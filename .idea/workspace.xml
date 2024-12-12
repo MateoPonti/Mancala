@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Terminado por ahora">
+      <change afterPath="$PROJECT_DIR$/src/vistas/Menu/menu2/MenuV2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/Menu/menu2/PanelConFondo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vistas/imagenes/Menu/Lobby.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/SerializadorUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorPartidas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorPartidas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/serializacion/dominio/AdministradorUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ITableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ITableroJugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Posicion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ResultadoJugada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/ResultadoJugada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/partida/Partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/clasesJuego/tablero/TableroJugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/mancala/Mancala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Secundarias/Casa_1Habas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Secundarias/Casa_2Habas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Secundarias/Casa_3Habas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Secundarias/Casa_4Habas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Secundarias/Casa_5Habas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Secundarias/Casa_Vacio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,11 +126,11 @@
       <recent name="modelo.jugador" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\usuario\IdeaProjects\Mancala\src\vistas\imagenes\Menu" />
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\vistas\imagenes\Secundarias" />
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\vistas\imagenes" />
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\UML" />
       <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src" />
-      <recent name="C:\Users\Mateo\IdeaProjects\Mancala\src\server\LibreriaRMIMVC.jar!\doc" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -214,8 +219,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.AppServidor" />
         <item itemvalue="Application.AppCliente" />
+        <item itemvalue="Application.AppServidor" />
         <item itemvalue="JUnit.TableroJugadorTest" />
       </list>
     </recent_temporary>
@@ -367,14 +372,19 @@
       <workItem from="1733281603430" duration="168000" />
       <workItem from="1733281775781" duration="2429000" />
       <workItem from="1733329292471" duration="831000" />
-    </task>
-    <task id="LOCAL-00090" summary="probando el online con la vista consola">
-      <option name="closed" value="true" />
-      <created>1729504066593</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1729504066593</updated>
+      <workItem from="1733336166203" duration="66000" />
+      <workItem from="1733385113264" duration="2445000" />
+      <workItem from="1733406273744" duration="1045000" />
+      <workItem from="1733445412213" duration="1848000" />
+      <workItem from="1733489868059" duration="1489000" />
+      <workItem from="1733545687377" duration="2325000" />
+      <workItem from="1733642749342" duration="1708000" />
+      <workItem from="1733828403491" duration="284000" />
+      <workItem from="1733831973312" duration="2279000" />
+      <workItem from="1733882192884" duration="595000" />
+      <workItem from="1733964948199" duration="207000" />
+      <workItem from="1733965675227" duration="317000" />
+      <workItem from="1733993588679" duration="1529000" />
     </task>
     <task id="LOCAL-00091" summary="probando el online con la vista consola">
       <option name="closed" value="true" />
@@ -760,7 +770,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733167334035</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="Terminado por ahora">
+      <option name="closed" value="true" />
+      <created>1733336189720</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1733336189720</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -819,7 +837,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>169</line>
+          <line>168</line>
           <properties class="modelo.mancala.Mancala" method="getJugador">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -895,17 +913,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>211</line>
+          <line>210</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/mancala/Mancala.java</url>
-          <line>111</line>
+          <line>110</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/modelo/clasesJuego/tablero/Tablero.java</url>
-          <line>61</line>
+          <line>60</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>

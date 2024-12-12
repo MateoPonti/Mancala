@@ -32,7 +32,6 @@ public class Tablero implements Serializable {
         if (tableroTurno.estaVacioContenedor(posicion)){
             return ResultadoJugada.PosicionInvalida;} // comprueba que el jugador no haya elegido una posicion donde no haya habas
 
-
         int  habasRepartidas=tableroTurno.repartirHabasContenedor(posicion);
 
         while (habasRepartidas>0){
@@ -47,7 +46,7 @@ public class Tablero implements Serializable {
         }
         TableroJugador tableroConHabasRestante = comprobarFinalizo(tableroTurno,tableroOponente); // si uno de los 2 jugadores no tiene habas , al otro le suma las habas que tiene en sus agujeros en la Zona en caso de tener.
         if(tableroConHabasRestante!=null){
-            resultado=ResultadoJugada.Victoria;
+            resultado = ResultadoJugada.Victoria;
             tableroConHabasRestante.sumarHabasRestante();
         }
         return resultado;

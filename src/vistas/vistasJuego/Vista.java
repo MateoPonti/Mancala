@@ -8,6 +8,7 @@ import vistas.IConectado;
 import vistas.ITipo;
 import vistas.IVista;
 import vistas.Menu.VistaMenu;
+import vistas.Menu.menu2.MenuV2;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -15,7 +16,7 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 public  class Vista implements IVista, Serializable, IConectado {
-    private VistaMenu menu;
+    private MenuV2 menu;
     private Controlador controlador;
     private ITipo tipo;
 
@@ -54,7 +55,7 @@ public  class Vista implements IVista, Serializable, IConectado {
     @Override
     public void inicializar() {
         if (controlador!=null){
-        menu = new VistaMenu(this);
+        menu = new MenuV2(this);
         tipo = new VistaConsolaSwing();
         tipo.asignarAbandono(this);
         tipo.modificarInput(controlador,menu);

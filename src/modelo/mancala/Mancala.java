@@ -105,16 +105,15 @@ public class Mancala extends ObservableRemoto implements IMancala{
         }
         catch (Exception ignored){
         }
-
     }
 
     public void hacerJugada(int pos, IUsuario jugador) throws  RemoteException{
         if(partida!= null){
         Notificacion resultado = partida.hacerJugada(pos,jugador);
-        if (resultado!=Notificacion.POSICIONINVALIDA  && resultado!=null){
+        if (resultado != Notificacion.POSICIONINVALIDA  && resultado != null){
             notificarObservadores(new Notificador(Notificacion.MOSTRARTABLEROS,preparados));
         }
-        if (resultado==Notificacion.FINALIZOJUEGO){
+        if (resultado  == Notificacion.FINALIZOJUEGO){
             IJugador ganador= partida.getGanador();
             asignarPuntos(ganador);
             notificarObservadores(new Notificador(resultado,preparados));
