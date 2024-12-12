@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Haciendo Otro Menu">
-      <change afterPath="$PROJECT_DIR$/src/vistas/imagenes/Menu/fondoComponentes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vistas/imagenes/Menu/inicioSesion.jpg" afterDir="false" />
+    <list default="true" id="cab9b41b-b727-49fc-ad05-56c66a169905" name="Changes" comment="Finalizando Juego">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Partidas.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Partidas.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PosicionUsuario.dat" beforeDir="false" afterPath="$PROJECT_DIR$/PosicionUsuario.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuarios.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Usuarios.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/Menu/MenuVersion2/MenuV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/Menu/MenuVersion2/MenuV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/imagenes/Menu/Lobby.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/imagenes/Menu/Lobby.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vistas/vistasJuego/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -379,23 +372,9 @@
       <workItem from="1733882192884" duration="595000" />
       <workItem from="1733964948199" duration="207000" />
       <workItem from="1733965675227" duration="317000" />
-      <workItem from="1733993588679" duration="11602000" />
-    </task>
-    <task id="LOCAL-00095" summary="Haciendo la Vista Grafica">
-      <option name="closed" value="true" />
-      <created>1729582828224</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1729582828224</updated>
-    </task>
-    <task id="LOCAL-00096" summary="Haciendo la Vista Grafica">
-      <option name="closed" value="true" />
-      <created>1729589107165</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1729589107165</updated>
+      <workItem from="1733993588679" duration="12353000" />
+      <workItem from="1734010342861" duration="244000" />
+      <workItem from="1734018434878" duration="452000" />
     </task>
     <task id="LOCAL-00097" summary="Haciendo la Vista Grafica">
       <option name="closed" value="true" />
@@ -773,7 +752,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734003658835</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="Terminando menuv2">
+      <option name="closed" value="true" />
+      <created>1734007417279</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1734007417279</updated>
+    </task>
+    <task id="LOCAL-00145" summary="Finalizando Juego">
+      <option name="closed" value="true" />
+      <created>1734007435304</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1734007435304</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -791,8 +786,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Terminando la Vista Grafica" />
-    <MESSAGE value="Vistas casi que finalizadas" />
     <MESSAGE value="Vistas Terminadas" />
     <MESSAGE value="Solo falta el desconectarJugador en ambas vistas" />
     <MESSAGE value="Cambios en server , agrego inicializar a interface Ivista" />
@@ -816,7 +809,9 @@
     <MESSAGE value="arreglando que desconecte el controladorRemoto" />
     <MESSAGE value="Terminado por ahora" />
     <MESSAGE value="Haciendo Otro Menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Haciendo Otro Menu" />
+    <MESSAGE value="Terminando menuv2" />
+    <MESSAGE value="Finalizando Juego" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalizando Juego" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -878,7 +873,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/controlador/Controlador.java</url>
-          <line>83</line>
+          <line>84</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
