@@ -4,6 +4,7 @@ import modelo.clasesJuego.usuario.IUsuario;
 import vistas.IConectado;
 import vistas.vistasJuego.VistaConsolaSwing;
 import vistas.vistasJuego.VistaGrafica;
+import vistas.vistasJuego.VistaGrafica2;
 
 import javax.swing.*;
 import javax.swing.text.Style;
@@ -104,7 +105,7 @@ public class VistaMenu implements IMenu {
                 conectado.jugar(new VistaConsolaSwing());
             }
             else {
-                conectado.jugar(new VistaGrafica());
+                conectado.jugar(new VistaGrafica2());
             }
         });
 

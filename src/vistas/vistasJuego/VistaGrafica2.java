@@ -13,20 +13,20 @@ import java.awt.event.*;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
-public class VistaGrafica implements ITipo {
+public class VistaGrafica2 implements ITipo {
     private final JFrame frame;
     private  final  JPanel jPanelJuego;
     private final JPanel pAgujero;
     private final  JLabel lCasa;
     private final JLabel lCasaOp;
-    private final  ArrayList<JLabel> lAgujeros;
+    private final ArrayList<JLabel> lAgujeros;
     private  final  ArrayList<JLabel> lAgujH;
     private  final JButton botSalir;
     private final    JLabel lTurno;
     private final  JPanel panelAbandonar;
 
 
-    public VistaGrafica() {
+    public VistaGrafica2() {
         //definicion
         frame = new JFrame();
         jPanelJuego = new JPanel();
@@ -194,7 +194,7 @@ public class VistaGrafica implements ITipo {
 
 
     private String obtenerImagen(int habas, String contenedor) {
-        String ruta= "src/vistas/imagenes/Grafica/";
+        String ruta= "src/vistas/imagenes/Grafica1/";
         if (habas == 0) {
             return ruta + contenedor + "_Vacio.png";
         }
@@ -223,7 +223,7 @@ public class VistaGrafica implements ITipo {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        }
+    }
     private void setImagenCasa(ITableroJugador tableroJugador,JLabel l){
         try {
             int habas=tableroJugador.getZona().getHabas();

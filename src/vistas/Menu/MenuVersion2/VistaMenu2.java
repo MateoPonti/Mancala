@@ -4,6 +4,7 @@ import vistas.IConectado;
 import vistas.Menu.IMenu;
 import vistas.vistasJuego.VistaConsolaSwing;
 import vistas.vistasJuego.VistaGrafica;
+import vistas.vistasJuego.VistaGrafica2;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +12,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.rmi.RemoteException;
 
-public class MenuV2 implements IMenu {
+public class VistaMenu2 implements IMenu {
     private final IConectado conectado;
     private final JFrame frame;
     private final PanelConFondo panelJuego;
@@ -27,7 +28,7 @@ public class MenuV2 implements IMenu {
 
     // metodos publicos
 
-    public MenuV2(IConectado conectado) {
+    public VistaMenu2(IConectado conectado) {
         // definicion
         this.conectado=conectado;
         frame = new JFrame();
@@ -78,7 +79,7 @@ public class MenuV2 implements IMenu {
 
 
         frame.setTitle("Mancala");
-        Image icono = Toolkit.getDefaultToolkit().getImage("src/vistas/imagenes/Icono.png");
+        Image icono = Toolkit.getDefaultToolkit().getImage("src/vistas/imagenes/Icono.jpg");
         frame.setIconImage(icono);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 

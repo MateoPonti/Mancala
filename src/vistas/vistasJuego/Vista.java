@@ -7,7 +7,7 @@ import modelo.clasesJuego.usuario.IUsuario;
 import vistas.IConectado;
 import vistas.ITipo;
 import vistas.IVista;
-import vistas.Menu.MenuVersion2.MenuV2;
+import vistas.Menu.MenuVersion2.VistaMenu2;
 import vistas.Menu.VistaMenu;
 
 import java.awt.*;
@@ -17,7 +17,7 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 public  class Vista implements IVista, Serializable, IConectado {
-    private MenuV2 menu;
+    private VistaMenu2 menu;
     private Controlador controlador;
     private ITipo tipo;
 
@@ -56,7 +56,7 @@ public  class Vista implements IVista, Serializable, IConectado {
     @Override
     public void inicializar() {
         if (controlador!=null){
-        menu = new MenuV2(this);
+        menu = new VistaMenu2(this);
         tipo = new VistaConsolaSwing();
         tipo.asignarAbandono(this);
         tipo.modificarInput(controlador,menu);
